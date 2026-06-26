@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
+  <url><loc>https://patmiazga.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://patmiazga.com/communities.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://patmiazga.com/vancouver-buyers-south-okanagan.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://patmiazga.com/alberta-prairie-buyers-south-okanagan.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Community spotlights -->
+  <url><loc>https://patmiazga.com/anarchist-mountain.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/osoyoos-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/oliver-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/the-cottages-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/casitas-del-sol-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/desert-mirage-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/okanagan-falls-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/keremeos-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Buyer guides -->
+  <url><loc>https://patmiazga.com/first-time-buyer-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/bc-tax-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/buyer-guide-a-z.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/relocation-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/living-in-osoyoos-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/living-in-south-okanagan-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/recreation-services-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/whats-up-and-coming-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Due diligence guides -->
+  <url><loc>https://patmiazga.com/inspection-ready-guide.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/inspection-what-to-expect-guide.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/inspection-well-septic-guide.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/radon-testing-guide.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patmiazga.com/climate-insurance-risk-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/unpermitted-work-guide.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+
+  <!-- Specialist guides -->
+  <url><loc>https://patmiazga.com/investment-property-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/manufactured-home-guide.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/owner-builder-guide.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patmiazga.com/commercial-opportunity-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/contractors-guide.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://patmiazga.com/dripa-property-rights-guide.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+
+  <!-- Seller guides -->
+  <url><loc>https://patmiazga.com/sellers-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pat Miazga CRM — Lead Pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',system-ui,sans-serif;background:#f0ede8;color:#1a1a18;font-size:15px;-webkit-font-smoothing:antialiased}
+    #root{min-height:100vh}
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react">
+const { useState, useEffect } = React;
+
+const STORAGE_KEY = "pat-crm-v1";
+
+const palette = {
+  ink: "#1a1a18", stone: "#3d3d38", warmMid: "#7a7468", sand: "#c8b89a",
+  cream: "#f7f4ef", white: "#ffffff", accent: "#8b6f47", accentDark: "#6b5235",
+  border: "#e2ddd6", peerBg: "#f0ede8",
+};
+
+const CONTACT_DAYS = {
+  new: null, "3day": null, "11day": null,
+  A: 7, B: 15, C: 30, pond: null, "bad-lead": null,
+  top50: 30, top100: 90, sphere: null,
+};
+
+const STAGE_INFO = {
+  new:        { label: "New Lead",           color: "#7a7468", group: "unknown", standard: "Move to 3-Day immediately — don't work leads here" },
+  "3day":     { label: "3-Day Follow-Up",    color: "#d97706", group: "unknown", standard: "2 calls + 2 texts + 2 emails per day × 3 days" },
+  "11day":    { label: "11-Day Follow-Up",   color: "#b45309", group: "unknown", standard: "6 calls + 6 texts + 6 emails spread over 11 days" },
+  A:          { label: "A Lead — Active",    color: "#16a34a", group: "unknown", standard: "Active appt OR signed listing/buyer agreement. Contact ≤7 days." },
+  B:          { label: "B Lead — 90 Days",   color: "#2563eb", group: "unknown", standard: "Buying/selling in 90–100 days. Contact every 15 days." },
+  C:          { label: "C Lead — 12 Months", color: "#8b6f47", group: "unknown", standard: "Buying/selling in 4–12 months. Contact every 30 days." },
+  pond:       { label: "Prospect Pond",      color: "#94a3b8", group: "unknown", standard: "Automated nurture. Watch for high-value actions to re-engage." },
+  "bad-lead": { label: "Bad Contact Info",   color: "#dc2626", group: "unknown", standard: "Invalid phone/email. Never delete — keep the record." },
+  top50:      { label: "Top 50",             color: "#dc2626", group: "known",   standard: "Personal monthly touch. Calls, texts, voice notes, short videos." },
+  top100:     { label: "Top 100",            color: "#2563eb", group: "known",   standard: "Personal touch every 90 days. 5 calls/day keeps schedule on track." },
+  sphere:     { label: "General Sphere",     color: "#7a7468", group: "known",   standard: "Newsletters, market reports, birthday messages. No contact commitment." },
+};
+
+const STAGE_GUIDANCE = {
+  new:        "Move to 3-Day immediately. Don't work leads in New Lead — it's just a waiting room.",
+  "3day":     "3-Day Plan: 2 calls + 2 texts + 2 emails per day. Always leave a voicemail. Make 3 promises every time: I'll text, I'll email, I'll call again.",
+  "11day":    "11-Day Plan: 6 calls + 6 texts + 6 emails over 11 days. Slower cadence — every other day. Big response spike happens days 6–11.",
+  A:          "⚠️ A = Active ONLY. Must have: signed buyer agency, signed listing agreement, OR active appointment. If they didn't sign — move to B or C. 'Active on the website' is NOT an A lead.",
+  B:          "B = Buying or selling in 90–100 days. No signed agreement yet but moving toward it. Goal: get the appointment and move to A.",
+  C:          "C = Buying or selling in 4–12 months. Check in monthly. Every call, ask: has their timeline changed? Move to B when it does.",
+  pond:       "Prospect Pond: set up automated newsletters and market reports. Watch for high-value actions (returns to site, views multiple listings) — then re-engage personally.",
+  "bad-lead": "Bad contact info — never delete. Keep the record. If they come back with valid info, pull them out. System may still match cookies.",
+  top50:      "Top 50: best referral sources, best past clients, people you want to deepen relationships with. Monthly personal touches. Top 50 can temporarily move to A/B/C when ready to transact — move them back after closing.",
+  top100:     "Top 100: next 100 best relationships. Quarterly personal touches. Travis's math: 5 calls/day × 5 days/week × 3.5 weeks = full Top 50 + 100 on schedule. Top 100 can also temporarily move to A/B/C when they're ready — move back after closing.",
+  sphere:     "General Sphere: the rest of your known database. Automated newsletters and market reports. No specific contact commitment. When someone calls ready to move, put them in A, B, or C immediately.",
+};
+
+const SCRIPTS = {
+  "3day": [
+    {
+      id: "vm-d1-am", label: "Voicemail — Day 1 Morning", icon: "📞",
+      note: "Always leave a voicemail. Make 3 promises: text, email, call again. Never double-dial.",
+      content: `"Hey [Name], it's Pat Miazga calling from RE/MAX All Points Realty. You downloaded [Guide Name] from my website and I just had a couple of quick questions — I want to make sure what I send you is actually relevant to where you're at, not just generic information. I'll also shoot you a text and an email in case that's easier to connect. And if I don't reach you this morning, I'll try you again this afternoon. Hope you have a great day."`
+    },
+    {
+      id: "txt-d1", label: "Text — Day 1 (Send after morning voicemail)", icon: "💬",
+      note: "Send immediately after the morning voicemail — you promised it in the voicemail.",
+      content: `Hi [Name], Pat Miazga here — RE/MAX, South Okanagan. You grabbed my [Guide Name]. Just left you a voicemail — happy to answer questions or just talk through what you're looking at. No pressure. — Pat 604-562-5982`
+    },
+    {
+      id: "em-d1", label: "Email — Day 1", icon: "📧",
+      subject: "Your [Guide Name] — quick question",
+      content: `Hi [Name],\n\nPat Miazga here from RE/MAX All Points Realty. You downloaded my [Guide Name] — thanks for that.\n\nQuick question before I make any assumptions: are you in early research mode, or do you have a specific timeline you're working toward?\n\nEither is fine — I just want to make sure anything I send you is actually useful, not just more noise in your inbox.\n\nI'll give you a quick call today. Or if email is easier, just reply here.\n\n— Pat Miazga\nRE/MAX All Points Realty\n604-562-5982 | patmiazga.com`
+    },
+    {
+      id: "vm-d1-pm", label: "Voicemail — Day 1 Afternoon", icon: "📞",
+      note: "Follow through on the promise you made this morning.",
+      content: `"Hey [Name], Pat Miazga again from RE/MAX — just following up from this morning like I said I would. I know your day probably got away from you. Still just want to ask a couple of quick questions so I can point you in the right direction. Feel free to shoot me a text if that's easier — same number. I'll try you again tomorrow. Take care."`
+    },
+    {
+      id: "vm-d2", label: "Voicemail — Day 2", icon: "📞",
+      content: `"Hey [Name], Pat Miazga from RE/MAX here — following up again on the [Guide Name] you downloaded. I know life gets busy. No pressure at all — I just want to make sure you have what you need. Give me a call back or shoot me a text. I'll try you one more time tomorrow. Hope you're having a good week."`
+    },
+    {
+      id: "txt-d2", label: "Text — Day 2", icon: "💬",
+      content: `Hey [Name] — Pat Miazga. Still here if you have questions about [South Okanagan / the guide / the move]. No rush. — 604-562-5982`
+    },
+    {
+      id: "em-d2", label: "Email — Day 2", icon: "📧",
+      subject: "Still happy to help — Pat Miazga",
+      content: `Hi [Name],\n\nJust following up on my earlier message. No worries if now's not the right time.\n\nFor what it's worth — I made the move from the Lower Mainland to the South Okanagan myself, so I know exactly what questions come up. When you're ready to talk through any of it, I'm around.\n\nJust reply here or give me a call.\n\n— Pat Miazga\nRE/MAX All Points Realty\n604-562-5982 | patmiazga.com`
+    },
+    {
+      id: "vm-d3", label: "Voicemail — Day 3 (Final in 3-Day)", icon: "📞",
+      note: "Last attempt in the 3-day plan. Move to 11-Day if no contact after this.",
+      content: `"Hey [Name], Pat Miazga — RE/MAX. This is my last check-in in my initial follow-up. If now's not the right time, totally understand — I'll stay in touch and check in periodically. But if you want to talk through [the South Okanagan / the buying process / the move], just call or send a text. Same number. Take care."`
+    },
+    {
+      id: "txt-d3", label: "Text — Day 3", icon: "💬",
+      note: "After this, move to 11-Day plan if no response.",
+      content: `Hey [Name] — Pat Miazga. Last message in my initial follow-up. Whenever timing's right, I'm here. — 604-562-5982`
+    },
+    {
+      id: "em-d3", label: "Email — Day 3", icon: "📧",
+      subject: "No worries — I'll stay in touch",
+      content: `Hi [Name],\n\nLast email in my initial follow-up — I don't want to flood your inbox.\n\nIf the timing isn't right yet, that's completely fine. I'll stay in touch with occasional market updates and I'm always here if something changes.\n\nWhenever you're ready to talk [South Okanagan / next steps / the move], just reach out.\n\n— Pat Miazga\nRE/MAX All Points Realty\n604-562-5982 | patmiazga.com`
+    },
+  ],
+  "11day": [
+    {
+      id: "vm-11", label: "11-Day Voicemail (Every Other Day)", icon: "📞",
+      note: "Slow the cadence to every other day. Travis says a big response spike happens days 6–11 — their world has settled down.",
+      content: `"Hey [Name], it's Pat Miazga from RE/MAX — South Okanagan. Still trying to connect with you about the [Guide Name] you downloaded a little while back. I know things get busy. Whenever it works for you, I'm around — just give me a call or shoot me a text. No rush at all. Take care."`
+    },
+    {
+      id: "txt-11", label: "11-Day Text", icon: "💬",
+      content: `Hi [Name] — Pat Miazga, RE/MAX. Still here whenever timing works for you. No pressure. — 604-562-5982`
+    },
+    {
+      id: "em-11", label: "11-Day Email (Engagement Focus)", icon: "📧",
+      subject: "Still here whenever you're ready — Pat Miazga",
+      content: `Hi [Name],\n\nI know life gets busy — no worries at all.\n\nA lot of people I work with are in research mode for months before they take any steps. That's completely normal. The South Okanagan isn't going anywhere.\n\nWhenever you're ready to talk — whether it's about the market, the buying process, or just what life actually looks like out here — reply here or give me a call.\n\n— Pat Miazga\nRE/MAX All Points Realty\n604-562-5982 | patmiazga.com`
+    },
+    {
+      id: "em-bad-phone", label: "Email — Bad or Missing Phone Number", icon: "📧",
+      note: "Use this when you can't reach them by phone. Keep emailing through the full 14-day cycle before moving to Pond.",
+      subject: "Having trouble reaching you — Pat Miazga",
+      content: `Hi [Name],\n\nI've been trying to reach you but I think I may have an incorrect number on file.\n\nCould you send me the best number to reach you? Just reply to this email. Or if email works better for you, that's completely fine — I'm easy.\n\n— Pat Miazga\nRE/MAX All Points Realty\n604-562-5982 | patmiazga.com`
+    },
+  ],
+  "A": [
+    {
+      id: "vm-A", label: "A-Lead Check-In (Within 7 Days)", icon: "📞",
+      note: "A = active appointment or signed agreement ONLY. Personal contact only — no drip campaigns. Never let an A go more than 7 days without a personal touch.",
+      content: `"Hey [Name], Pat here — just checking in. Wanted to make sure you had a chance to look at [those properties / the latest update] and see if you have any questions before [our appointment / we move forward]. Give me a call when you get a chance. Talk soon."`
+    },
+    {
+      id: "txt-A", label: "A-Lead Text", icon: "💬",
+      content: `Hey [Name] — Pat here. Checking in. Did you get a chance to look at [those properties / that info]? Any questions? — 604-562-5982`
+    },
+  ],
+  "B": [
+    {
+      id: "vm-B", label: "B-Lead Check-In (Every 15 Days)", icon: "📞",
+      note: "Goal: move B → A. Ask about their progress every call. Look for the moment to schedule the appointment.",
+      content: `"Hey [Name], Pat Miazga here from RE/MAX. It's been a couple of weeks since we last connected — just wanted to check in and see how things are going. [Getting closer to approval? / Any updates on your timeline? / Anything changed on your end?] Also been keeping an eye on the market and wanted to flag a couple of things worth knowing. Give me a call when you get a chance or shoot me a text. No rush. Talk soon."`
+    },
+    {
+      id: "txt-B", label: "B-Lead Text (15 Days)", icon: "💬",
+      content: `Hey [Name] — Pat Miazga. Just checking in — how are things progressing? Happy to chat whenever. — 604-562-5982`
+    },
+    {
+      id: "em-B", label: "B-Lead Email — Market Update", icon: "📧",
+      note: "Fill in real, specific market observations — not generic. This is what separates a personal touch from a drip campaign.",
+      subject: "South Okanagan update — Pat Miazga",
+      content: `Hi [Name],\n\nJust wanted to check in — it's been a couple of weeks since we talked.\n\nA few things worth knowing about the market right now:\n\n[INSERT 2–3 specific, current observations relevant to their situation — inventory levels, new listings in their area of interest, price movement, anything that actually matters to them.]\n\nHow are things progressing on your end? Anything I can help move forward?\n\n— Pat Miazga\nRE/MAX All Points Realty\n604-562-5982 | patmiazga.com`
+    },
+  ],
+  "C": [
+    {
+      id: "vm-C", label: "C-Lead Monthly Check-In", icon: "📞",
+      note: "Goal: stay on radar and catch the moment their timeline shifts. Ask about timeline every single call. Move to B the moment they're within 90 days.",
+      content: `"Hey [Name], Pat Miazga from RE/MAX. Just doing my monthly check-in — wanted to make sure I'm still on your radar and you're still on mine. [Is the timeline still looking like [season/month]? / Any updates on your end?] Give me a call back when you get a chance. Talk soon."`
+    },
+    {
+      id: "em-C", label: "C-Lead Monthly Email", icon: "📧",
+      subject: "Monthly check-in — Pat Miazga",
+      content: `Hi [Name],\n\nJust touching base — it's been about a month since we last connected.\n\nAnything changed on your end? Timeline still looking like [what they told you]?\n\nI'll keep sending you [market updates / relevant listings] in the meantime so you have a feel for what's out there. And when the timing shifts, just give me a shout.\n\n— Pat Miazga\nRE/MAX All Points Realty\n604-562-5982 | patmiazga.com`
+    },
+  ],
+  "pond": [
+    {
+      id: "vm-pond", label: "Pond Re-Engagement (High-Value Action Trigger)", icon: "📞",
+      note: "Only call when the system flags high-value action — returned to website, viewed multiple listings, opened multiple emails. Otherwise leave them in automated nurture.",
+      content: `"Hey [Name], Pat Miazga from RE/MAX here. I noticed some activity on my site and just wanted to reach out — see if anything's changed on your end or if you have questions. No pressure at all. If timing's still not right, totally fine. Give me a call or send a text if you want to connect. Take care."`
+    },
+  ],
+  "top50": [
+    {
+      id: "vm-50-car", label: "Car Call Voicemail — Monthly", icon: "📞",
+      note: "Travis's method: make these calls in the car on the way to appointments. Keeps calls short. If it runs long: 'I'm heading into an appointment — let's find time to really catch up. What works tomorrow?'",
+      content: `"Hey [Name], Pat here — in the car on the way to an appointment. Was just thinking about you, wanted to check in and see how things are going. Give me a call back when you get a chance. Talk soon. Take care."`
+    },
+    {
+      id: "vm-50-full", label: "Full Check-In Voicemail", icon: "📞",
+      content: `"Hey [Name], Pat Miazga here. Just calling to check in — see how things are going. No agenda, just want to stay in touch. Give me a call back when you have a few minutes. Hope everything's going well."`
+    },
+    {
+      id: "txt-50", label: "Personal Text Touch", icon: "💬",
+      note: "Voice notes and short videos also work great for Top 50 — more personal than a text.",
+      content: `Hey [Name] — Pat here. Just thinking about you. Hope everything's going well. Give me a shout when you have a minute. — Pat`
+    },
+  ],
+  "top100": [
+    {
+      id: "vm-100", label: "Quarterly Check-In Voicemail", icon: "📞",
+      note: "Once every 90 days. Keep it warm and brief. 5 calls/day × 5 days/week × 3.5 weeks = full Top 50 + Top 100 on schedule.",
+      content: `"Hey [Name], Pat Miazga here — RE/MAX. Just doing my quarterly check-in — it's been a little while since we talked. Hope you're doing well. Give me a call back when you get a chance. If the timing ever makes sense to chat real estate, I'm always around. Take care."`
+    },
+    {
+      id: "txt-100", label: "Quarterly Text", icon: "💬",
+      content: `Hey [Name] — Pat Miazga. Checking in — hope everything's going well. Give me a shout sometime. — 604-562-5982`
+    },
+  ],
+};
+
+const SOURCE_GUIDES = [
+  "First-Time Buyer Guide","BC Tax Guide","Buyer's Guide A-Z","Living in Osoyoos",
+  "Living in South Okanagan","Relocation Guide","Seller's Guide","Investment Property Guide",
+  "Manufactured Home Guide","Radon Testing Guide","Climate & Insurance Risk","Contractors Guide",
+  "Owner Builder Guide","Unpermitted Work Guide","DRIPA / Leasehold Guide",
+  "Calgary Landing Page","Website Contact Form","Referral","Open House","Social Media","RE/MAX Lead","Other",
+];
+
+const TAGS_LIST = [
+  "Buyer","Seller","Investor","Relocating","First-Timer",
+  "Commercial","Referral Source","Past Client","Alberta","Lower Mainland","Saskatchewan / Manitoba",
+];
+
+function daysSince(iso) {
+  if (!iso) return null;
+  return Math.floor((Date.now() - new Date(iso)) / 86400000);
+}
+function fmt(iso) {
+  if (!iso) return "—";
+  return new Date(iso).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" });
+}
+function getUrgency(contact) {
+  const days = CONTACT_DAYS[contact.stage];
+  if (!days) return null;
+  const ago = daysSince(contact.lastContact);
+  if (ago === null) return "overdue";
+  if (ago >= days) return "overdue";
+  if (ago >= days * 0.75) return "soon";
+  return "ok";
+}
+function stagePriority(stage) {
+  return { A: 0, top50: 1, B: 2, "3day": 3, "11day": 4, top100: 5, C: 6 }[stage] ?? 99;
+}
+
+function Badge({ text, color }) {
+  return (
+    <span style={{ display:"inline-block", padding:"2px 8px", borderRadius:12, fontSize:11, fontWeight:600, whiteSpace:"nowrap", background:color+"22", color, border:`1px solid ${color}44` }}>
+      {text}
+    </span>
+  );
+}
+function Dot({ color }) {
+  return <span style={{ display:"inline-block", width:8, height:8, borderRadius:"50%", background:color, flexShrink:0 }} />;
+}
+function SectionHead({ title }) {
+  return <div style={{ fontSize:11, fontWeight:700, letterSpacing:2, textTransform:"uppercase", color:palette.warmMid, margin:"20px 0 10px" }}>{title}</div>;
+}
+
+function CopyButton({ text }) {
+  const [copied, setCopied] = useState(false);
+  function copy() {
+    try {
+      navigator.clipboard.writeText(text).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); });
+    } catch(e) {
+      const ta = document.createElement("textarea");
+      ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand("copy");
+      document.body.removeChild(ta); setCopied(true); setTimeout(() => setCopied(false), 2000);
+    }
+  }
+  return (
+    <button onClick={copy} style={{ padding:"4px 10px", borderRadius:6, border:`1px solid ${palette.border}`, background:copied?"#f0fdf4":palette.white, color:copied?"#16a34a":palette.warmMid, fontSize:11, cursor:"pointer", fontFamily:"Inter, sans-serif", flexShrink:0 }}>
+      {copied ? "✓ Copied" : "Copy"}
+    </button>
+  );
+}
+
+function ContactCard({ contact, onClick }) {
+  const info = STAGE_INFO[contact.stage] || {};
+  const urg = getUrgency(contact);
+  const ago = daysSince(contact.lastContact);
+  return (
+    <div onClick={() => onClick(contact)} style={{ background:palette.white, border:`1.5px solid ${urg==="overdue"?"#dc2626":palette.border}`, borderRadius:8, padding:"12px 14px", marginBottom:8, cursor:"pointer", display:"flex", justifyContent:"space-between", alignItems:"center", gap:10 }}>
+      <div style={{ minWidth:0 }}>
+        <div style={{ display:"flex", alignItems:"center", gap:7, marginBottom:3 }}>
+          {urg==="overdue"&&<span>🔴</span>}{urg==="soon"&&<span>🟡</span>}{urg==="ok"&&<span>🟢</span>}{!urg&&<Dot color={info.color||palette.warmMid}/>}
+          <span style={{ fontWeight:700, color:palette.ink, fontSize:15, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap" }}>{contact.name}</span>
+        </div>
+        <div style={{ fontSize:12, color:palette.warmMid }}>
+          {ago===null?"Never contacted":`Last contact: ${ago}d ago`}{contact.sourceGuide?` · ${contact.sourceGuide}`:""}
+        </div>
+        {contact.tags?.length>0&&<div style={{ marginTop:4, display:"flex", gap:4, flexWrap:"wrap" }}>{contact.tags.slice(0,3).map(t=><Badge key={t} text={t} color={palette.sand}/>)}</div>}
+      </div>
+      <div style={{ flexShrink:0, textAlign:"right" }}>
+        <Badge text={info.label||contact.stage} color={info.color||palette.warmMid}/>
+        {urg==="overdue"&&<div style={{ fontSize:10, color:"#dc2626", marginTop:3, fontWeight:700 }}>CALL TODAY</div>}
+      </div>
+    </div>
+  );
+}
+
+function TodayView({ contacts, allContacts, onSelect }) {
+  const today = new Date().toLocaleDateString("en-CA",{weekday:"long",month:"long",day:"numeric"});
+  const newLeads = allContacts.filter(c=>c.stage==="new"||c.stage==="3day"||c.stage==="11day");
+  return (
+    <div>
+      <div style={{ marginBottom:20 }}>
+        <div style={{ fontSize:12, color:palette.warmMid, marginBottom:2 }}>{today}</div>
+        <div style={{ fontSize:24, fontFamily:"Cormorant Garamond, serif", fontWeight:700, color:palette.ink, lineHeight:1.2 }}>
+          {contacts.length===0?"You're all caught up.":`${contacts.length} contact${contacts.length!==1?"s":""} need attention`}
+        </div>
+        <div style={{ fontSize:13, color:palette.warmMid, marginTop:4, fontStyle:"italic" }}>
+          "The single largest expense in your business is the deals you're losing to competitors." — Travis Robertson
+        </div>
+      </div>
+      {newLeads.length>0&&(
+        <div style={{ background:"#fffbeb", border:"1px solid #fcd34d", borderRadius:10, padding:14, marginBottom:20 }}>
+          <div style={{ fontWeight:700, fontSize:13, color:"#92400e", marginBottom:4 }}>🔥 {newLeads.length} Lead{newLeads.length!==1?"s":""} in Active Follow-Up</div>
+          <div style={{ fontSize:12, color:"#92400e", marginBottom:10 }}>3-Day: 2 calls + 2 texts + 2 emails/day. Always leave a voicemail. Make 3 promises every time.</div>
+          {newLeads.map(c=>(
+            <div key={c.id} onClick={()=>onSelect(c)} style={{ marginBottom:6, padding:"8px 10px", background:palette.white, borderRadius:7, cursor:"pointer", border:"1px solid #fcd34d55", display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+              <span style={{ fontWeight:600, fontSize:13 }}>{c.name}</span>
+              <Badge text={STAGE_INFO[c.stage]?.label||c.stage} color={STAGE_INFO[c.stage]?.color||palette.warmMid}/>
+            </div>
+          ))}
+        </div>
+      )}
+      {contacts.length===0&&newLeads.length===0&&(
+        <div style={{ textAlign:"center", padding:"48px 20px", color:palette.warmMid }}>
+          <div style={{ fontSize:40, marginBottom:12 }}>✓</div>
+          <div style={{ fontSize:15, fontWeight:600, color:palette.stone }}>Nothing urgent today.</div>
+          <div style={{ fontSize:13, marginTop:6 }}>Keep the pipeline moving — add contacts with the + button.</div>
+        </div>
+      )}
+      {contacts.map(c=><ContactCard key={c.id} contact={c} onClick={onSelect}/>)}
+      {contacts.length>0&&(
+        <div style={{ marginTop:16, padding:"12px 14px", background:palette.peerBg, borderRadius:8, border:`1px solid ${palette.border}` }}>
+          <div style={{ fontSize:12, color:palette.warmMid }}>💡 <strong>Travis's math:</strong> 5 calls/day × 5 days/week × 3.5 weeks = full Top 50 + Top 100 maintained on schedule.</div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function PipelineView({ contacts, onSelect }) {
+  const stages = ["new","3day","11day","A","B","C","pond","bad-lead"];
+  return (
+    <div>
+      <div style={{ fontSize:24, fontFamily:"Cormorant Garamond, serif", fontWeight:700, color:palette.ink, marginBottom:4 }}>Lead Pipeline</div>
+      <div style={{ fontSize:13, color:palette.warmMid, marginBottom:20 }}>People you don't know yet</div>
+      {stages.map(stage=>{
+        const group=contacts.filter(c=>c.stage===stage);
+        const info=STAGE_INFO[stage];
+        return (
+          <div key={stage} style={{ marginBottom:22 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8, padding:"6px 10px", background:palette.white, borderRadius:7, border:`1px solid ${palette.border}` }}>
+              <Dot color={info.color}/><span style={{ fontWeight:700, fontSize:13, color:palette.stone }}>{info.label}</span>
+              <span style={{ fontSize:12, color:palette.warmMid }}>({group.length})</span>
+              <span style={{ fontSize:11, color:palette.warmMid, marginLeft:"auto", fontStyle:"italic", textAlign:"right", maxWidth:170 }}>{info.standard}</span>
+            </div>
+            {group.length===0?<div style={{ fontSize:12, color:palette.warmMid, paddingLeft:14, fontStyle:"italic" }}>Empty</div>
+              :group.map(c=><ContactCard key={c.id} contact={c} onClick={onSelect}/>)}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function SphereView({ contacts, onSelect }) {
+  const tiers=["top50","top100","sphere"];
+  return (
+    <div>
+      <div style={{ fontSize:24, fontFamily:"Cormorant Garamond, serif", fontWeight:700, color:palette.ink, marginBottom:4 }}>Your Sphere</div>
+      <div style={{ fontSize:13, color:palette.warmMid, marginBottom:12 }}>Past clients, referral sources, friends, family</div>
+      <div style={{ background:"#fffbeb", border:"1px solid #fcd34d", borderRadius:8, padding:"10px 12px", marginBottom:20, fontSize:12, color:"#92400e" }}>
+        🚗 <strong>Car call tip:</strong> Make Top 50 + 100 calls in the car on the way to appointments. If a call runs long: <em>"I'm heading into an appointment — let's find time to really catch up. What works tomorrow?"</em>
+        <div style={{ marginTop:6 }}>📋 <strong>Top 50/100 → pipeline:</strong> When a sphere contact is ready to transact, move them to A, B, or C. Move them back to Top 50/100 after closing.</div>
+      </div>
+      {tiers.map(tier=>{
+        const group=contacts.filter(c=>c.stage===tier);
+        const info=STAGE_INFO[tier];
+        return (
+          <div key={tier} style={{ marginBottom:22 }}>
+            <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:8, padding:"6px 10px", background:palette.white, borderRadius:7, border:`1px solid ${palette.border}` }}>
+              <Dot color={info.color}/><span style={{ fontWeight:700, fontSize:13, color:palette.stone }}>{info.label}</span>
+              <span style={{ fontSize:12, color:palette.warmMid }}>({group.length})</span>
+              <span style={{ fontSize:11, color:palette.warmMid, marginLeft:"auto", fontStyle:"italic", textAlign:"right", maxWidth:170 }}>{info.standard}</span>
+            </div>
+            {group.length===0?<div style={{ fontSize:12, color:palette.warmMid, paddingLeft:14, fontStyle:"italic" }}>Empty</div>
+              :group.map(c=><ContactCard key={c.id} contact={c} onClick={onSelect}/>)}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function AllView({ contacts, onSelect }) {
+  const [search,setSearch]=useState("");
+  const [filter,setFilter]=useState("all");
+  const filtered=contacts.filter(c=>{
+    const q=search.toLowerCase();
+    const ms=!q||c.name.toLowerCase().includes(q)||c.email?.toLowerCase().includes(q)||c.phone?.includes(q)||c.tags?.some(t=>t.toLowerCase().includes(q));
+    const mf=filter==="all"||c.stage===filter||(filter==="unknown"&&STAGE_INFO[c.stage]?.group==="unknown")||(filter==="known"&&STAGE_INFO[c.stage]?.group==="known");
+    return ms&&mf;
+  }).sort((a,b)=>a.name.localeCompare(b.name));
+  return (
+    <div>
+      <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search by name, email, phone, tag…"
+        style={{ width:"100%", padding:"10px 14px", border:`1px solid ${palette.border}`, borderRadius:8, fontSize:14, marginBottom:12, boxSizing:"border-box", background:palette.white, fontFamily:"Inter, sans-serif" }}/>
+      <div style={{ display:"flex", gap:6, overflowX:"auto", paddingBottom:4, marginBottom:12 }}>
+        {[["all","All"],["unknown","Leads"],["known","Sphere"],["A","A"],["B","B"],["C","C"],["top50","Top 50"],["pond","Pond"],["bad-lead","Bad"]].map(([val,lbl])=>(
+          <button key={val} onClick={()=>setFilter(val)} style={{ flexShrink:0, padding:"5px 12px", borderRadius:20, fontSize:12, fontWeight:600, cursor:"pointer", border:`1.5px solid ${filter===val?palette.accent:palette.border}`, background:filter===val?palette.accent:"white", color:filter===val?"white":palette.warmMid, fontFamily:"Inter, sans-serif" }}>{lbl}</button>
+        ))}
+      </div>
+      <div style={{ fontSize:12, color:palette.warmMid, marginBottom:10 }}>{filtered.length} contacts</div>
+      {filtered.length===0?<div style={{ textAlign:"center", color:palette.warmMid, padding:40, fontSize:14 }}>No contacts found</div>
+        :filtered.map(c=><ContactCard key={c.id} contact={c} onClick={onSelect}/>)}
+    </div>
+  );
+}
+
+function ScriptsView() {
+  const [activeStage,setActiveStage]=useState("3day");
+  const groups=[
+    {label:"New Leads — Unknown",stages:["3day","11day"]},
+    {label:"Active Pipeline",stages:["A","B","C","pond"]},
+    {label:"Sphere of Influence",stages:["top50","top100"]},
+  ];
+  return (
+    <div>
+      <div style={{ fontSize:24, fontFamily:"Cormorant Garamond, serif", fontWeight:700, color:palette.ink, marginBottom:4 }}>Script Library</div>
+      <div style={{ fontSize:13, color:palette.warmMid, marginBottom:20 }}>Travis Robertson framework · Pat Miazga voice · Tap any script to copy</div>
+      {groups.map(g=>(
+        <div key={g.label} style={{ marginBottom:16 }}>
+          <div style={{ fontSize:11, fontWeight:700, color:palette.warmMid, letterSpacing:1.5, textTransform:"uppercase", marginBottom:8 }}>{g.label}</div>
+          <div style={{ display:"flex", flexWrap:"wrap", gap:6 }}>
+            {g.stages.filter(s=>SCRIPTS[s]).map(s=>{
+              const info=STAGE_INFO[s];
+              return (
+                <button key={s} onClick={()=>setActiveStage(s)} style={{ padding:"6px 12px", borderRadius:20, fontSize:12, fontWeight:600, cursor:"pointer", fontFamily:"Inter, sans-serif", background:activeStage===s?info.color:"transparent", color:activeStage===s?"white":info.color, border:`1.5px solid ${info.color}` }}>
+                  {info.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+      {STAGE_GUIDANCE[activeStage]&&(
+        <div style={{ background:palette.peerBg, border:`1px solid ${palette.border}`, borderRadius:8, padding:"10px 12px", marginBottom:20, fontSize:13, color:palette.stone, lineHeight:1.5 }}>
+          {STAGE_GUIDANCE[activeStage]}
+        </div>
+      )}
+      {(SCRIPTS[activeStage]||[]).map(script=>(
+        <div key={script.id} style={{ background:palette.white, border:`1px solid ${palette.border}`, borderRadius:10, padding:14, marginBottom:14 }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:8, gap:8 }}>
+            <div style={{ fontWeight:700, fontSize:14, color:palette.ink }}>{script.icon} {script.label}</div>
+            <CopyButton text={script.subject?`Subject: ${script.subject}\n\n${script.content}`:script.content}/>
+          </div>
+          {script.note&&<div style={{ fontSize:11, color:palette.warmMid, background:palette.peerBg, borderRadius:6, padding:"6px 8px", marginBottom:8, fontStyle:"italic", lineHeight:1.4 }}>💡 {script.note}</div>}
+          {script.subject&&<div style={{ fontSize:12, fontWeight:600, color:palette.accent, marginBottom:6 }}>Subject: {script.subject}</div>}
+          <div style={{ fontSize:13, color:palette.stone, lineHeight:1.6, whiteSpace:"pre-wrap", background:palette.cream, borderRadius:6, padding:10 }}>{script.content}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ScriptPanel({ contact }) {
+  const scripts=SCRIPTS[contact.stage]||[];
+  const [expanded,setExpanded]=useState(false);
+  if(scripts.length===0) return null;
+  const preview=scripts.slice(0,expanded?scripts.length:2);
+  return (
+    <div>
+      <SectionHead title={`Scripts — ${STAGE_INFO[contact.stage]?.label||contact.stage}`}/>
+      {preview.map(script=>(
+        <div key={script.id} style={{ background:palette.white, border:`1px solid ${palette.border}`, borderRadius:8, padding:12, marginBottom:10 }}>
+          <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:6, gap:8 }}>
+            <span style={{ fontWeight:600, fontSize:13, color:palette.stone }}>{script.icon} {script.label}</span>
+            <CopyButton text={script.subject?`Subject: ${script.subject}\n\n${script.content}`:script.content}/>
+          </div>
+          {script.note&&<div style={{ fontSize:11, color:palette.warmMid, fontStyle:"italic", marginBottom:6, lineHeight:1.4 }}>💡 {script.note}</div>}
+          {script.subject&&<div style={{ fontSize:11, fontWeight:600, color:palette.accent, marginBottom:4 }}>Subject: {script.subject}</div>}
+          <div style={{ fontSize:12, color:palette.stone, lineHeight:1.5, whiteSpace:"pre-wrap", background:palette.cream, borderRadius:6, padding:"8px 10px" }}>{script.content}</div>
+        </div>
+      ))}
+      {scripts.length>2&&(
+        <button onClick={()=>setExpanded(!expanded)} style={{ width:"100%", padding:8, background:"none", border:`1px solid ${palette.border}`, borderRadius:8, cursor:"pointer", fontSize:12, color:palette.warmMid, fontFamily:"Inter, sans-serif" }}>
+          {expanded?`Show fewer scripts`:`Show all ${scripts.length} scripts for this stage`}
+        </button>
+      )}
+    </div>
+  );
+}
+
+function ContactModal({ contact, onClose, onLog, onUpdate, onDelete }) {
+  const [logNote,setLogNote]=useState("");
+  const [showLog,setShowLog]=useState(false);
+  const [noteText,setNoteText]=useState(contact.notes||"");
+  const [stageConfirm,setStageConfirm]=useState(null);
+  const info=STAGE_INFO[contact.stage]||{};
+  const urg=getUrgency(contact);
+  const ago=daysSince(contact.lastContact);
+  const days=CONTACT_DAYS[contact.stage];
+  const urgBanner=urg==="overdue"
+    ?{bg:"#fef2f2",border:"#fca5a5",color:"#991b1b",text:`⚠️ Overdue — contact standard is every ${days} days. Reach out today.`}
+    :urg==="soon"
+    ?{bg:"#fffbeb",border:"#fcd34d",color:"#92400e",text:`🔔 Due soon — last touch was ${ago} days ago (standard: ${days} days)`}
+    :urg==="ok"
+    ?{bg:"#f0fdf4",border:"#86efac",color:"#166534",text:`✓ On track — last contact ${ago}d ago`}
+    :null;
+
+  async function handleLog(method){
+    await onLog(contact.id,method,logNote);
+    setLogNote("");setShowLog(false);
+  }
+  async function confirmStage(stage){
+    await onUpdate(contact.id,{stage});
+    setStageConfirm(null);
+  }
+  function handleStageClick(stage){
+    if(stage===contact.stage) return;
+    const guidance=STAGE_GUIDANCE[stage];
+    if(guidance) setStageConfirm({stage,guidance});
+    else confirmStage(stage);
+  }
+
+  const unknownStages=["new","3day","11day","A","B","C","pond","bad-lead"];
+  const knownStages=["top50","top100","sphere"];
+
+  return (
+    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.55)", zIndex:400, display:"flex", alignItems:"flex-end" }}>
+      <div style={{ background:palette.cream, width:"100%", maxHeight:"93vh", overflowY:"auto", borderRadius:"18px 18px 0 0", padding:"20px 18px 48px" }}>
+
+        {stageConfirm&&(
+          <div style={{ position:"sticky", top:0, zIndex:10, background:"#fffbeb", border:"1px solid #fcd34d", borderRadius:10, padding:14, marginBottom:16 }}>
+            <div style={{ fontWeight:700, fontSize:13, color:"#92400e", marginBottom:6 }}>Moving to: {STAGE_INFO[stageConfirm.stage]?.label}</div>
+            <div style={{ fontSize:13, color:"#92400e", marginBottom:12, lineHeight:1.5 }}>{stageConfirm.guidance}</div>
+            <div style={{ display:"flex", gap:8 }}>
+              <button onClick={()=>confirmStage(stageConfirm.stage)} style={{ flex:1, padding:9, background:palette.accent, color:"white", border:"none", borderRadius:8, cursor:"pointer", fontWeight:700, fontFamily:"Inter, sans-serif" }}>Confirm Move</button>
+              <button onClick={()=>setStageConfirm(null)} style={{ flex:1, padding:9, background:palette.white, color:palette.stone, border:`1px solid ${palette.border}`, borderRadius:8, cursor:"pointer", fontFamily:"Inter, sans-serif" }}>Cancel</button>
+            </div>
+          </div>
+        )}
+
+        <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:14 }}>
+          <div>
+            <div style={{ fontSize:24, fontFamily:"Cormorant Garamond, serif", fontWeight:700, color:palette.ink }}>{contact.name}</div>
+            <div style={{ marginTop:4 }}><Badge text={info.label||contact.stage} color={info.color||palette.warmMid}/></div>
+          </div>
+          <button onClick={onClose} style={{ border:"none", background:"none", fontSize:26, cursor:"pointer", color:palette.warmMid }}>×</button>
+        </div>
+
+        {urgBanner&&(
+          <div style={{ background:urgBanner.bg, border:`1px solid ${urgBanner.border}`, borderRadius:8, padding:"9px 12px", marginBottom:14, fontSize:13, color:urgBanner.color, fontWeight:500 }}>
+            {urgBanner.text}
+          </div>
+        )}
+
+        <div style={{ background:palette.white, borderRadius:10, padding:14, marginBottom:16 }}>
+          {contact.email&&<a href={`mailto:${contact.email}`} style={{ display:"block", fontSize:14, color:palette.accent, marginBottom:8, textDecoration:"none" }}>📧 {contact.email}</a>}
+          {contact.phone&&<a href={`tel:${contact.phone}`} style={{ display:"block", fontSize:14, color:palette.accent, marginBottom:8, textDecoration:"none" }}>📞 {contact.phone}</a>}
+          {contact.sourceGuide&&<div style={{ fontSize:13, color:palette.warmMid, marginBottom:6 }}>📄 {contact.sourceGuide}</div>}
+          <div style={{ fontSize:13, color:palette.warmMid, marginBottom:contact.tags?.length?6:0 }}>Added: {fmt(contact.addedDate)} · Last contact: {fmt(contact.lastContact)}</div>
+          {contact.tags?.length>0&&<div style={{ marginTop:8, display:"flex", gap:5, flexWrap:"wrap" }}>{contact.tags.map(t=><Badge key={t} text={t} color={palette.sand}/>)}</div>}
+        </div>
+
+        <ScriptPanel contact={contact}/>
+
+        <SectionHead title="Log Contact"/>
+        {showLog?(
+          <div style={{ background:palette.white, borderRadius:10, padding:14, marginBottom:16 }}>
+            <input value={logNote} onChange={e=>setLogNote(e.target.value)} placeholder="Notes (optional — outcome, next step, anything relevant)"
+              style={{ width:"100%", padding:"8px 12px", border:`1px solid ${palette.border}`, borderRadius:8, fontSize:13, marginBottom:10, boxSizing:"border-box", fontFamily:"Inter, sans-serif" }}/>
+            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:8 }}>
+              {["Call","Voicemail","Text","Email","Meeting","Other"].map(m=>(
+                <button key={m} onClick={()=>handleLog(m)} style={{ padding:"9px 6px", background:palette.accent, color:"white", border:"none", borderRadius:8, fontSize:13, cursor:"pointer", fontWeight:600, fontFamily:"Inter, sans-serif" }}>{m}</button>
+              ))}
+            </div>
+            <button onClick={()=>setShowLog(false)} style={{ marginTop:8, width:"100%", padding:8, background:"none", border:`1px solid ${palette.border}`, borderRadius:8, cursor:"pointer", color:palette.warmMid, fontSize:13, fontFamily:"Inter, sans-serif" }}>Cancel</button>
+          </div>
+        ):(
+          <button onClick={()=>setShowLog(true)} style={{ width:"100%", padding:13, background:palette.accent, color:"white", border:"none", borderRadius:10, fontSize:15, fontWeight:700, cursor:"pointer", marginBottom:16, fontFamily:"Inter, sans-serif" }}>
+            + Log Contact
+          </button>
+        )}
+
+        <SectionHead title="Pipeline Stage"/>
+        <div style={{ fontSize:11, color:palette.warmMid, marginBottom:8, fontStyle:"italic" }}>
+          Top 50/100 can move to A/B/C when ready to transact — move back after closing.
+        </div>
+        <div style={{ fontSize:12, fontWeight:600, color:palette.stone, marginBottom:6 }}>Lead Pipeline</div>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:12 }}>
+          {unknownStages.map(s=>{const si=STAGE_INFO[s];const a=contact.stage===s;return(
+            <button key={s} onClick={()=>handleStageClick(s)} style={{ padding:"6px 10px", borderRadius:20, fontSize:11, fontWeight:700, cursor:"pointer", fontFamily:"Inter, sans-serif", background:a?si.color:"transparent", color:a?"white":si.color, border:`1.5px solid ${si.color}` }}>{si.label}</button>
+          );})}
+        </div>
+        <div style={{ fontSize:12, fontWeight:600, color:palette.stone, marginBottom:6 }}>Sphere</div>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:20 }}>
+          {knownStages.map(s=>{const si=STAGE_INFO[s];const a=contact.stage===s;return(
+            <button key={s} onClick={()=>handleStageClick(s)} style={{ padding:"6px 10px", borderRadius:20, fontSize:11, fontWeight:700, cursor:"pointer", fontFamily:"Inter, sans-serif", background:a?si.color:"transparent", color:a?"white":si.color, border:`1.5px solid ${si.color}` }}>{si.label}</button>
+          );})}
+        </div>
+
+        <SectionHead title="Notes"/>
+        <textarea value={noteText} onChange={e=>setNoteText(e.target.value)} rows={3} placeholder="Notes about this contact…"
+          style={{ width:"100%", padding:"10px 12px", border:`1px solid ${palette.border}`, borderRadius:8, fontSize:13, resize:"vertical", boxSizing:"border-box", fontFamily:"Inter, sans-serif", marginBottom:8 }}/>
+        <button onClick={()=>onUpdate(contact.id,{notes:noteText})} style={{ padding:"6px 14px", background:palette.peerBg, border:`1px solid ${palette.border}`, borderRadius:6, cursor:"pointer", fontSize:12, color:palette.stone, fontFamily:"Inter, sans-serif" }}>Save Notes</button>
+
+        {contact.contactHistory?.length>0&&(
+          <>
+            <SectionHead title={`Contact History (${contact.contactHistory.length})`}/>
+            <div style={{ background:palette.white, borderRadius:10, overflow:"hidden", marginBottom:20 }}>
+              {[...contact.contactHistory].reverse().slice(0,8).map((h,i,arr)=>(
+                <div key={i} style={{ padding:"10px 14px", borderBottom:i<arr.length-1?`1px solid ${palette.border}`:"none" }}>
+                  <div style={{ display:"flex", justifyContent:"space-between" }}>
+                    <span style={{ fontWeight:700, fontSize:13, color:palette.stone }}>{h.method}</span>
+                    <span style={{ fontSize:11, color:palette.warmMid }}>{fmt(h.date)}</span>
+                  </div>
+                  {h.note&&<div style={{ fontSize:12, color:palette.warmMid, marginTop:3 }}>{h.note}</div>}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        <div style={{ fontSize:11, color:palette.warmMid, marginBottom:8, fontStyle:"italic" }}>
+          Travis's rule: never delete leads. Use "Bad Contact Info" stage instead — they may come back.
+        </div>
+        <button onClick={()=>{if(window.confirm(`Delete ${contact.name}?\n\nTravis recommends using "Bad Contact Info" stage instead of deleting. Leads sometimes come back.\n\nDelete anyway?`)) onDelete(contact.id);}} style={{ width:"100%", padding:10, background:"none", border:"1px solid #fca5a5", borderRadius:8, color:"#991b1b", cursor:"pointer", fontSize:13, fontFamily:"Inter, sans-serif" }}>
+          Delete Contact
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function AddModal({ onAdd, onClose }) {
+  const [form,setForm]=useState({name:"",email:"",phone:"",category:"unknown",stage:"new",sourceGuide:"",tags:[],notes:""});
+  const set=(key,val)=>setForm(f=>({...f,[key]:val}));
+  const toggleTag=tag=>set("tags",form.tags.includes(tag)?form.tags.filter(t=>t!==tag):[...form.tags,tag]);
+  function switchCategory(cat){set("category",cat);set("stage",cat==="unknown"?"new":"top50");}
+  async function handleSubmit(){if(!form.name.trim()){alert("Name is required.");return;}await onAdd(form);}
+  const stages=form.category==="unknown"?["new","3day","11day","A","B","C","pond","bad-lead"]:["top50","top100","sphere"];
+  return (
+    <div style={{ position:"fixed", inset:0, background:"rgba(0,0,0,0.55)", zIndex:400, display:"flex", alignItems:"flex-end" }}>
+      <div style={{ background:palette.cream, width:"100%", maxHeight:"93vh", overflowY:"auto", borderRadius:"18px 18px 0 0", padding:"20px 18px 48px" }}>
+        <div style={{ display:"flex", justifyContent:"space-between", marginBottom:20 }}>
+          <div style={{ fontSize:22, fontFamily:"Cormorant Garamond, serif", fontWeight:700, color:palette.ink }}>Add Contact</div>
+          <button onClick={onClose} style={{ border:"none", background:"none", fontSize:26, cursor:"pointer", color:palette.warmMid }}>×</button>
+        </div>
+        {[["Name *","name","text"],["Email","email","email"],["Phone","phone","tel"]].map(([label,key,type])=>(
+          <div key={key} style={{ marginBottom:12 }}>
+            <label style={{ fontSize:12, fontWeight:600, color:palette.stone, display:"block", marginBottom:4 }}>{label}</label>
+            <input type={type} value={form[key]} onChange={e=>set(key,e.target.value)}
+              style={{ width:"100%", padding:"10px 12px", border:`1px solid ${palette.border}`, borderRadius:8, fontSize:14, boxSizing:"border-box", fontFamily:"Inter, sans-serif", background:palette.white }}/>
+          </div>
+        ))}
+        <SectionHead title="Contact Type"/>
+        <div style={{ display:"flex", gap:10, marginBottom:20 }}>
+          {[["unknown","Lead (Don't Know)"],["known","Sphere (Know)"]].map(([val,lbl])=>(
+            <button key={val} onClick={()=>switchCategory(val)} style={{ flex:1, padding:11, borderRadius:8, cursor:"pointer", fontWeight:700, fontSize:13, fontFamily:"Inter, sans-serif", border:`2px solid ${form.category===val?palette.accent:palette.border}`, background:form.category===val?palette.accent:palette.white, color:form.category===val?"white":palette.stone }}>{lbl}</button>
+          ))}
+        </div>
+        <SectionHead title="Pipeline Stage"/>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:20 }}>
+          {stages.map(s=>{const si=STAGE_INFO[s];const a=form.stage===s;return(
+            <button key={s} onClick={()=>set("stage",s)} style={{ padding:"6px 10px", borderRadius:20, fontSize:11, fontWeight:700, cursor:"pointer", fontFamily:"Inter, sans-serif", background:a?si.color:"transparent", color:a?"white":si.color, border:`1.5px solid ${si.color}` }}>{si.label}</button>
+          );})}
+        </div>
+        <SectionHead title="Source / Guide"/>
+        <select value={form.sourceGuide} onChange={e=>set("sourceGuide",e.target.value)}
+          style={{ width:"100%", padding:"10px 12px", border:`1px solid ${palette.border}`, borderRadius:8, fontSize:14, marginBottom:20, boxSizing:"border-box", background:palette.white, fontFamily:"Inter, sans-serif" }}>
+          <option value="">Select source…</option>
+          {SOURCE_GUIDES.map(s=><option key={s} value={s}>{s}</option>)}
+        </select>
+        <SectionHead title="Tags"/>
+        <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:20 }}>
+          {TAGS_LIST.map(tag=>(
+            <button key={tag} onClick={()=>toggleTag(tag)} style={{ padding:"5px 11px", borderRadius:20, fontSize:12, cursor:"pointer", fontFamily:"Inter, sans-serif", background:form.tags.includes(tag)?palette.accent:palette.white, color:form.tags.includes(tag)?"white":palette.warmMid, border:`1px solid ${form.tags.includes(tag)?palette.accent:palette.border}` }}>{tag}</button>
+          ))}
+        </div>
+        <SectionHead title="Notes"/>
+        <textarea value={form.notes} onChange={e=>set("notes",e.target.value)} rows={2} placeholder="Initial notes…"
+          style={{ width:"100%", padding:"10px 12px", border:`1px solid ${palette.border}`, borderRadius:8, fontSize:13, resize:"vertical", boxSizing:"border-box", fontFamily:"Inter, sans-serif", marginBottom:20 }}/>
+        <button onClick={handleSubmit} style={{ width:"100%", padding:14, background:palette.accent, color:"white", border:"none", borderRadius:10, fontSize:15, fontWeight:700, cursor:"pointer", fontFamily:"Inter, sans-serif" }}>
+          Add Contact
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function CRM() {
+  const [contacts,setContacts]=useState([]);
+  const [loading,setLoading]=useState(true);
+  const [tab,setTab]=useState("today");
+  const [selected,setSelected]=useState(null);
+  const [showAdd,setShowAdd]=useState(false);
+
+  useEffect(()=>{
+    (async()=>{
+      try{const r=await window.storage.get(STORAGE_KEY);if(r)setContacts(JSON.parse(r.value));}catch(_){}
+      setLoading(false);
+    })();
+  },[]);
+
+  async function persist(updated){setContacts(updated);try{await window.storage.set(STORAGE_KEY,JSON.stringify(updated));}catch(_){}}
+  async function addContact(data){const c={...data,id:Date.now().toString(),addedDate:new Date().toISOString(),lastContact:null,contactHistory:[]};await persist([...contacts,c]);setShowAdd(false);setTab("today");}
+  async function updateContact(id,updates){const updated=contacts.map(c=>c.id===id?{...c,...updates}:c);await persist(updated);setSelected(updated.find(c=>c.id===id)||null);}
+  async function logContact(id,method,note){const entry={date:new Date().toISOString(),method,note};const updated=contacts.map(c=>c.id===id?{...c,lastContact:entry.date,contactHistory:[...(c.contactHistory||[]),entry]}:c);await persist(updated);setSelected(updated.find(c=>c.id===id)||null);}
+  async function deleteContact(id){await persist(contacts.filter(c=>c.id!==id));setSelected(null);}
+
+  const todayContacts=contacts.filter(c=>{const d=CONTACT_DAYS[c.stage];if(!d)return false;const a=daysSince(c.lastContact);return a===null||a>=d;}).sort((a,b)=>stagePriority(a.stage)-stagePriority(b.stage));
+  const unknownContacts=contacts.filter(c=>STAGE_INFO[c.stage]?.group==="unknown");
+  const knownContacts=contacts.filter(c=>STAGE_INFO[c.stage]?.group==="known");
+
+  const tabs=[
+    {id:"today",label:todayContacts.length>0?`Today (${todayContacts.length})`:"Today"},
+    {id:"pipeline",label:"Pipeline"},
+    {id:"sphere",label:"Sphere"},
+    {id:"all",label:"All"},
+    {id:"scripts",label:"Scripts"},
+  ];
+
+  if(loading) return <div style={{ display:"flex", alignItems:"center", justifyContent:"center", height:"100vh", background:palette.cream, fontFamily:"Inter, sans-serif", color:palette.warmMid }}>Loading your pipeline…</div>;
+
+  return (
+    <div style={{ maxWidth:480, margin:"0 auto", minHeight:"100vh", background:palette.cream, fontFamily:"Inter, sans-serif", position:"relative" }}>
+      <div style={{ background:palette.ink, padding:"14px 18px 12px", position:"sticky", top:0, zIndex:200 }}>
+        <div style={{ fontSize:10, color:palette.sand, letterSpacing:2.5, textTransform:"uppercase", fontWeight:700 }}>Pat Miazga · RE/MAX All Points Realty</div>
+        <div style={{ color:palette.white, fontSize:21, fontFamily:"Cormorant Garamond, serif", fontWeight:700, marginTop:1 }}>Pipeline CRM</div>
+      </div>
+      <div style={{ background:palette.white, borderBottom:`1px solid ${palette.border}`, display:"flex", position:"sticky", top:52, zIndex:190, overflowX:"auto" }}>
+        {tabs.map(t=>(
+          <button key={t.id} onClick={()=>setTab(t.id)} style={{ flex:1, minWidth:60, padding:"11px 4px", border:"none", background:"none", cursor:"pointer", fontSize:12, fontWeight:tab===t.id?700:400, color:tab===t.id?palette.accent:palette.warmMid, borderBottom:tab===t.id?`2.5px solid ${palette.accent}`:"2.5px solid transparent", fontFamily:"Inter, sans-serif", whiteSpace:"nowrap" }}>{t.label}</button>
+        ))}
+      </div>
+      <div style={{ padding:"16px 14px 100px" }}>
+        {tab==="today"    &&<TodayView    contacts={todayContacts} allContacts={contacts} onSelect={setSelected}/>}
+        {tab==="pipeline" &&<PipelineView contacts={unknownContacts} onSelect={setSelected}/>}
+        {tab==="sphere"   &&<SphereView   contacts={knownContacts} onSelect={setSelected}/>}
+        {tab==="all"      &&<AllView      contacts={contacts} onSelect={setSelected}/>}
+        {tab==="scripts"  &&<ScriptsView/>}
+      </div>
+      <button onClick={()=>setShowAdd(true)} style={{ position:"fixed", bottom:28, right:20, width:54, height:54, borderRadius:"50%", background:palette.accent, color:"white", border:"none", fontSize:26, cursor:"pointer", boxShadow:"0 4px 16px rgba(0,0,0,0.25)", zIndex:300, lineHeight:1, fontFamily:"Inter, sans-serif" }}>+</button>
+      {selected&&<ContactModal contact={selected} onClose={()=>setSelected(null)} onLog={logContact} onUpdate={updateContact} onDelete={deleteContact}/>}
+      {showAdd&&<AddModal onAdd={addContact} onClose={()=>setShowAdd(false)}/>}
+    </div>
+  );
+}
+
+
+// Mount the app
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(CRM));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://patmiazga.com/unpermitted-work-guide.html" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Unpermitted Work &amp; Stop Work Orders | South Okanagan | Pat Miazga</title>
+<meta name="description" content="How to spot unpermitted renovations when buying in BC. What liability you inherit, how to protect yourself before removing subjects, and how the 2025 Sewell v. Abadian ruling changed disclosure in South Okanagan real estate." />
+<meta property="og:title" content="Unpermitted Work & Stop Work Orders | South Okanagan | Pat Miazga"/>
+<meta property="og:description" content="Buying or selling a South Okanagan property with unpermitted work? Know the risks, your obligations, and your options — from a REALTOR® with a construction background."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://patmiazga.com/unpermitted-work-guide.html"/>
+<meta property="og:site_name" content="Pat Miazga | South Okanagan REALTOR®"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Unpermitted Work & Stop Work Orders | South Okanagan | Pat Miazga"/>
+<meta name="twitter:description" content="Buying or selling a South Okanagan property with unpermitted work? Know the risks, your obligations, and your options — from a REALTOR® with a construction background."/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#1a1a18; --stone:#3d3d38; --mid:#7a7468; --sand:#c8b89a;
+  --cream:#f7f4ef; --white:#fff; --accent:#8b6f47; --accent-dk:#6b5235;
+  --border:#e2ddd6; --soft:#f0ede8;
+  --fd:'Cormorant Garamond',Georgia,serif; --fb:'Inter',system-ui,sans-serif;
+  --green:#3a7d44;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--cream);color:var(--stone);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:680px;margin:0 auto;padding:0 22px;}
+img{max-width:100%;}
+
+/* ── HERO ILLUSTRATION (inline SVG, no external requests) ── */
+.hero{background:var(--ink);color:var(--white);padding:48px 0 56px;position:relative;overflow:hidden;}
+.hero-photo{position:absolute;inset:0;z-index:0;opacity:.9;}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,26,24,.35) 0%,rgba(26,26,24,.75) 70%,var(--ink) 100%);}
+.hero-inner{position:relative;z-index:1;}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);}
+.eyebrow-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+.updated-badge{font-size:10px;font-weight:600;color:rgba(255,255,255,.55);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:3px 11px;letter-spacing:.03em;white-space:nowrap;}
+.hero h1{font-family:var(--fd);font-weight:600;font-size:clamp(2.2rem,9vw,3.2rem);line-height:1.08;margin-bottom:16px;}
+.hero h1 em{font-style:italic;color:var(--sand);}
+.hero p{font-size:16px;color:rgba(255,255,255,.65);max-width:480px;}
+.hero-byline{display:flex;align-items:center;gap:11px;margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);}
+.hero-avatar{width:42px;height:42px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:600;font-size:17px;color:var(--white);flex-shrink:0;}
+.hero-byline-text{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.4;}
+.hero-byline-text strong{color:var(--white);font-weight:600;}
+
+/* ── PROGRESS BAR ── */
+.progress-wrap{background:var(--white);border-bottom:1px solid var(--border);padding:11px 0;position:sticky;top:0;z-index:50;}
+.progress-track{background:var(--soft);border-radius:6px;height:6px;overflow:hidden;}
+.progress-fill{background:var(--accent);height:100%;border-radius:6px;width:14%;transition:width .4s ease;}
+.progress-label{font-size:10.5px;color:var(--mid);margin-top:6px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+
+/* ── SECTIONS ── */
+.section{padding:44px 0;border-bottom:1px solid var(--border);}
+.section:last-of-type{border-bottom:none;}
+.section-num{font-family:var(--fd);font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.06em;margin-bottom:8px;}
+.section h2{font-family:var(--fd);font-weight:600;font-size:clamp(1.6rem,6vw,2.1rem);color:var(--ink);margin-bottom:14px;line-height:1.18;}
+.section h2 em{font-style:italic;color:var(--accent);}
+.section p{margin-bottom:14px;font-size:15.5px;}
+.section p:last-child{margin-bottom:0;}
+.lede{font-size:17px;color:var(--ink);font-weight:400;}
+
+/* ── STEP TIMELINE ── */
+.steps{margin-top:24px;}
+.step{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border);}
+.step:first-child{border-top:none;padding-top:0;}
+.step-num{font-family:var(--fd);font-size:1.6rem;font-weight:600;color:var(--sand);flex-shrink:0;width:34px;line-height:1.3;}
+.step-content h3{font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.step-content p{font-size:14px;color:var(--mid);margin-bottom:0;}
+
+/* ── CALLOUT CARD ── */
+.callout{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:22px;margin:22px 0;}
+.callout-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+.callout-big{font-family:var(--fd);font-size:2.6rem;font-weight:600;color:var(--ink);line-height:1;margin-bottom:6px;}
+.callout-sub{font-size:13px;color:var(--mid);}
+.callout-divider{height:1px;background:var(--border);margin:18px 0;}
+
+/* ── SAVINGS TABLE ── */
+.savings-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--border);gap:12px;}
+.savings-row:last-child{border-bottom:none;}
+.savings-row.total{padding-top:16px;border-top:2px solid var(--ink);border-bottom:none;}
+.savings-label{font-size:14px;color:var(--stone);}
+.savings-label .sub{display:block;font-size:12px;color:var(--mid);margin-top:2px;}
+.savings-val{font-family:var(--fd);font-size:1.3rem;font-weight:600;color:var(--ink);white-space:nowrap;}
+.savings-val.green{color:var(--green);}
+.savings-row.total .savings-val{font-size:1.8rem;color:var(--accent);}
+.savings-row.total .savings-label{font-weight:600;color:var(--ink);font-size:15px;}
+
+/* ── GATE ── */
+.gate{background:var(--ink);color:var(--white);padding:48px 0;position:relative;overflow:hidden;}
+.gate::after{content:'';position:absolute;bottom:-40%;left:-10%;width:55%;height:140%;background:radial-gradient(circle,rgba(200,184,154,.15),transparent 70%);}
+.gate-inner{position:relative;z-index:1;}
+.gate .eyebrow{color:var(--sand);}
+.gate h2{font-family:var(--fd);font-weight:600;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.15;margin-bottom:14px;}
+.gate h2 em{font-style:italic;color:var(--sand);}
+.gate p{color:rgba(255,255,255,.6);margin-bottom:24px;font-size:15px;}
+.unlock-list{list-style:none;margin-bottom:28px;}
+.unlock-list li{display:flex;gap:11px;padding:10px 0;border-top:1px solid rgba(255,255,255,.1);font-size:14.5px;color:rgba(255,255,255,.85);}
+.unlock-list li:first-child{border-top:none;}
+.unlock-icon{color:var(--sand);font-size:14px;flex-shrink:0;margin-top:1px;}
+
+/* ── FORM ── */
+.form-card{background:var(--white);border-radius:14px;padding:24px;}
+.form-card h3{font-family:var(--fd);font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.form-card .form-sub{font-size:13px;color:var(--mid);margin-bottom:18px;}
+.fgroup{margin-bottom:14px;}
+.fgroup label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
+.fgroup input,.fgroup select{width:100%;font-family:var(--fb);font-size:15px;padding:12px 14px;border:1.5px solid var(--border);border-radius:9px;background:var(--white);color:var(--ink);outline:none;transition:border-color .15s;}
+.fgroup input:focus,.fgroup select:focus{border-color:var(--accent);}
+.form-row{display:flex;gap:10px;}
+.form-row .fgroup{flex:1;}
+.submit-btn{width:100%;padding:14px;background:var(--accent);color:var(--white);border:none;border-radius:9px;font-family:var(--fb);font-size:15px;font-weight:600;cursor:pointer;margin-top:4px;transition:background .15s;}
+.submit-btn:active{background:var(--accent-dk);}
+.form-disclaimer{font-size:11.5px;color:var(--mid);text-align:center;margin-top:12px;line-height:1.5;}
+
+/* ── UNLOCKED CONTENT ── */
+#unlocked{display:none;}
+#unlocked.show{display:block;}
+.unlock-banner{background:var(--soft);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px;display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--stone);}
+.unlock-banner .check{color:var(--green);font-size:18px;}
+
+/* ── PROFESSIONAL DISCLAIMER BANNER ── */
+.disclaimer-banner{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:14px 0 0;font-size:12.5px;color:var(--mid);line-height:1.6;}
+.disclaimer-banner strong{color:var(--stone);}
+
+/* ── HIGHLIGHT BOX ── */
+.highlight{background:var(--soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0;}
+.highlight .h-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.highlight p{font-size:14.5px;margin-bottom:0;color:var(--stone);}
+
+/* ── COMPARISON CARD (Osoyoos advantage) ── */
+.compare-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:20px 0;}
+.compare-card{border-radius:12px;padding:18px;border:1.5px solid var(--border);}
+.compare-card.win{border-color:var(--green);background:#f4f9f4;}
+.compare-card.lose{border-color:var(--border);background:var(--white);}
+.compare-card-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+.compare-card.win .compare-card-title{color:var(--green);}
+.compare-card.lose .compare-card-title{color:var(--mid);}
+.compare-card-towns{font-family:var(--fd);font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.compare-card p{font-size:13.5px;color:var(--mid);margin-bottom:0;}
+
+/* ── COST TABLE ── */
+.cost-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+.cost-table th{text-align:left;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);padding-bottom:10px;border-bottom:2px solid var(--ink);}
+.cost-table th:last-child{text-align:right;}
+.cost-table td{padding:11px 0;border-bottom:1px solid var(--border);color:var(--stone);}
+.cost-table td:last-child{text-align:right;font-weight:600;color:var(--ink);font-family:var(--fd);font-size:1.05rem;}
+.cost-table tr.total td{border-bottom:none;border-top:2px solid var(--ink);padding-top:14px;font-weight:600;color:var(--ink);}
+.cost-table tr.total td:last-child{font-size:1.3rem;color:var(--accent);}
+.cost-note{font-size:12px;color:var(--mid);margin-top:-8px;margin-bottom:14px;}
+
+/* ── ACCORDION ── */
+.acc{border:1px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.acc-head{padding:15px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;background:var(--white);font-weight:600;font-size:14.5px;color:var(--ink);}
+.acc-head .plus{font-size:18px;color:var(--accent);transition:transform .2s;flex-shrink:0;margin-left:12px;}
+.acc.open .acc-head .plus{transform:rotate(45deg);}
+.acc-body{padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.acc.open .acc-body{max-height:600px;padding-bottom:16px;}
+.acc-body p{font-size:14px;color:var(--mid);margin-bottom:8px;}
+.acc-body p:last-child{margin-bottom:0;}
+
+/* ── FINAL CTA ── */
+.cta{background:var(--ink);color:var(--white);padding:48px 0;text-align:center;position:relative;overflow:hidden;}
+.cta-photo{position:absolute;inset:0;z-index:0;opacity:.8;}
+.cta-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--ink) 0%,rgba(26,26,24,.6) 50%,var(--ink) 100%);}
+.cta .wrap{position:relative;z-index:1;}
+.cta h2{font-family:var(--fd);font-weight:600;font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:12px;}
+.cta h2 em{font-style:italic;color:var(--sand);}
+.cta p{color:rgba(255,255,255,.6);margin-bottom:26px;font-size:15px;max-width:440px;margin-left:auto;margin-right:auto;}
+.cta-buttons{display:flex;flex-direction:column;gap:10px;max-width:340px;margin:0 auto;}
+.cta-btn{display:block;padding:15px;border-radius:10px;font-family:var(--fb);font-weight:600;font-size:15px;text-decoration:none;text-align:center;cursor:pointer;border:none;}
+.cta-btn.primary{background:var(--accent);color:var(--white);}
+.cta-btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.25);color:var(--white);}
+
+/* ── FOOTER ── */
+.footer{padding:30px 0 40px;text-align:center;}
+.footer .fname{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--ink);}
+.footer .ftag{font-size:12px;color:var(--mid);margin-top:3px;}
+.footer .flinks{margin-top:14px;font-size:12px;color:var(--mid);}
+.footer .flinks a{color:var(--accent);text-decoration:none;}
+
+@media(min-width:600px){
+  .compare-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ── TAX MAP ILLUSTRATION (inline SVG) ── */
+.tax-map{border-radius:12px;overflow:hidden;margin:22px 0;background:#1a1a18;padding:4px;}
+
+/* ── BADGE BANNER (illustrated, no photo needed) ── */
+.badge-banner{display:flex;align-items:center;gap:18px;background:var(--ink);border-radius:14px;padding:22px;margin:22px 0;}
+.badge-seal{width:104px;height:104px;flex-shrink:0;}
+.badge-seal svg{width:100%;height:100%;}
+.badge-text-title{font-family:var(--fd);font-size:1.15rem;font-weight:600;color:var(--white);line-height:1.25;margin-bottom:7px;}
+.badge-text-sub{font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.5;}
+@media(max-width:420px){
+  .badge-banner{flex-direction:column;text-align:center;}
+  .badge-seal{width:90px;height:90px;}
+}
+
+/* ── ICON ROW (replaces photo grid for rural section) ── */
+.icon-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0;}
+.icon-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px 16px;text-align:center;}
+.icon-card .icon-circle{width:48px;height:48px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:20px;}
+.icon-card .icon-label{font-size:13px;font-weight:600;color:var(--ink);}
+
+/* ── SCENARIO CARD ── */
+.scenario{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:24px 0;}
+.scenario-head{background:var(--ink);padding:18px 22px;display:flex;align-items:center;gap:13px;}
+.scenario-avatar{width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:600;font-size:17px;color:var(--white);flex-shrink:0;}
+.scenario-head-text{color:var(--white);}
+.scenario-head-text .sh-label{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin-bottom:2px;}
+.scenario-head-text .sh-name{font-family:var(--fd);font-size:1.2rem;font-weight:600;line-height:1.1;}
+.scenario-body{padding:20px 22px;}
+.scenario-body p{font-size:14.5px;margin-bottom:12px;}
+.scenario-body p:last-child{margin-bottom:0;}
+.scenario-math{background:var(--soft);border-radius:10px;padding:14px 16px;margin:14px 0;}
+.scenario-math .sm-row{display:flex;justify-content:space-between;font-size:13.5px;padding:5px 0;color:var(--stone);}
+.scenario-math .sm-row.result{border-top:1px solid var(--border);margin-top:6px;padding-top:10px;font-weight:600;color:var(--ink);}
+.scenario-math .sm-row.result .sm-val{color:var(--accent);font-family:var(--fd);font-size:1.15rem;}
+/* ── FLOWCHART ── */
+.flow{margin:22px 0;}
+.flow-step{display:flex;gap:14px;align-items:flex-start;}
+.flow-num{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:600;font-size:14px;flex-shrink:0;}
+.flow-line{width:2px;background:var(--border);flex-shrink:0;margin-left:15px;height:24px;}
+.flow-content{flex:1;padding-bottom:4px;}
+.flow-content h4{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:3px;}
+.flow-content p{font-size:13px;color:var(--mid);margin-bottom:0;}
+.flow-branch{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 14px 46px;}
+@media(max-width:480px){.flow-branch{grid-template-columns:1fr;}}
+.flow-card{border-radius:10px;padding:14px;border:1.5px solid var(--border);}
+.flow-card.good{border-color:var(--green);background:#f4f9f4;}
+.flow-card.bad{border-color:var(--hot,#c0392b);background:#fdf3f3;}
+.flow-card .fc-title{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
+.flow-card.good .fc-title{color:var(--green);}
+.flow-card.bad .fc-title{color:#c0392b;}
+.flow-card p{font-size:13px;color:var(--stone);margin-bottom:0;}
+
+/* ── CONTACT CARD (who to contact) ── */
+.contact-card{display:flex;gap:14px;align-items:flex-start;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px;}
+.contact-icon{width:42px;height:42px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.contact-body h4{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:3px;}
+.contact-body p{font-size:13px;color:var(--mid);margin-bottom:0;}
+
+/* ── TIMELINE LIST (DRIPA) ── */
+.tl-event{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--border);}
+.tl-event:first-child{border-top:none;}
+.tl-date{font-family:var(--fd);font-size:1rem;font-weight:600;color:var(--accent);width:90px;flex-shrink:0;}
+.tl-event-body h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:3px;}
+.tl-event-body p{font-size:13px;color:var(--mid);margin-bottom:0;}
+
+/* ── OPINION CARDS (DRIPA - dual perspective) ── */
+.opinion-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:14px;}
+.opinion-source{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+.opinion-card p{font-size:13.5px;color:var(--stone);margin-bottom:8px;}
+.opinion-card p:last-child{margin-bottom:0;}
+.opinion-cite{font-size:11px;color:var(--mid);font-style:italic;}
+
+</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Pat Miazga",
+    "jobTitle": "REALTOR®",
+    "worksFor": {"@type": "Organization", "name": "RE/MAX All Points Realty"},
+    "url": "https://patmiazga.com",
+    "telephone": "604-562-5982",
+    "email": "miazgarealestate@gmail.com",
+    "areaServed": ["Osoyoos, BC","Oliver, BC","South Okanagan, BC","Similkameen, BC","Anarchist Mountain, BC"],
+    "knowsLanguage": ["English","Polish"],
+    "description": "South Okanagan Real Estate and Relocation Specialist with 22+ years BC experience. The only REALTOR® who can handle your Lower Mainland sale and South Okanagan purchase — licensed BC-wide since 2004.",
+    "award": ["RE/MAX Hall of Fame","MLS Medallion Club"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "author": {"@type": "Person", "name": "Pat Miazga", "jobTitle": "REALTOR®"},
+    "publisher": {"@type": "Organization", "name": "RE/MAX All Points Realty"},
+    "about": {"@type": "Place", "name": "South Okanagan, British Columbia, Canada"},
+    "description": "Unpermitted Work Guide BC — how to identify and handle unpermitted renovations when buying in South Okanagan"
+  }
+  </script>
+  <meta property="og:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+  <meta name="twitter:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+</head>
+<body>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-photo">
+    <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#4a3a28"/>
+          <stop offset="100%" stop-color="#1a1a18"/>
+        </linearGradient>
+        <linearGradient id="lakeGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#8b6f47" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#1a1a18" stop-opacity="0.9"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#skyGrad)"/>
+      <circle cx="600" cy="120" r="60" fill="#c8b89a" opacity="0.5"/>
+      <circle cx="600" cy="120" r="90" fill="#c8b89a" opacity="0.15"/>
+      <path d="M0,220 Q150,170 320,210 Q500,250 650,190 Q740,160 800,200 L800,400 L0,400 Z" fill="#3d3d38" opacity="0.65"/>
+      <path d="M0,260 Q200,220 400,255 Q600,290 800,240 L800,400 L0,400 Z" fill="#2a2420" opacity="0.8"/>
+      <rect x="0" y="300" width="800" height="100" fill="url(#lakeGrad)"/>
+      <g stroke="#c8b89a" stroke-width="2" opacity="0.4">
+        <line x1="-40" y1="400" x2="160" y2="305"/>
+        <line x1="20" y1="400" x2="220" y2="305"/>
+        <line x1="80" y1="400" x2="280" y2="305"/>
+        <line x1="140" y1="400" x2="340" y2="305"/>
+        <line x1="200" y1="400" x2="400" y2="305"/>
+        <line x1="260" y1="400" x2="460" y2="305"/>
+        <line x1="320" y1="400" x2="520" y2="305"/>
+        <line x1="380" y1="400" x2="580" y2="305"/>
+        <line x1="440" y1="400" x2="640" y2="305"/>
+        <line x1="500" y1="400" x2="700" y2="305"/>
+        <line x1="560" y1="400" x2="760" y2="305"/>
+        <line x1="620" y1="400" x2="820" y2="305"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow-row">
+      <div class="eyebrow">Property Compliance · South Okanagan</div>
+      <div class="updated-badge">Updated June 2026</div>
+    </div>
+    <h1>Unpermitted work?<br>Here's what <em>actually</em><br>happens next.</h1>
+    <p>Stop work orders, retroactive permits, and unpermitted additions — what they mean, how they affect a sale, and the realistic path to getting a property back into good standing.</p>
+    <div class="hero-byline">
+      <div class="hero-avatar">PM</div>
+      <div class="hero-byline-text"><strong>Pat Miazga</strong>, REALTOR®<br>RE/MAX All Points Realty<br>South Okanagan Real Estate & Relocation Specialist · 22+ years in BC<br>604-562-5982 · patmiazga.com</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-wrap">
+  <div class="wrap">
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-label" id="progress-label">Section 1 of 8 — free preview</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="disclaimer-banner">
+    <strong>Please note:</strong> Pat Miazga is a licensed real estate professional — not a building official, contractor, or lawyer. This guide explains the general BC process for unpermitted work and is not a substitute for a building code compliance assessment from a qualified professional or advice from your local building department. Every municipality and situation is different.
+  </div>
+</div>
+
+<!-- SECTION 1: FREE — What Counts as Unpermitted Work -->
+<div class="section" id="sec-1">
+  <div class="wrap">
+    <div class="section-num">01 — The Basics</div>
+    <h2>Not everything needs a permit. <em>A lot more does than people think.</em></h2>
+    <p class="lede">In BC, a building permit is required any time work affects the structure, plumbing, electrical, gas, or changes how a space is used — even if a previous owner did the work, and even if it "looks fine."</p>
+
+    <div class="acc open">
+      <div class="acc-head" onclick="toggleAcc(this)"><span>Usually needs a permit</span><span class="plus">+</span></div>
+      <div class="acc-body">
+        <p>Additions of any size · finished basements and basement suites · decks over a certain height or attached to the house · structural changes (removed/altered walls, beams) · new plumbing fixtures or relocated plumbing · electrical panel upgrades or new circuits · garages, carports, and accessory buildings over a certain size · wood stoves and gas fireplace installations · pools and hot tubs (in many municipalities).</p>
+      </div>
+    </div>
+
+    <div class="acc">
+      <div class="acc-head" onclick="toggleAcc(this)"><span>Usually doesn't need a permit</span><span class="plus">+</span></div>
+      <div class="acc-body">
+        <p>Cosmetic work — paint, flooring, cabinets, countertops (without moving plumbing) · like-for-like fixture replacement · landscaping · small uncovered decks/patios below a certain height (varies by municipality) · fences below a certain height.</p>
+        <p style="font-size:11.5px;color:var(--mid);font-style:italic;margin-top:8px">The exact thresholds vary by municipality — when in doubt, a quick call to the local building department clarifies it in minutes.</p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <div class="h-label">The part that surprises people</div>
+      <p>It doesn't matter who did the work or when. If a basement suite was finished by a previous owner 15 years ago without a permit, <strong>it's still unpermitted</strong> — and it's now your problem to resolve, not theirs. This is one of the most common surprises in South Okanagan resale properties, especially ones with secondary suites or owner-built additions.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: FREE — Discovery + What a Stop Work Order Is -->
+<div class="section" id="sec-2">
+  <div class="wrap">
+    <div class="section-num">02 — How It Comes to Light</div>
+    <h2>Most unpermitted work is found <em>during a sale</em> — not during construction.</h2>
+    <p>A "stop work order" sounds like something that only happens mid-renovation with an inspector standing in the driveway. In practice, that's the less common path. Here's how it usually actually happens:</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>During a home inspection</h3>
+          <p>The most common discovery point. An inspector notices a finished basement with no permit on file, a deck that doesn't match the original building plans, or electrical work that doesn't look professionally done.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>A title search</h3>
+          <p>If a "Notice on Title" (often called a Section 57 notice) was registered for unresolved unpermitted work, it shows up here — visible to buyers, lenders, and insurers.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>An insurance claim</h3>
+          <p>A burst pipe or electrical fire leads an insurance adjuster to discover the work behind the wall was never permitted — and the related portion of the claim may be denied.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>A neighbour complaint or routine inspection</h3>
+          <p>Less common in rural South Okanagan than in dense urban areas, but it happens — particularly with visible exterior additions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-eyebrow">What a Stop Work / Work-Without-Permit Order Actually Means</div>
+      <div class="callout-sub" style="margin-top:6px">A formal notice from the local building department that:</div>
+      <div class="callout-divider"></div>
+      <p style="margin-bottom:0;font-size:14px">All related work must stop immediately. A compliance deadline is set — typically 30 to 90 days. You then have two paths: apply for a <strong>retroactive ("after-the-fact") permit</strong> to legalize the work, or <strong>remove</strong> it. In many municipalities, a notice is also registered against the property title until the issue is resolved.</p>
+    </div>
+  </div>
+</div>
+
+<!-- GATE -->
+<div class="gate" id="gate">
+  <div class="wrap gate-inner">
+    <div class="eyebrow">Unlock the Full Guide</div>
+    <h2>The path back to <em>good standing</em> — and who can help you get there.</h2>
+    <p>Enter your details below and the rest of this guide unlocks immediately — plus you'll get a copy emailed to you for reference.</p>
+    <ul class="unlock-list">
+      <li><span class="unlock-icon">●</span> The retroactive permit process, step by step</li>
+      <li><span class="unlock-icon">●</span> When removal is the only realistic option</li>
+      <li><span class="unlock-icon">●</span> How unpermitted work affects buying or selling a property</li>
+      <li><span class="unlock-icon">●</span> Realistic cost and timeline expectations</li>
+      <li><span class="unlock-icon">●</span> Who to contact — and how Pat can help connect the dots</li>
+      <li><span class="unlock-icon">●</span> A full walkthrough example, start to finish</li>
+    </ul>
+
+    <div class="form-card">
+      <h3>Unlock your guide</h3>
+      <div class="form-sub">Takes 15 seconds. No spam, just useful South Okanagan info.</div>
+      <form id="lead-form" onsubmit="return submitForm(event)">
+        <div class="form-row">
+          <div class="fgroup"><label>First Name *</label><input type="text" id="g-fn" required/></div>
+          <div class="fgroup"><label>Last Name *</label><input type="text" id="g-ln" required/></div>
+        </div>
+        <div class="fgroup"><label>Email *</label><input type="email" id="g-em" required/></div>
+        <div class="fgroup"><label>Phone (optional)</label><input type="tel" id="g-ph"/></div>
+        <div class="form-row">
+          <div class="fgroup"><label>What's your situation?</label>
+            <select id="g-loc">
+              <option value="">Select…</option>
+              <option>Buying a property with unpermitted work</option>
+              <option>Selling — need to resolve before listing</option>
+              <option>Just discovered unpermitted work on my property</option>
+              <option>General research</option>
+            </select>
+          </div>
+          <div class="fgroup"><label>Timeline</label>
+            <select id="g-time">
+              <option value="">Select…</option>
+              <option>Urgent — active order/deadline</option>
+              <option>0–3 months</option>
+              <option>3–12 months</option>
+              <option>Just researching</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Unlock the Full Guide →</button>
+        <div class="form-disclaimer">By submitting, you'll receive this guide and occasional follow-up emails relevant to South Okanagan property topics. Unsubscribe anytime.</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- UNLOCKED CONTENT -->
+<div id="unlocked">
+
+  <div class="section" id="sec-3" style="padding-top:32px">
+    <div class="wrap">
+      <div class="unlock-banner"><span class="check">✓</span> Guide unlocked — here's the rest.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Retroactive Permit Process -->
+  <div class="section" id="sec-4">
+    <div class="wrap">
+      <div class="section-num">03 — The Path Back</div>
+      <h2>The retroactive permit process, <em>step by step</em>.</h2>
+      <p>The good news first: in most cases, the building department's goal is compliance, not punishment. If the work was done reasonably well, it can often be legalized without major demolition.</p>
+
+      <div class="flow">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div class="flow-content">
+            <h4>Compliance assessment</h4>
+            <p>A qualified professional (often a building consultant, designer, or contractor familiar with retroactive permits) reviews the work against the current BC Building Code.</p>
+          </div>
+        </div>
+        <div class="flow-line"></div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-content">
+            <h4>Documentation & drawings</h4>
+            <p>Plans/drawings of the existing work are prepared — sometimes requiring walls or ceilings to be opened temporarily to verify what's behind them (wiring, insulation, structural framing).</p>
+          </div>
+        </div>
+        <div class="flow-line"></div>
+        <div class="flow-step">
+          <div class="flow-num">3</div>
+          <div class="flow-content">
+            <h4>Retroactive permit application</h4>
+            <p>Submitted to the local building department along with the documentation and any required fees (typically higher than a standard permit fee).</p>
+          </div>
+        </div>
+        <div class="flow-line"></div>
+        <div class="flow-step">
+          <div class="flow-num">4</div>
+          <div class="flow-content">
+            <h4>The fork in the road</h4>
+            <p>Based on the assessment, one of two paths follows:</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-branch">
+        <div class="flow-card good">
+          <div class="fc-title">Meets current code</div>
+          <p>Inspections are completed, the permit is finalized, and any notice on title is cleared. Full demolition is rarely required in this scenario.</p>
+        </div>
+        <div class="flow-card bad">
+          <div class="fc-title">Doesn't meet code</div>
+          <p>Targeted remedial work brings the specific non-compliant elements up to code — re-wiring a circuit, adding a fire separation, upsizing a beam — then re-inspection and permit finalization.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="h-label">Worth knowing</div>
+        <p>Just because something was built without a permit doesn't mean it's unsafe — plenty of unpermitted work was done by competent tradespeople who simply skipped the paperwork. The assessment is what tells you which path you're on, and it's the single most important step to get right before spending money on anything else.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: When Removal Is the Only Option -->
+  <div class="section" id="sec-5">
+    <div class="wrap">
+      <div class="section-num">04 — The Other Outcome</div>
+      <h2>Sometimes the answer is <em>removal</em> — here's when.</h2>
+      <p>An "Order to Remove" is the most serious outcome, and it's relatively rare. It typically applies when:</p>
+
+      <div class="acc open">
+        <div class="acc-head" onclick="toggleAcc(this)"><span>The work poses a genuine safety risk</span><span class="plus">+</span></div>
+        <div class="acc-body">
+          <p>Structural elements that can't be brought up to code without essentially rebuilding, or electrical/gas work with serious hazards that can't be remediated in place.</p>
+        </div>
+      </div>
+
+      <div class="acc">
+        <div class="acc-head" onclick="toggleAcc(this)"><span>It violates zoning that can't be varied</span><span class="plus">+</span></div>
+        <div class="acc-body">
+          <p>An addition that exceeds setback requirements, lot coverage, or height restrictions where no variance is available — common with additions built close to property lines.</p>
+        </div>
+      </div>
+
+      <div class="acc">
+        <div class="acc-head" onclick="toggleAcc(this)"><span>Strata or covenant restrictions prohibit it</span><span class="plus">+</span></div>
+        <div class="acc-body">
+          <p>An illegal secondary suite in a strata building where the bylaws explicitly prohibit suites — no amount of permitting fixes a use that's not allowed at all.</p>
+        </div>
+      </div>
+
+      <p style="font-size:13.5px;color:var(--mid)">For most single-family South Okanagan properties — additions, suites, decks, shops — removal is the exception, not the rule. But it's worth knowing this outcome exists before assuming everything can simply be "permitted after the fact."</p>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Buying or Selling -->
+  <div class="section" id="sec-6">
+    <div class="wrap">
+      <div class="section-num">05 — At Resale</div>
+      <h2>How this shows up when you're <em>buying or selling</em>.</h2>
+
+      <div class="acc open">
+        <div class="acc-head" onclick="toggleAcc(this)"><span>If you're selling</span><span class="plus">+</span></div>
+        <div class="acc-body">
+          <p>BC's Property Disclosure Statement asks directly whether you're aware of any additions or renovations made without required permits. You're generally better off resolving it — or at minimum disclosing it clearly and pricing accordingly — than hoping it doesn't come up. A notice on title doesn't go away because you sold the property; it follows the property.</p>
+        </div>
+      </div>
+
+      <div class="acc">
+        <div class="acc-head" onclick="toggleAcc(this)"><span>If you're buying</span><span class="plus">+</span></div>
+        <div class="acc-body">
+          <p>Unpermitted work is one of the most common things a good home inspector flags — and one of the most common things buyers use to negotiate price. It's not automatically a deal-breaker, but it should factor into your offer: either a price adjustment, a condition that the seller resolves it before closing, or you go in with eyes open about what you're taking on.</p>
+        </div>
+      </div>
+
+      <div class="acc">
+        <div class="acc-head" onclick="toggleAcc(this)"><span>Financing & insurance</span><span class="plus">+</span></div>
+        <div class="acc-body">
+          <p>A notice on title can make a property harder to finance — some lenders will hold back funds or decline until it's resolved. On the insurance side, claims related specifically to unpermitted work may be denied, even if the rest of the policy is valid.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: Cost & Timeline -->
+  <div class="section" id="sec-7">
+    <div class="wrap">
+      <div class="section-num">06 — The Real Numbers</div>
+      <h2>What it typically <em>costs and takes</em>.</h2>
+      <p>Every situation is different, but here's a realistic range based on common scenarios:</p>
+
+      <table class="cost-table">
+        <thead><tr><th>Scenario</th><th>Typical Range</th></tr></thead>
+        <tbody>
+          <tr><td>Compliance assessment</td><td>$300–$1,200</td></tr>
+          <tr><td>Drawings/documentation for retroactive permit</td><td>$800–$3,000+</td></tr>
+          <tr><td>Retroactive permit fee (vs. standard permit)</td><td>1.5–3× standard fee</td></tr>
+          <tr><td>Minor remedial work (e.g. one circuit, fire separation)</td><td>$1,000–$5,000</td></tr>
+          <tr><td>Major remedial work (structural)</td><td>$10,000–$50,000+</td></tr>
+          <tr><td>Municipal fines (per offence, varies widely)</td><td>$500–$50,000</td></tr>
+        </tbody>
+      </table>
+      <div class="cost-note">Timelines: a straightforward retroactive permit can take a few weeks to a couple of months. Anything requiring remedial work or re-inspection can take several months, especially if it depends on contractor availability.</div>
+
+      <div class="highlight">
+        <div class="h-label">The expensive mistake</div>
+        <p>The single most expensive path is doing nothing, then having it surface during a sale with a tight closing date — at that point, you're negotiating from a weaker position and working against a deadline. Addressing it proactively, on your own timeline, is almost always cheaper and less stressful.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7: Who to Contact -->
+  <div class="section" id="sec-8">
+    <div class="wrap">
+      <div class="section-num">07 — Who to Call</div>
+      <h2>You don't have to <em>figure this out alone</em>.</h2>
+
+      <div class="contact-card">
+        <div class="contact-icon">🏛</div>
+        <div class="contact-body">
+          <h4>Your local building department</h4>
+          <p>The first call. They can tell you whether a permit exists on file, what the retroactive process looks like for your specific situation, and what's required. Building officials deal with this constantly — it's a normal conversation for them, even if it doesn't feel normal to you.</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">📐</div>
+        <div class="contact-body">
+          <h4>A building code consultant or designer</h4>
+          <p>For the compliance assessment and drawings. Look for someone specifically experienced with retroactive/after-the-fact permits — it's a slightly different skill set than new-construction design.</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">🔧</div>
+        <div class="contact-body">
+          <h4>Licensed contractors & Red Seal trades</h4>
+          <p>For any remedial work — electrical, plumbing, structural. Permits and inspections generally go more smoothly when the remedial work is done by licensed trades who are used to working with the building department.</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">⚖️</div>
+        <div class="contact-body">
+          <h4>A real estate lawyer (for resale situations)</h4>
+          <p>If unpermitted work is discovered mid-transaction, a lawyer can advise on how it affects the contract, disclosure obligations, and any adjustments to the deal.</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-icon">🤝</div>
+        <div class="contact-body">
+          <h4>Pat</h4>
+          <p>After 22+ years and a background in commercial construction and project management, Pat has worked through this exact process — on both sides of a transaction — more times than he can count. He's not a building official or a contractor, but he can often point you toward the right local resource and help you understand what you're looking at before you spend money on professionals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8: Worked Example -->
+  <div class="section" id="sec-9">
+    <div class="wrap">
+      <div class="section-num">08 — A Realistic Example</div>
+      <h2>What this <em>actually looks like</em>, start to finish.</h2>
+
+      <div class="scenario">
+        <div class="scenario-head">
+          <div class="scenario-avatar">TH</div>
+          <div class="scenario-head-text">
+            <div class="sh-label">Illustrative Example</div>
+            <div class="sh-name">A basement suite, discovered at inspection</div>
+          </div>
+        </div>
+        <div class="scenario-body">
+          <p>A buyer's home inspector flags a finished basement suite with a kitchen — no permit on file with the municipality, and no notice on title (the previous owner did the work quietly years ago and never disclosed it).</p>
+          <p><strong>What happened next:</strong> The buyer and seller agreed to a price adjustment to account for the unknown, and the buyer proceeded with the purchase. After possession, the new owner hired a building consultant for a compliance assessment ($650). The electrical and the egress window in the suite needed minor upgrades (~$3,200 total) to meet current code. A retroactive permit was issued, inspections passed, and the suite is now fully legal — meaning it can be rented out with confidence and won't surface as an issue at the next sale.</p>
+          <p><strong>Total cost:</strong> roughly $3,850 and about 10 weeks from assessment to final sign-off — done on the new owner's schedule, not under pressure from a closing date.</p>
+          <p style="font-size:11.5px;color:var(--mid);font-style:italic;margin-top:10px;margin-bottom:0">Illustrative example based on a typical scenario — not a specific client.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="h-label">The takeaway</div>
+        <p>Unpermitted work is common — especially in older South Okanagan properties, rural acreages, and homes with secondary suites. It's rarely a reason to walk away from an otherwise good property. It is a reason to know what you're looking at, get a real number before you commit, and build the resolution into your plans rather than discovering it later.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="cta" id="sec-10">
+    <div class="cta-photo">
+      <svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+        <rect width="800" height="300" fill="#1a1a18"/>
+        <g stroke="#8b6f47" stroke-width="1" opacity="0.5" fill="none">
+          <path d="M-50,250 Q150,180 350,240 Q550,300 850,210"/>
+          <path d="M-50,200 Q150,130 350,190 Q550,250 850,160"/>
+          <path d="M-50,150 Q150,80 350,140 Q550,200 850,110"/>
+        </g>
+        <circle cx="660" cy="60" r="36" fill="#c8b89a" opacity="0.18"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <h2>Found something during a search — <em>or before you list</em>?</h2>
+      <p>Whether you're buying, selling, or just found out your basement suite was never permitted, Pat can help you understand what you're looking at and who to call first.</p>
+      <div class="cta-buttons">
+        <a href="mailto:miazgarealestate@gmail.com?subject=Unpermitted Work Guide - Let's Talk" class="cta-btn primary">Email Pat Directly</a>
+        <a href="tel:+16045625982" class="cta-btn ghost">Call / Text: 604-562-5982</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /unlocked -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="wrap">
+    <div class="fname">Pat Miazga, REALTOR®</div>
+    <div class="ftag">RE/MAX All Points Realty · South Okanagan Real Estate & Relocation Specialist · Osoyoos, BC</div>
+    <div class="flinks">
+      604-562-5982 · miazgarealestate@gmail.com · <a href="https://patmiazga.com">patmiazga.com</a><br><br>
+      Information in this guide reflects general BC Building Act/Building Code processes as of <strong>June 2026</strong> and is subject to change. Requirements vary by municipality. <br>Pat Miazga is a licensed real estate professional, not a building official, contractor, or lawyer — always confirm specifics with your local building department and qualified professionals.
+    </div>
+  </div>
+</div>
+<script>
+// ── PROGRESS BAR ──
+var sections = ['#sec-1','#sec-2','#gate','#sec-4','#sec-5','#sec-6','#sec-7','#sec-8','#sec-9','#sec-10'];
+var labels = ['Section 1 of 8 — free preview','Section 2 of 8 — free preview','Unlock to continue','Section 3 of 8','Section 4 of 8','Section 5 of 8','Section 6 of 8','Section 7 of 8','Section 8 of 8','Guide complete'];
+
+window.addEventListener('scroll', function(){
+  var scrollPos = window.scrollY + 200;
+  var current = 0;
+  for(var i=0;i<sections.length;i++){
+    var el = document.querySelector(sections[i]);
+    if(el && el.offsetParent !== null && el.offsetTop <= scrollPos) current = i;
+  }
+  var pct = Math.round(((current+1) / sections.length) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = labels[current];
+});
+
+// ── ACCORDION ──
+function toggleAcc(el){
+  var acc = el.parentElement;
+  acc.classList.toggle('open');
+}
+
+// ── LEAD FORM ──
+var FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdqkvra";
+
+function submitForm(e){
+  e.preventDefault();
+
+  var formData = {
+    firstname: document.getElementById('g-fn').value,
+    lastname: document.getElementById('g-ln').value,
+    email: document.getElementById('g-em').value,
+    phone: document.getElementById('g-ph').value,
+    location: document.getElementById('g-loc').value,
+    timeline: document.getElementById('g-time').value,
+    source: "Unpermitted Work Guide",
+    _subject: "New lead: Unpermitted Work Guide"
+  };
+
+  var lead = {
+    firstname: formData.firstname, lastname: formData.lastname, email: formData.email,
+    phone: formData.phone, location: formData.location, timeline: formData.timeline,
+    source: formData.source,
+    added: new Date().toISOString().slice(0,10),
+    status: 'new',
+    tags: ['buyer'],
+    gv: 1, eo: 0, ec: 0, es: 0, boost: false, notes: [], reminders: []
+  };
+
+  try {
+    var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
+    lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
+    leads.unshift(lead);
+    localStorage.setItem('pm_leads', JSON.stringify(leads));
+  } catch(err){ console.log('Could not save to CRM storage', err); }
+
+  fetch(FORMSPREE_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  }).catch(function(err){ console.log('Formspree submission error', err); });
+
+  unlockGuide();
+  return false;
+}
+
+function unlockGuide(){
+  document.getElementById('gate').style.display = 'none';
+  var unlocked = document.getElementById('unlocked');
+  unlocked.classList.add('show');
+  unlocked.scrollIntoView({behavior:'smooth'});
+  localStorage.setItem('pm_unpermitted_unlocked','true');
+}
+
+if(localStorage.getItem('pm_unpermitted_unlocked')==='true'){
+  document.getElementById('gate').style.display='none';
+  document.getElementById('unlocked').classList.add('show');
+}
+</script>
+</body>
+</html>

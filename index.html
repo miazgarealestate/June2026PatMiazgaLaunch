@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pat Miazga — South Okanagan REALTOR® | Osoyoos &amp; Oliver Real Estate</title>
+  <meta name="description" content="Pat Miazga, REALTOR® with RE/MAX All Points Realty. South Okanagan relocation specialist helping Vancouver and Calgary buyers find homes in Osoyoos, Oliver and the South Okanagan. 22+ years BC real estate experience." />
+  <meta name="keywords" content="Osoyoos real estate, Oliver BC real estate, South Okanagan realtor, buy home Osoyoos, relocate South Okanagan, BC speculation tax Osoyoos, South Okanagan relocation specialist, Pat Miazga realtor" />
+  <meta name="author" content="Pat Miazga, REALTOR®" />
+  <link rel="canonical" href="https://patmiazga.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://patmiazga.com/" />
+  <meta property="og:title" content="Pat Miazga — South Okanagan REALTOR® | Osoyoos &amp; Oliver Real Estate" />
+  <meta property="og:description" content="Helping Vancouver and Calgary buyers relocate to Osoyoos, Oliver and the South Okanagan. 22+ years BC real estate. Free buyer guides, local knowledge, honest advice." />
+  <meta property="og:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pat Miazga — South Okanagan REALTOR®" />
+  <meta name="twitter:description" content="Helping Vancouver and Calgary buyers relocate to Osoyoos and the South Okanagan. Free guides, honest advice, 22+ years experience." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Pat Miazga","jobTitle":"REALTOR®","worksFor":{"@type":"Organization","name":"RE/MAX All Points Realty"},"url":"https://patmiazga.com","telephone":"604-562-5982","email":"miazgarealestate@gmail.com","areaServed":["Osoyoos, BC","Oliver, BC","South Okanagan, BC","Similkameen, BC"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sold.css" />
+  <link rel="stylesheet" href="listings.css" />
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       HERO SLIDER — Full-screen background photos
+       ═══════════════════════════════════════════════ */
+    .hero{position:relative;height:100vh;min-height:600px;overflow:hidden;display:flex;align-items:center}
+    .hero-slides{position:absolute;inset:0;z-index:0}
+    .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;background-size:cover;background-position:center}
+    .hero-slide.active{opacity:1}
+    /* SWAP THESE src values for your own South Okanagan photos */
+    .hero-slide:nth-child(1){background-image:url('images/hero-1-winter-valley.jpg')}
+    .hero-slide:nth-child(2){background-image:url('images/hero-2-summer-valley.jpg')}
+    .hero-slide:nth-child(3){background-image:url('images/hero-3-summer-close.jpg')}
+    .hero-slide:nth-child(4){background-image:url('images/hero-4-winter-lake.jpg')}
+    .hero-slide:nth-child(5){background-image:url('images/hero-5-from-lake.jpg')}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,8,.75) 0%,rgba(10,10,8,.35) 60%,rgba(10,10,8,.1) 100%);z-index:1}
+    .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 40px;width:100%}
+    .hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sand);display:block;margin-bottom:20px}
+    .hero-headline{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:600;line-height:1.05;color:#fff;margin-bottom:24px}
+    .hero-headline em{font-style:italic;color:var(--sand)}
+    .hero-hook{font-size:18px;font-weight:500;color:#fff;border-left:3px solid var(--sand);padding-left:18px;margin-bottom:18px;line-height:1.55;max-width:520px}
+    .hero-sub{font-size:16px;color:rgba(255,255,255,.72);line-height:1.75;margin-bottom:36px;max-width:480px}
+    .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+    /* Slide dots */
+    .hero-dots{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:10px}
+    .hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4);border:none;cursor:pointer;padding:0;transition:background .3s,transform .3s}
+    .hero-dot.active{background:var(--sand);transform:scale(1.3)}
+    /* Scroll hint */
+    .hero-scroll{position:absolute;bottom:36px;right:48px;z-index:3;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:8px}
+    .hero-scroll::after{content:'';display:block;width:40px;height:1px;background:rgba(255,255,255,.3)}
+
+    /* ═══════════════════════════════════════════════
+       PHONE BAR — visible just under nav
+       ═══════════════════════════════════════════════ */
+    .phone-bar{background:var(--accent);color:#fff;text-align:center;padding:10px 24px;font-size:13px;font-weight:600;letter-spacing:.04em;display:flex;align-items:center;justify-content:center;gap:20px}
+    .phone-bar a{color:#fff;text-decoration:none}
+    .phone-bar a:hover{text-decoration:underline}
+    .phone-bar-sep{opacity:.4}
+
+    /* ═══════════════════════════════════════════════
+       STATS BAR (already in style.css — minor override)
+       ═══════════════════════════════════════════════ */
+
+    /* ═══════════════════════════════════════════════
+       PHOTO SECTION — full-bleed with dark overlay + text
+       ═══════════════════════════════════════════════ */
+    .photo-section{position:relative;min-height:480px;display:flex;align-items:center;overflow:hidden}
+    .photo-section-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-attachment:fixed}
+    .photo-section-overlay{position:absolute;inset:0}
+    .photo-section-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 40px}
+    .photo-section--left .photo-section-content{max-width:600px}
+
+    /* ═══════════════════════════════════════════════
+       COMMUNITY PHOTO GRID
+       ═══════════════════════════════════════════════ */
+    .communities-section{padding:0;background:var(--ink)}
+    .communities-header{text-align:center;padding:72px 24px 48px;background:var(--ink)}
+    .communities-header h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2rem,4vw,3rem);color:#fff;margin-bottom:12px}
+    .communities-header p{color:rgba(255,255,255,.6);font-size:16px;max-width:560px;margin:0 auto}
+    .community-photo-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:280px 280px}
+    .community-photo-card{position:relative;overflow:hidden;display:block;text-decoration:none}
+    .community-photo-card:hover .community-photo-img{transform:scale(1.08)}
+    .community-photo-card.large{grid-column:span 2;grid-row:span 1}
+    .community-photo-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s ease}
+    .community-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.88) 0%,rgba(10,10,8,.25) 55%)}
+    .community-photo-label{position:absolute;bottom:0;left:0;right:0;padding:24px;color:#fff}
+    .community-photo-label .tag{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sand);display:block;margin-bottom:6px}
+    .community-photo-label h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:600;margin-bottom:4px}
+    .community-photo-label .sub{font-size:13px;color:rgba(255,255,255,.7)}
+    .community-photo-label .arrow{font-size:13px;color:var(--sand);font-weight:600;display:inline-block;margin-top:8px;opacity:0;transform:translateX(-8px);transition:all .3s}
+    .community-photo-card:hover .arrow{opacity:1;transform:translateX(0)}
+    /* Photo sources — SWAP for your own Osoyoos/Oliver/Anarchist photos */
+    .cp-osoyoos{background-image:url('images/comm-osoyoos.jpg')}
+    .cp-oliver{background-image:url('images/comm-oliver.jpg')}
+    .cp-anarchist{background-image:url('images/comm-anarchist.jpg');background-position:center 35%}
+    .cp-cottages{background-image:url('images/comm-cottages.jpg');background-position:center 55%}
+    .cp-casitas{background-image:url('images/comm-casitas.jpg');background-position:center 40%}
+    .cp-desert{background-image:url('images/comm-desert.jpg');background-position:center 35%}
+    .cp-okfalls{background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=900&q=80')}
+    .cp-keremeos{background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900&q=80')}
+
+    /* ═══════════════════════════════════════════════
+       BUYER TYPE BANNER CARDS
+       ═══════════════════════════════════════════════ */
+    .buyer-banners{display:grid;grid-template-columns:1fr 1fr;min-height:320px}
+    .buyer-banner{position:relative;overflow:hidden;display:block;text-decoration:none}
+    .buyer-banner-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s ease}
+    .buyer-banner:hover .buyer-banner-bg{transform:scale(1.05)}
+    .buyer-banner-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,10,8,.75) 0%,rgba(10,10,8,.4) 100%)}
+    .buyer-banner-content{position:relative;z-index:2;padding:48px 40px;color:#fff;height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+    .buyer-banner-content .tag{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sand);margin-bottom:12px;display:block}
+    .buyer-banner-content h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.8rem;margin-bottom:10px;color:#fff}
+    .buyer-banner-content p{font-size:14px;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:18px;max-width:380px}
+    .buyer-banner-content .cta-link{font-size:13px;font-weight:600;color:var(--sand);letter-spacing:.05em}
+    .bb-vancouver{background-image:url('https://images.unsplash.com/photo-1559511260-66a654ae982a?w=1000&q=80')}
+    .bb-prairie{background-image:url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1000&q=80')}
+
+    /* ═══════════════════════════════════════════════
+       GUIDES SECTION UPDATES
+       ═══════════════════════════════════════════════ */
+    .guides-section{padding:80px 24px;background:var(--peer-bg)}
+
+    /* ═══════════════════════════════════════════════
+       CONTACT SECTION — photo background
+       ═══════════════════════════════════════════════ */
+    .contact{position:relative;overflow:hidden}
+    .contact-bg{position:absolute;inset:0;background-image:url('images/break-contact.jpg');background-size:cover;background-position:center;background-attachment:fixed;background-position:50% 30%}
+    .contact-bg-overlay{position:absolute;inset:0;background:rgba(10,10,8,.88)}
+    .contact-grid{position:relative;z-index:2}
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════ */
+    @media(max-width:900px){
+      .community-photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,220px)}
+      .community-photo-card.large{grid-column:span 1}
+      .buyer-banners{grid-template-columns:1fr}
+      .hero-content{padding:0 24px}
+      .photo-section-bg{background-attachment:scroll}
+      .contact-bg{background-attachment:scroll}
+    }
+    @media(max-width:580px){
+      .community-photo-grid{grid-template-columns:1fr;grid-template-rows:repeat(8,200px)}
+      .hero-scroll{display:none}
+      .phone-bar{flex-direction:column;gap:6px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PHONE BAR -->
+  <div class="phone-bar">
+    <span>Pat Miazga, REALTOR® — RE/MAX All Points Realty</span>
+    <span class="phone-bar-sep">|</span>
+    <a href="tel:+16045625982">604-562-5982</a>
+    <span class="phone-bar-sep">|</span>
+    <a href="mailto:miazgarealestate@gmail.com">miazgarealestate@gmail.com</a>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">PAT MIAZGA</a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#relocation">Relocation</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="communities.html">Communities</a>
+        <a href="#guides">Free Guides</a>
+        <a href="#listings">Listings</a>
+        <a href="#sold">Past Sales</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <section class="hero" id="top">
+    <div class="hero-slides">
+      <!-- REPLACE these Unsplash URLs with your own South Okanagan photos -->
+      <!-- Ideal shots: Osoyoos Lake aerial, vineyard rows, Anarchist Mountain view, desert landscape, lakefront dock -->
+      <div class="hero-slide active"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">South Okanagan Relocation Specialist</span>
+      <h1 class="hero-headline">Beyond the<br><em>listing sheet.</em></h1>
+      <p class="hero-hook">The only REALTOR® who can handle your Lower Mainland sale and your South Okanagan purchase — licensed BC-wide for 22 years.</p>
+      <p class="hero-sub">Construction background, relocation experience, deep local knowledge. Honest guidance most agents simply can't provide.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Work With Pat</a>
+        <a href="#relocation" class="btn-ghost">Planning a Move?</a>
+      </div>
+    </div>
+    <div class="hero-dots">
+      <button class="hero-dot active" data-slide="0"></button>
+      <button class="hero-dot" data-slide="1"></button>
+      <button class="hero-dot" data-slide="2"></button>
+      <button class="hero-dot" data-slide="3"></button>
+      <button class="hero-dot" data-slide="4"></button>
+    </div>
+    <div class="hero-scroll">Scroll to explore</div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-num">22+</span><span class="stat-label">Years Licensed</span></div>
+    <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Transactions</span></div>
+    <div class="stat"><span class="stat-num">4.7★</span><span class="stat-label">Google Rating</span></div>
+    <div class="stat"><span class="stat-num">RE/MAX</span><span class="stat-label">Hall of Fame</span></div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <p class="section-eyebrow">About Pat</p>
+        <h2>Property Advisor.<br>Project Strategist.<br>REALTOR®.</h2>
+        <p>Pat Miazga sees what most agents miss. After 22 years in BC real estate — and a background in commercial construction, project management, and hands-on renovation work — Pat evaluates every property on a level most agents simply can't. Construction quality, hidden costs, renovation potential, long-term value. His clients don't just get a transaction. They get an honest assessment from someone who has seen everything and will tell them the truth.</p>
+        <p>From foreclosures to development land, multi-family buildings to commercial leases, strata dissolutions to estate sales — Pat has handled it all across Greater Vancouver and beyond. He is a RE/MAX Hall of Fame recipient, MLS® Medallion Club member, and has maintained his license in good standing since January 2004.</p>
+        <p>Three years ago, Pat relocated his family to the South Okanagan. He knows what the move feels like, what questions come up, and what surprises people — because he lived it. He still maintains his Coquitlam office, so he can list your Lower Mainland home and find your Okanagan property without ever handing you off.</p>
+        <p>When Pat isn't working on a deal, he's usually building something — saunas, greenhouses, hot sauces that friends keep asking for. He speaks English and Polish. He holds active security clearances. And he picks up the phone.</p>
+        <div class="about-awards">
+          <span>RE/MAX Hall of Fame 2019</span>
+          <span>Executive Club 2022–2024</span>
+          <span>100% Club</span>
+          <span>Platinum Club</span>
+          <span>MLS® Medallion Club</span>
+          <span>10 Year RE/MAX Anniversary</span>
+        </div>
+        <div class="about-education">
+          <p class="section-eyebrow" style="margin-top:32px;">Education &amp; Credentials</p>
+          <ul>
+            <li>UBC Sauder School of Business — Real Estate Trading Services</li>
+            <li>BCIT — Computer Systems Technology Diploma</li>
+            <li>Kwantlen University College — Electronics Engineering</li>
+            <li>BC Mandatory Continuing Education — biennial legal, ethics &amp; professional development</li>
+          </ul>
+        </div>
+      </div>
+      <div class="about-quote-block">
+        <blockquote>"I don't just look at what a property is — I look at what it could be, what it will cost, and whether it's truly worth pursuing."</blockquote>
+        <cite>— Pat Miazga</cite>
+        <div class="about-languages">
+          <p class="section-eyebrow" style="margin-top:32px;">Languages</p>
+          <p>English &amp; Polish</p>
+        </div>
+        <div class="about-specialties">
+          <p class="section-eyebrow" style="margin-top:24px;">Specialties</p>
+          <p>Beach &amp; Lakefront · Luxury · Agricultural &amp; Farm · Equestrian · Acreages · Condominiums · Relocation · Development Land · Investment · Foreclosure · New Construction</p>
+        </div>
+        <p class="about-brokerage">Licensed with <strong>RE/MAX All Points Realty</strong><br>#101-1020 Austin Ave, Coquitlam BC</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO BREAK — South Okanagan lifestyle -->
+  <!-- REPLACE background-image URL with your own vineyard or lake photo -->
+  <div class="photo-section">
+    <div class="photo-section-bg" style="background-image:url('images/break-vineyard.jpg')"></div>
+    <div class="photo-section-overlay" style="background:linear-gradient(to right,rgba(10,10,8,.78) 0%,rgba(10,10,8,.2) 100%)"></div>
+    <div class="photo-section-content">
+      <span style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);display:block;margin-bottom:16px">Canada's Wine Capital</span>
+      <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2rem,4vw,3.2rem);color:#fff;line-height:1.1;margin-bottom:16px;font-weight:600">Oliver &amp; Osoyoos.<br><em style="font-style:italic;color:var(--sand)">50+ wineries on your doorstep.</em></h2>
+      <p style="color:rgba(255,255,255,.72);font-size:16px;line-height:1.75;max-width:480px;margin-bottom:28px">The Golden Mile Bench. The Black Sage Bench. Burrowing Owl, Black Hills, Nk'Mip Cellars. You're not visiting wine country on weekends — you're living in it.</p>
+      <a href="oliver-real-estate.html" style="display:inline-block;background:var(--accent);color:#fff;padding:12px 26px;border-radius:5px;font-size:14px;font-weight:600;text-decoration:none">Explore Oliver →</a>
+    </div>
+  </div>
+
+  <!-- COMMUNITY PHOTO GRID -->
+  <section class="communities-section" id="communities">
+    <div class="communities-header">
+      <p class="section-eyebrow" style="color:var(--sand)">South Okanagan Communities</p>
+      <h2>Find your place here</h2>
+      <p>In-depth community guides written from lived experience — not a brochure. Click any community to explore.</p>
+    </div>
+    <div class="community-photo-grid">
+
+      <a href="osoyoos-real-estate.html" class="community-photo-card large">
+        <div class="community-photo-img cp-osoyoos"></div>
+        <div class="community-photo-overlay"></div>
+        <div class="community-photo-label">
+          <span class="tag">Canada's Warmest Town · No Speculation Tax</span>
+          <h3>Osoyoos</h3>
+          <span class="sub">Osoyoos Lake · Wine Country · Desert Landscape</span>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+
+      <a href="oliver-real-estate.html" class="community-photo-card large">
+        <div class="community-photo-img cp-oliver"></div>
+        <div class="community-photo-overlay"></div>
+        <div class="community-photo-label">
+          <span class="tag">Canada's Wine Capital · No Speculation Tax</span>
+          <h3>Oliver</h3>
+          <span class="sub">Golden Mile Bench · Black Sage Bench · 50+ Wineries</span>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+
+      <a href="anarchist-mountain.html" class="community-photo-card">
+        <div class="community-photo-img cp-anarchist"></div>
+        <div class="community-photo-overlay"></div>
+        <div class="community-photo-label">
+          <span class="tag">⭐ Pat Lives Here</span>
+          <h3>Anarchist Mountain</h3>
+          <span class="sub">Acreages · Views · Community</span>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+
+      <a href="the-cottages-osoyoos.html" class="community-photo-card">
+        <div class="community-photo-img cp-cottages"></div>
+        <div class="community-photo-overlay"></div>
+        <div class="community-photo-label">
+          <span class="tag">Gated Lakefront Resort</span>
+          <h3>The Cottages</h3>
+          <span class="sub">1,800ft Waterfront · Resale Only</span>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+
+      <a href="casitas-del-sol-osoyoos.html" class="community-photo-card">
+        <div class="community-photo-img cp-casitas"></div>
+        <div class="community-photo-overlay"></div>
+        <div class="community-photo-label">
+          <span class="tag">Gated 55+ Community</span>
+          <h3>Casitas Del Sol</h3>
+          <span class="sub">Golf Adjacent · Lake Views · Low Fees</span>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+
+      <a href="desert-mirage-osoyoos.html" class="community-photo-card">
+        <div class="community-photo-img cp-desert"></div>
+        <div class="community-photo-overlay"></div>
+        <div class="community-photo-label">
+          <span class="tag">Resort Condos · STR-Friendly</span>
+          <h3>Desert Mirage</h3>
+          <span class="sub">Lakeside · 2 Pools · Investment Profile</span>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+
+      <a href="okanagan-falls-real-estate.html" class="community-photo-card">
+        <div class="community-photo-img cp-okfalls"></div>
+        <div class="community-photo-overlay"></div>
+        <div class="community-photo-label">
+          <span class="tag">Value Play</span>
+          <h3>Okanagan Falls</h3>
+          <span class="sub">Skaha Lake · Growing Wine Scene</span>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+
+      <a href="keremeos-real-estate.html" class="community-photo-card">
+        <div class="community-photo-img cp-keremeos"></div>
+        <div class="community-photo-overlay"></div>
+        <div class="community-photo-label">
+          <span class="tag">Similkameen Valley</span>
+          <h3>Keremeos</h3>
+          <span class="sub">Acreages · Orchards · Affordability</span>
+          <span class="arrow">Explore →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- BUYER TYPE BANNERS -->
+  <div class="buyer-banners">
+    <a href="vancouver-buyers-south-okanagan.html" class="buyer-banner">
+      <div class="buyer-banner-bg bb-vancouver"></div>
+      <div class="buyer-banner-overlay"></div>
+      <div class="buyer-banner-content">
+        <span class="tag">Vancouver &amp; Lower Mainland Buyers</span>
+        <h3>Why buyers are choosing<br>Osoyoos over Kelowna in 2026</h3>
+        <p>The equity move that makes sense — no Speculation Tax, lower prices, one agent for both sides of your move.</p>
+        <span class="cta-link">Read the full guide →</span>
+      </div>
+    </a>
+    <a href="alberta-prairie-buyers-south-okanagan.html" class="buyer-banner">
+      <div class="buyer-banner-bg bb-prairie"></div>
+      <div class="buyer-banner-overlay"></div>
+      <div class="buyer-banner-content">
+        <span class="tag">Alberta, Saskatchewan &amp; Manitoba Buyers</span>
+        <h3>How BC real estate works<br>differently than the prairies</h3>
+        <p>PTT, SVT, wildfire insurance, the flipping tax — everything you need to know before you sign anything in BC.</p>
+        <span class="cta-link">Read the full guide →</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- RELOCATION — photo background -->
+  <section class="relocation" id="relocation" style="position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background-image:url('images/break-relocation.jpg');background-size:cover;background-position:center;background-attachment:fixed"></div>
+    <div style="position:absolute;inset:0;background:rgba(10,10,8,.82)"></div>
+    <div class="container" style="position:relative;z-index:2">
+      <p class="section-eyebrow center" style="color:var(--sand)">Thinking About Making the Move?</p>
+      <h2 class="center" style="color:#fff">South Okanagan<br>Relocation Specialist</h2>
+      <p class="relocation-intro center" style="color:rgba(255,255,255,.72)">Pat made this move himself — with a family, with kids in school, leaving one of Canada's most expensive markets for one of its most liveable communities. He knows what the questions are before you even ask them.</p>
+      <div class="relocation-grid">
+        <div class="relocation-card">
+          <p class="relocation-icon">&#9788;</p>
+          <h3>From the Lower Mainland</h3>
+          <p>You've probably already visited. You already love it. Pat can list your Lower Mainland property AND land you in the South Okanagan — one agent, full transition. He still maintains his office and network in Coquitlam and knows both markets intimately.</p>
+        </div>
+        <div class="relocation-card">
+          <p class="relocation-icon">&#9650;</p>
+          <h3>From Alberta &amp; the Prairies</h3>
+          <p>Trade the Alberta winter for Canada's warmest climate and bring your equity with you. Pat understands the BC buying process and will guide you through every step — from first inquiry to keys in hand.</p>
+        </div>
+        <div class="relocation-card">
+          <p class="relocation-icon">&#9673;</p>
+          <h3>Your Eyes on the Ground</h3>
+          <p>Can't make the trip every weekend? Pat has been vetting properties for out-of-town buyers since the start of his career. He'll preview, assess honestly, and report back — so you only make the trip when it truly counts.</p>
+        </div>
+      </div>
+      <div class="relocation-life">
+        <p class="section-eyebrow center" style="margin-top:72px;color:var(--sand)">Life in the South Okanagan</p>
+        <h3 class="center" style="color:#fff">What you're actually moving to.</h3>
+        <div class="life-grid">
+          <div class="life-item"><strong>Climate</strong><p>More sunny days than almost anywhere in Canada. Hot summers, mild winters — a dramatic change from Lower Mainland grey.</p></div>
+          <div class="life-item"><strong>Wine &amp; Food</strong><p>Oliver and Osoyoos sit at the heart of BC wine country. World-class wineries, fruit stands, orchards, u-pick farms, and farmers markets at your doorstep.</p></div>
+          <div class="life-item"><strong>Recreation</strong><p>Quading, skiing, golf, boating, fishing, hiking, RVing — an outdoor playground with something for every season.</p></div>
+          <div class="life-item"><strong>Family &amp; Community</strong><p>Smaller schools, safer streets, kids playing outside. Pat raises his own family here and speaks honestly about what community life looks like day to day.</p></div>
+          <div class="life-item"><strong>Property Opportunity</strong><p>Acreages, orchards, hobby farms, lakefront — property types that simply don't exist in Metro Vancouver, at a fraction of the price.</p></div>
+          <div class="life-item"><strong>Honest Picture</strong><p>Pat will tell you what services are available locally, what you'll drive for, and what rural ownership actually means day to day. No sugar coating.</p></div>
+        </div>
+      </div>
+      <div class="relocation-cta">
+        <p style="color:rgba(255,255,255,.75)">Considering the move? Pat is happy to walk you through the process personally — no pressure, just straight talk.</p>
+        <a href="#contact" class="btn-primary">Start the Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="expertise" id="expertise">
+    <div class="container">
+      <p class="section-eyebrow center">What Pat Brings</p>
+      <h2 class="center">A wider lens on every property.</h2>
+      <p class="expertise-intro center">Pat's background spans residential, commercial, investment, and development — giving clients a depth of perspective across the full spectrum of real estate.</p>
+      <div class="expertise-grid">
+        <div class="expertise-card"><div class="expertise-icon">&#8962;</div><h3>Buyers</h3><p>Hidden issues. Future costs. Renovation opportunity. Pat helps buyers see past the staging and understand exactly what they're getting — and what it will really take to get there.</p></div>
+        <div class="expertise-card"><div class="expertise-icon">&#8599;</div><h3>Sellers</h3><p>Strategic pre-sale improvements, smart positioning, honest advice on what actually moves the needle. Pat has managed full renovations to maximize sale prices — not just advice, real results.</p></div>
+        <div class="expertise-card"><div class="expertise-icon">&#9673;</div><h3>Investors</h3><p>Cap rate analysis, renovation feasibility, development potential. Pat has worked with condos, multi-family buildings, commercial properties, campgrounds, and everything in between.</p></div>
+        <div class="expertise-card"><div class="expertise-icon">&#10148;</div><h3>Relocation</h3><p>Pat made the move from the Lower Mainland to the South Okanagan himself. He understands both markets, both lifestyles, and can handle both sides of your transition.</p></div>
+        <div class="expertise-card"><div class="expertise-icon">&#9881;</div><h3>Construction &amp; Projects</h3><p>Years of commercial construction and project management across BC and Western Canada — federal government clients, major Canadian organizations, structural renovations, and full project oversight.</p></div>
+        <div class="expertise-card"><div class="expertise-icon">&#9654;</div><h3>Complex Transactions</h3><p>Foreclosures, estate sales, strata dissolutions, development land, failed completions, pre-sale assignments. Pat has navigated it all — and stayed calm doing it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <p class="section-eyebrow center">What Clients &amp; Colleagues Say</p>
+      <h2 class="center">Trusted by clients.<br>Respected by peers.</h2>
+      <p class="testimonials-note center">Pat is one of the few agents with public reviews from both satisfied clients <em>and</em> fellow REALTORS® who have worked with him on the other side of a transaction.</p>
+      <p class="section-eyebrow">From Clients</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card"><p class="testimonial-text">"He knows his business and has plenty of contacts he can refer you to. He's super organized and gets things done. If he says he will do something, he does it. He goes above and beyond, ensuring that everyone is happy — both the buyer and the seller."</p><p class="testimonial-author">Gino Piccolo</p><p class="testimonial-detail">Residential, commercial &amp; investment — multiple transactions</p><div class="testimonial-stars">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"Your knowledge of the Real Estate business and all the ins and outs was second to none. You were always available to take my calls, answer my questions and make me feel comfortable with the major decisions I was undertaking."</p><p class="testimonial-author">Natalina Grossi</p><p class="testimonial-detail">Simultaneous sale &amp; purchase</p><div class="testimonial-stars">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"Pat was timely and efficient in helping get my apartment sold — even though I had to travel overseas. His responses were always prompt and his suggestions on pricing and market conditions were well informed."</p><p class="testimonial-author">Indira Menezes</p><p class="testimonial-detail">Remote transaction — seller overseas</p><div class="testimonial-stars">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"He's very honest and you can tell he cares about getting you into the right home and not just making money off of the sale."</p><p class="testimonial-author">C. Mid</p><p class="testimonial-detail">Referred buyer</p><div class="testimonial-stars">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"He went above and beyond to help me in every way — from finding a place and putting me in touch with great people to help renovate. I can't say enough about how much he did for me as a client. I am very proud now to have him as a friend."</p><p class="testimonial-author">Jay H</p><p class="testimonial-detail">Sale &amp; purchase with renovation coordination</p><div class="testimonial-stars">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"Amazing and very professional experience. I never knew it could be that easy and stress free. If you are looking for someone who really understands how the market works, Pat is the one."</p><p class="testimonial-author">Ernest Kwaah</p><p class="testimonial-detail">Home purchase</p><div class="testimonial-stars">★★★★★</div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"We cannot recommend Pat Miazga enough! He recently helped us navigate a highly complex and difficult financing situation to get our home deal accepted. Throughout what could have been an incredibly overwhelming and stressful process, Pat was our absolute rock. He kept us completely calm, remained endlessly patient, and truly went above and beyond at every single turn. If you want a realtor who is not only a consummate professional but also genuinely cares about his clients, Pat is your guy!"</p><p class="testimonial-author">Nicola Cliffe</p><p class="testimonial-detail">Home purchase — Osoyoos, BC · June 2026</p><div class="testimonial-stars">★★★★★</div></div>
+      </div>
+      <p class="section-eyebrow" style="margin:56px 0 24px;">From Fellow REALTORS®</p>
+      <div class="testimonials-grid peer-grid">
+        <div class="testimonial-card peer-card"><p class="peer-badge">Fellow REALTOR® Review</p><p class="testimonial-text">"Pat helped my clients three times now and they've been incredibly happy. Not only did Pat get what the clients wanted, but he was able to sell their home for more than they were expecting."</p><p class="testimonial-author">Eitan Pinsky</p><p class="testimonial-detail">Google Local Guide · Multiple referred transactions</p><div class="testimonial-stars">★★★★★</div></div>
+        <div class="testimonial-card peer-card"><p class="peer-badge">Fellow REALTOR® Review</p><p class="testimonial-text">"We got the deal done on Christmas Eve and Pat worked diligently to get his clients' house sold to facilitate the sale. Always answered calls and emails and made things easy and straightforward. I'd give him 7 stars but it only allows 5."</p><p class="testimonial-author">Jody Squires</p><p class="testimonial-detail">Google Local Guide · Opposing agent, Christmas Eve transaction</p><div class="testimonial-stars">★★★★★</div></div>
+        <div class="testimonial-card peer-card"><p class="peer-badge">Fellow REALTOR® Review</p><p class="testimonial-text">"Pat is a great Realtor to work with. Great communication and very straightforward. These are not things I take for granted when working with other agents."</p><p class="testimonial-author">Jon Lumer</p><p class="testimonial-detail">Google Local Guide · Industry peer</p><div class="testimonial-stars">★★★★★</div></div>
+      </div>
+      <div class="google-rating"><p>4.7 ★★★★★ on Google</p><a href="https://www.google.com/maps/search/Pat+Miazga+RE/MAX" target="_blank" rel="noopener">View all reviews on Google Maps →</a></div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="service-area">
+    <div class="container">
+      <p class="section-eyebrow center">Service Area</p>
+      <h2 class="center">South Okanagan, BC</h2>
+      <p class="center area-sub">Primarily serving the southern Okanagan communities. Still fully active for existing clients and referrals in the Lower Mainland through RE/MAX All Points Realty, Coquitlam.</p>
+      <div class="area-tags">
+        <span>Osoyoos</span><span>Oliver</span><span>Okanagan Falls</span>
+        <span>Keremeos</span><span>Cawston</span><span>Penticton</span>
+        <span>Rock Creek</span><span>Bridesville</span><span>&amp; Surrounding Area</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE GUIDES -->
+  <section class="guides-section" id="guides">
+    <div class="container">
+      <p class="section-eyebrow center">Free Resources</p>
+      <h2 class="center">South Okanagan Real Estate Guides</h2>
+      <p class="section-sub center">22 in-depth guides covering every stage of buying, selling, and living in the South Okanagan. Written from 22+ years of BC real estate experience. Read the first sections free — unlock the full guide with your email.</p>
+
+      <p class="guides-category-label">For Buyers</p>
+      <div class="guides-grid">
+        <a href="first-time-buyer-guide.html" class="guide-card"><div class="guide-card-icon">🏠</div><div class="guide-card-body"><p class="guide-card-eyebrow">First Time Buyers</p><h3 class="guide-card-title">First Time Buyer's Guide</h3><p class="guide-card-desc">BC incentives, PTT exemptions, FHSA, RRSP Home Buyers' Plan — every dollar-saving program available to first-time buyers in BC.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="bc-tax-guide.html" class="guide-card"><div class="guide-card-icon">📋</div><div class="guide-card-body"><p class="guide-card-eyebrow">Taxes &amp; Closing Costs</p><h3 class="guide-card-title">BC Property Tax Guide</h3><p class="guide-card-desc">PTT, GST, Speculation &amp; Vacancy Tax, Foreign Buyer Tax — with an interactive calculator so you know your true closing costs before you make an offer.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="buyer-guide-a-z.html" class="guide-card"><div class="guide-card-icon">📖</div><div class="guide-card-body"><p class="guide-card-eyebrow">Complete Buying Process</p><h3 class="guide-card-title">Buyer's Guide A–Z</h3><p class="guide-card-desc">The full BC buying process from first search to keys in hand — subjects, inspections, wildfire insurance, financing, and closing explained clearly.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="relocation-guide.html" class="guide-card"><div class="guide-card-icon">🚚</div><div class="guide-card-body"><p class="guide-card-eyebrow">Relocating to BC</p><h3 class="guide-card-title">Relocation Guide</h3><p class="guide-card-desc">Moving from Vancouver, Calgary, or anywhere else? Everything you need to plan a successful relocation to the South Okanagan — from neighbourhood selection to moving day.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="investment-property-guide.html" class="guide-card"><div class="guide-card-icon">💰</div><div class="guide-card-body"><p class="guide-card-eyebrow">Investment &amp; STR</p><h3 class="guide-card-title">Investment Property Guide</h3><p class="guide-card-desc">STR licensing, long-term rental rules, fractional ownership, and what the numbers actually look like for South Okanagan investment properties.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="manufactured-home-guide.html" class="guide-card"><div class="guide-card-icon">🏡</div><div class="guide-card-body"><p class="guide-card-eyebrow">Manufactured Homes</p><h3 class="guide-card-title">Manufactured Home Guide</h3><p class="guide-card-desc">Pad lease vs. strata, financing quirks, CSA certification, age restrictions, and what to watch for when buying a manufactured home in BC.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+      </div>
+
+      <p class="guides-category-label">Due Diligence</p>
+      <div class="guides-grid">
+        <a href="inspection-ready-guide.html" class="guide-card"><div class="guide-card-icon">🔍</div><div class="guide-card-body"><p class="guide-card-eyebrow">Inspection Series — Part 1</p><h3 class="guide-card-title">Getting Ready for Inspection</h3><p class="guide-card-desc">What to prepare before the inspector arrives, what documents to have on hand, and how to set realistic expectations as a buyer or seller.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="inspection-what-to-expect-guide.html" class="guide-card"><div class="guide-card-icon">🏗️</div><div class="guide-card-body"><p class="guide-card-eyebrow">Inspection Series — Part 2</p><h3 class="guide-card-title">What to Expect During Inspection</h3><p class="guide-card-desc">What a licensed inspector checks, what red flags actually matter vs. minor issues, and how to read the report when it lands in your inbox.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="inspection-well-septic-guide.html" class="guide-card"><div class="guide-card-icon">💧</div><div class="guide-card-body"><p class="guide-card-eyebrow">Inspection Series — Part 3</p><h3 class="guide-card-title">Well Water, Septic &amp; Rural Inspections</h3><p class="guide-card-desc">Rural properties need extra due diligence. This guide covers well water testing, septic inspections, and when you absolutely need a specialist beyond the standard home inspector.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="unpermitted-work-guide.html" class="guide-card"><div class="guide-card-icon">🔨</div><div class="guide-card-body"><p class="guide-card-eyebrow">Due Diligence</p><h3 class="guide-card-title">Unpermitted Work Guide</h3><p class="guide-card-desc">How to identify unpermitted renovations, what liability you inherit as a buyer, and how to protect yourself before removing subjects.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="radon-testing-guide.html" class="guide-card"><div class="guide-card-icon">⚗️</div><div class="guide-card-body"><p class="guide-card-eyebrow">Health &amp; Safety</p><h3 class="guide-card-title">Radon Testing Guide</h3><p class="guide-card-desc">The South Okanagan has elevated radon levels. What radon is, how to test for it, acceptable thresholds, and remediation costs before you buy.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="climate-insurance-risk-guide.html" class="guide-card"><div class="guide-card-icon">🔥</div><div class="guide-card-body"><p class="guide-card-eyebrow">Climate &amp; Wildfire Risk</p><h3 class="guide-card-title">Climate &amp; Insurance Risk Guide</h3><p class="guide-card-desc">Wildfire interface zones, flood risk, the 50km active fire insurance rule, and how to evaluate climate risk when choosing a property in the South Okanagan.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+      </div>
+
+      <p class="guides-category-label">Living Here</p>
+      <div class="guides-grid">
+        <a href="living-in-osoyoos-guide.html" class="guide-card"><div class="guide-card-icon">🍷</div><div class="guide-card-body"><p class="guide-card-eyebrow">Local Life</p><h3 class="guide-card-title">Living in Osoyoos</h3><p class="guide-card-desc">Wine country, golf, climate, schools, local favourites and what daily life actually looks like in Canada's warmest town — from someone who made the move.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="living-in-south-okanagan-guide.html" class="guide-card"><div class="guide-card-icon">🏔️</div><div class="guide-card-body"><p class="guide-card-eyebrow">The Region</p><h3 class="guide-card-title">Living in the South Okanagan</h3><p class="guide-card-desc">Town-by-town breakdown of Osoyoos, Oliver, Keremeos, Okanagan Falls and beyond — including the Speculation Tax comparison most agents won't explain.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="recreation-services-guide.html" class="guide-card"><div class="guide-card-icon">⛷️</div><div class="guide-card-body"><p class="guide-card-eyebrow">Lifestyle</p><h3 class="guide-card-title">Recreation, Services &amp; Seasonal Activities</h3><p class="guide-card-desc">Golf, skiing, hiking, wineries, healthcare, schools, and everything else that makes life in the South Okanagan worth relocating for.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="whats-up-and-coming-guide.html" class="guide-card"><div class="guide-card-icon">🚀</div><div class="guide-card-body"><p class="guide-card-eyebrow">Growth &amp; Development</p><h3 class="guide-card-title">What's Up and Coming</h3><p class="guide-card-desc">New developments, infrastructure projects, and economic growth underway in the South Okanagan — what's driving demand and where the region is headed.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+      </div>
+
+      <p class="guides-category-label">For Sellers &amp; Builders</p>
+      <div class="guides-grid">
+        <a href="sellers-guide.html" class="guide-card"><div class="guide-card-icon">🏷️</div><div class="guide-card-body"><p class="guide-card-eyebrow">Selling Your Home</p><h3 class="guide-card-title">Seller's Guide</h3><p class="guide-card-desc">Pricing strategy, preparing your home, the listing process, disclosure obligations, and how to maximize your net proceeds in the South Okanagan market.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="owner-builder-guide.html" class="guide-card"><div class="guide-card-icon">🪚</div><div class="guide-card-body"><p class="guide-card-eyebrow">Building Your Own</p><h3 class="guide-card-title">Owner Builder Guide</h3><p class="guide-card-desc">BC owner builder licensing, what you can and can't self-build, disclosure requirements when selling, and how lenders view owner-built homes.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="contractors-guide.html" class="guide-card"><div class="guide-card-icon">🦺</div><div class="guide-card-body"><p class="guide-card-eyebrow">Renovations &amp; Trades</p><h3 class="guide-card-title">Contractors Guide</h3><p class="guide-card-desc">How to vet contractors in BC, what permits they need to pull, red flags to watch for, and how to protect yourself legally on any renovation project.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+        <a href="commercial-opportunity-guide.html" class="guide-card"><div class="guide-card-icon">🏢</div><div class="guide-card-body"><p class="guide-card-eyebrow">Commercial Real Estate</p><h3 class="guide-card-title">Commercial Opportunity Assessment</h3><p class="guide-card-desc">Tourism, hospitality, agriculture and mixed-use commercial opportunities across the South Okanagan — how to evaluate them and what due diligence looks different from residential.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+      </div>
+
+      <p class="guides-category-label">Property Rights &amp; Special Topics</p>
+      <div class="guides-grid guides-grid--narrow">
+        <a href="dripa-property-rights-guide.html" class="guide-card"><div class="guide-card-icon">⚖️</div><div class="guide-card-body"><p class="guide-card-eyebrow">Property Rights</p><h3 class="guide-card-title">DRIPA &amp; Property Rights Guide</h3><p class="guide-card-desc">A factual, balanced look at BC's Declaration on the Rights of Indigenous Peoples Act — what it means for property owners and what's still being determined in the courts.</p><span class="guide-card-cta">Read the Guide →</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRENT LISTINGS -->
+  <section class="listings" id="listings">
+    <div class="container">
+      <p class="section-eyebrow center">Properties</p>
+      <h2 class="center">Current Listings</h2>
+      <div class="listing-card">
+        <div class="listing-hero">
+          <div class="listing-gallery">
+            <span class="listing-badge">Active Listing</span>
+            <span class="listing-badge-price-drop">&#9660; Price Improved</span>
+            <img src="images/gallagher/exterior.jpg" alt="70-8300 Gallagher Lake Frontage Rd" id="main-photo" />
+            <div class="listing-thumbs">
+              <img src="images/gallagher/exterior.jpg" alt="Exterior" class="active" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/living-staged.png" alt="Living Room Staged" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/living.jpg" alt="Living Room" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/fireplace.jpg" alt="Feature Fireplace Wall" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/kitchen1.jpg" alt="Kitchen" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/dining.jpg" alt="Dining &amp; Kitchen" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/kitchen-staged.png" alt="Kitchen Staged" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/kitchen2.jpg" alt="Kitchen Detail" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/primary-staged.png" alt="Primary Bedroom Staged" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/ensuite1.jpg" alt="Ensuite" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/ensuite2.jpg" alt="Ensuite Detail" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/mainbath1.jpg" alt="Main Bath" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/mainbath2.jpg" alt="Main Bath Detail" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/mainbath3.jpg" alt="Main Bath Vanity" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/living2.jpg" alt="Open Concept" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/kitchen3.jpg" alt="Kitchen 3" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/foyer.jpg" alt="Foyer" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/laundry.jpg" alt="Laundry Room" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/garage.jpg" alt="Double Garage" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/backyard.png" alt="Backyard &amp; Mountain View" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/exterior2.jpg" alt="Exterior Front" onclick="swapPhoto(this)" />
+              <img src="images/gallagher/exterior3.jpg" alt="Exterior Side" onclick="swapPhoto(this)" />
+            </div>
+          </div>
+          <div class="listing-details">
+            <div>
+              <p class="listing-price">$499,900</p>
+              <p class="listing-orig-price">Originally $549,900</p>
+              <p class="listing-address">#70 – 8300 Gallagher Lake Frontage Rd</p>
+              <p class="listing-city">Oliver, BC &nbsp;·&nbsp; Gallagher Lake Village Park</p>
+              <div class="listing-specs">
+                <div class="listing-spec"><span class="listing-spec-label">Bedrooms</span><span class="listing-spec-value">3</span></div>
+                <div class="listing-spec"><span class="listing-spec-label">Bathrooms</span><span class="listing-spec-value">2</span></div>
+                <div class="listing-spec"><span class="listing-spec-label">Size</span><span class="listing-spec-value">1,498 sq ft</span></div>
+                <div class="listing-spec"><span class="listing-spec-label">Garage</span><span class="listing-spec-value">Double Attached</span></div>
+                <div class="listing-spec"><span class="listing-spec-label">Year Built</span><span class="listing-spec-value">2014</span></div>
+                <div class="listing-spec"><span class="listing-spec-label">Renovated</span><span class="listing-spec-value">2025 — Full</span></div>
+                <div class="listing-spec"><span class="listing-spec-label">Taxes (2026)</span><span class="listing-spec-value">$2,164</span></div>
+                <div class="listing-spec"><span class="listing-spec-label">Pad Rent</span><span class="listing-spec-value">$750/mo</span></div>
+              </div>
+              <div class="listing-highlights">
+                <h4>Key Highlights</h4>
+                <ul>
+                  <li>Fully renovated 2025 — never occupied since renovation</li>
+                  <li>Quartz countertops, Italian subway tile, new stainless appliances</li>
+                  <li>6-ft built-in electric fireplace with custom feature wall</li>
+                  <li>Vaulted ceilings · Central A/C · On-demand hot water</li>
+                  <li>Double attached garage · 4 total parking · 1 RV space</li>
+                  <li>No PTT · No GST · No age restrictions</li>
+                  <li>Pad rent includes water, sewer, garbage &amp; recycling</li>
+                  <li>River walking path &amp; off-leash dog park steps away</li>
+                  <li>Minutes to Oliver wineries, golf, hiking &amp; recreation</li>
+                </ul>
+              </div>
+              <p class="listing-mls">MLS® 10379947 &nbsp;·&nbsp; Listed by Pat Miazga, RE/MAX All Points Realty</p>
+              <div class="listing-pad-note">Leasehold property — no PTT or GST applies. Pad rent $750/month (new buyer rate) covers water, sewer, garbage and recycling. No rentals permitted. 2 pets with park approval.</div>
+            </div>
+            <div class="listing-cta">
+              <a href="#contact" class="btn-primary">Book a Showing</a>
+              <a href="tel:+16045625982" class="btn-ghost" style="color:var(--ink);border-color:var(--border);">604-562-5982</a>
+            </div>
+          </div>
+        </div>
+        <div class="listing-body">
+          <h3>About This Property</h3>
+          <p>This is the most thoroughly renovated home currently listed in Gallagher Lake Village Park — fully updated, move-in ready, and never occupied since the 2025 renovation. Bright and open, this 3 bedroom, 2 bathroom rancher offers nearly 1,500 sq ft of well-planned single-level living. The stunning interior features wide plank commercial-grade laminate flooring, quartz countertops throughout, new cabinet doors, brand new stainless steel kitchen and laundry appliances, and all-new lighting with tri-mode settings. The spacious living room centres on a striking custom feature wall with a 6-ft built-in electric fireplace. Large kitchen island, full pantry, vaulted ceilings, instant hot water, central A/C, and natural gas heat. A generous private back and side yard with concrete patio and natural gas BBQ hookup — a rare find in the park. Vacant and easy to show.</p>
+          <div class="listing-features-grid">
+            <div class="listing-feature-group"><h4>Kitchen &amp; Living</h4><ul><li>Quartz countertops</li><li>Italian subway tile backsplash</li><li>White cabinets · grey island</li><li>Full pantry</li><li>New stainless steel appliances</li><li>6-ft electric fireplace feature wall</li><li>Vaulted ceilings throughout</li><li>Tri-mode ceiling lighting</li></ul></div>
+            <div class="listing-feature-group"><h4>Bedrooms &amp; Bathrooms</h4><ul><li>Primary: 15'1" × 12'9" + walk-in closet</li><li>4-piece ensuite — quartz + subway tile</li><li>Bedroom 2: 12'9" × 11'</li><li>Bedroom 3: 12'10" × 10'2"</li><li>4-piece main bath — quartz + subway tile</li><li>Laundry room: 10'2" × 7'9"</li><li>New washer &amp; dryer included</li><li>Solar tube natural light in laundry</li></ul></div>
+            <div class="listing-feature-group"><h4>Exterior &amp; Systems</h4><ul><li>Double attached garage 20' × 19'1"</li><li>4 total parking · 1 RV space</li><li>Concrete slab patio</li><li>Natural gas BBQ hookup</li><li>Underground irrigation — front &amp; side</li><li>Forced air natural gas heat</li><li>Central air conditioning</li><li>On-demand hot water system</li><li>Hardie plank siding · concrete crawl space</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAST SALES -->
+  <section class="sold" id="sold">
+    <div class="container">
+      <p class="section-eyebrow center">Track Record</p>
+      <h2 class="center">Past Sales</h2>
+      <p class="sold-intro center">Over 500 transactions across 22 years — spanning the Lower Mainland, Fraser Valley, Interior BC, and Vancouver Island. A curated selection of notable sales across property types.</p>
+      <div class="sold-stats">
+        <div class="sold-stat"><span class="sold-stat-num">500+</span><span class="sold-stat-label">Transactions</span></div>
+        <div class="sold-stat"><span class="sold-stat-num">22</span><span class="sold-stat-label">Years</span></div>
+        <div class="sold-stat"><span class="sold-stat-num">$475K–$2.6M</span><span class="sold-stat-label">Price Range</span></div>
+        <div class="sold-stat"><span class="sold-stat-num">BC-Wide</span><span class="sold-stat-label">Coverage</span></div>
+      </div>
+      <div class="sold-category"><span class="sold-category-title">Detached Homes</span><div class="sold-grid"><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/264st.png" alt="12020 264th Street, Maple Ridge" /><div class="sold-card-info"><span class="sold-type">House / Single Family</span><p class="sold-address">12020 264th Street</p><p class="sold-location">Maple Ridge, BC</p><p class="sold-price">$1,635,000</p></div></div><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/pynford.png" alt="6302 Pynford Court, Burnaby" /><div class="sold-card-info"><span class="sold-type">House / Single Family · 5 bed · 4,190 sqft</span><p class="sold-address">6302 Pynford Court</p><p class="sold-location">Burnaby, BC</p><p class="sold-price">$2,488,000</p></div></div><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/cunningham.png" alt="3615 Cunningham Drive, Richmond" /><div class="sold-card-info"><span class="sold-type">House / Single Family · 5 bed · 2,610 sqft</span><p class="sold-address">3615 Cunningham Drive</p><p class="sold-location">Richmond, BC</p><p class="sold-price">$1,405,000</p></div></div><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/cedar.png" alt="3721 Cedar Drive, Port Coquitlam" /><div class="sold-card-info"><span class="sold-type">House / Single Family</span><p class="sold-address">3721 Cedar Drive</p><p class="sold-location">Port Coquitlam, BC</p><p class="sold-price">$1,050,000</p></div></div></div></div>
+      <div class="sold-category"><span class="sold-category-title">Pre-Sale Improvement — Listed After Strategic Renovation</span><div class="sold-grid"><div class="sold-card"><span class="sold-badge sold-badge-story">Renovated &amp; Sold</span><img src="images/sold/joy.png" alt="809-10620 150th Street, Surrey" /><div class="sold-card-info"><span class="sold-type">Townhouse</span><p class="sold-address">809-10620 150th Street</p><p class="sold-location">Surrey, BC (Guildford)</p><p class="sold-price">SOLD</p><p class="sold-story">Pat managed a full renovation before listing — transforming a distressed unit into a market-ready property that sold successfully after a failed first completion.</p></div></div><div class="sold-card"><span class="sold-badge sold-badge-story">Refreshed &amp; Sold</span><img src="images/sold/vilma.png" alt="1001-13880 101 Avenue, Surrey" /><div class="sold-card-info"><span class="sold-type">Apartment / Condo</span><p class="sold-address">1001-13880 101 Avenue</p><p class="sold-location">Surrey, BC</p><p class="sold-price">SOLD</p><p class="sold-story">Pat coordinated a full repaint and new flooring before listing — maximizing the sale price through targeted pre-sale improvements.</p></div></div><div class="sold-card"><span class="sold-badge sold-badge-story">Refreshed &amp; Sold</span><img src="images/sold/88ave.png" alt="15902 88th Avenue, Surrey" /><div class="sold-card-info"><span class="sold-type">House / Single Family</span><p class="sold-address">15902 88th Avenue</p><p class="sold-location">Surrey, BC</p><p class="sold-price">$995,000</p><p class="sold-story">Working with a widow client, Pat brought in his contractor to refresh the property before going to market — a sensitive situation handled with care and professionalism.</p></div></div></div></div>
+      <div class="sold-category"><span class="sold-category-title">Commercial</span><div class="sold-grid sold-grid-2"><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/kingsway.png" alt="2645 Kingsway Avenue, Port Coquitlam" /><div class="sold-card-info"><span class="sold-type">Commercial / Industrial</span><p class="sold-address">2645 Kingsway Avenue</p><p class="sold-location">Port Coquitlam, BC</p><p class="sold-price">$1,100,000</p><p class="sold-story">Gino's Tires &amp; Towing — a long-term client relationship that began with a residential sale and grew into commercial property transactions.</p></div></div><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/russell.png" alt="7147 Russell Avenue, Burnaby" /><div class="sold-card-info"><span class="sold-type">Commercial / Industrial</span><p class="sold-address">7147 Russell Avenue</p><p class="sold-location">Burnaby, BC</p><p class="sold-price">$1,220,000</p></div></div></div></div>
+      <div class="sold-category"><span class="sold-category-title">Multi-Family Investment — MacKenzie, BC</span><p style="font-size:14px;color:var(--warm-mid);margin-bottom:24px;font-style:italic;">A single investor relationship that led to multiple apartment building acquisitions in northern BC — a testament to the long-term client partnerships Pat builds.</p><div class="sold-grid sold-grid-2"><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/crysdale.png" alt="4 Crysdale, MacKenzie" /><div class="sold-card-info"><span class="sold-type">Multi-Family / Apartment Building</span><p class="sold-address">4 Crysdale</p><p class="sold-location">MacKenzie, BC</p><p class="sold-price">Investment Acquisition</p></div></div><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/clearwater.png" alt="5 Clearwater, MacKenzie" /><div class="sold-card-info"><span class="sold-type">Multi-Family / Apartment Building</span><p class="sold-address">5 Clearwater</p><p class="sold-location">MacKenzie, BC</p><p class="sold-price">Investment Acquisition</p></div></div></div></div>
+      <div class="sold-category"><span class="sold-category-title">Province-Wide Reach</span><div class="sold-grid sold-grid-2"><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/groves.png" alt="307-485 Groves Avenue, Kelowna" /><div class="sold-card-info"><span class="sold-type">Condominium / New Development</span><p class="sold-address">307-485 Groves Avenue</p><p class="sold-location">Kelowna, BC</p><p class="sold-price">SOLD</p></div></div><div class="sold-card"><span class="sold-badge">SOLD</span><img src="images/sold/bristol.png" alt="301-1010 Bristol Road, Victoria" /><div class="sold-card-info"><span class="sold-type">Condominium — Carolyn Manor Estates</span><p class="sold-address">301-1010 Bristol Road</p><p class="sold-location">Victoria, BC</p><p class="sold-price">SOLD</p></div></div></div></div>
+      <div class="sold-cta"><p>These are just a sample. Over 500 transactions across 22 years — Pat has likely handled a situation like yours before.</p><a href="#contact" class="btn-primary">Talk to Pat About Your Property</a></div>
+    </div>
+  </section>
+
+  <!-- CONTACT — photo background -->
+  <section class="contact" id="contact">
+    <div class="contact-bg"></div>
+    <div class="contact-bg-overlay"></div>
+    <div class="container contact-grid">
+      <div class="contact-text">
+        <p class="section-eyebrow" style="color:var(--sand)">Get In Touch</p>
+        <h2 style="color:#fff">Let's talk about your next move.</h2>
+        <p style="color:rgba(255,255,255,.72)">Whether you're buying, selling, investing, or considering a relocation to the South Okanagan — Pat brings the experience, the local knowledge, and the straight talk to help you make a confident decision.</p>
+        <div class="contact-details">
+          <div class="contact-item"><span class="contact-label">Mobile</span><a href="tel:+16045625982" style="color:var(--sand)">604-562-5982</a></div>
+          <div class="contact-item"><span class="contact-label">Email</span><a href="mailto:miazgarealestate@gmail.com" style="color:var(--sand)">miazgarealestate@gmail.com</a></div>
+          <div class="contact-item"><span class="contact-label">Brokerage</span><span style="color:rgba(255,255,255,.7)">RE/MAX All Points Realty<br>#101-1020 Austin Ave, Coquitlam BC</span></div>
+          <div class="contact-item"><span class="contact-label">Languages</span><span style="color:rgba(255,255,255,.7)">English &amp; Polish</span></div>
+          <div class="contact-item"><span class="contact-label">Social</span><div class="social-links"><a href="https://www.facebook.com/miazgapat" target="_blank" rel="noopener" style="color:var(--sand)">Facebook</a><a href="https://www.instagram.com/patmiazgarealestate/" target="_blank" rel="noopener" style="color:var(--sand)">Instagram</a></div></div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Your name" required /></div>
+        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="your@email.com" required /></div>
+        <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="Your phone number" /></div>
+        <div class="form-group"><label for="interest">I am interested in</label><select id="interest" name="interest"><option value="">Select one...</option><option>Buying in South Okanagan</option><option>Relocating from Lower Mainland</option><option>Relocating from Alberta / Prairies</option><option>Selling my property</option><option>Investment property</option><option>General inquiry</option></select></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="Tell Pat what you're looking for..." required></textarea></div>
+        <button type="submit" class="btn-primary full-width">Send Message</button>
+        <p class="form-note" id="form-success" style="display:none;">&#10003; Message sent. Pat will be in touch shortly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p class="footer-name">Pat Miazga</p>
+        <p>Licensed REALTOR® — RE/MAX All Points Realty</p>
+        <p>South Okanagan, BC &nbsp;|&nbsp; 604-562-5982 &nbsp;|&nbsp; miazgarealestate@gmail.com</p>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2026 Pat Miazga. All rights reserved.</p>
+        <p class="footer-disclaimer">The trademarks MLS®, Multiple Listing Service® and associated logos are owned by The Canadian Real Estate Association (CREA). The trademarks REALTOR®, REALTORS® and the REALTOR® logo are controlled by CREA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // ── HERO SLIDER ──
+    (function(){
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      let current = 0, timer;
+
+      // Inject Unsplash photo URLs — REPLACE with your own South Okanagan photos
+      const photos = [
+        'images/hero-1-winter-valley.jpg',  // Osoyoos winter panorama from Anarchist
+        'images/hero-2-summer-valley.jpg',  // summer valley elevated
+        'images/hero-3-summer-close.jpg',   // summer closer to town
+        'images/hero-4-winter-lake.jpg',    // winter lake panorama
+        'images/hero-5-from-lake.jpg'       // from the lake looking at town
+      ];
+      slides.forEach((s,i) => s.style.backgroundImage = `url('${photos[i]}')`);
+
+      function goTo(n){
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+      function next(){ goTo(current + 1); }
+
+      dots.forEach(d => d.addEventListener('click', () => {
+        clearInterval(timer);
+        goTo(+d.dataset.slide);
+        timer = setInterval(next, 5000);
+      }));
+
+      timer = setInterval(next, 5000);
+    })();
+  </script>
+</body>
+</html>

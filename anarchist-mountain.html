@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living on Anarchist Mountain | Osoyoos BC Real Estate — Pat Miazga</title>
+  <meta name="description" content="Anarchist Mountain real estate and community guide — rural acreages 15km east of Osoyoos with valley and lake views. AMCS, volunteer fire department, STR rules under RDOS jurisdiction, and what buying here actually involves." />
+  <meta property="og:title" content="Living on Anarchist Mountain — Osoyoos BC" />
+  <meta property="og:description" content="Mountain acreages, big views, volunteer fire department, and a community that actually knows its neighbours. Pat Miazga lives here — and can help you buy here." />
+  <meta property="og:url" content="https://patmiazga.com/anarchist-mountain.html" />
+  <link rel="canonical" href="https://patmiazga.com/anarchist-mountain.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --ink:#1a1a18;--stone:#3d3d38;--warm-mid:#7a7468;--sand:#c8b89a;
+      --cream:#f7f4ef;--white:#ffffff;--accent:#8b6f47;--accent-dk:#6b5235;
+      --border:#e2ddd6;--peer-bg:#f0ede8;
+      --fd:'Cormorant Garamond',Georgia,serif;
+      --fb:'Inter',system-ui,sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);background:var(--white);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:var(--accent-dk)}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}
+    .narrow{max-width:720px;margin:0 auto;padding:0 24px}
+    .nav{position:sticky;top:0;z-index:100;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--white);letter-spacing:.08em}
+    .nav-links{display:flex;gap:24px;align-items:center}
+    .nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.04em}
+    .nav-links a:hover{color:var(--white)}
+    .nav-cta{background:var(--accent);color:var(--white)!important;padding:8px 16px;border-radius:4px;font-weight:600!important}
+    .eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:12px}
+    /* HERO */
+    .hero{background:var(--ink);padding:88px 24px 80px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(139,111,71,.18) 0%,transparent 70%)}
+    .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;position:relative}
+    .hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);display:block;margin-bottom:18px}
+    .hero h1{font-family:var(--fd);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:600;line-height:1.08;color:var(--white);margin-bottom:20px}
+    .hero h1 em{font-style:italic;color:var(--sand)}
+    .hero-hook{font-size:18px;font-weight:500;color:var(--white);border-left:3px solid var(--sand);padding-left:16px;margin-bottom:20px;line-height:1.55}
+    .hero-sub{font-size:16px;color:rgba(255,255,255,.68);line-height:1.75;margin-bottom:32px}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 26px;border-radius:5px;font-size:14px;font-weight:600;letter-spacing:.03em;transition:all .2s}
+    .btn-primary{background:var(--accent);color:var(--white)}
+    .btn-primary:hover{background:var(--accent-dk);color:var(--white)}
+    .btn-ghost{border:1px solid rgba(255,255,255,.4);color:var(--white)}
+    .btn-ghost:hover{border-color:var(--white)}
+    /* VISUAL CARD in hero */
+    .hero-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px;color:var(--white)}
+    .hero-visual .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+    .hero-stat{text-align:center}
+    .hero-stat-num{font-family:var(--fd);font-size:2.2rem;font-weight:600;color:var(--sand);display:block}
+    .hero-stat-label{font-size:12px;color:rgba(255,255,255,.6);line-height:1.4}
+    .hero-visual-note{font-size:13px;color:rgba(255,255,255,.55);text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:16px;font-style:italic}
+    /* SECTIONS */
+    .section{padding:72px 24px}
+    .section--cream{background:var(--cream)}
+    .section--peer{background:var(--peer-bg)}
+    .section--dark{background:var(--ink);color:var(--white)}
+    .section h2{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;line-height:1.15;margin-bottom:20px}
+    .section h3{font-family:var(--fd);font-size:1.35rem;font-weight:600;margin-bottom:10px}
+    .section p{color:var(--stone);line-height:1.78;margin-bottom:16px}
+    .section--dark p{color:rgba(255,255,255,.72)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    /* CARDS */
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px 24px}
+    .card--accent{border-left:4px solid var(--accent)}
+    .card h3{font-family:var(--fd);font-size:1.2rem;margin-bottom:10px;color:var(--ink)}
+    .card p{font-size:15px;color:var(--warm-mid);margin-bottom:0;line-height:1.65}
+    /* FACT BAR */
+    .fact-bar{display:flex;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:40px 0}
+    .fact{flex:1;padding:24px 16px;text-align:center;border-right:1px solid var(--border)}
+    .fact:last-child{border-right:none}
+    .fact-num{font-family:var(--fd);font-size:2rem;font-weight:600;color:var(--accent);display:block}
+    .fact-label{font-size:12px;color:var(--warm-mid);line-height:1.4}
+    /* COMMUNITY HIGHLIGHT */
+    .community-org{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px;display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start}
+    .org-icon{width:64px;height:64px;background:var(--peer-bg);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+    .org-body h3{font-family:var(--fd);font-size:1.3rem;margin-bottom:8px;color:var(--ink)}
+    .org-body p{font-size:15px;color:var(--stone);line-height:1.7;margin-bottom:10px}
+    .org-link{font-size:13px;font-weight:600;color:var(--accent)}
+    /* STR CALLOUT */
+    .str-callout{background:linear-gradient(135deg,var(--ink) 0%,#2a2820 100%);border-radius:14px;padding:36px 32px;color:var(--white);border-left:4px solid var(--sand);margin:32px 0}
+    .str-callout h3{font-family:var(--fd);font-size:1.4rem;color:var(--sand);margin-bottom:12px}
+    .str-callout p{color:rgba(255,255,255,.75);font-size:15px;line-height:1.7;margin-bottom:0}
+    /* GUIDE LINKS */
+    .guide-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .guide-link{background:var(--peer-bg);border:1px solid var(--border);border-radius:10px;padding:20px;color:var(--ink);display:block;transition:all .2s}
+    .guide-link:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+    .guide-link .icon{font-size:20px;margin-bottom:8px}
+    .guide-link .gtitle{font-family:var(--fd);font-size:1.05rem;font-weight:600;margin-bottom:4px}
+    .guide-link .gcta{font-size:12px;font-weight:600;color:var(--accent);margin-top:8px;display:block}
+    /* PAT NOTE */
+    .pat-note{background:var(--peer-bg);border:1px solid var(--border);border-radius:14px;padding:32px;display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:start;margin:40px 0}
+    .pat-avatar{width:80px;height:80px;border-radius:50%;background:var(--border);overflow:hidden;flex-shrink:0}
+    .pat-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .pat-note-body h3{font-family:var(--fd);font-size:1.2rem;margin-bottom:8px}
+    .pat-note-body p{font-size:15px;color:var(--stone);line-height:1.72;margin-bottom:0;font-style:italic}
+    /* CTA BOX */
+    .cta-box{background:var(--ink);color:var(--white);border-radius:14px;padding:52px 40px;text-align:center}
+    .cta-box h2{font-family:var(--fd);font-size:2.2rem;color:var(--white);margin-bottom:14px}
+    .cta-box p{color:rgba(255,255,255,.7);max-width:480px;margin:0 auto 28px}
+    /* BREADCRUMB */
+    .breadcrumb{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:20px}
+    .breadcrumb a{color:var(--sand)}
+    /* FOOTER */
+    .footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px;text-align:center;font-size:14px;line-height:1.8}
+    .footer a{color:var(--sand)}
+    .footer strong{color:var(--white)}
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-visual{display:none}
+    }
+    @media(max-width:680px){
+      .grid-2,.grid-3{grid-template-columns:1fr}
+      .guide-row{grid-template-columns:1fr 1fr}
+      .community-org{grid-template-columns:1fr}
+      .fact-bar{flex-wrap:wrap}
+      .fact{flex:1 1 45%;border-right:none;border-bottom:1px solid var(--border)}
+      .pat-note{grid-template-columns:1fr}
+      .cta-box{padding:36px 24px}
+      .nav-links{display:none}
+    }
+    @media(max-width:420px){.guide-row{grid-template-columns:1fr}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Pat Miazga",
+    "jobTitle": "REALTOR®",
+    "worksFor": {"@type": "Organization", "name": "RE/MAX All Points Realty"},
+    "url": "https://patmiazga.com",
+    "telephone": "604-562-5982",
+    "email": "miazgarealestate@gmail.com",
+    "areaServed": ["Osoyoos, BC","Oliver, BC","South Okanagan, BC","Similkameen, BC","Anarchist Mountain, BC"],
+    "knowsLanguage": ["English","Polish"],
+    "description": "South Okanagan Real Estate and Relocation Specialist with 22+ years BC experience. The only REALTOR® who can handle your Lower Mainland sale and South Okanagan purchase — licensed BC-wide since 2004.",
+    "award": ["RE/MAX Hall of Fame","MLS Medallion Club"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Anarchist Mountain, Osoyoos, BC",
+    "description": "Rural mountain community 15km east of Osoyoos. Acreages with valley and lake views, tight-knit community, RDOS Electoral Area C jurisdiction.",
+    "geo": {"@type": "GeoCoordinates", "latitude": 49.0100, "longitude": -119.3500},
+    "containedInPlace": {"@type": "Place", "name": "South Okanagan, British Columbia, Canada"}
+  }
+  </script>
+  <meta property="og:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+  <meta name="twitter:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">PAT MIAZGA</a>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="communities.html">Communities</a>
+        <a href="index.html#guides">Free Guides</a>
+        <a href="index.html#contact" class="nav-cta">Talk to Pat</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Home</a> → <a href="communities.html">Communities</a> → Anarchist Mountain</div>
+        <span class="hero-eyebrow">Community Spotlight — Anarchist Mountain, Osoyoos BC</span>
+        <h1>Mountain living.<br><em>15 minutes from everything.</em></h1>
+        <p class="hero-hook">Pat Miazga has lived on Anarchist Mountain for nearly three years. This isn't research — it's home.</p>
+        <p class="hero-sub">Acreages with panoramic views over Osoyoos Lake and the valley below. A volunteer fire department that shows up. A community society that actually brings people together. And a real estate angle that most agents simply don't know about.</p>
+        <div class="hero-btns">
+          <a href="index.html#contact" class="btn btn-primary">Talk to Pat About Buying Here</a>
+          <a href="communities.html" class="btn btn-ghost">All Communities →</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="stat-grid">
+          <div class="hero-stat">
+            <span class="hero-stat-num">1,491m</span>
+            <span class="hero-stat-label">Elevation at summit<br>(4,892 ft)</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">15km</span>
+            <span class="hero-stat-label">East of Osoyoos<br>town centre</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">130+</span>
+            <span class="hero-stat-label">Residents at annual<br>community BBQ</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">2013</span>
+            <span class="hero-stat-label">FireSmart program<br>active since</span>
+          </div>
+        </div>
+        <p class="hero-visual-note">Named after John Haywood — a prospector who called himself an Anarchist and carried a stick of dynamite in his boot. Officially named 1922.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO LIVES HERE -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <span class="eyebrow">The Community</span>
+          <h2>Not a suburb. Not a resort. A real mountain community.</h2>
+          <p>Anarchist Mountain attracts a specific type of person. Families who want space and a yard measured in acres, not square feet. Retirees from Vancouver and Calgary who made the move for the views and stayed for the neighbours. Remote workers who discovered you can have fibre internet and a mountain sunrise at the same time.</p>
+          <p>The community is anchored by the Anarchist Mountain Community Society (AMCS), a not-for-profit that has been running events, BBQs, markets, and silent auctions for years. At the 2024 annual BBQ, over 130 people showed up. For a rural mountain community, that's remarkable.</p>
+          <p>People know their neighbours here. That's not marketing language — it's what you find when you actually live here.</p>
+        </div>
+        <div>
+          <div class="fact-bar" style="flex-direction:column;border-radius:12px;margin:0">
+            <div class="fact" style="border-right:none;border-bottom:1px solid var(--border);text-align:left;padding:20px 24px">
+              <span style="font-size:13px;font-weight:600;color:var(--ink);display:block;margin-bottom:4px">📍 Location</span>
+              <span style="font-size:14px;color:var(--stone)">15 km east of Osoyoos on Hwy 3 (Crowsnest Hwy). Easy access to town, grocery, medical, golf. 4km from US border crossing.</span>
+            </div>
+            <div class="fact" style="border-right:none;border-bottom:1px solid var(--border);text-align:left;padding:20px 24px">
+              <span style="font-size:13px;font-weight:600;color:var(--ink);display:block;margin-bottom:4px">🏡 Property Types</span>
+              <span style="font-size:14px;color:var(--stone)">Acreages, rural residential lots, custom-built homes. Larger parcels than anything you'll find in Osoyoos town. Many with valley and lake views.</span>
+            </div>
+            <div class="fact" style="border-right:none;border-bottom:1px solid var(--border);text-align:left;padding:20px 24px">
+              <span style="font-size:13px;font-weight:600;color:var(--ink);display:block;margin-bottom:4px">❄️ Winter</span>
+              <span style="font-size:14px;color:var(--stone)">Snow in winter — a proper one, unlike town. But milder than you'd expect at elevation. Road maintenance by RDOS. Community members are well-prepared.</span>
+            </div>
+            <div class="fact" style="border-right:none;text-align:left;padding:20px 24px">
+              <span style="font-size:13px;font-weight:600;color:var(--ink);display:block;margin-bottom:4px">🌐 Internet</span>
+              <span style="font-size:14px;color:var(--stone)">Fibre internet available in many areas. Remote work is very viable — several AMCS board members work remotely from the mountain.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAT'S NOTE -->
+  <section class="section">
+    <div class="container">
+      <div class="pat-note">
+        <div class="pat-avatar">
+          <img src="images/pat-miazga.png" alt="Pat Miazga" />
+        </div>
+        <div class="pat-note-body">
+          <h3>A note from Pat — who actually lives here</h3>
+          <p>"I made the move to Anarchist Mountain at the end of August 2022 — coming up on three years this summer. What I didn't expect was how quickly I'd feel connected to the community. The AMCS BBQ, the fire department fundraisers, the neighbours who show up when you need them. My construction background meant I could evaluate properties up here differently than most agents — the land, the orientation, the build quality. If you're considering Anarchist Mountain, I can walk you through what I've learned living here, not just what I've read about it."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY ORGS -->
+  <section class="section section--peer">
+    <div class="container">
+      <span class="eyebrow">Community Organizations</span>
+      <h2>The people who make the mountain work</h2>
+      <p style="color:var(--stone);max-width:620px;margin-bottom:40px">Anarchist Mountain has two organizations that most rural communities would envy. Both are volunteer-run, both punch well above their weight, and both are worth knowing about before you buy here.</p>
+
+      <div class="community-org">
+        <div class="org-icon">🏘️</div>
+        <div class="org-body">
+          <h3>Anarchist Mountain Community Society (AMCS)</h3>
+          <p>The AMCS is the social glue of the mountain. Annual events include the summer BBQ (130+ attendees in 2024), the Silent Auction which raises thousands annually for the fire department, markets, and community gatherings at the Jamie Soule Memorial Park on Sasquatch Trail. The AMCS also negotiates member discounts with local businesses including Kettle Valley Golf Course and the Sage Pub.</p>
+          <p>Membership is $60/year for residents. The AMCS board is made up of actual mountain residents — remote workers, retirees, families. The society also runs a FireSmart committee that has been doing residential assessments since 2013, one of the most proactive wildfire preparedness programs in the South Okanagan.</p>
+          <p>Events are held at The Summit Centre (118 Peregrine Road) and Jamie Soule Memorial Park (105 Sasquatch Trail).</p>
+          <a href="https://amcsbc.ca" target="_blank" rel="noopener" class="org-link">Visit amcsbc.ca →</a>
+        </div>
+      </div>
+
+      <div class="community-org">
+        <div class="org-icon">🚒</div>
+        <div class="org-body">
+          <h3>Anarchist Mountain Fire Department & Fire Rescue Society (AMFD / AMFRS)</h3>
+          <p>The Anarchist Mountain Fire Department is a volunteer department serving the mountain and surrounding RDOS electoral areas. Fire Chief Urs Grob leads a team that provides fire suppression, technical rescue, and medical response for the community — the same services a municipal department provides, but fully volunteer-funded and community-supported.</p>
+          <p>The Fire Rescue Society (AMFRS) runs the annual online auction, a beloved community event that brings in equipment funding and training dollars. The department is located at 115 Grizzly Road and is always looking for volunteers. During the 2021 wildfire season, community members organized food coordination at the fire hall — a genuine grassroots response.</p>
+          <p>For buyers: the presence of a local volunteer department is a meaningful factor in property insurance. Always confirm coverage specifics with your insurer and broker.</p>
+          <a href="http://amfd.org" target="_blank" rel="noopener" class="org-link">Visit amfd.org →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STR CALLOUT — THE DIFFERENTIATOR -->
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">The Angle Other Agents Miss</span>
+      <h2>Short-Term Rentals on Anarchist Mountain — a critical distinction</h2>
+      <p style="color:var(--stone);max-width:680px">This is the most misunderstood real estate fact about Anarchist Mountain, and almost no agent in this market gets it right.</p>
+
+      <div class="str-callout">
+        <h3>⚠️ Osoyoos STR rules do NOT apply on the mountain</h3>
+        <p>The Town of Osoyoos has a principal residence requirement for short-term rentals (STR) — you must live there to operate an Airbnb. But Anarchist Mountain sits outside Osoyoos town limits, in RDOS Electoral Areas C and H. That means the town's STR rules simply don't apply. Full-time STR operations have historically been legally possible in these areas under RDOS jurisdiction — without the principal residence restriction that applies in town.</p>
+        <p style="margin-top:12px"><strong style="color:var(--sand)">Important:</strong> RDOS STR regulations are under active review and can change. Always verify the current rules directly with RDOS Development Services before purchasing for STR purposes. Pat can help you ask the right questions and connect you with the right people.</p>
+      </div>
+
+      <p style="color:var(--stone)">This distinction makes certain Anarchist Mountain properties genuinely different investment propositions than equivalent properties in Osoyoos town. It's the kind of nuance that requires someone who actually knows the jurisdictional boundaries — and ideally, someone who lives there.</p>
+    </div>
+  </section>
+
+  <!-- WHAT TO EXPECT BUYING HERE -->
+  <section class="section section--cream">
+    <div class="container">
+      <span class="eyebrow">Buying on Anarchist Mountain</span>
+      <h2>What's different about buying rural</h2>
+      <div class="grid-3">
+        <div class="card card--accent">
+          <h3>💧 Well & Septic</h3>
+          <p>Most properties on the mountain are on well water and septic. Well flow testing and water quality testing are non-negotiable conditions on any rural purchase here. Pat's inspection guides cover exactly what to test for and when to bring in a specialist.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>🔥 Wildfire Interface</h3>
+          <p>Anarchist Mountain is in a wildfire interface zone. FireSmart assessments are available through AMCS. The 50km active wildfire insurance rule applies — your insurer won't bind a new policy near an active fire. Build this into your subject conditions.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>📋 RDOS vs Town Rules</h3>
+          <p>Properties here are regulated by RDOS, not the Town of Osoyoos. Building permits, zoning, subdivision — all go through RDOS. If you're planning to build or renovate, understanding the difference matters before you make an offer.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>⚗️ Radon Testing</h3>
+          <p>The South Okanagan has elevated radon levels, and mountain properties with basements warrant testing. The RDOS ran a funded radon testing program — ask Pat about timing and how to interpret results.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>🏗️ Owner-Built Homes</h3>
+          <p>Some mountain properties were owner-built. BC's owner builder rules require disclosure when selling and have financing implications. Pat's Owner Builder Guide explains what to look for and how lenders view these properties.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>🚗 Access & Snow</h3>
+          <p>Hwy 3 up Anarchist Mountain is maintained, but individual road access matters. Ask about road maintenance, snow clearing responsibility, and whether the property has year-round access. Not all do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELEVANT GUIDES -->
+  <section class="section section--peer">
+    <div class="container">
+      <span class="eyebrow">Go Deeper</span>
+      <h2>Guides relevant to buying on Anarchist Mountain</h2>
+      <p style="color:var(--stone);max-width:620px">These guides cover the topics that matter most for rural and mountain property purchases. First sections are free — unlock the rest with your email.</p>
+      <div class="guide-row">
+        <a href="inspection-well-septic-guide.html" class="guide-link">
+          <div class="icon">💧</div>
+          <div class="gtitle">Well Water, Septic & Rural Inspections</div>
+          <div class="gdesc">What to test, when to bring in a specialist, and what the results mean.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+        <a href="climate-insurance-risk-guide.html" class="guide-link">
+          <div class="icon">🔥</div>
+          <div class="gtitle">Climate & Insurance Risk Guide</div>
+          <div class="gdesc">Wildfire interface zones, the 50km rule, and what to verify before removing subjects.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+        <a href="owner-builder-guide.html" class="guide-link">
+          <div class="icon">🪚</div>
+          <div class="gtitle">Owner Builder Guide</div>
+          <div class="gdesc">BC owner builder rules, disclosure requirements, and lender implications.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+        <a href="radon-testing-guide.html" class="guide-link">
+          <div class="icon">⚗️</div>
+          <div class="gtitle">Radon Testing Guide</div>
+          <div class="gdesc">South Okanagan radon levels, how to test, and what action levels mean.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+        <a href="investment-property-guide.html" class="guide-link">
+          <div class="icon">💰</div>
+          <div class="gtitle">Investment Property Guide</div>
+          <div class="gdesc">STR licensing, RDOS rules, and how to evaluate the numbers before buying.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+        <a href="unpermitted-work-guide.html" class="guide-link">
+          <div class="icon">🔨</div>
+          <div class="gtitle">Unpermitted Work Guide</div>
+          <div class="gdesc">How to spot it, what liability you inherit, and how to protect yourself.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Thinking about buying on Anarchist Mountain?</h2>
+        <p>Pat has lived here for nearly three years and knows the community, the quirks, the STR rules, and the properties. There's no substitute for talking to someone who actually lives where you want to buy.</p>
+        <a href="index.html#contact" class="btn btn-primary">Start the Conversation</a>
+        <a href="communities.html" class="btn btn-ghost" style="margin-left:12px">See All Communities →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Pat Miazga, REALTOR®</strong> — RE/MAX All Points Realty<br>
+      South Okanagan Real Estate & Relocation Specialist<br>
+      📞 <a href="tel:6045625982">604-562-5982</a> &nbsp;|&nbsp; ✉️ <a href="mailto:miazgarealestate@gmail.com">miazgarealestate@gmail.com</a> &nbsp;|&nbsp; <a href="https://patmiazga.com">patmiazga.com</a></p>
+      <p style="margin-top:16px;font-size:12px">The information on this page reflects Pat's personal experience and publicly available community information. STR regulations, RDOS rules, and community programs are subject to change — always verify current rules directly with RDOS Development Services before making real estate decisions.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

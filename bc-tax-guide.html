@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://patmiazga.com/bc-tax-guide.html" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BC Tax Guide | South Okanagan | Pat Miazga</title>
+<meta name="description" content="Complete BC property tax guide for South Okanagan buyers — Property Transfer Tax, Speculation and Vacancy Tax (Osoyoos and Oliver are NOT designated), GST, and the BC Home Flipping Tax. Includes interactive closing cost calculator." />
+<meta property="og:title" content="BC Tax Guide | South Okanagan Real Estate | Pat Miazga"/>
+<meta property="og:description" content="PTT, GST, Speculation Tax, and the BC Home Flipping Tax explained for South Okanagan buyers. Osoyoos and Oliver are outside the SVT taxable zone."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://patmiazga.com/bc-tax-guide.html"/>
+<meta property="og:site_name" content="Pat Miazga | South Okanagan REALTOR®"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BC Tax Guide | South Okanagan Real Estate | Pat Miazga"/>
+<meta name="twitter:description" content="PTT, GST, Speculation Tax, and the BC Home Flipping Tax explained for South Okanagan buyers. Osoyoos and Oliver are outside the SVT taxable zone."/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#1a1a18; --stone:#3d3d38; --mid:#7a7468; --sand:#c8b89a;
+  --cream:#f7f4ef; --white:#fff; --accent:#8b6f47; --accent-dk:#6b5235;
+  --border:#e2ddd6; --soft:#f0ede8;
+  --fd:'Cormorant Garamond',Georgia,serif; --fb:'Inter',system-ui,sans-serif;
+  --green:#3a7d44;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--cream);color:var(--stone);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:680px;margin:0 auto;padding:0 22px;}
+img{max-width:100%;}
+
+/* ── HERO ILLUSTRATION (inline SVG, no external requests) ── */
+.hero{background:var(--ink);color:var(--white);padding:48px 0 56px;position:relative;overflow:hidden;}
+.hero-photo{position:absolute;inset:0;z-index:0;opacity:.9;}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,26,24,.35) 0%,rgba(26,26,24,.75) 70%,var(--ink) 100%);}
+.hero-inner{position:relative;z-index:1;}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sand);}
+.eyebrow-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+.updated-badge{font-size:10px;font-weight:600;color:rgba(255,255,255,.55);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:3px 11px;letter-spacing:.03em;white-space:nowrap;}
+.hero h1{font-family:var(--fd);font-weight:600;font-size:clamp(2.2rem,9vw,3.2rem);line-height:1.08;margin-bottom:16px;}
+.hero h1 em{font-style:italic;color:var(--sand);}
+.hero p{font-size:16px;color:rgba(255,255,255,.65);max-width:480px;}
+.hero-byline{display:flex;align-items:center;gap:11px;margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);}
+.hero-avatar{width:42px;height:42px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:600;font-size:17px;color:var(--white);flex-shrink:0;}
+.hero-byline-text{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.4;}
+.hero-byline-text strong{color:var(--white);font-weight:600;}
+
+/* ── PROGRESS BAR ── */
+.progress-wrap{background:var(--white);border-bottom:1px solid var(--border);padding:11px 0;position:sticky;top:0;z-index:50;}
+.progress-track{background:var(--soft);border-radius:6px;height:6px;overflow:hidden;}
+.progress-fill{background:var(--accent);height:100%;border-radius:6px;width:14%;transition:width .4s ease;}
+.progress-label{font-size:10.5px;color:var(--mid);margin-top:6px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+
+/* ── SECTIONS ── */
+.section{padding:44px 0;border-bottom:1px solid var(--border);}
+.section:last-of-type{border-bottom:none;}
+.section-num{font-family:var(--fd);font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.06em;margin-bottom:8px;}
+.section h2{font-family:var(--fd);font-weight:600;font-size:clamp(1.6rem,6vw,2.1rem);color:var(--ink);margin-bottom:14px;line-height:1.18;}
+.section h2 em{font-style:italic;color:var(--accent);}
+.section p{margin-bottom:14px;font-size:15.5px;}
+.section p:last-child{margin-bottom:0;}
+.lede{font-size:17px;color:var(--ink);font-weight:400;}
+
+/* ── STEP TIMELINE ── */
+.steps{margin-top:24px;}
+.step{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border);}
+.step:first-child{border-top:none;padding-top:0;}
+.step-num{font-family:var(--fd);font-size:1.6rem;font-weight:600;color:var(--sand);flex-shrink:0;width:34px;line-height:1.3;}
+.step-content h3{font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.step-content p{font-size:14px;color:var(--mid);margin-bottom:0;}
+
+/* ── CALLOUT CARD ── */
+.callout{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:22px;margin:22px 0;}
+.callout-eyebrow{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+.callout-big{font-family:var(--fd);font-size:2.6rem;font-weight:600;color:var(--ink);line-height:1;margin-bottom:6px;}
+.callout-sub{font-size:13px;color:var(--mid);}
+.callout-divider{height:1px;background:var(--border);margin:18px 0;}
+
+/* ── SAVINGS TABLE ── */
+.savings-row{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid var(--border);gap:12px;}
+.savings-row:last-child{border-bottom:none;}
+.savings-row.total{padding-top:16px;border-top:2px solid var(--ink);border-bottom:none;}
+.savings-label{font-size:14px;color:var(--stone);}
+.savings-label .sub{display:block;font-size:12px;color:var(--mid);margin-top:2px;}
+.savings-val{font-family:var(--fd);font-size:1.3rem;font-weight:600;color:var(--ink);white-space:nowrap;}
+.savings-val.green{color:var(--green);}
+.savings-row.total .savings-val{font-size:1.8rem;color:var(--accent);}
+.savings-row.total .savings-label{font-weight:600;color:var(--ink);font-size:15px;}
+
+/* ── GATE ── */
+.gate{background:var(--ink);color:var(--white);padding:48px 0;position:relative;overflow:hidden;}
+.gate::after{content:'';position:absolute;bottom:-40%;left:-10%;width:55%;height:140%;background:radial-gradient(circle,rgba(200,184,154,.15),transparent 70%);}
+.gate-inner{position:relative;z-index:1;}
+.gate .eyebrow{color:var(--sand);}
+.gate h2{font-family:var(--fd);font-weight:600;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.15;margin-bottom:14px;}
+.gate h2 em{font-style:italic;color:var(--sand);}
+.gate p{color:rgba(255,255,255,.6);margin-bottom:24px;font-size:15px;}
+.unlock-list{list-style:none;margin-bottom:28px;}
+.unlock-list li{display:flex;gap:11px;padding:10px 0;border-top:1px solid rgba(255,255,255,.1);font-size:14.5px;color:rgba(255,255,255,.85);}
+.unlock-list li:first-child{border-top:none;}
+.unlock-icon{color:var(--sand);font-size:14px;flex-shrink:0;margin-top:1px;}
+
+/* ── FORM ── */
+.form-card{background:var(--white);border-radius:14px;padding:24px;}
+.form-card h3{font-family:var(--fd);font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.form-card .form-sub{font-size:13px;color:var(--mid);margin-bottom:18px;}
+.fgroup{margin-bottom:14px;}
+.fgroup label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
+.fgroup input,.fgroup select{width:100%;font-family:var(--fb);font-size:15px;padding:12px 14px;border:1.5px solid var(--border);border-radius:9px;background:var(--white);color:var(--ink);outline:none;transition:border-color .15s;}
+.fgroup input:focus,.fgroup select:focus{border-color:var(--accent);}
+.form-row{display:flex;gap:10px;}
+.form-row .fgroup{flex:1;}
+.submit-btn{width:100%;padding:14px;background:var(--accent);color:var(--white);border:none;border-radius:9px;font-family:var(--fb);font-size:15px;font-weight:600;cursor:pointer;margin-top:4px;transition:background .15s;}
+.submit-btn:active{background:var(--accent-dk);}
+.form-disclaimer{font-size:11.5px;color:var(--mid);text-align:center;margin-top:12px;line-height:1.5;}
+
+/* ── UNLOCKED CONTENT ── */
+#unlocked{display:none;}
+#unlocked.show{display:block;}
+.unlock-banner{background:var(--soft);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin-bottom:8px;display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--stone);}
+.unlock-banner .check{color:var(--green);font-size:18px;}
+
+/* ── PROFESSIONAL DISCLAIMER BANNER ── */
+.disclaimer-banner{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:14px 18px;margin:14px 0 0;font-size:12.5px;color:var(--mid);line-height:1.6;}
+.disclaimer-banner strong{color:var(--stone);}
+
+/* ── HIGHLIGHT BOX ── */
+.highlight{background:var(--soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0;}
+.highlight .h-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.highlight p{font-size:14.5px;margin-bottom:0;color:var(--stone);}
+
+/* ── COMPARISON CARD (Osoyoos advantage) ── */
+.compare-grid{display:grid;grid-template-columns:1fr;gap:12px;margin:20px 0;}
+.compare-card{border-radius:12px;padding:18px;border:1.5px solid var(--border);}
+.compare-card.win{border-color:var(--green);background:#f4f9f4;}
+.compare-card.lose{border-color:var(--border);background:var(--white);}
+.compare-card-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;}
+.compare-card.win .compare-card-title{color:var(--green);}
+.compare-card.lose .compare-card-title{color:var(--mid);}
+.compare-card-towns{font-family:var(--fd);font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.compare-card p{font-size:13.5px;color:var(--mid);margin-bottom:0;}
+
+/* ── COST TABLE ── */
+.cost-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+.cost-table th{text-align:left;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);padding-bottom:10px;border-bottom:2px solid var(--ink);}
+.cost-table th:last-child{text-align:right;}
+.cost-table td{padding:11px 0;border-bottom:1px solid var(--border);color:var(--stone);}
+.cost-table td:last-child{text-align:right;font-weight:600;color:var(--ink);font-family:var(--fd);font-size:1.05rem;}
+.cost-table tr.total td{border-bottom:none;border-top:2px solid var(--ink);padding-top:14px;font-weight:600;color:var(--ink);}
+.cost-table tr.total td:last-child{font-size:1.3rem;color:var(--accent);}
+.cost-note{font-size:12px;color:var(--mid);margin-top:-8px;margin-bottom:14px;}
+
+/* ── ACCORDION ── */
+.acc{border:1px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.acc-head{padding:15px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;background:var(--white);font-weight:600;font-size:14.5px;color:var(--ink);}
+.acc-head .plus{font-size:18px;color:var(--accent);transition:transform .2s;flex-shrink:0;margin-left:12px;}
+.acc.open .acc-head .plus{transform:rotate(45deg);}
+.acc-body{padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.acc.open .acc-body{max-height:600px;padding-bottom:16px;}
+.acc-body p{font-size:14px;color:var(--mid);margin-bottom:8px;}
+.acc-body p:last-child{margin-bottom:0;}
+
+/* ── FINAL CTA ── */
+.cta{background:var(--ink);color:var(--white);padding:48px 0;text-align:center;position:relative;overflow:hidden;}
+.cta-photo{position:absolute;inset:0;z-index:0;opacity:.8;}
+.cta-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,var(--ink) 0%,rgba(26,26,24,.6) 50%,var(--ink) 100%);}
+.cta .wrap{position:relative;z-index:1;}
+.cta h2{font-family:var(--fd);font-weight:600;font-size:clamp(1.8rem,7vw,2.4rem);margin-bottom:12px;}
+.cta h2 em{font-style:italic;color:var(--sand);}
+.cta p{color:rgba(255,255,255,.6);margin-bottom:26px;font-size:15px;max-width:440px;margin-left:auto;margin-right:auto;}
+.cta-buttons{display:flex;flex-direction:column;gap:10px;max-width:340px;margin:0 auto;}
+.cta-btn{display:block;padding:15px;border-radius:10px;font-family:var(--fb);font-weight:600;font-size:15px;text-decoration:none;text-align:center;cursor:pointer;border:none;}
+.cta-btn.primary{background:var(--accent);color:var(--white);}
+.cta-btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.25);color:var(--white);}
+
+/* ── FOOTER ── */
+.footer{padding:30px 0 40px;text-align:center;}
+.footer .fname{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--ink);}
+.footer .ftag{font-size:12px;color:var(--mid);margin-top:3px;}
+.footer .flinks{margin-top:14px;font-size:12px;color:var(--mid);}
+.footer .flinks a{color:var(--accent);text-decoration:none;}
+
+@media(min-width:600px){
+  .compare-grid{grid-template-columns:1fr 1fr;}
+}
+
+/* ── TAX MAP ILLUSTRATION (inline SVG) ── */
+.tax-map{border-radius:12px;overflow:hidden;margin:22px 0;background:#1a1a18;padding:4px;}
+
+/* ── BADGE BANNER (illustrated, no photo needed) ── */
+.badge-banner{display:flex;align-items:center;gap:18px;background:var(--ink);border-radius:14px;padding:22px;margin:22px 0;}
+.badge-seal{width:104px;height:104px;flex-shrink:0;}
+.badge-seal svg{width:100%;height:100%;}
+.badge-text-title{font-family:var(--fd);font-size:1.15rem;font-weight:600;color:var(--white);line-height:1.25;margin-bottom:7px;}
+.badge-text-sub{font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.5;}
+@media(max-width:420px){
+  .badge-banner{flex-direction:column;text-align:center;}
+  .badge-seal{width:90px;height:90px;}
+}
+
+/* ── ICON ROW (replaces photo grid for rural section) ── */
+.icon-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0;}
+.icon-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px 16px;text-align:center;}
+.icon-card .icon-circle{width:48px;height:48px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:20px;}
+.icon-card .icon-label{font-size:13px;font-weight:600;color:var(--ink);}
+
+/* ── SCENARIO CARD ── */
+.scenario{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin:24px 0;}
+.scenario-head{background:var(--ink);padding:18px 22px;display:flex;align-items:center;gap:13px;}
+.scenario-avatar{width:44px;height:44px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:600;font-size:17px;color:var(--white);flex-shrink:0;}
+.scenario-head-text{color:var(--white);}
+.scenario-head-text .sh-label{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sand);margin-bottom:2px;}
+.scenario-head-text .sh-name{font-family:var(--fd);font-size:1.2rem;font-weight:600;line-height:1.1;}
+.scenario-body{padding:20px 22px;}
+.scenario-body p{font-size:14.5px;margin-bottom:12px;}
+.scenario-body p:last-child{margin-bottom:0;}
+.scenario-math{background:var(--soft);border-radius:10px;padding:14px 16px;margin:14px 0;}
+.scenario-math .sm-row{display:flex;justify-content:space-between;font-size:13.5px;padding:5px 0;color:var(--stone);}
+.scenario-math .sm-row.result{border-top:1px solid var(--border);margin-top:6px;padding-top:10px;font-weight:600;color:var(--ink);}
+.scenario-math .sm-row.result .sm-val{color:var(--accent);font-family:var(--fd);font-size:1.15rem;}
+
+/* ── PTT CALCULATOR ── */
+.calc-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px;margin:22px 0;}
+.calc-card h3{font-family:var(--fd);font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:4px;}
+.calc-sub{font-size:12.5px;color:var(--mid);margin-bottom:16px;}
+.calc-input-row{margin-bottom:14px;}
+.calc-input-row label{display:block;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;}
+.calc-price-input{display:flex;align-items:center;background:var(--cream);border:1.5px solid var(--border);border-radius:9px;padding:10px 14px;}
+.calc-price-input span{font-family:var(--fd);font-size:1.3rem;color:var(--mid);margin-right:4px;}
+.calc-price-input input[type=text]{border:none;background:none;font-family:var(--fd);font-size:1.3rem;font-weight:600;color:var(--ink);outline:none;width:100%;}
+.calc-checks{display:flex;flex-direction:column;gap:10px;margin-bottom:18px;}
+.calc-check{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--stone);cursor:pointer;}
+.calc-check input{width:18px;height:18px;accent-color:var(--accent);flex-shrink:0;}
+.calc-results{background:var(--soft);border-radius:10px;padding:16px;}
+.calc-row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;font-size:13.5px;color:var(--stone);border-bottom:1px solid var(--border);}
+.calc-row:last-child{border-bottom:none;}
+.calc-row.total{padding-top:12px;border-top:2px solid var(--ink);margin-top:4px;}
+.calc-row.total .calc-val{font-family:var(--fd);font-size:1.6rem;color:var(--accent);font-weight:600;}
+.calc-row.savings .calc-val{color:var(--green);}
+.calc-val{font-weight:600;color:var(--ink);font-family:var(--fd);font-size:1.05rem;}
+.calc-strike{text-decoration:line-through;color:var(--mid);font-size:12px;margin-right:6px;}
+
+/* ── PTT RATE TABLE ── */
+.rate-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;}
+.rate-table th{text-align:left;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);padding-bottom:10px;border-bottom:2px solid var(--ink);}
+.rate-table th:last-child{text-align:right;}
+.rate-table td{padding:11px 0;border-bottom:1px solid var(--border);color:var(--stone);}
+.rate-table td:last-child{text-align:right;font-weight:600;color:var(--ink);font-family:var(--fd);font-size:1.1rem;}
+
+/* ── PROFILE CARDS (which taxes apply to you) ── */
+.profile-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:12px;}
+.profile-card h4{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:10px;}
+.profile-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.ptag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;}
+.ptag.applies{background:#fdecea;color:var(--accent-dk);}
+.ptag.exempt{background:#eafaf1;color:var(--green);}
+.ptag.maybe{background:var(--soft);color:var(--mid);}
+.profile-card p{font-size:13.5px;color:var(--mid);margin-bottom:0;}
+
+/* ── COMPARE TABLE (new vs resale) ── */
+.vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0;}
+.vs-card{border:1.5px solid var(--border);border-radius:12px;padding:16px 14px;background:var(--white);}
+.vs-card .vs-title{font-family:var(--fd);font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:10px;text-align:center;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.vs-row{font-size:12.5px;color:var(--stone);padding:6px 0;border-bottom:1px solid var(--border);}
+.vs-row:last-child{border-bottom:none;}
+.vs-row strong{display:block;color:var(--ink);font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px;}
+@media(max-width:480px){
+  .vs-grid{grid-template-columns:1fr;}
+}
+</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Pat Miazga",
+    "jobTitle": "REALTOR®",
+    "worksFor": {"@type": "Organization", "name": "RE/MAX All Points Realty"},
+    "url": "https://patmiazga.com",
+    "telephone": "604-562-5982",
+    "email": "miazgarealestate@gmail.com",
+    "areaServed": ["Osoyoos, BC","Oliver, BC","South Okanagan, BC","Similkameen, BC","Anarchist Mountain, BC"],
+    "knowsLanguage": ["English","Polish"],
+    "description": "South Okanagan Real Estate and Relocation Specialist with 22+ years BC experience. The only REALTOR® who can handle your Lower Mainland sale and South Okanagan purchase — licensed BC-wide since 2004.",
+    "award": ["RE/MAX Hall of Fame","MLS Medallion Club"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "author": {"@type": "Person", "name": "Pat Miazga", "jobTitle": "REALTOR®"},
+    "publisher": {"@type": "Organization", "name": "RE/MAX All Points Realty"},
+    "about": {"@type": "Place", "name": "South Okanagan, British Columbia, Canada"},
+    "description": "BC Property Tax Guide — Property Transfer Tax, Speculation and Vacancy Tax, GST for South Okanagan real estate"
+  }
+  </script>
+  <meta property="og:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+  <meta name="twitter:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-photo">
+    <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#4a3a28"/>
+          <stop offset="100%" stop-color="#1a1a18"/>
+        </linearGradient>
+        <linearGradient id="lakeGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#8b6f47" stop-opacity="0.55"/>
+          <stop offset="100%" stop-color="#1a1a18" stop-opacity="0.9"/>
+        </linearGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#skyGrad)"/>
+      <circle cx="600" cy="120" r="60" fill="#c8b89a" opacity="0.5"/>
+      <circle cx="600" cy="120" r="90" fill="#c8b89a" opacity="0.15"/>
+      <path d="M0,220 Q150,170 320,210 Q500,250 650,190 Q740,160 800,200 L800,400 L0,400 Z" fill="#3d3d38" opacity="0.65"/>
+      <path d="M0,260 Q200,220 400,255 Q600,290 800,240 L800,400 L0,400 Z" fill="#2a2420" opacity="0.8"/>
+      <rect x="0" y="300" width="800" height="100" fill="url(#lakeGrad)"/>
+      <g stroke="#c8b89a" stroke-width="2" opacity="0.4">
+        <line x1="-40" y1="400" x2="160" y2="305"/>
+        <line x1="20" y1="400" x2="220" y2="305"/>
+        <line x1="80" y1="400" x2="280" y2="305"/>
+        <line x1="140" y1="400" x2="340" y2="305"/>
+        <line x1="200" y1="400" x2="400" y2="305"/>
+        <line x1="260" y1="400" x2="460" y2="305"/>
+        <line x1="320" y1="400" x2="520" y2="305"/>
+        <line x1="380" y1="400" x2="580" y2="305"/>
+        <line x1="440" y1="400" x2="640" y2="305"/>
+        <line x1="500" y1="400" x2="700" y2="305"/>
+        <line x1="560" y1="400" x2="760" y2="305"/>
+        <line x1="620" y1="400" x2="820" y2="305"/>
+      </g>
+    </svg>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow-row">
+      <div class="eyebrow">BC Tax Guide · South Okanagan</div>
+      <div class="updated-badge">Updated June 2026</div>
+    </div>
+    <h1>Property taxes<br>in BC, <em>decoded</em>.</h1>
+    <p>PTT, the new federal GST rebate, the Speculation Tax, the Foreign Buyer Tax, the Empty Homes Tax — every tax you'll hear about when buying in BC, explained in plain English, with a calculator so you know exactly what you'll owe.</p>
+    <div class="hero-byline">
+      <div class="hero-avatar">PM</div>
+      <div class="hero-byline-text"><strong>Pat Miazga</strong>, REALTOR®<br>RE/MAX All Points Realty<br>South Okanagan Real Estate & Relocation Specialist · 22+ years in BC<br>604-562-5982 · patmiazga.com</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-wrap">
+  <div class="wrap">
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-label" id="progress-label">Section 1 of 8 — free preview</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="disclaimer-banner">
+    <strong>Please note:</strong> Pat Miazga is a licensed real estate professional — not an accountant or lawyer. This guide is general information to help you understand the BC tax landscape, not personalized tax or legal advice. Tax outcomes depend on your individual circumstances. Please confirm details with a qualified accountant, real estate lawyer, or notary before making decisions based on this guide.
+  </div>
+</div>
+
+<!-- SECTION 1: FREE — PTT Basics + Calculator -->
+<div class="section" id="sec-1">
+  <div class="wrap">
+    <div class="section-num">01 — Property Transfer Tax</div>
+    <h2>The one tax <em>everyone</em> pays — here's exactly how much.</h2>
+    <p class="lede">Property Transfer Tax (PTT) is a one-time provincial tax paid when a property changes ownership in BC. It's calculated in tiers based on the purchase price.</p>
+
+    <table class="rate-table">
+      <thead><tr><th>Portion of purchase price</th><th>Rate</th></tr></thead>
+      <tbody>
+        <tr><td>First $200,000</td><td>1%</td></tr>
+        <tr><td>$200,000 – $2,000,000</td><td>2%</td></tr>
+        <tr><td>Over $2,000,000</td><td>3%</td></tr>
+        <tr><td>Residential portion over $3,000,000</td><td>+2% additional</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--mid);margin-top:-8px">The last two tiers rarely come into play for South Okanagan homes — but they matter if you're looking at larger acreages or commercial-residential mixes.</p>
+
+    <div class="calc-card">
+      <h3>PTT Calculator</h3>
+      <div class="calc-sub">Enter a purchase price to see exactly what you'd owe.</div>
+      <div class="calc-input-row">
+        <label>Purchase Price</label>
+        <div class="calc-price-input">
+          <span>$</span>
+          <input type="text" id="calc-price" value="650,000" inputmode="numeric"/>
+        </div>
+      </div>
+      <div class="calc-checks">
+        <label class="calc-check"><input type="checkbox" id="calc-ftb"/> I qualify as a first-time buyer (BC residency requirements met)</label>
+        <label class="calc-check"><input type="checkbox" id="calc-new"/> This is a newly built home</label>
+      </div>
+      <div class="calc-results" id="calc-results"></div>
+    </div>
+
+    <div class="highlight">
+      <div class="h-label">Important nuance</div>
+      <p>The First-Time Buyer PTT exemption requires you to have lived in BC for 12 months, or filed 2 BC income tax returns in the last 6 years. <strong>If you're moving here from Alberta or elsewhere and haven't established BC residency yet, you likely won't qualify for this exemption on your first purchase</strong> — even if it's your first home ever. This catches a lot of out-of-province buyers off guard. Our <a href="first-time-buyer-guide.html" style="color:var(--accent)">First-Time Buyer's Guide</a> covers this in detail.</p>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-head">
+        <div class="scenario-avatar">DR</div>
+        <div class="scenario-head-text">
+          <div class="sh-label">Illustrative Example</div>
+          <div class="sh-name">A typical resale purchase</div>
+        </div>
+      </div>
+      <div class="scenario-body">
+        <p>A $750,000 resale home in Osoyoos, purchased by a repeat buyer (no exemptions apply):</p>
+        <div class="scenario-math">
+          <div class="sm-row"><span>1% on first $200,000</span><span>$2,000</span></div>
+          <div class="sm-row"><span>2% on remaining $550,000</span><span>$11,000</span></div>
+          <div class="sm-row result"><span>Total PTT owing</span><span class="sm-val">$13,000</span></div>
+        </div>
+        <p style="font-size:11.5px;color:var(--mid);font-style:italic;margin-top:10px;margin-bottom:0">Illustrative example based on standard PTT rates — not a specific client.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: FREE — GST Rebate -->
+<div class="section" id="sec-2">
+  <div class="wrap">
+    <div class="section-num">02 — Brand New for 2026</div>
+    <h2>The federal government just <em>eliminated GST</em> for first-time buyers.</h2>
+    <p>If you're buying a resale home, there's no GST — only PTT. But new construction (a new house, new condo, or substantially renovated home) carries <strong>5% GST</strong> on top of the purchase price. On a $900,000 new build, that's normally $45,000.</p>
+
+    <div class="callout">
+      <div class="callout-eyebrow">First-Time Home Buyers' GST Rebate</div>
+      <div class="callout-big">Up to $50,000</div>
+      <div class="callout-sub">back on a new home, for eligible first-time buyers</div>
+      <div class="callout-divider"></div>
+      <p style="margin-bottom:0;font-size:14px">Bill C-4 received Royal Assent on <strong>March 12, 2026</strong>. New homes priced at <strong>$1,000,000 or less</strong> get the GST eliminated entirely for eligible first-time buyers. Homes between $1M–$1.5M get a partial rebate on a sliding scale. Applies to purchase agreements signed on or after March 20, 2025, and before 2031.</p>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-head">
+        <div class="scenario-avatar">N&A</div>
+        <div class="scenario-head-text">
+          <div class="sh-label">Illustrative Example</div>
+          <div class="sh-name">A new build in Oliver</div>
+        </div>
+      </div>
+      <div class="scenario-body">
+        <p>A first-time buyer couple purchasing a new $900,000 home in Oliver, with an agreement signed after March 20, 2025:</p>
+        <div class="scenario-math">
+          <div class="sm-row"><span>GST owing (5% of $900,000)</span><span>$45,000</span></div>
+          <div class="sm-row"><span>First-Time Buyer GST Rebate (home under $1M — full rebate)</span><span>− $45,000</span></div>
+          <div class="sm-row result"><span>GST actually paid</span><span class="sm-val">$0</span></div>
+        </div>
+        <p style="font-size:11.5px;color:var(--mid);font-style:italic;margin-top:10px;margin-bottom:0">Illustrative example based on the new federal rebate rules — not a specific client.</p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <div class="h-label">Worth knowing</div>
+      <p>This rebate is separate from the BC PTT exemptions. A first-time buyer who's established BC residency and buys a new home under $1.1M could potentially eliminate <strong>both</strong> the PTT and the GST — that's the scenario we walk through at the end of this guide.</p>
+    </div>
+  </div>
+</div>
+
+<!-- GATE -->
+<div class="gate" id="gate">
+  <div class="wrap gate-inner">
+    <div class="eyebrow">Unlock the Full Tax Guide</div>
+    <h2>Five more taxes you'll hear about — <em>and which ones actually apply here</em>.</h2>
+    <p>Enter your details below and the rest of this guide unlocks immediately — plus you'll get a copy emailed to you for reference.</p>
+    <ul class="unlock-list">
+      <li><span class="unlock-icon">●</span> The Foreign Buyer Tax — and why South Okanagan is outside the zone</li>
+      <li><span class="unlock-icon">●</span> The Speculation & Vacancy Tax map — Osoyoos/Oliver vs. the rest of the valley</li>
+      <li><span class="unlock-icon">●</span> The Empty Homes Tax — the Vancouver-only tax everyone confuses with the above</li>
+      <li><span class="unlock-icon">●</span> New construction vs. resale — full side-by-side tax comparison</li>
+      <li><span class="unlock-icon">●</span> "Which taxes apply to you" — a quick breakdown by buyer type</li>
+      <li><span class="unlock-icon">●</span> Two full worked examples, combining everything in this guide</li>
+    </ul>
+
+    <div class="form-card">
+      <h3>Unlock your guide</h3>
+      <div class="form-sub">Takes 15 seconds. No spam, just useful South Okanagan info.</div>
+      <form id="lead-form" onsubmit="return submitForm(event)">
+        <div class="form-row">
+          <div class="fgroup"><label>First Name *</label><input type="text" id="g-fn" required/></div>
+          <div class="fgroup"><label>Last Name *</label><input type="text" id="g-ln" required/></div>
+        </div>
+        <div class="fgroup"><label>Email *</label><input type="email" id="g-em" required/></div>
+        <div class="fgroup"><label>Phone (optional)</label><input type="tel" id="g-ph"/></div>
+        <div class="form-row">
+          <div class="fgroup"><label>Where are you moving from?</label>
+            <select id="g-loc">
+              <option value="">Select…</option>
+              <option>Vancouver / Lower Mainland</option>
+              <option>Calgary, AB</option>
+              <option>Edmonton, AB</option>
+              <option>Vancouver Island</option>
+              <option>Elsewhere in BC</option>
+              <option>Elsewhere in Canada</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fgroup"><label>Timeline</label>
+            <select id="g-time">
+              <option value="">Select…</option>
+              <option>Just researching</option>
+              <option>0–6 months</option>
+              <option>6–12 months</option>
+              <option>1–2 years</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Unlock the Full Guide →</button>
+        <div class="form-disclaimer">By submitting, you'll receive this guide and occasional follow-up emails relevant to buying in the South Okanagan. Unsubscribe anytime.</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- UNLOCKED CONTENT -->
+<div id="unlocked">
+
+  <div class="section" id="sec-3" style="padding-top:32px">
+    <div class="wrap">
+      <div class="unlock-banner"><span class="check">✓</span> Guide unlocked — here's the rest.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: Foreign Buyer Tax -->
+  <div class="section" id="sec-4">
+    <div class="wrap">
+      <div class="section-num">03 — The Foreign Buyer Tax</div>
+      <h2>An extra <em>20%</em> tax — that doesn't apply in Osoyoos or Oliver.</h2>
+      <p>The "Foreign Buyer Tax" — officially the Additional Property Transfer Tax — adds <strong>20%</strong> on top of regular PTT for foreign nationals, foreign corporations, and taxable trustees. But it only applies in specific designated regions.</p>
+
+      <div class="tax-map">
+        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
+          <rect width="400" height="280" rx="14" fill="#1a1a18"/>
+          <path d="M200,20 C160,60 240,100 200,140 C160,180 240,220 200,260" stroke="#3d3d38" stroke-width="34" fill="none" stroke-linecap="round"/>
+          <g font-family="Inter, sans-serif">
+            <circle cx="200" cy="50" r="9" fill="#c0392b"/>
+            <text x="220" y="55" font-size="15" fill="#fff" font-weight="700">Kelowna</text>
+            <circle cx="200" cy="95" r="9" fill="#c0392b"/>
+            <text x="220" y="100" font-size="15" fill="#fff" font-weight="700">West Kelowna</text>
+
+            <circle cx="200" cy="150" r="7" fill="#3a7d44"/>
+            <text x="216" y="154" font-size="13" fill="#fff" font-weight="600">Summerland</text>
+            <circle cx="200" cy="185" r="7" fill="#3a7d44"/>
+            <text x="216" y="189" font-size="13" fill="#fff" font-weight="600">Penticton</text>
+            <circle cx="200" cy="220" r="9" fill="#3a7d44"/>
+            <text x="220" y="225" font-size="15" fill="#fff" font-weight="700">Oliver</text>
+            <circle cx="200" cy="255" r="9" fill="#3a7d44"/>
+            <text x="220" y="260" font-size="15" fill="#fff" font-weight="700">Osoyoos</text>
+          </g>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#aaa">
+            <circle cx="24" cy="22" r="6" fill="#c0392b"/>
+            <text x="38" y="26">Regional District of Central Okanagan</text>
+            <circle cx="24" cy="42" r="6" fill="#3a7d44"/>
+            <text x="38" y="46">Regional District of Okanagan-Similkameen</text>
+          </g>
+        </svg>
+      </div>
+
+      <p>The Additional Property Transfer Tax applies in the Capital Regional District, Metro Vancouver, the Fraser Valley, the Regional District of Nanaimo, and the <strong>Regional District of Central Okanagan</strong> (Kelowna, West Kelowna, Lake Country, Peachland). The <strong>Regional District of Okanagan-Similkameen</strong> — which includes Osoyoos, Oliver, Penticton, and Summerland — is not on that list.</p>
+
+      <div class="highlight">
+        <div class="h-label">Does this affect you?</div>
+        <p>Most of Pat's buyers are Canadian citizens or permanent residents relocating from Vancouver or Alberta — this tax doesn't apply to you regardless of location. It mainly matters if you're a foreign national, or working with family members who are.</p>
+      </div>
+
+      <p style="font-size:13.5px;color:var(--mid)">Separately, Canada's federal foreign buyer ban (currently extended through January 1, 2027) restricts non-Canadians from purchasing residential property in Census Metropolitan Areas and Census Agglomerations with populations of 10,000 or more. Osoyoos' population is below that threshold, which may exempt it from the federal ban — though the rules have several exemption categories and this is worth confirming with a lawyer if it applies to your situation.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 4: Speculation & Vacancy Tax -->
+  <div class="section" id="sec-5">
+    <div class="wrap">
+      <div class="section-num">04 — Speculation & Vacancy Tax</div>
+      <h2>Osoyoos and Oliver are <em>still</em> off this list.</h2>
+      <p>The Speculation and Vacancy Tax is an annual tax on residential properties in designated areas that sit empty or aren't a principal residence. For 2026, the rates increased: <strong>1% of assessed value</strong> for BC residents and Canadian citizens/PRs, and <strong>3%</strong> for foreign owners and "untaxed worldwide earners." A homeowner tax credit of up to $4,000 can offset the amount owing.</p>
+
+      <div class="tax-map">
+        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block">
+          <rect width="400" height="280" rx="14" fill="#1a1a18"/>
+          <path d="M200,20 C160,60 240,100 200,140 C160,180 240,220 200,260" stroke="#3d3d38" stroke-width="34" fill="none" stroke-linecap="round"/>
+          <g font-family="Inter, sans-serif">
+            <circle cx="200" cy="35" r="7" fill="#c0392b"/>
+            <text x="216" y="39" font-size="13" fill="#fff" font-weight="600">Vernon</text>
+            <circle cx="200" cy="75" r="7" fill="#c0392b"/>
+            <text x="216" y="79" font-size="13" fill="#fff" font-weight="600">Kelowna</text>
+            <circle cx="200" cy="115" r="7" fill="#c0392b"/>
+            <text x="216" y="119" font-size="13" fill="#fff" font-weight="600">Summerland</text>
+            <circle cx="200" cy="150" r="7" fill="#c0392b"/>
+            <text x="216" y="154" font-size="13" fill="#fff" font-weight="600">Penticton</text>
+            <circle cx="200" cy="200" r="10" fill="#3a7d44"/>
+            <text x="220" y="205" font-size="16" fill="#fff" font-weight="700">Oliver</text>
+            <circle cx="200" cy="245" r="10" fill="#3a7d44"/>
+            <text x="220" y="250" font-size="16" fill="#fff" font-weight="700">Osoyoos</text>
+          </g>
+          <g font-family="Inter, sans-serif" font-size="11" fill="#aaa">
+            <circle cx="24" cy="22" r="6" fill="#c0392b"/>
+            <text x="38" y="26">Speculation Tax applies (2026)</text>
+            <circle cx="24" cy="42" r="6" fill="#3a7d44"/>
+            <text x="38" y="46">Currently exempt</text>
+          </g>
+        </svg>
+      </div>
+
+      <p>Most owners are automatically exempt — if the property is your principal residence, or it's tenanted for 6+ months of the year at fair market rent, you owe nothing (you still have to file the annual declaration by March 31, though). The tax mainly targets vacant second homes and investment properties.</p>
+
+      <div class="scenario">
+        <div class="scenario-head">
+          <div class="scenario-avatar">RC</div>
+          <div class="scenario-head-text">
+            <div class="sh-label">Illustrative Example</div>
+            <div class="sh-name">A Calgary buyer's second home</div>
+          </div>
+        </div>
+        <div class="scenario-body">
+          <p>Someone from Calgary buying a $1,000,000 recreation property they'll use a few weeks a year, not renting it out:</p>
+          <div class="scenario-math">
+            <div class="sm-row"><span>If located in Penticton (1% of $1,000,000)</span><span>$10,000/yr</span></div>
+            <div class="sm-row"><span>Less BC homeowner credit</span><span>− $4,000</span></div>
+            <div class="sm-row result"><span>Net Speculation Tax in Penticton</span><span class="sm-val">$6,000/yr</span></div>
+          </div>
+          <div class="scenario-math" style="margin-top:10px">
+            <div class="sm-row result"><span>Same property in Osoyoos or Oliver</span><span class="sm-val">$0/yr</span></div>
+          </div>
+          <p style="font-size:11.5px;color:var(--mid);font-style:italic;margin-top:10px;margin-bottom:0">Illustrative example based on 2026 Speculation & Vacancy Tax rates — not a specific client.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Empty Homes Tax -->
+  <div class="section" id="sec-6">
+    <div class="wrap">
+      <div class="section-num">05 — Empty Homes Tax</div>
+      <h2>A Vancouver bylaw that <em>doesn't exist</em> here.</h2>
+      <p>If you currently own property in Vancouver, you may already be familiar with the <strong>Empty Homes Tax</strong> — a City of Vancouver bylaw (separate from the provincial Speculation & Vacancy Tax) charging roughly 3% of assessed value on vacant residential properties within Vancouver's city limits.</p>
+
+      <div class="highlight">
+        <div class="h-label">The confusion, cleared up</div>
+        <p>The Empty Homes Tax is a <strong>municipal</strong> bylaw that applies only inside the City of Vancouver. It does not exist anywhere in the Okanagan — not in Osoyoos, not in Kelowna, not in Penticton. If you're selling a Vancouver property and worried about "the empty homes tax following you" to your new place — it doesn't. The only annual property tax to think about here is the provincial Speculation & Vacancy Tax covered in the previous section, and Osoyoos/Oliver are currently exempt from that one too.</p>
+      </div>
+
+      <p style="font-size:13.5px;color:var(--mid)">Other BC municipalities have introduced their own local empty-homes-style bylaws in recent years — but none currently apply in the South Okanagan/Similkameen region.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 6: New vs Resale -->
+  <div class="section" id="sec-7">
+    <div class="wrap">
+      <div class="section-num">06 — New Construction vs. Resale</div>
+      <h2>The tax picture looks <em>very different</em> depending what you buy.</h2>
+      <p>Here's the side-by-side, assuming a similarly-priced home in each case.</p>
+
+      <div class="vs-grid">
+        <div class="vs-card">
+          <div class="vs-title">Resale Home</div>
+          <div class="vs-row"><strong>GST</strong>None — resale homes are GST-exempt</div>
+          <div class="vs-row"><strong>PTT</strong>Standard rates apply; First-Time Buyer exemption available up to $835K (full) / $860K (partial)</div>
+          <div class="vs-row"><strong>Inspection</strong>Strongly recommended — you're buying "as-is"</div>
+          <div class="vs-row"><strong>Best for</strong>Buyers wanting character, established neighbourhoods, or move-in-ready at a lower price point</div>
+        </div>
+        <div class="vs-card">
+          <div class="vs-title">New Construction</div>
+          <div class="vs-row"><strong>GST</strong>5% applies; First-Time Buyer GST Rebate can eliminate it entirely up to $1M (partial to $1.5M)</div>
+          <div class="vs-row"><strong>PTT</strong>Standard rates apply; Newly Built Home exemption available up to $1.1M (full) / $1.15M (partial)</div>
+          <div class="vs-row"><strong>Inspection</strong>New Home Warranty coverage applies (2-5-10 year)</div>
+          <div class="vs-row"><strong>Best for</strong>First-time buyers who can stack both exemptions — potentially the lowest total tax outcome available</div>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="h-label">The bottom line</div>
+        <p>For a qualifying first-time buyer, a new build under $1M can mean <strong>$0 PTT and $0 GST</strong> — a combined savings that can exceed $60,000 compared to the sticker price. That's a meaningful enough difference that it's worth at least looking at new-construction inventory, even if your instinct is "resale."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 7: Which Taxes Apply To You -->
+  <div class="section" id="sec-8">
+    <div class="wrap">
+      <div class="section-num">07 — Your Situation</div>
+      <h2>Which of these taxes <em>actually apply to you</em>?</h2>
+      <p>A quick breakdown by buyer profile — all assuming a purchase in Osoyoos or Oliver.</p>
+
+      <div class="profile-card">
+        <h4>BC resident, first home ever</h4>
+        <div class="profile-tags">
+          <span class="ptag exempt">PTT exemption (up to $835K)</span>
+          <span class="ptag exempt">Spec Tax: N/A here</span>
+          <span class="ptag exempt">Foreign Buyer Tax: N/A</span>
+          <span class="ptag maybe">GST Rebate if new build</span>
+        </div>
+        <p>The cleanest scenario. If you've lived in BC for 12+ months or filed 2 BC tax returns, you likely qualify for the full PTT exemption — and if buying new construction, potentially the GST rebate too.</p>
+      </div>
+
+      <div class="profile-card">
+        <h4>Out-of-province Canadian (e.g. Alberta), first home ever, buying primary residence</h4>
+        <div class="profile-tags">
+          <span class="ptag applies">Full PTT (likely)</span>
+          <span class="ptag exempt">Spec Tax: N/A here</span>
+          <span class="ptag exempt">Foreign Buyer Tax: N/A</span>
+          <span class="ptag maybe">GST Rebate if new build</span>
+        </div>
+        <p>You won't have the BC residency history needed for the PTT exemption on this purchase — so standard PTT rates apply. The federal GST rebate on new construction still applies though, since it has no BC-residency requirement.</p>
+      </div>
+
+      <div class="profile-card">
+        <h4>BC resident or out-of-province Canadian, repeat buyer</h4>
+        <div class="profile-tags">
+          <span class="ptag applies">Full PTT</span>
+          <span class="ptag exempt">Spec Tax: N/A here (principal residence)</span>
+          <span class="ptag exempt">Foreign Buyer Tax: N/A</span>
+        </div>
+        <p>No first-time buyer exemptions apply, but as a Canadian buying your principal residence in Osoyoos/Oliver, neither the Speculation Tax nor the Foreign Buyer Tax come into play.</p>
+      </div>
+
+      <div class="profile-card">
+        <h4>Canadian buyer, second/recreational property</h4>
+        <div class="profile-tags">
+          <span class="ptag applies">Full PTT</span>
+          <span class="ptag exempt">Spec Tax: $0 in Osoyoos/Oliver</span>
+          <span class="ptag exempt">Foreign Buyer Tax: N/A</span>
+        </div>
+        <p>This is where the Osoyoos/Oliver advantage matters most. The same recreational property elsewhere in the valley could mean thousands per year in Speculation Tax — here, it doesn't.</p>
+      </div>
+
+      <div class="profile-card">
+        <h4>Foreign national / non-permanent-resident</h4>
+        <div class="profile-tags">
+          <span class="ptag maybe">Federal ban may not apply (pop. &lt;10K)</span>
+          <span class="ptag exempt">Foreign Buyer Tax: N/A (outside designated area)</span>
+          <span class="ptag applies">Spec Tax: 3% if applicable elsewhere</span>
+        </div>
+        <p>This situation has the most legal nuance — exemption categories under the federal ban (work permits, protected persons, etc.) matter a lot. Get advice from a real estate lawyer before proceeding.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 8: Worked Examples -->
+  <div class="section" id="sec-9">
+    <div class="wrap">
+      <div class="section-num">08 — Putting It All Together</div>
+      <h2>Two full examples, <em>start to finish</em>.</h2>
+
+      <div class="scenario">
+        <div class="scenario-head">
+          <div class="scenario-avatar">JK</div>
+          <div class="scenario-head-text">
+            <div class="sh-label">Illustrative Example</div>
+            <div class="sh-name">Alberta family, resale home, Osoyoos</div>
+          </div>
+        </div>
+        <div class="scenario-body">
+          <p>A family from Calgary, first home ever, buying a $780,000 resale home in Osoyoos as their principal residence. They haven't established BC residency yet.</p>
+          <div class="scenario-math">
+            <div class="sm-row"><span>PTT (1% on $200K + 2% on $580K) — no exemption (residency not yet met)</span><span>$13,600</span></div>
+            <div class="sm-row"><span>GST</span><span>$0 (resale)</span></div>
+            <div class="sm-row"><span>Speculation & Vacancy Tax</span><span>$0 (Osoyoos exempt + principal residence)</span></div>
+            <div class="sm-row"><span>Foreign Buyer Tax</span><span>$0 (Canadian, outside designated area)</span></div>
+            <div class="sm-row result"><span>Total tax at closing</span><span class="sm-val">$13,600</span></div>
+          </div>
+          <p style="font-size:11.5px;color:var(--mid);font-style:italic;margin-top:10px;margin-bottom:0">Illustrative example — not a specific client.</p>
+        </div>
+      </div>
+
+      <div class="scenario">
+        <div class="scenario-head">
+          <div class="scenario-avatar">BT</div>
+          <div class="scenario-head-text">
+            <div class="sh-label">Illustrative Example</div>
+            <div class="sh-name">BC resident, new build, Oliver</div>
+          </div>
+        </div>
+        <div class="scenario-body">
+          <p>A first-time buyer who's lived in the Lower Mainland for 5 years, buying a new $950,000 home in Oliver.</p>
+          <div class="scenario-math">
+            <div class="sm-row"><span>PTT before exemption (1% on $200K + 2% on $750K)</span><span>$17,000</span></div>
+            <div class="sm-row"><span>Newly Built Home Exemption (full, under $1.1M)</span><span>− $17,000</span></div>
+            <div class="sm-row"><span>GST before rebate (5% of $950,000)</span><span>$47,500</span></div>
+            <div class="sm-row"><span>First-Time Buyer GST Rebate (full, under $1M)</span><span>− $47,500</span></div>
+            <div class="sm-row result"><span>Total tax at closing</span><span class="sm-val">$0</span></div>
+          </div>
+          <div class="scenario-math" style="margin-top:10px;background:#eafaf1">
+            <div class="sm-row result"><span style="color:var(--green)">Total combined savings</span><span class="sm-val" style="color:var(--green)">$64,500</span></div>
+          </div>
+          <p style="font-size:11.5px;color:var(--mid);font-style:italic;margin-top:10px;margin-bottom:0">Illustrative example — not a specific client.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <div class="h-label">The takeaway</div>
+        <p>Every buyer's tax situation depends on residency history, what you're buying, and where. The good news: in Osoyoos and Oliver specifically, two of the five taxes in this guide simply don't apply — which is one less thing to plan around.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="cta" id="sec-10">
+    <div class="cta-photo">
+      <svg viewBox="0 0 800 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+        <rect width="800" height="300" fill="#1a1a18"/>
+        <g stroke="#8b6f47" stroke-width="1" opacity="0.5" fill="none">
+          <path d="M-50,250 Q150,180 350,240 Q550,300 850,210"/>
+          <path d="M-50,200 Q150,130 350,190 Q550,250 850,160"/>
+          <path d="M-50,150 Q150,80 350,140 Q550,200 850,110"/>
+        </g>
+        <circle cx="660" cy="60" r="36" fill="#c8b89a" opacity="0.18"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <h2>Not sure which taxes apply to <em>your purchase</em>?</h2>
+      <p>Every situation is a little different. Pat can walk through your specific numbers — residency, property type, and location — and tell you exactly what to expect at closing.</p>
+      <div class="cta-buttons">
+        <a href="mailto:miazgarealestate@gmail.com?subject=BC Tax Guide - Let's Talk" class="cta-btn primary">Email Pat Directly</a>
+        <a href="tel:+16045625982" class="cta-btn ghost">Call / Text: 604-562-5982</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /unlocked -->
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="wrap">
+    <div class="fname">Pat Miazga, REALTOR®</div>
+    <div class="ftag">RE/MAX All Points Realty · South Okanagan Real Estate & Relocation Specialist · Osoyoos, BC</div>
+    <div class="flinks">
+      604-562-5982 · miazgarealestate@gmail.com · <a href="https://patmiazga.com">patmiazga.com</a><br><br>
+      Tax rates, exemption thresholds, and program details in this guide are accurate as of <strong>June 2026</strong> and are subject to change by the BC and federal governments. <br>Pat Miazga is a licensed real estate professional, not an accountant or lawyer — this guide is general information only, not personalized tax or legal advice. Always confirm current figures and your specific situation with a qualified accountant, lawyer, or notary before relying on them.
+    </div>
+  </div>
+</div>
+<script>
+// ── PTT CALCULATOR ──
+function parsePrice(){
+  var raw = document.getElementById('calc-price').value.replace(/[^0-9]/g,'');
+  return parseInt(raw||'0',10);
+}
+function formatMoney(n){
+  var rounded = Math.round(n);
+  return '$' + rounded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+function calcPTTAmount(price){
+  var tax = 0;
+  if(price > 0) tax += Math.min(price,200000) * 0.01;
+  if(price > 200000) tax += (Math.min(price,2000000) - 200000) * 0.02;
+  if(price > 2000000) tax += (Math.min(price,3000000) - 2000000) * 0.03;
+  if(price > 3000000) tax += (price - 3000000) * 0.02;
+  return tax;
+}
+function calcFTBExemption(price, tax){
+  if(price <= 835000) return tax;
+  if(price < 860000) return tax * ((860000 - price) / (860000 - 835000));
+  return 0;
+}
+function calcNBHExemption(price, tax){
+  if(price <= 1100000) return tax;
+  if(price < 1150000) return tax * ((1150000 - price) / (1150000 - 1100000));
+  return 0;
+}
+function calcGSTRebate(price){
+  var gst = price * 0.05;
+  if(price <= 1000000) return gst;
+  if(price < 1500000) return gst * ((1500000 - price) / (1500000 - 1000000));
+  return 0;
+}
+function runCalc(){
+  var price = parsePrice();
+  var isFTB = document.getElementById('calc-ftb').checked;
+  var isNew = document.getElementById('calc-new').checked;
+
+  var pttBefore = calcPTTAmount(price);
+  var exemption = 0;
+  if(isFTB){
+    var ftbEx = calcFTBExemption(price, pttBefore);
+    var nbhEx = isNew ? calcNBHExemption(price, pttBefore) : 0;
+    exemption = Math.max(ftbEx, nbhEx);
+  } else if(isNew){
+    exemption = calcNBHExemption(price, pttBefore);
+  }
+  var pttAfter = Math.max(0, pttBefore - exemption);
+
+  var gstBefore = 0, gstRebate = 0, gstAfter = 0;
+  if(isNew){
+    gstBefore = price * 0.05;
+    gstRebate = isFTB ? calcGSTRebate(price) : 0;
+    gstAfter = Math.max(0, gstBefore - gstRebate);
+  }
+
+  var totalSavings = exemption + gstRebate;
+  var totalOwing = pttAfter + gstAfter;
+
+  var html = '';
+  html += '<div class="calc-row"><span>Property Transfer Tax</span><span class="calc-val">';
+  if(exemption > 0){
+    html += '<span class="calc-strike">' + formatMoney(pttBefore) + '</span>' + formatMoney(pttAfter);
+  } else {
+    html += formatMoney(pttBefore);
+  }
+  html += '</span></div>';
+
+  if(isNew){
+    html += '<div class="calc-row"><span>GST on new construction</span><span class="calc-val">';
+    if(gstRebate > 0){
+      html += '<span class="calc-strike">' + formatMoney(gstBefore) + '</span>' + formatMoney(gstAfter);
+    } else {
+      html += formatMoney(gstBefore);
+    }
+    html += '</span></div>';
+  }
+
+  if(totalSavings > 0){
+    html += '<div class="calc-row savings"><span>Total savings from exemptions/rebates</span><span class="calc-val">' + formatMoney(totalSavings) + '</span></div>';
+  }
+
+  html += '<div class="calc-row total"><span>Estimated total owing</span><span class="calc-val">' + formatMoney(totalOwing) + '</span></div>';
+
+  document.getElementById('calc-results').innerHTML = html;
+}
+document.getElementById('calc-price').addEventListener('input', function(e){
+  var val = e.target.value.replace(/[^0-9]/g,'');
+  if(val){ e.target.value = parseInt(val,10).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); } else { e.target.value=''; }
+  runCalc();
+});
+document.getElementById('calc-ftb').addEventListener('change', runCalc);
+document.getElementById('calc-new').addEventListener('change', runCalc);
+runCalc();
+
+// ── PROGRESS BAR ──
+var sections = ['#sec-1','#sec-2','#gate','#sec-4','#sec-5','#sec-6','#sec-7','#sec-8','#sec-9','#sec-10'];
+var labels = ['Section 1 of 8 — free preview','Section 2 of 8 — free preview','Unlock to continue','Section 3 of 8','Section 4 of 8','Section 5 of 8','Section 6 of 8','Section 7 of 8','Section 8 of 8','Guide complete'];
+
+window.addEventListener('scroll', function(){
+  var scrollPos = window.scrollY + 200;
+  var current = 0;
+  for(var i=0;i<sections.length;i++){
+    var el = document.querySelector(sections[i]);
+    if(el && el.offsetParent !== null && el.offsetTop <= scrollPos) current = i;
+  }
+  var pct = Math.round(((current+1) / sections.length) * 100);
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = labels[current];
+});
+
+// ── ACCORDION (unused here but kept for consistency) ──
+function toggleAcc(el){
+  var acc = el.parentElement;
+  acc.classList.toggle('open');
+}
+
+// ── LEAD FORM ──
+var FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdqkvra";
+
+function submitForm(e){
+  e.preventDefault();
+
+  var formData = {
+    firstname: document.getElementById('g-fn').value,
+    lastname: document.getElementById('g-ln').value,
+    email: document.getElementById('g-em').value,
+    phone: document.getElementById('g-ph').value,
+    location: document.getElementById('g-loc').value,
+    timeline: document.getElementById('g-time').value,
+    source: "BC Tax Guide",
+    _subject: "New lead: BC Tax Guide"
+  };
+
+  var lead = {
+    firstname: formData.firstname, lastname: formData.lastname, email: formData.email,
+    phone: formData.phone, location: formData.location, timeline: formData.timeline,
+    source: formData.source,
+    added: new Date().toISOString().slice(0,10),
+    status: 'new',
+    tags: ['buyer'],
+    gv: 1, eo: 0, ec: 0, es: 0, boost: false, notes: [], reminders: []
+  };
+
+  try {
+    var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
+    lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
+    leads.unshift(lead);
+    localStorage.setItem('pm_leads', JSON.stringify(leads));
+  } catch(err){ console.log('Could not save to CRM storage', err); }
+
+  fetch(FORMSPREE_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
+  }).catch(function(err){ console.log('Formspree submission error', err); });
+
+  unlockGuide();
+  return false;
+}
+
+function unlockGuide(){
+  document.getElementById('gate').style.display = 'none';
+  var unlocked = document.getElementById('unlocked');
+  unlocked.classList.add('show');
+  unlocked.scrollIntoView({behavior:'smooth'});
+  localStorage.setItem('pm_taxguide_unlocked','true');
+}
+
+if(localStorage.getItem('pm_taxguide_unlocked')==='true'){
+  document.getElementById('gate').style.display='none';
+  document.getElementById('unlocked').classList.add('show');
+}
+</script>
+</body>
+</html>
