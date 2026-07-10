@@ -3,7 +3,16 @@ function swapPhoto(thumb) {
   const main = document.getElementById('main-photo');
   if (main) {
     main.src = thumb.src;
-    document.querySelectorAll('.listing-thumbs img').forEach(t => t.classList.remove('active'));
+    thumb.closest('.listing-thumbs').querySelectorAll('img').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+  }
+}
+
+function swapPhotoSurrey(thumb) {
+  const main = document.getElementById('main-photo-surrey');
+  if (main) {
+    main.src = thumb.src;
+    thumb.closest('.listing-thumbs').querySelectorAll('img').forEach(t => t.classList.remove('active'));
     thumb.classList.add('active');
   }
 }

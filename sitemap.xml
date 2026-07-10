@@ -46,4 +46,7 @@
   <!-- Seller guides -->
   <url><loc>https://patmiazga.com/sellers-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- Active listings -->
+  <url><loc>https://patmiazga.com/surrey-listing.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
 </urlset>
