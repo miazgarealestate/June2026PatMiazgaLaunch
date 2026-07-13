@@ -46,6 +46,15 @@
   <!-- Seller guides -->
   <url><loc>https://patmiazga.com/sellers-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <url><loc>https://patmiazga.com/moving-from-alberta-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/moving-from-vancouver-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/acreage-buyers-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/irrigation-water-rights-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/waterfront-buyers-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/retirement-guide-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/snowbird-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/south-okanagan-cost-of-living-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
   <!-- Active listings -->
   <url><loc>https://patmiazga.com/surrey-listing.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
