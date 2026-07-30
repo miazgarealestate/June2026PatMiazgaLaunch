@@ -62,6 +62,13 @@
     @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}}
     @media(max-width:680px){.grid-2,.grid-3{grid-template-columns:1fr}.guide-row{grid-template-columns:1fr 1fr}.nav-links{display:none}.cta-box{padding:36px 24px}}
     @media(max-width:420px){.guide-row{grid-template-columns:1fr}}
+    .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+    .photo-grid figure{margin:0;border-radius:10px;overflow:hidden;background:var(--peer-bg);border:1px solid var(--border)}
+    .photo-grid img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .3s}
+    .photo-grid a:hover img{transform:scale(1.04)}
+    .photo-grid figcaption{font-size:12px;color:var(--warm-mid);padding:8px 12px;background:var(--white)}
+    @media(max-width:680px){.photo-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:420px){.photo-grid{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
   {
@@ -88,7 +95,9 @@
     "containedInPlace": {"@type": "Place", "name": "Osoyoos, British Columbia, Canada"}
   }
   </script>
-  <meta property="og:image" content="https://patmiazga.com/images/osoyoos-lake-boats-beach.jpg" />
+  <meta property="og:image" content="https://patmiazga.com/images/oasis-resort-entrance-sign.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://patmiazga.com/images/oasis-resort-entrance-sign.jpg" />
   <script type="application/ld+json">
   {
   "@context": "https://schema.org",
@@ -145,6 +154,20 @@
   </div>
 </section>
 
+<section class="section" style="padding-bottom:0">
+  <div class="container">
+    <span class="eyebrow">On-Site Photos</span>
+    <h2 style="font-size:1.5rem;margin-bottom:20px">The Oasis Resort, in person</h2>
+    <div class="photo-grid">
+      <figure><a href="images/oasis-resort-entrance-sign.jpg"><img src="images/oasis-resort-entrance-sign.jpg" alt="The Oasis Resort gated entrance sign at 2615 Lakeshore Drive, Osoyoos" loading="lazy"></a><figcaption>Resort entrance</figcaption></figure>
+      <figure><a href="images/oasis-resort-pool-patio.jpg"><img src="images/oasis-resort-pool-patio.jpg" alt="The Oasis Resort heated pool and patio area with umbrellas" loading="lazy"></a><figcaption>Pool &amp; patio</figcaption></figure>
+      <figure><a href="images/oasis-resort-clubhouse.jpg"><img src="images/oasis-resort-clubhouse.jpg" alt="The Oasis Resort clubhouse building with Canadian flag" loading="lazy"></a><figcaption>Clubhouse</figcaption></figure>
+      <figure><a href="images/oasis-resort-park-street.jpg"><img src="images/oasis-resort-park-street.jpg" alt="Tree-lined street of deeded RV sites at The Oasis Resort, Osoyoos" loading="lazy"></a><figcaption>Site streetscape</figcaption></figure>
+      <figure><a href="images/oasis-resort-rv-site-patio.jpg"><img src="images/oasis-resort-rv-site-patio.jpg" alt="Deeded RV site patio with mountain view at The Oasis Resort" loading="lazy"></a><figcaption>RV site &amp; patio</figcaption></figure>
+      <figure><a href="images/oasis-resort-lakefront-beach.jpg"><img src="images/oasis-resort-lakefront-beach.jpg" alt="Private beach and Osoyoos Lake frontage near The Oasis Resort" loading="lazy"></a><figcaption>Lakefront beach</figcaption></figure>
+    </div>
+  </div>
+</section>
 
 <section class="section section--cream">
   <div class="container">
