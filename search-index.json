@@ -6,28 +6,16 @@
   "desc": "Buying acreage in the South Okanagan? ALR zoning, well water and septic basics, fire insurance, private road maintenance, and financing rules for rural properti"
  },
  {
-  "title": "Moving from Alberta, Saskatchewan or Manitoba to South Okanagan BC",
-  "url": "alberta-prairie-buyers-south-okanagan.html",
+  "title": "BC Tax Guide | South Okanagan",
+  "url": "bc-tax-guide.html",
   "category": "Free Guide",
-  "desc": "Moving from Alberta, Saskatchewan, or Manitoba to the South Okanagan? How BC real estate works differently than the prairies \u2014 PTT, SVT, wildfire insurance, the"
- },
- {
-  "title": "Living on Anarchist Mountain | Osoyoos BC Real Estate",
-  "url": "anarchist-mountain.html",
-  "category": "Town / Area",
-  "desc": "Anarchist Mountain is one of BC's best-kept secrets \u2014 mountain living 15 minutes from Osoyoos, with a tight-knit community, stunning views, and unique real esta"
+  "desc": "Complete BC property tax guide for South Okanagan buyers \u2014 Property Transfer Tax, Speculation and Vacancy Tax (Osoyoos and Oliver are NOT designated), GST, and "
  },
  {
   "title": "Bayview Crescent Osoyoos \u2014 Waterfront Street Buying Guide",
   "url": "bayview-crescent-osoyoos.html",
   "category": "Community Spotlight",
   "desc": "Bayview Crescent Osoyoos \u2014 freehold single-family waterfront homes on Solana Bay with private docks. Pricing, dock rules and what to check before buying on this"
- },
- {
-  "title": "BC Tax Guide | South Okanagan",
-  "url": "bc-tax-guide.html",
-  "category": "Free Guide",
-  "desc": "Complete BC property tax guide for South Okanagan buyers \u2014 Property Transfer Tax, Speculation and Vacancy Tax (Osoyoos and Oliver are NOT designated), GST, and "
  },
  {
   "title": "Brightwater Osoyoos \u2014 New Construction Condo Buying Guide",
@@ -90,6 +78,12 @@
   "desc": "How to find and vet contractors for renovations in BC. Permits, Technical Safety BC, the Builders Lien Act 10% holdback, red flags to watch for, and how to prot"
  },
  {
+  "title": "DRIPA &amp; Property Rights in BC",
+  "url": "dripa-property-rights-guide.html",
+  "category": "Free Guide",
+  "desc": "A factual guide to BC's Declaration on the Rights of Indigenous Peoples Act and what it means for property owners in the South Okanagan. Balanced, accurate, and"
+ },
+ {
   "title": "Desert Court Osoyoos \u2014 Lowrise Condo Buying Guide",
   "url": "desert-court-osoyoos.html",
   "category": "Community Spotlight",
@@ -114,22 +108,10 @@
   "desc": "Dividend Ridge Osoyoos \u2014 an executive freehold subdivision steps from the Osoyoos Golf Club with panoramic lake and valley views. What buyers should know about "
  },
  {
-  "title": "DRIPA &amp; Property Rights in BC",
-  "url": "dripa-property-rights-guide.html",
-  "category": "Free Guide",
-  "desc": "A factual guide to BC's Declaration on the Rights of Indigenous Peoples Act and what it means for property owners in the South Okanagan. Balanced, accurate, and"
- },
- {
   "title": "First-Time Buyer's Guide | South Okanagan",
   "url": "first-time-buyer-guide.html",
   "category": "Free Guide",
   "desc": "First time buying a home in BC? This guide covers the PTT exemption (saves up to $8,000), FHSA, RRSP Home Buyers Plan, and every BC incentive available to first"
- },
- {
-  "title": "Harbour Key Drive Osoyoos \u2014 Waterfront Street Buying Guide",
-  "url": "harbour-key-drive-osoyoos.html",
-  "category": "Community Spotlight",
-  "desc": "Harbour Key Drive Osoyoos \u2014 freehold canal and channel-front homes on Osoyoos Lake, from vacant building lots to multi-million dollar waterfront estates. What b"
  },
  {
   "title": "Getting Ready for Inspection | South Okanagan",
@@ -138,16 +120,10 @@
   "desc": "How to prepare for a home inspection in BC \u2014 what documents to gather, what to expect as a buyer or seller, and how to set realistic expectations before the ins"
  },
  {
-  "title": "Well Water, Septic &amp; Property Inspections",
-  "url": "inspection-well-septic-guide.html",
-  "category": "Free Guide",
-  "desc": "Buying rural property in the South Okanagan? Well water testing, septic inspections, and what specialist reports you need before removing subjects \u2014 critical du"
- },
- {
-  "title": "What to Expect During a Home Inspection",
-  "url": "inspection-what-to-expect-guide.html",
-  "category": "Free Guide",
-  "desc": "What does a BC home inspector actually check? This guide explains the inspection process, what red flags matter vs. minor issues, and how to read your inspectio"
+  "title": "Harbour Key Drive Osoyoos \u2014 Waterfront Street Buying Guide",
+  "url": "harbour-key-drive-osoyoos.html",
+  "category": "Community Spotlight",
+  "desc": "Harbour Key Drive Osoyoos \u2014 freehold canal and channel-front homes on Osoyoos Lake, from vacant building lots to multi-million dollar waterfront estates. What b"
  },
  {
   "title": "Investment Property Guide | South Okanagan",
@@ -180,6 +156,12 @@
   "desc": "Lakeshore Villas Resort Osoyoos \u2014 individually owned condos, townhouses and villas on Osoyoos Lake with a private dock. What buyers should know about this owner"
  },
  {
+  "title": "Las Ventanas Al Paraiso Osoyoos \u2014 Buying Guide",
+  "url": "las-ventanas-osoyoos.html",
+  "category": "Community Spotlight",
+  "desc": "An exclusive 11-unit beachfront condo building at 2418 Lakeshore Drive with geothermal heating, a private dock and sandy beach."
+ },
+ {
   "title": "Living in Osoyoos",
   "url": "living-in-osoyoos-guide.html",
   "category": "Free Guide",
@@ -190,6 +172,12 @@
   "url": "living-in-south-okanagan-guide.html",
   "category": "Free Guide",
   "desc": "Thinking about moving to the South Okanagan? Town-by-town comparison of Osoyoos, Oliver, Okanagan Falls, Keremeos, and surrounding communities \u2014 including the S"
+ },
+ {
+  "title": "Living on Anarchist Mountain | Osoyoos BC Real Estate",
+  "url": "anarchist-mountain.html",
+  "category": "Town / Area",
+  "desc": "Anarchist Mountain is one of BC's best-kept secrets \u2014 mountain living 15 minutes from Osoyoos, with a tight-knit community, stunning views, and unique real esta"
  },
  {
   "title": "Manufactured Home Guide | South Okanagan",
@@ -208,6 +196,12 @@
   "url": "moving-from-alberta-guide.html",
   "category": "Free Guide",
   "desc": "A practical guide for Calgary and Edmonton buyers relocating to Osoyoos, Oliver, and the South Okanagan \u2014 climate, real estate, the tax trap most Alberta buyers"
+ },
+ {
+  "title": "Moving from Alberta, Saskatchewan or Manitoba to South Okanagan BC",
+  "url": "alberta-prairie-buyers-south-okanagan.html",
+  "category": "Free Guide",
+  "desc": "Moving from Alberta, Saskatchewan, or Manitoba to the South Okanagan? How BC real estate works differently than the prairies \u2014 PTT, SVT, wildfire insurance, the"
  },
  {
   "title": "Moving from Vancouver to the South Okanagan",
@@ -258,12 +252,6 @@
   "desc": "What to do in the South Okanagan \u2014 golf, skiing at Mount Baldy, hiking, boating, 50+ wineries, healthcare access, schools, and seasonal activities in Osoyoos an"
  },
  {
-  "title": "South Okanagan Relocation Guide",
-  "url": "relocation-guide.html",
-  "category": "Free Guide",
-  "desc": "Planning a move to the South Okanagan from Vancouver, Calgary, or anywhere on the prairies? This guide covers neighbourhood selection, the buying process, movin"
- },
- {
   "title": "Rendezvous Beach Resort Osoyoos \u2014 Leasehold Site Buying Guide",
   "url": "rendezvous-beach-resort-osoyoos.html",
   "category": "Community Spotlight",
@@ -304,6 +292,12 @@
   "url": "south-okanagan-cost-of-living-guide.html",
   "category": "Free Guide",
   "desc": "What things actually cost in Osoyoos and the South Okanagan \u2014 housing, utilities, insurance, groceries, and transportation \u2014 compared honestly to Vancouver and "
+ },
+ {
+  "title": "South Okanagan Relocation Guide",
+  "url": "relocation-guide.html",
+  "category": "Free Guide",
+  "desc": "Planning a move to the South Okanagan from Vancouver, Calgary, or anywhere on the prairies? This guide covers neighbourhood selection, the buying process, movin"
  },
  {
   "title": "Spirit Ridge at Nk'Mip Resort Osoyoos \u2014 Buying Guide",
@@ -364,6 +358,18 @@
   "url": "watermark-beach-resort-osoyoos.html",
   "category": "Community Spotlight",
   "desc": "Watermark Beach Resort Osoyoos \u2014 deeded whole and fractional ownership condos and townhomes on Osoyoos Lake, with an optional rental pool. Costs, GST, PTT and w"
+ },
+ {
+  "title": "Well Water, Septic &amp; Property Inspections",
+  "url": "inspection-well-septic-guide.html",
+  "category": "Free Guide",
+  "desc": "Buying rural property in the South Okanagan? Well water testing, septic inspections, and what specialist reports you need before removing subjects \u2014 critical du"
+ },
+ {
+  "title": "What to Expect During a Home Inspection",
+  "url": "inspection-what-to-expect-guide.html",
+  "category": "Free Guide",
+  "desc": "What does a BC home inspector actually check? This guide explains the inspection process, what red flags matter vs. minor issues, and how to read your inspectio"
  },
  {
   "title": "What's Up and Coming | South Okanagan",
