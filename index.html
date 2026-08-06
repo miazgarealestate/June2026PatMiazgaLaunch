@@ -54,6 +54,25 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="sold.css" />
   <link rel="stylesheet" href="listings.css" />
+  <style>
+    .site-credit {
+      background: var(--ink, #1a1a18);
+      text-align: center;
+      padding: 30px 24px 34px;
+    }
+    .site-credit img {
+      width: 210px;
+      max-width: 55%;
+      height: auto;
+      display: inline-block;
+      opacity: 0.94;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .site-credit img:hover {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  </style>
 </head>
 <body>
 
@@ -1159,6 +1178,20 @@
       </div>
     </div>
   </footer>
+
+  <!-- SITE CREDIT -->
+  <div class="site-credit">
+    <picture>
+      <source srcset="images/crafted-by-pat-miazga.webp" type="image/webp" />
+      <img
+        src="images/crafted-by-pat-miazga.png"
+        alt="Crafted by Pat Miazga"
+        width="900"
+        height="434"
+        loading="lazy"
+      />
+    </picture>
+  </div>
 
   <script src="script.js"></script>
   <script src="search.js" defer></script>
