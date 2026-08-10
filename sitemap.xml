@@ -92,6 +92,13 @@
   <url><loc>https://patmiazga.com/watermark-beach-resort-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/white-sands-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
+  <!-- New guide: BC strata depreciation report rules (added Aug 2026) -->
+  <url><loc>https://patmiazga.com/strata-depreciation-report-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- New town pages with Aug 2026 market data (Rock Creek/Bridesville, Naramata) -->
+  <url><loc>https://patmiazga.com/rock-creek-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/naramata-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
   <!-- Active listings -->
   <url><loc>https://patmiazga.com/surrey-listing.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
