@@ -1,3 +1,5 @@
+const CONTACT_FORM_ENDPOINT = 'https://formspree.io/f/xzdqkvra';
+
 // Listing photo gallery swap
 function swapPhoto(thumb) {
   const main = document.getElementById('main-photo');
@@ -37,19 +39,53 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Contact form — basic client-side handler
-// (Wire up to Formspree, Netlify Forms, or similar for production)
+// Contact form — Formspree JSON POST (same endpoint as guide pages)
 function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
   const success = document.getElementById('form-success');
+  const errorEl = document.getElementById('form-error');
+  const originalLabel = btn.textContent;
+
+  if (success) success.style.display = 'none';
+  if (errorEl) errorEl.style.display = 'none';
+
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  setTimeout(() => {
-    btn.style.display = 'none';
-    success.style.display = 'block';
-    e.target.reset();
-  }, 800);
+
+  const payload = {
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    interest: form.interest.value,
+    message: form.message.value,
+    _subject: 'New contact form: patmiazga.com'
+  };
+
+  fetch(CONTACT_FORM_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error('Form submission failed');
+      return res.json().catch(() => ({}));
+    })
+    .then(() => {
+      btn.style.display = 'none';
+      if (success) success.style.display = 'block';
+      form.reset();
+    })
+    .catch(() => {
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+      btn.style.display = '';
+      if (errorEl) errorEl.style.display = 'block';
+    });
 }
 
 // Nav scroll effect
