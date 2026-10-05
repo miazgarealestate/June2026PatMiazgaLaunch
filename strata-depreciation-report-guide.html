@@ -74,6 +74,17 @@
     @media(max-width:960px){.photo-grid{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:680px){.grid-2,.grid-3{grid-template-columns:1fr}.guide-row{grid-template-columns:1fr 1fr}.nav-links{display:none}.cta-box{padding:36px 24px}.photo-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:420px){.guide-row{grid-template-columns:1fr}.photo-grid{grid-template-columns:1fr}}
+      /* Mobile menu */
+    .nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.35);border-radius:4px;color:var(--white);font-size:20px;line-height:1;padding:6px 10px;cursor:pointer}
+    .nav-toggle:focus-visible{outline:2px solid var(--sand);outline-offset:2px}
+    @media(max-width:680px){
+      .nav-toggle{display:block}
+      .nav-inner .pm-search-trigger{margin-left:auto;margin-right:8px}
+      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.12)}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:14px 24px;font-size:15px;border-top:1px solid rgba(255,255,255,.08)}
+      .nav-links a.nav-cta{margin:12px 24px;padding:12px 16px;text-align:center;border-top:none;border-radius:4px}
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -115,7 +126,7 @@
   <meta property="og:image" content="https://patmiazga.com/images/hero-2-summer-valley.jpg" />
 </head>
 <body>
-<nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-logo">PAT MIAZGA</a><div class="nav-links"><a href="index.html#about">About</a><a href="communities.html">Communities</a><a href="index.html#guides">Free Guides</a><a href="index.html#contact" class="nav-cta">Talk to Pat</a></div></div></nav>
+<nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-logo">PAT MIAZGA</a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button><div class="nav-links" id="nav-links"><a href="index.html#about">About</a><a href="communities.html">Communities</a><a href="index.html#guides">Free Guides</a><a href="index.html#contact" class="nav-cta">Talk to Pat</a></div></div></nav>
 
 <section class="hero">
   <div class="hero-inner">
@@ -198,6 +209,16 @@
 </section>
 
 <section class="section">
+  <div class="container">
+    <span class="eyebrow">Quick Answers</span>
+    <h2>Depreciation report rules — the short version</h2>
+    <div class="card" style="margin-bottom:16px"><h3 style="font-size:1.05rem;margin-bottom:8px">When do Osoyoos and Oliver strata corporations need a depreciation report?</h3><p style="margin:0">Strata corporations in the South Okanagan (outside Metro Vancouver, Fraser Valley, and the Capital Regional District) must obtain a current depreciation report by July 1, 2027, if they don't already have one, or if their most recent report is older than December 31, 2020.</p></div>
+    <div class="card" style="margin-bottom:16px"><h3 style="font-size:1.05rem;margin-bottom:8px">Does a bare land strata need a depreciation report?</h3><p style="margin:0">Yes. Bare land strata corporations are included in the new requirement since they typically manage shared infrastructure such as roads and utilities, the same as any other strata with five or more lots.</p></div>
+    <div class="card" style="margin-bottom:16px"><h3 style="font-size:1.05rem;margin-bottom:8px">Can a strata corporation still defer getting a depreciation report by vote?</h3><p style="margin:0">No. As of July 1, 2024, the option to defer a depreciation report with a three-quarters vote at the AGM was removed. Reports are now mandatory every 5 years for strata corporations with five or more lots.</p></div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container"><div class="cta-box">
     <h2>Buying or selling into a strata?</h2>
     <p>Pat will pull the current depreciation report status before you write an offer — and flag it clearly if a strata is behind schedule.</p>
@@ -207,4 +228,14 @@
 </section>
 
 <footer class="footer"><div class="container"><p><strong>Pat Miazga, REALTOR®</strong> — RE/MAX All Points Realty<br>South Okanagan Real Estate &amp; Relocation Specialist | BC-Wide License Since 2004<br>📞 <a href="tel:6045625982">604-562-5982</a> &nbsp;|&nbsp; ✉️ <a href="mailto:miazgarealestate@gmail.com">miazgarealestate@gmail.com</a> &nbsp;|&nbsp; <a href="https://patmiazga.com">patmiazga.com</a></p><p style="margin-top:16px;font-size:12px">General information only, based on BCREA's August 2026 summary of BC's depreciation report regulations — not legal advice. Confirm current requirements and deadlines with a BC real estate lawyer or directly with your strata council.</p></div></footer>
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'),l=document.getElementById('nav-links');
+  if(!t||!l){return;}
+  function set(o){l.classList.toggle('open',o);t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  t.addEventListener('click',function(){set(!l.classList.contains('open'));});
+  l.addEventListener('click',function(e){if(e.target.tagName==='A'){set(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('open')){set(false);t.focus();}});
+})();
+</script>
 </body></html>

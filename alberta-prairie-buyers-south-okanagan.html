@@ -110,6 +110,17 @@
       .cta-box{padding:36px 24px}
     }
     @media(max-width:420px){.guide-row{grid-template-columns:1fr}}
+      /* Mobile menu */
+    .nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.35);border-radius:4px;color:var(--white);font-size:20px;line-height:1;padding:6px 10px;cursor:pointer}
+    .nav-toggle:focus-visible{outline:2px solid var(--sand);outline-offset:2px}
+    @media(max-width:680px){
+      .nav-toggle{display:block}
+      .nav-inner .pm-search-trigger{margin-left:auto;margin-right:8px}
+      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.12)}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:14px 24px;font-size:15px;border-top:1px solid rgba(255,255,255,.08)}
+      .nav-links a.nav-cta{margin:12px 24px;padding:12px 16px;text-align:center;border-top:none;border-radius:4px}
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -144,7 +155,8 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">PAT MIAZGA</a><button class="pm-search-trigger" aria-label="Search site" title="Search (Ctrl+K)">🔍</button>
-      <div class="nav-links">
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <div class="nav-links" id="nav-links">
         <a href="index.html#about">About</a>
         <a href="communities.html">Communities</a>
         <a href="index.html#guides">Free Guides</a>
@@ -416,6 +428,19 @@
           <div class="gdesc">Never skip the well test. What to check on rural properties and why it matters more here.</div>
           <span class="gcta">Read Free →</span>
         </a>
+      
+        <a href="osoyoos-vs-calgary.html" class="guide-link">
+          <div class="icon">⚖️</div>
+          <div class="gtitle">Osoyoos vs Calgary</div>
+          <div class="gdesc">Price, climate and what is different about buying in BC vs Alberta.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+        <a href="south-okanagan-cost-of-living-guide.html" class="guide-link">
+          <div class="icon">🧾</div>
+          <div class="gtitle">Osoyoos Weather, Population &amp; Cost of Living</div>
+          <div class="gdesc">Weather, population, distances and the real cost of living, compared honestly to Vancouver and Calgary.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -441,5 +466,15 @@
   </footer>
 
   <script src="search.js" defer></script>
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'),l=document.getElementById('nav-links');
+  if(!t||!l){return;}
+  function set(o){l.classList.toggle('open',o);t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  t.addEventListener('click',function(){set(!l.classList.contains('open'));});
+  l.addEventListener('click',function(e){if(e.target.tagName==='A'){set(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('open')){set(false);t.focus();}});
+})();
+</script>
 </body>
 </html>

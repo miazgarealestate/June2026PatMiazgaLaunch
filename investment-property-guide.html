@@ -304,6 +304,7 @@ img{max-width:100%;}
   </script>
   <meta property="og:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
   <meta name="twitter:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+<style>.form-status{margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fdeceb;border:1px solid #e3a8a4;color:#7a1f1a;font-size:14px;line-height:1.5}.form-status[hidden]{display:none}.form-status a{color:inherit;font-weight:600}.submit-btn:disabled{opacity:.6;cursor:not-allowed}.form-disclaimer a{color:inherit;text-decoration:underline}</style>
 </head>
 <body>
 <div class="hero">
@@ -407,9 +408,9 @@ img{max-width:100%;}
     <div class="acc">
       <div class="acc-head" onclick="toggleAcc(this)"><span>Outside town limits, the rules can be completely different — Anarchist Mountain is the example</span><span class="plus">+</span></div>
       <div class="acc-body">
-        <p>This is a genuinely important distinction many buyers miss: the Town of Osoyoos opting in only applies <em>within Osoyoos town limits</em>. Properties in the surrounding rural areas — including <strong>Anarchist Mountain</strong>, the scenic hillside area east of town along Highway 3 — fall under the <strong>Regional District of Okanagan-Similkameen (RDOS)</strong> instead, specifically <strong>Electoral Area "C"</strong>. The RDOS regulates short-term rentals separately from the Town of Osoyoos, through its own land use bylaws and a vacation rental business licence framework. As of the RDOS's own published bylaw rollout, Electoral Areas "C" and "H" specifically <strong>opted not to participate</strong> in the regional business licence bylaw requiring compliance with the provincial principal residence rule — which is exactly why you'll see legally operating full-time short-term rental cottages, guest cabins, and vintner-stay properties on Anarchist Mountain that wouldn't be permitted under the same business model inside Osoyoos itself.</p>
-        <p style="margin-top:10px">This is a real and current opportunity gap for investors specifically targeting short-term rental income — a rural property a short drive from Osoyoos can operate on a fundamentally different legal basis than a property inside town limits. That said, RDOS rules are also under active review (the regional district has been reassessing its approach to vacation rentals across multiple electoral areas since 2024), and individual properties still need a Temporary Use Permit or STR Permit and must comply with whatever the current RDOS bylaw requires — "outside town limits" doesn't mean unregulated, just regulated differently. The RDOS has also shown it will enforce against problem operators: in one notable case, the RDOS board denied a vacation rental permit renewal for a rural Osoyoos-area property following sustained neighbour complaints about noise — the first such denial in the district's history.</p>
-        <p style="margin-top:10px">For any rural property outside Osoyoos town limits — Anarchist Mountain, other parts of Electoral Area C, or elsewhere in the RDOS — confirm the property's specific zoning, whether a Temporary Use Permit or STR Permit is in place or obtainable, and current Electoral Area-specific rules directly with RDOS Development Services before assuming a short-term rental strategy will work.</p>
+        <p>This is a genuinely important distinction many buyers miss: the Town of Osoyoos opting in only applies <em>within Osoyoos town limits</em>. Properties in the surrounding rural areas — including <strong>Anarchist Mountain</strong>, the scenic hillside area east of town along Highway 3 — fall under the <strong>Regional District of Okanagan-Similkameen (RDOS)</strong> instead, specifically <strong>Electoral Area A</strong>. The RDOS regulates short-term rentals separately from the Town of Osoyoos, through its own bylaws. RDOS has <strong>not opted Area A into</strong> the province's principal residence requirement (unlike Electoral Areas D, F and I), so the Town of Osoyoos' principal-residence rule does not apply there. Short-term rentals on Anarchist Mountain are still regulated: they require an RDOS Short-Term Rental (STR) Permit ($500 application fee) and, in most cases, a business licence — the business licence is not required only when the operator is present and living in the same dwelling as guests. Zoning in Area A permits up to two STR uses per property.</p>
+        <p style="margin-top:10px">That means a rural property a short drive from Osoyoos can be regulated on a different basis than a property inside town limits. RDOS rules are also under active review (the regional district has been reassessing its approach to vacation rentals across multiple electoral areas since 2024), and individual properties still need a Temporary Use Permit or STR Permit and must comply with whatever the current RDOS bylaw requires — "outside town limits" doesn't mean unregulated, just regulated differently. The RDOS has also shown it will enforce against problem operators: in one notable case, the RDOS board denied a vacation rental permit renewal for a rural Osoyoos-area property following sustained neighbour complaints about noise — the first such denial in the district's history.</p>
+        <p style="margin-top:10px">For any rural property outside Osoyoos town limits — Anarchist Mountain (Electoral Area A), other rural areas such as Electoral Area C, or elsewhere in the RDOS — confirm the property's specific zoning, whether a Temporary Use Permit or STR Permit is in place or obtainable, and current Electoral Area-specific rules directly with RDOS Development Services before assuming a short-term rental strategy will work.</p>
       </div>
     </div>
   </div>
@@ -459,6 +460,7 @@ img{max-width:100%;}
   <div class="wrap gate-inner">
     <div class="eyebrow">Unlock the Full Guide</div>
     <h2>The long-term rental market, registration rules, fractional ownership, and <em>Spirit Ridge explained</em>.</h2>
+    <p>Enter your details below to unlock the rest of this guide.</p>
     <ul class="unlock-list">
       <li><span class="unlock-icon">●</span> Registration and penalties — what's required if you do qualify to rent short-term</li>
       <li><span class="unlock-icon">●</span> The long-term rental opportunity — what's changed and why it matters</li>
@@ -469,7 +471,7 @@ img{max-width:100%;}
     </ul>
     <div class="form-card">
       <h3>Unlock your guide</h3>
-      <div class="form-sub">Takes 15 seconds. No spam.</div>
+      <div class="form-sub">Takes 15 seconds.</div>
       <form id="lead-form" onsubmit="return submitForm(event)">
         <div class="form-row">
           <div class="fgroup"><label>First Name *</label><input type="text" id="g-fn" required/></div>
@@ -496,8 +498,9 @@ img{max-width:100%;}
             </select>
           </div>
         </div>
-        <button type="submit" class="submit-btn">Unlock the Full Guide →</button>
-        <div class="form-disclaimer">By submitting, you'll receive this guide and occasional relevant follow-ups. Unsubscribe anytime.</div>
+        <button type="submit" class="submit-btn">Unlock the Full Guide</button>
+        <div class="form-status" id="form-status" role="alert" aria-live="polite" hidden></div>
+        <div class="form-disclaimer">By submitting, you agree that Pat Miazga, REALTOR®, may use your details to respond to your inquiry. See the <a href="privacy.html">Privacy Policy</a>.</div>
       </form>
     </div>
   </div>
@@ -705,8 +708,11 @@ function toggleAcc(el){
 // ── LEAD FORM ──
 var FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdqkvra";
 
+var submitting = false;
+
 function submitForm(e){
   e.preventDefault();
+  if(submitting){ return false; }
 
   var formData = {
     firstname: document.getElementById('g-fn').value,
@@ -729,21 +735,55 @@ function submitForm(e){
     gv: 1, eo: 0, ec: 0, es: 0, boost: false, notes: [], reminders: []
   };
 
-  try {
-    var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
-    lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
-    leads.unshift(lead);
-    localStorage.setItem('pm_leads', JSON.stringify(leads));
-  } catch(err){ console.log('Could not save to CRM storage', err); }
+  var form = document.getElementById('lead-form');
+  var btn = form.querySelector('button[type="submit"]');
+  var btnLabel = btn.textContent;
+  submitting = true;
+  btn.disabled = true;
+  btn.textContent = 'Sending\u2026';
+  showFormStatus(false);
 
+  // The guide unlocks only after Formspree confirms receipt (HTTP 2xx).
   fetch(FORMSPREE_ENDPOINT, {
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
-  }).catch(function(err){ console.log('Formspree submission error', err); });
+  }).then(function(res){
+    if(!res.ok){ throw new Error('Formspree responded with HTTP ' + res.status); }
+  }).then(function(){
+    // Convenience copy in this browser only. It is NOT proof of delivery and NOT a shared CRM.
+    try {
+      var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
+      lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
+      leads.unshift(lead);
+      localStorage.setItem('pm_leads', JSON.stringify(leads));
+    } catch(err){}
+    unlockGuide();
+  }, function(err){
+    console.log('Guide form submission failed', err);
+    showFormStatus(true);
+  }).then(function(){
+    submitting = false;
+    btn.disabled = false;
+    btn.textContent = btnLabel;
+  });
 
-  unlockGuide();
   return false;
+}
+
+function showFormStatus(failed){
+  var el = document.getElementById('form-status');
+  if(!el){ return; }
+  while(el.firstChild){ el.removeChild(el.firstChild); }
+  if(!failed){ el.hidden = true; return; }
+  el.appendChild(document.createTextNode('Your details could not be sent, so the guide is still locked. What you entered is still in the form \u2014 please try again. If it keeps failing, call or text Pat at '));
+  var tel = document.createElement('a'); tel.href = 'tel:+16045625982'; tel.textContent = '604-562-5982';
+  el.appendChild(tel);
+  el.appendChild(document.createTextNode(' or email '));
+  var mail = document.createElement('a'); mail.href = 'mailto:miazgarealestate@gmail.com'; mail.textContent = 'miazgarealestate@gmail.com';
+  el.appendChild(mail);
+  el.appendChild(document.createTextNode('.'));
+  el.hidden = false;
 }
 
 function unlockGuide(){
@@ -751,13 +791,16 @@ function unlockGuide(){
   var unlocked = document.getElementById('unlocked');
   unlocked.classList.add('show');
   unlocked.scrollIntoView({behavior:'smooth'});
-  localStorage.setItem('pm_investment_unlocked','true');
+  try { localStorage.setItem('pm_investment_unlocked','true'); } catch(err){}
 }
 
-if(localStorage.getItem('pm_investment_unlocked')==='true'){
-  document.getElementById('gate').style.display='none';
-  document.getElementById('unlocked').classList.add('show');
-}
+// Returning visitors who already unlocked this guide keep their access.
+try {
+  if(localStorage.getItem('pm_investment_unlocked')==='true'){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('unlocked').classList.add('show');
+  }
+} catch(err){}
 </script>
 </body>
 </html>

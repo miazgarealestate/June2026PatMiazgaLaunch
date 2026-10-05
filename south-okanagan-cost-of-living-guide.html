@@ -165,6 +165,8 @@ img{max-width:100%;}
   ]
 }
 </script>
+<style>.form-status{margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fdeceb;border:1px solid #e3a8a4;color:#7a1f1a;font-size:14px;line-height:1.5}.form-status[hidden]{display:none}.form-status a{color:inherit;font-weight:600}.submit-btn:disabled{opacity:.6;cursor:not-allowed}.form-disclaimer a{color:inherit;text-decoration:underline}</style>
+<style>.qa-q{font-size:16px;font-weight:600;color:var(--ink);margin:18px 0 6px}.qa-a{font-size:15.5px;margin-bottom:0}</style>
 </head>
 <body>
 
@@ -222,12 +224,30 @@ img{max-width:100%;}
   </div>
 </div>
 
+<!-- QUICK ANSWERS -->
+<div class="section" id="quick-answers">
+  <div class="wrap">
+    <div class="section-num">Quick answers</div>
+    <h2>Osoyoos quick answers</h2>
+    <h3 class="qa-q">What is the population of Osoyoos, BC?</h3>
+    <p class="qa-a">Osoyoos had 5,690 permanent residents within town limits per the 2021 Census, with current estimates running roughly 5,700 to 5,900. The wider area, including surrounding RDOS Electoral Area A and Osoyoos Indian Band lands, adds several thousand more.</p>
+    <h3 class="qa-q">Does Osoyoos get snow?</h3>
+    <p class="qa-a">Yes, but modestly. Winters in Osoyoos are short and milder than most of Canada, with average January lows around -3°C. Snow accumulation on the valley floor is light compared to the rest of BC's interior.</p>
+    <h3 class="qa-q">What is the average winter temperature in Osoyoos, BC?</h3>
+    <p class="qa-a">Average January lows run around -3°C, making Osoyoos winters notably milder than most of Canada, though still cold enough for occasional snow and frost.</p>
+    <h3 class="qa-q">What is the distance between Osoyoos and Penticton?</h3>
+    <p class="qa-a">Osoyoos to Penticton is roughly 60 km, about a 45 to 50 minute drive north on Highway 97.</p>
+    <h3 class="qa-q">How far is Oliver from Osoyoos?</h3>
+    <p class="qa-a">Oliver is about 20 km from Osoyoos, roughly a 20 minute drive.</p>
+  </div>
+</div>
+
 <!-- GATE -->
 <div class="gate" id="gate">
   <div class="wrap gate-inner">
     <div class="eyebrow">Unlock the Full Guide</div>
     <h2>Housing, utilities, insurance, and <em>the everyday numbers</em>.</h2>
-    <p>Enter your details below and the rest of this guide unlocks immediately — plus you'll get a copy emailed to you for reference.</p>
+    <p>Enter your details below to unlock the rest of this guide.</p>
     <ul class="unlock-list">
       <li><span class="unlock-icon">●</span> Housing costs — property tax and strata fee comparisons</li>
       <li><span class="unlock-icon">●</span> Utilities — BC Hydro, propane, water, and internet realities</li>
@@ -238,7 +258,7 @@ img{max-width:100%;}
 
     <div class="form-card">
       <h3>Unlock your guide</h3>
-      <div class="form-sub">Takes 15 seconds. No spam, just useful South Okanagan info.</div>
+      <div class="form-sub">Takes 15 seconds.</div>
       <form id="lead-form" onsubmit="return submitForm(event)">
         <div class="form-row">
           <div class="fgroup"><label>First Name *</label><input type="text" id="g-fn" required/></div>
@@ -256,8 +276,9 @@ img{max-width:100%;}
             <option>Other</option>
           </select>
         </div>
-        <button type="submit" class="submit-btn">Unlock the Full Guide →</button>
-        <div class="form-disclaimer">By submitting, you'll receive this guide and occasional follow-up emails relevant to South Okanagan real estate. Unsubscribe anytime.</div>
+        <button type="submit" class="submit-btn">Unlock the Full Guide</button>
+        <div class="form-status" id="form-status" role="alert" aria-live="polite" hidden></div>
+        <div class="form-disclaimer">By submitting, you agree that Pat Miazga, REALTOR®, may use your details to respond to your inquiry. See the <a href="privacy.html">Privacy Policy</a>.</div>
       </form>
     </div>
   </div>
@@ -390,8 +411,11 @@ window.addEventListener('scroll', function(){
 // ── LEAD FORM ──
 var FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdqkvra";
 
+var submitting = false;
+
 function submitForm(e){
   e.preventDefault();
+  if(submitting){ return false; }
 
   var formData = {
     firstname: document.getElementById('g-fn').value,
@@ -413,21 +437,55 @@ function submitForm(e){
     gv: 1, eo: 0, ec: 0, es: 0, boost: false, notes: [], reminders: []
   };
 
-  try {
-    var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
-    lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
-    leads.unshift(lead);
-    localStorage.setItem('pm_leads', JSON.stringify(leads));
-  } catch(err){ console.log('Could not save to CRM storage', err); }
+  var form = document.getElementById('lead-form');
+  var btn = form.querySelector('button[type="submit"]');
+  var btnLabel = btn.textContent;
+  submitting = true;
+  btn.disabled = true;
+  btn.textContent = 'Sending\u2026';
+  showFormStatus(false);
 
+  // The guide unlocks only after Formspree confirms receipt (HTTP 2xx).
   fetch(FORMSPREE_ENDPOINT, {
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
-  }).catch(function(err){ console.log('Formspree submission error', err); });
+  }).then(function(res){
+    if(!res.ok){ throw new Error('Formspree responded with HTTP ' + res.status); }
+  }).then(function(){
+    // Convenience copy in this browser only. It is NOT proof of delivery and NOT a shared CRM.
+    try {
+      var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
+      lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
+      leads.unshift(lead);
+      localStorage.setItem('pm_leads', JSON.stringify(leads));
+    } catch(err){}
+    unlockGuide();
+  }, function(err){
+    console.log('Guide form submission failed', err);
+    showFormStatus(true);
+  }).then(function(){
+    submitting = false;
+    btn.disabled = false;
+    btn.textContent = btnLabel;
+  });
 
-  unlockGuide();
   return false;
+}
+
+function showFormStatus(failed){
+  var el = document.getElementById('form-status');
+  if(!el){ return; }
+  while(el.firstChild){ el.removeChild(el.firstChild); }
+  if(!failed){ el.hidden = true; return; }
+  el.appendChild(document.createTextNode('Your details could not be sent, so the guide is still locked. What you entered is still in the form \u2014 please try again. If it keeps failing, call or text Pat at '));
+  var tel = document.createElement('a'); tel.href = 'tel:+16045625982'; tel.textContent = '604-562-5982';
+  el.appendChild(tel);
+  el.appendChild(document.createTextNode(' or email '));
+  var mail = document.createElement('a'); mail.href = 'mailto:miazgarealestate@gmail.com'; mail.textContent = 'miazgarealestate@gmail.com';
+  el.appendChild(mail);
+  el.appendChild(document.createTextNode('.'));
+  el.hidden = false;
 }
 
 function unlockGuide(){
@@ -435,13 +493,16 @@ function unlockGuide(){
   var unlocked = document.getElementById('unlocked');
   unlocked.classList.add('show');
   unlocked.scrollIntoView({behavior:'smooth'});
-  localStorage.setItem('pm_colguide_unlocked','true');
+  try { localStorage.setItem('pm_colguide_unlocked','true'); } catch(err){}
 }
 
-if(localStorage.getItem('pm_colguide_unlocked')==='true'){
-  document.getElementById('gate').style.display='none';
-  document.getElementById('unlocked').classList.add('show');
-}
+// Returning visitors who already unlocked this guide keep their access.
+try {
+  if(localStorage.getItem('pm_colguide_unlocked')==='true'){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('unlocked').classList.add('show');
+  }
+} catch(err){}
 </script>
 </body>
 </html>

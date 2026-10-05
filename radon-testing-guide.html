@@ -304,6 +304,7 @@ img{max-width:100%;}
   </script>
   <meta property="og:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
   <meta name="twitter:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+<style>.form-status{margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fdeceb;border:1px solid #e3a8a4;color:#7a1f1a;font-size:14px;line-height:1.5}.form-status[hidden]{display:none}.form-status a{color:inherit;font-weight:600}.submit-btn:disabled{opacity:.6;cursor:not-allowed}.form-disclaimer a{color:inherit;text-decoration:underline}</style>
 </head>
 <body>
 <div class="hero">
@@ -429,6 +430,7 @@ img{max-width:100%;}
   <div class="wrap gate-inner">
     <div class="eyebrow">Unlock the Full Guide</div>
     <h2>How to test, what mitigation costs, and <em>what buyers and sellers should do</em>.</h2>
+    <p>Enter your details below to unlock the rest of this guide.</p>
     <ul class="unlock-list">
       <li><span class="unlock-icon">●</span> How to actually test — short-term vs. long-term, and why it matters</li>
       <li><span class="unlock-icon">●</span> Where to get test kits, including free options</li>
@@ -439,7 +441,7 @@ img{max-width:100%;}
     </ul>
     <div class="form-card">
       <h3>Unlock your guide</h3>
-      <div class="form-sub">Takes 15 seconds. No spam.</div>
+      <div class="form-sub">Takes 15 seconds.</div>
       <form id="lead-form" onsubmit="return submitForm(event)">
         <div class="form-row">
           <div class="fgroup"><label>First Name *</label><input type="text" id="g-fn" required/></div>
@@ -466,8 +468,9 @@ img{max-width:100%;}
             </select>
           </div>
         </div>
-        <button type="submit" class="submit-btn">Unlock the Full Guide →</button>
-        <div class="form-disclaimer">By submitting, you'll receive this guide and occasional relevant follow-ups. Unsubscribe anytime.</div>
+        <button type="submit" class="submit-btn">Unlock the Full Guide</button>
+        <div class="form-status" id="form-status" role="alert" aria-live="polite" hidden></div>
+        <div class="form-disclaimer">By submitting, you agree that Pat Miazga, REALTOR®, may use your details to respond to your inquiry. See the <a href="privacy.html">Privacy Policy</a>.</div>
       </form>
     </div>
   </div>
@@ -658,8 +661,11 @@ function toggleAcc(el){
 // ── LEAD FORM ──
 var FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdqkvra";
 
+var submitting = false;
+
 function submitForm(e){
   e.preventDefault();
+  if(submitting){ return false; }
 
   var formData = {
     firstname: document.getElementById('g-fn').value,
@@ -682,21 +688,55 @@ function submitForm(e){
     gv: 1, eo: 0, ec: 0, es: 0, boost: false, notes: [], reminders: []
   };
 
-  try {
-    var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
-    lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
-    leads.unshift(lead);
-    localStorage.setItem('pm_leads', JSON.stringify(leads));
-  } catch(err){ console.log('Could not save to CRM storage', err); }
+  var form = document.getElementById('lead-form');
+  var btn = form.querySelector('button[type="submit"]');
+  var btnLabel = btn.textContent;
+  submitting = true;
+  btn.disabled = true;
+  btn.textContent = 'Sending\u2026';
+  showFormStatus(false);
 
+  // The guide unlocks only after Formspree confirms receipt (HTTP 2xx).
   fetch(FORMSPREE_ENDPOINT, {
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
-  }).catch(function(err){ console.log('Formspree submission error', err); });
+  }).then(function(res){
+    if(!res.ok){ throw new Error('Formspree responded with HTTP ' + res.status); }
+  }).then(function(){
+    // Convenience copy in this browser only. It is NOT proof of delivery and NOT a shared CRM.
+    try {
+      var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
+      lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
+      leads.unshift(lead);
+      localStorage.setItem('pm_leads', JSON.stringify(leads));
+    } catch(err){}
+    unlockGuide();
+  }, function(err){
+    console.log('Guide form submission failed', err);
+    showFormStatus(true);
+  }).then(function(){
+    submitting = false;
+    btn.disabled = false;
+    btn.textContent = btnLabel;
+  });
 
-  unlockGuide();
   return false;
+}
+
+function showFormStatus(failed){
+  var el = document.getElementById('form-status');
+  if(!el){ return; }
+  while(el.firstChild){ el.removeChild(el.firstChild); }
+  if(!failed){ el.hidden = true; return; }
+  el.appendChild(document.createTextNode('Your details could not be sent, so the guide is still locked. What you entered is still in the form \u2014 please try again. If it keeps failing, call or text Pat at '));
+  var tel = document.createElement('a'); tel.href = 'tel:+16045625982'; tel.textContent = '604-562-5982';
+  el.appendChild(tel);
+  el.appendChild(document.createTextNode(' or email '));
+  var mail = document.createElement('a'); mail.href = 'mailto:miazgarealestate@gmail.com'; mail.textContent = 'miazgarealestate@gmail.com';
+  el.appendChild(mail);
+  el.appendChild(document.createTextNode('.'));
+  el.hidden = false;
 }
 
 function unlockGuide(){
@@ -704,13 +744,16 @@ function unlockGuide(){
   var unlocked = document.getElementById('unlocked');
   unlocked.classList.add('show');
   unlocked.scrollIntoView({behavior:'smooth'});
-  localStorage.setItem('pm_radon_unlocked','true');
+  try { localStorage.setItem('pm_radon_unlocked','true'); } catch(err){}
 }
 
-if(localStorage.getItem('pm_radon_unlocked')==='true'){
-  document.getElementById('gate').style.display='none';
-  document.getElementById('unlocked').classList.add('show');
-}
+// Returning visitors who already unlocked this guide keep their access.
+try {
+  if(localStorage.getItem('pm_radon_unlocked')==='true'){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('unlocked').classList.add('show');
+  }
+} catch(err){}
 </script>
 </body>
 </html>

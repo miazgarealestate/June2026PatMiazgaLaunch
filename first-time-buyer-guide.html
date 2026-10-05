@@ -247,6 +247,7 @@ img{max-width:100%;}
   </script>
   <meta property="og:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
   <meta name="twitter:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+<style>.form-status{margin:12px 0 0;padding:12px 14px;border-radius:8px;background:#fdeceb;border:1px solid #e3a8a4;color:#7a1f1a;font-size:14px;line-height:1.5}.form-status[hidden]{display:none}.form-status a{color:inherit;font-weight:600}.submit-btn:disabled{opacity:.6;cursor:not-allowed}.form-disclaimer a{color:inherit;text-decoration:underline}</style>
 </head>
 <body>
 
@@ -399,18 +400,18 @@ img{max-width:100%;}
 <div class="section" id="sec-2">
   <div class="wrap">
     <div class="section-num">02 — The $8,000 Question</div>
-    <h2>BC will <em>waive</em> your property transfer tax — if you qualify.</h2>
-    <p>Property Transfer Tax (PTT) is a one-time tax charged when you register a property in BC. On a typical $750,000 home, that's a <strong>$13,000 bill</strong> at closing. Most first-time buyers have no idea it can be eliminated entirely.</p>
+    <h2>BC can <em>waive up to $8,000</em> of your property transfer tax — if you qualify.</h2>
+    <p>Property Transfer Tax (PTT) is a one-time tax charged when you register a property in BC. On a typical $750,000 home, that's a <strong>$13,000 bill</strong> at closing. Most first-time buyers have no idea up to $8,000 of it can be waived.</p>
 
     <div class="callout">
       <div class="callout-eyebrow">First-Time Home Buyers' Program</div>
       <div class="callout-big">Up to $8,000</div>
       <div class="callout-sub">in property transfer tax you may not have to pay</div>
       <div class="callout-divider"></div>
-      <p style="margin-bottom:0;font-size:14px">Full exemption on homes valued at <strong>$835,000 or less</strong>. A partial exemption applies between $835,000–$860,000. To qualify, you must be a Canadian citizen or permanent resident, have lived in BC for 12 months (or filed 2 BC tax returns in the last 6 years), and have never owned a principal residence anywhere in the world.</p>
+      <p style="margin-bottom:0;font-size:14px">Full exemption on homes valued at <strong>$500,000 or less</strong>. A fixed <strong>$8,000</strong> exemption applies to homes valued from $500,000 to $835,000, reduced gradually to $0 between $835,000 and $860,000. To qualify, you must be a Canadian citizen or permanent resident, have lived in BC for 12 months (or filed 2 BC tax returns in the last 6 years), and have never owned a principal residence anywhere in the world.</p>
     </div>
 
-    <p>In Vernon, a typical detached home assesses around $721,000 — comfortably inside the full exemption. In Kelowna it's closer to $918,000, often landing buyers in partial-exemption or no-exemption territory. <strong>Where you buy in the Okanagan directly affects how much of this $8,000 you actually get.</strong></p>
+    <p>In Vernon, a typical detached home assesses around $721,000 — under the $835,000 limit, so the full $8,000 applies. In Kelowna it's closer to $918,000, which is above the $860,000 cutoff, so no exemption applies. <strong>Where you buy in the Okanagan directly affects how much of this $8,000 you actually get.</strong></p>
 
     <div class="scenario">
       <div class="scenario-head">
@@ -424,10 +425,10 @@ img{max-width:100%;}
         <p>Sarah, a first-time buyer from Surrey, found a $610,000 condo overlooking the lake in Osoyoos. Here's what happened to her property transfer tax bill:</p>
         <div class="scenario-math">
           <div class="sm-row"><span>PTT without exemption (1% on first $200K, 2% above)</span><span>$10,200</span></div>
-          <div class="sm-row"><span>Sarah qualifies as a first-time buyer (under $835K)</span><span>− $10,200</span></div>
-          <div class="sm-row result"><span>PTT Sarah actually pays</span><span class="sm-val">$0</span></div>
+          <div class="sm-row"><span>First-Time Home Buyers' exemption (home valued $500K–$835K: fixed $8,000)</span><span>− $8,000</span></div>
+          <div class="sm-row result"><span>PTT Sarah actually pays</span><span class="sm-val">$2,200</span></div>
         </div>
-        <p>That $10,200 went straight into her moving budget and a new patio set for the lake view.</p>
+        <p>That $8,000 stayed in her moving budget and went toward a new patio set for the lake view.</p>
       </div>
     </div>
 
@@ -443,7 +444,7 @@ img{max-width:100%;}
   <div class="wrap gate-inner">
     <div class="eyebrow">Unlock the Full Guide</div>
     <h2>There's <em>more money on the table</em> — and one regional advantage almost nobody talks about.</h2>
-    <p>Enter your details below and the rest of this guide unlocks immediately — plus you'll get a copy emailed to you for reference.</p>
+    <p>Enter your details below to unlock the rest of this guide.</p>
     <ul class="unlock-list">
       <li><span class="unlock-icon">●</span> The First Home Savings Account — shelter up to $40,000 tax-free toward your down payment</li>
       <li><span class="unlock-icon">●</span> The RRSP Home Buyers' Plan, explained simply</li>
@@ -455,7 +456,7 @@ img{max-width:100%;}
 
     <div class="form-card">
       <h3>Unlock your guide</h3>
-      <div class="form-sub">Takes 15 seconds. No spam, just useful South Okanagan info.</div>
+      <div class="form-sub">Takes 15 seconds.</div>
       <form id="lead-form" onsubmit="return submitForm(event)">
         <div class="form-row">
           <div class="fgroup"><label>First Name *</label><input type="text" id="g-fn" required/></div>
@@ -486,8 +487,9 @@ img{max-width:100%;}
             </select>
           </div>
         </div>
-        <button type="submit" class="submit-btn">Unlock the Full Guide →</button>
-        <div class="form-disclaimer">By submitting, you'll receive this guide and occasional follow-up emails relevant to buying in the South Okanagan. Unsubscribe anytime.</div>
+        <button type="submit" class="submit-btn">Unlock the Full Guide</button>
+        <div class="form-status" id="form-status" role="alert" aria-live="polite" hidden></div>
+        <div class="form-disclaimer">By submitting, you agree that Pat Miazga, REALTOR®, may use your details to respond to your inquiry. See the <a href="privacy.html">Privacy Policy</a>.</div>
       </form>
     </div>
   </div>
@@ -558,10 +560,10 @@ img{max-width:100%;}
         <div class="callout-big">$1,100,000</div>
         <div class="callout-sub">full exemption threshold (partial up to $1,150,000)</div>
         <div class="callout-divider"></div>
-        <p style="margin-bottom:0;font-size:14px">Applies to a newly constructed home on vacant land, a unit in a new condo building that's never been occupied, or a manufactured home newly placed on a parcel of vacant land. Compare that to the $835,000 threshold for resale homes — a meaningful difference if new construction is on your radar.</p>
+        <p style="margin-bottom:0;font-size:14px">Applies to a newly constructed home on vacant land, a unit in a new condo building that's never been occupied, or a manufactured home newly placed on a parcel of vacant land. Compare that to the First-Time Home Buyers' exemption on resale homes, which is capped at $8,000 and phases out by $860,000 — a meaningful difference if new construction is on your radar.</p>
       </div>
 
-      <p style="font-size:13.5px;color:var(--mid)">Example: a new build in Osoyoos at $1,050,000 would normally carry a $21,000 PTT bill. Under this exemption, that drops to <strong style="color:var(--ink)">$0</strong>.</p>
+      <p style="font-size:13.5px;color:var(--mid)">Example: a new build in Osoyoos at $1,050,000 would normally carry a $19,000 PTT bill. Under this exemption, that drops to <strong style="color:var(--ink)">$0</strong>.</p>
     </div>
   </div>
 
@@ -599,7 +601,7 @@ img{max-width:100%;}
             <circle cx="24" cy="22" r="6" fill="#c0392b"/>
             <text x="38" y="26">Speculation Tax applies (2026)</text>
             <circle cx="24" cy="42" r="6" fill="#3a7d44"/>
-            <text x="38" y="46">Currently exempt</text>
+            <text x="38" y="46">Outside designated area</text>
           </g>
         </svg>
       </div>
@@ -615,7 +617,7 @@ img{max-width:100%;}
           </svg>
         </div>
         <div class="badge-text">
-          <div class="badge-text-title">Currently exempt from the Speculation & Vacancy Tax</div>
+          <div class="badge-text-title">Outside the Speculation & Vacancy Tax area</div>
           <div class="badge-text-sub">While Penticton, Kelowna, Vernon and most of the valley were added to the taxable list in 2025, Osoyoos and Oliver were not.</div>
         </div>
       </div>
@@ -723,22 +725,22 @@ img{max-width:100%;}
     <div class="wrap">
       <div class="section-num">08 — The Real Numbers</div>
       <h2>What you'll actually need on <em>closing day</em>.</h2>
-      <p>Here's a realistic closing cost breakdown for a $650,000 first home purchase in the South Okanagan, assuming the First-Time Buyer PTT exemption applies in full.</p>
+      <p>Here's a realistic closing cost breakdown for a $650,000 first home purchase in the South Okanagan, assuming the First-Time Home Buyers' PTT exemption ($8,000) applies.</p>
 
       <table class="cost-table">
         <thead><tr><th>Item</th><th>Estimate</th></tr></thead>
         <tbody>
           <tr><td>Down payment (5% minimum, insured mortgage)</td><td>$32,500</td></tr>
-          <tr><td>Property Transfer Tax</td><td>$0*</td></tr>
+          <tr><td>Property Transfer Tax</td><td>$3,000*</td></tr>
           <tr><td>Legal / notary fees</td><td>~$1,200</td></tr>
           <tr><td>Home inspection</td><td>~$500</td></tr>
           <tr><td>Well & septic inspection (if applicable)</td><td>~$400</td></tr>
           <tr><td>Title insurance</td><td>~$250</td></tr>
           <tr><td>Property tax / utility adjustments</td><td>~$300</td></tr>
-          <tr class="total"><td>Estimated cash needed at closing</td><td>~$35,150</td></tr>
+          <tr class="total"><td>Estimated cash needed at closing</td><td>~$38,150</td></tr>
         </tbody>
       </table>
-      <div class="cost-note">*With First-Time Buyer exemption applied. Without it, add approximately $11,000 in PTT to the total above.</div>
+      <div class="cost-note">*PTT on a $650,000 purchase is about $11,000; the $8,000 First-Time Home Buyers' exemption reduces it to about $3,000. Without the exemption, add a further $8,000 to the total above.</div>
       <p style="font-size:13.5px;color:var(--mid)">This doesn't include moving costs, immediate repairs, or furnishing — but it's the number your lawyer will ask you to have ready before possession day.</p>
     </div>
   </div>
@@ -806,8 +808,11 @@ function toggleAcc(el){
 // ── LEAD FORM ──
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xzdqkvra";
 
+var submitting = false;
+
 function submitForm(e){
   e.preventDefault();
+  if(submitting){ return false; }
 
   const formData = {
     firstname: document.getElementById('g-fn').value,
@@ -829,38 +834,73 @@ function submitForm(e){
   };
 
   // Store locally so it flows into Pat's CRM if opened on the same device/browser
-  try {
-    let leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
-    lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
-    leads.unshift(lead);
-    localStorage.setItem('pm_leads', JSON.stringify(leads));
-  } catch(err){ console.log('Could not save to CRM storage', err); }
 
-  // Send to Formspree so Pat gets an email notification for every lead
+  var form = document.getElementById('lead-form');
+  var btn = form.querySelector('button[type="submit"]');
+  var btnLabel = btn.textContent;
+  submitting = true;
+  btn.disabled = true;
+  btn.textContent = 'Sending\u2026';
+  showFormStatus(false);
+
+  // The guide unlocks only after Formspree confirms receipt (HTTP 2xx).
   fetch(FORMSPREE_ENDPOINT, {
     method: 'POST',
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
-  }).catch(err => console.log('Formspree submission error', err));
+  }).then(function(res){
+    if(!res.ok){ throw new Error('Formspree responded with HTTP ' + res.status); }
+  }).then(function(){
+    // Convenience copy in this browser only. It is NOT proof of delivery and NOT a shared CRM.
+    try {
+      var leads = JSON.parse(localStorage.getItem('pm_leads')||'[]');
+      lead.id = Date.now().toString(36)+Math.random().toString(36).slice(2);
+      leads.unshift(lead);
+      localStorage.setItem('pm_leads', JSON.stringify(leads));
+    } catch(err){}
+    unlockGuide();
+  }, function(err){
+    console.log('Guide form submission failed', err);
+    showFormStatus(true);
+  }).then(function(){
+    submitting = false;
+    btn.disabled = false;
+    btn.textContent = btnLabel;
+  });
 
-  // Unlock content
-  unlockGuide();
   return false;
+}
+
+function showFormStatus(failed){
+  var el = document.getElementById('form-status');
+  if(!el){ return; }
+  while(el.firstChild){ el.removeChild(el.firstChild); }
+  if(!failed){ el.hidden = true; return; }
+  el.appendChild(document.createTextNode('Your details could not be sent, so the guide is still locked. What you entered is still in the form \u2014 please try again. If it keeps failing, call or text Pat at '));
+  var tel = document.createElement('a'); tel.href = 'tel:+16045625982'; tel.textContent = '604-562-5982';
+  el.appendChild(tel);
+  el.appendChild(document.createTextNode(' or email '));
+  var mail = document.createElement('a'); mail.href = 'mailto:miazgarealestate@gmail.com'; mail.textContent = 'miazgarealestate@gmail.com';
+  el.appendChild(mail);
+  el.appendChild(document.createTextNode('.'));
+  el.hidden = false;
 }
 
 function unlockGuide(){
   document.getElementById('gate').style.display = 'none';
-  const unlocked = document.getElementById('unlocked');
+  var unlocked = document.getElementById('unlocked');
   unlocked.classList.add('show');
   unlocked.scrollIntoView({behavior:'smooth'});
-  localStorage.setItem('pm_ftb_unlocked','true');
+  try { localStorage.setItem('pm_ftb_unlocked','true'); } catch(err){}
 }
 
-// ── CHECK IF ALREADY UNLOCKED (returning visitor) ──
-if(localStorage.getItem('pm_ftb_unlocked')==='true'){
-  document.getElementById('gate').style.display='none';
-  document.getElementById('unlocked').classList.add('show');
-}
+// Returning visitors who already unlocked this guide keep their access.
+try {
+  if(localStorage.getItem('pm_ftb_unlocked')==='true'){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('unlocked').classList.add('show');
+  }
+} catch(err){}
 </script>
 </body>
 </html>

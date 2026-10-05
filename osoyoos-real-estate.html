@@ -92,6 +92,17 @@
     @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}}
     @media(max-width:680px){.grid-2,.grid-3{grid-template-columns:1fr}.guide-row{grid-template-columns:1fr 1fr}.services-grid{grid-template-columns:1fr}.neighbourhood{grid-template-columns:1fr}.nav-links{display:none}.cta-box{padding:36px 24px}}
     @media(max-width:420px){.guide-row{grid-template-columns:1fr}}
+      /* Mobile menu */
+    .nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.35);border-radius:4px;color:var(--white);font-size:20px;line-height:1;padding:6px 10px;cursor:pointer}
+    .nav-toggle:focus-visible{outline:2px solid var(--sand);outline-offset:2px}
+    @media(max-width:680px){
+      .nav-toggle{display:block}
+      .nav-inner .pm-search-trigger{margin-left:auto;margin-right:8px}
+      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.12)}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:14px 24px;font-size:15px;border-top:1px solid rgba(255,255,255,.08)}
+      .nav-links a.nav-cta{margin:12px 24px;padding:12px 16px;text-align:center;border-top:none;border-radius:4px}
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -114,7 +125,7 @@
     "@context": "https://schema.org",
     "@type": "Place",
     "name": "Osoyoos, BC",
-    "description": "Canada's warmest town. Osoyoos Lake, wine country, desert landscape. No BC Speculation and Vacancy Tax.",
+    "description": "Canada's warmest town. Osoyoos Lake, wine country, desert landscape. Outside the BC Speculation and Vacancy Tax designated areas.",
     "geo": {"@type": "GeoCoordinates", "latitude": 49.0319, "longitude": -119.4680},
     "containedInPlace": {"@type": "Place", "name": "South Okanagan, British Columbia, Canada"}
   }
@@ -127,7 +138,8 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">PAT MIAZGA</a><button class="pm-search-trigger" aria-label="Search site" title="Search (Ctrl+K)">🔍</button>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+    <div class="nav-links" id="nav-links">
       <a href="index.html#about">About</a>
       <a href="communities.html">Communities</a>
       <a href="index.html#guides">Free Guides</a>
@@ -286,7 +298,26 @@
       <a href="climate-insurance-risk-guide.html" class="guide-link"><div class="icon">🔥</div><div class="gtitle">Climate &amp; Insurance Risk</div><div class="gdesc">Wildfire zones, the 50km rule, and what to verify before subjects come off.</div><span class="gcta">Read Free →</span></a>
       <a href="investment-property-guide.html" class="guide-link"><div class="icon">💰</div><div class="gtitle">Investment Property Guide</div><div class="gdesc">STR licensing, rental rules, and the real investment numbers in Osoyoos.</div><span class="gcta">Read Free →</span></a>
       <a href="inspection-well-septic-guide.html" class="guide-link"><div class="icon">💧</div><div class="gtitle">Well Water &amp; Rural Inspections</div><div class="gdesc">Critical for any rural or semi-rural property in the South Okanagan.</div><span class="gcta">Read Free →</span></a>
-    </div>
+    
+        <a href="osoyoos-vs-kelowna.html" class="guide-link">
+          <div class="icon">🍇</div>
+          <div class="gtitle">Osoyoos vs Kelowna</div>
+          <div class="gdesc">Home prices, climate, Speculation Tax, amenities and pace of life compared.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+        <a href="south-okanagan-cost-of-living-guide.html" class="guide-link">
+          <div class="icon">🧾</div>
+          <div class="gtitle">Osoyoos Weather, Population &amp; Cost of Living</div>
+          <div class="gdesc">Weather, population, distances and the real cost of living, compared honestly to Vancouver and Calgary.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+        <a href="should-i-move-to-osoyoos.html" class="guide-link">
+          <div class="icon">🧭</div>
+          <div class="gtitle">Should I Move to Osoyoos?</div>
+          <div class="gdesc">An honest breakdown of who Osoyoos fits, who it doesn't, and what changes day to day.</div>
+          <span class="gcta">Read Free →</span>
+        </a>
+      </div>
   </div>
 </section>
 
@@ -311,5 +342,15 @@
 </footer>
 
   <script src="search.js" defer></script>
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'),l=document.getElementById('nav-links');
+  if(!t||!l){return;}
+  function set(o){l.classList.toggle('open',o);t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  t.addEventListener('click',function(){set(!l.classList.contains('open'));});
+  l.addEventListener('click',function(e){if(e.target.tagName==='A'){set(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('open')){set(false);t.focus();}});
+})();
+</script>
 </body>
 </html>
