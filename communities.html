@@ -70,6 +70,10 @@
     .community-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .2s;display:flex;flex-direction:column}
     .community-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);transform:translateY(-3px);border-color:var(--accent)}
     .community-card-visual{height:160px;display:flex;align-items:center;justify-content:center;font-size:56px;background:var(--peer-bg)}
+    .community-card-visual img{width:100%;height:100%;object-fit:cover;display:block}
+    .community-card-visual--tile{background:linear-gradient(135deg,#1a1a18 0%,#3d3d38 100%);position:relative}
+    .community-card-visual--tile::before{content:"";position:absolute;left:50%;top:50%;width:64px;height:1px;background:var(--sand);transform:translate(-50%,-22px)}
+    .community-card-visual--tile span{font-family:var(--fd);font-style:italic;font-size:1.35rem;line-height:1.2;font-weight:500;color:var(--sand);letter-spacing:.02em;text-align:center;padding:0 16px;margin-top:6px}
     .community-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
     .community-card-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
     .community-card h3{font-family:var(--fd);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.25}
@@ -135,12 +139,16 @@
   </script>
   <meta property="og:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
   <meta name="twitter:image" content="https://patmiazga.com/images/hero-1-winter-valley.jpg" />
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">PAT MIAZGA</a><button class="pm-search-trigger" aria-label="Search site" title="Search (Ctrl+K)">🔍</button>
+      <a href="index.html" class="nav-logo" style="display:inline-flex;align-items:center;gap:10px"><img src="images/pat-miazga-logo-badge-96.png" alt="" width="40" height="40" style="display:block;flex:none">PAT MIAZGA</a><button class="pm-search-trigger" aria-label="Search site" title="Search (Ctrl+K)">🔍</button>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
       <div class="nav-links" id="nav-links">
         <a href="index.html#about">About</a>
@@ -183,7 +191,7 @@
       <div class="community-grid">
 
         <a href="osoyoos-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌊</div>
+          <div class="community-card-visual"><img src="images/thumbs/osoyoos-real-estate.jpg" alt="Osoyoos — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Town — Osoyoos</span>
             <h3>Osoyoos</h3>
@@ -193,7 +201,7 @@
         </a>
 
         <a href="oliver-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🍇</div>
+          <div class="community-card-visual"><img src="images/thumbs/oliver-real-estate.jpg" alt="Oliver — Canada's Wine Capital — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Town — Oliver</span>
             <h3>Oliver — Canada's Wine Capital</h3>
@@ -203,7 +211,7 @@
         </a>
 
         <a href="anarchist-mountain.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏔️</div>
+          <div class="community-card-visual"><img src="images/thumbs/anarchist-mountain.jpg" alt="Anarchist Mountain — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Rural — Anarchist Mountain</span>
             <h3>Anarchist Mountain</h3>
@@ -213,7 +221,7 @@
         </a>
 
         <a href="regal-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌲</div>
+          <div class="community-card-visual"><img src="images/thumbs/regal-ridge-osoyoos.jpg" alt="Regal Ridge — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Rural — Anarchist Mountain</span>
             <h3>Regal Ridge <span style="font-weight:400;font-size:.7em;opacity:.7">(a.k.a. Osoyoos Mountain Estates)</span></h3>
@@ -223,7 +231,7 @@
         </a>
 
         <a href="sidley-mountain-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏔️</div>
+          <div class="community-card-visual"><img src="images/thumbs/sidley-mountain-osoyoos.jpg" alt="Sidley Mountain — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Rural — Anarchist Mountain (Sidley Area)</span>
             <h3>Sidley Mountain</h3>
@@ -233,7 +241,7 @@
         </a>
 
         <a href="the-cottages-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">⛵</div>
+          <div class="community-card-visual"><img src="images/thumbs/the-cottages-osoyoos.jpg" alt="The Cottages on Osoyoos Lake — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated Resort — Osoyoos Lake</span>
             <h3>The Cottages on Osoyoos Lake</h3>
@@ -243,7 +251,7 @@
         </a>
 
         <a href="casitas-del-sol-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌅</div>
+          <div class="community-card-visual"><img src="images/thumbs/casitas-del-sol-osoyoos.jpg" alt="Casitas Del Sol — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated 55+ — Osoyoos</span>
             <h3>Casitas Del Sol</h3>
@@ -253,7 +261,7 @@
         </a>
 
         <a href="desert-mirage-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏊</div>
+          <div class="community-card-visual"><img src="images/thumbs/desert-mirage-osoyoos.jpg" alt="Desert Mirage — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Resort Condos — Osoyoos</span>
             <h3>Desert Mirage</h3>
@@ -263,7 +271,7 @@
         </a>
 
         <a href="okanagan-falls-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏞️</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Okanagan Falls</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Village — Okanagan Falls</span>
             <h3>Okanagan Falls</h3>
@@ -273,7 +281,7 @@
         </a>
 
         <a href="keremeos-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🍎</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Keremeos</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Village — Similkameen Valley</span>
             <h3>Keremeos</h3>
@@ -283,7 +291,7 @@
         </a>
 
         <a href="cawston-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌱</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Cawston</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Village — Similkameen Valley</span>
             <h3>Cawston</h3>
@@ -293,7 +301,7 @@
         </a>
 
         <a href="hedley-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">⛏️</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Hedley</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Village — Similkameen Valley</span>
             <h3>Hedley</h3>
@@ -303,7 +311,7 @@
         </a>
 
         <a href="kaleden-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🚴</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Kaleden</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Village — Skaha Lake</span>
             <h3>Kaleden</h3>
@@ -313,7 +321,7 @@
         </a>
 
         <a href="westbridge-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏞️</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Westbridge</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Rural — Boundary Country</span>
             <h3>Westbridge</h3>
@@ -323,7 +331,7 @@
         </a>
 
         <a href="rock-creek-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">⛰️</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Rock Creek &amp; Bridesville</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Rural — Boundary Country</span>
             <h3>Rock Creek &amp; Bridesville</h3>
@@ -333,7 +341,7 @@
         </a>
 
         <a href="naramata-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🍇</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Naramata</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Wine Country — Naramata Bench</span>
             <h3>Naramata</h3>
@@ -343,7 +351,7 @@
         </a>
 
         <div class="community-card" style="opacity:.7">
-          <div class="community-card-visual">🌄</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Osoyoos East &amp; Rural Properties</span></div>
           <div class="community-card-body">
             <span class="badge-soon">Coming Soon</span>
             <span class="community-card-tag">Area — Osoyoos East / Rural</span>
@@ -365,7 +373,7 @@
       <div class="community-grid">
 
         <a href="spirit-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🍷</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Spirit Ridge at Nk'Mip Resort</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Fractional & Whole Resort — Nk'Mip</span>
             <h3>Spirit Ridge at Nk'Mip Resort</h3>
@@ -375,7 +383,7 @@
         </a>
 
         <a href="walnut-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏖️</div>
+          <div class="community-card-visual"><img src="images/thumbs/walnut-beach-resort-osoyoos.jpg" alt="Walnut Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Condo-Hotel — Private Beach</span>
             <h3>Walnut Beach Resort</h3>
@@ -385,7 +393,7 @@
         </a>
 
         <a href="safari-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌴</div>
+          <div class="community-card-visual"><img src="images/thumbs/safari-beach-resort-osoyoos.jpg" alt="Safari Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Strata — Sheltered Bay</span>
             <h3>Safari Beach Resort</h3>
@@ -395,7 +403,7 @@
         </a>
 
         <a href="rendezvous-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">⛺</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Rendezvous Beach Resort</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Leasehold Sites — Reserve Land</span>
             <h3>Rendezvous Beach Resort</h3>
@@ -405,7 +413,7 @@
         </a>
 
         <a href="sonora-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏜️</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sonora Ridge</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated Custom Homes — East Bench</span>
             <h3>Sonora Ridge</h3>
@@ -415,7 +423,7 @@
         </a>
 
         <a href="desert-rose-estates-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌹</div>
+          <div class="community-card-visual"><img src="images/thumbs/desert-rose-estates-osoyoos.jpg" alt="Desert Rose Estates — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated 55+ Bare Land Strata</span>
             <h3>Desert Rose Estates <span style="font-weight:400;font-size:.7em;opacity:.7">(a.k.a. Sunset Ridge Estates)</span></h3>
@@ -425,7 +433,7 @@
         </a>
 
         <a href="cedar-villa-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌲</div>
+          <div class="community-card-visual"><img src="images/thumbs/cedar-villa-osoyoos.jpg" alt="Cedar Villa — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">No Age Restriction — Bare Land Strata</span>
             <h3>Cedar Villa</h3>
@@ -435,7 +443,7 @@
         </a>
 
         <a href="waltons-lakefront-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🚐</div>
+          <div class="community-card-visual"><img src="images/thumbs/waltons-lakefront-resort-osoyoos.jpg" alt="Walton's Waterfront RV Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Strata RV Lots — Osoyoos Lake</span>
             <h3>Walton's Waterfront RV Resort</h3>
@@ -445,7 +453,7 @@
         </a>
 
         <a href="lakeshore-villas-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏡</div>
+          <div class="community-card-visual"><img src="images/thumbs/lakeshore-villas-resort-osoyoos.jpg" alt="Lakeshore Villas Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Owner-Operated — Private Dock</span>
             <h3>Lakeshore Villas Resort</h3>
@@ -455,7 +463,7 @@
         </a>
 
         <a href="island-view-rv-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏝️</div>
+          <div class="community-card-visual"><img src="images/thumbs/island-view-rv-resort-osoyoos.jpg" alt="Island View RV Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Bare Land Strata RV Lots</span>
             <h3>Island View RV Resort</h3>
@@ -465,7 +473,7 @@
         </a>
 
         <a href="the-oasis-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌵</div>
+          <div class="community-card-visual"><img src="images/thumbs/the-oasis-resort-osoyoos.jpg" alt="The Oasis Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Deeded RV Sites — 8 Acres</span>
             <h3>The Oasis Resort</h3>
@@ -475,7 +483,7 @@
         </a>
 
         <a href="casa-del-mila-oro-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏛️</div>
+          <div class="community-card-visual"><img src="images/thumbs/casa-del-mila-oro-resort-osoyoos.jpg" alt="Casa Del Mila Oro Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Owner-Operated Beachfront</span>
             <h3>Casa Del Mila Oro Resort</h3>
@@ -485,7 +493,7 @@
         </a>
 
         <a href="las-ventanas-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌅</div>
+          <div class="community-card-visual"><img src="images/thumbs/las-ventanas-osoyoos.jpg" alt="Las Ventanas Al Paraiso — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Exclusive 11-Unit Beachfront</span>
             <h3>Las Ventanas Al Paraiso</h3>
@@ -495,7 +503,7 @@
         </a>
 
         <a href="brightwater-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏗️</div>
+          <div class="community-card-visual"><img src="images/thumbs/brightwater-osoyoos.jpg" alt="Brightwater — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">New Construction — Lakeshore Dr</span>
             <h3>Brightwater</h3>
@@ -505,7 +513,7 @@
         </a>
 
         <a href="cactus-flats-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🚗</div>
+          <div class="community-card-visual"><img src="images/thumbs/cactus-flats-osoyoos.jpg" alt="Cactus Flats — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">RV-Garage Townhomes</span>
             <h3>Cactus Flats</h3>
@@ -515,7 +523,7 @@
         </a>
 
         <a href="paradise-rv-park-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌞</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Paradise Park</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Park Model Homes — Solana Bay</span>
             <h3>Paradise Park</h3>
@@ -525,7 +533,7 @@
         </a>
 
         <a href="bayview-crescent-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">⛵</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Bayview Crescent</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Waterfront Street</span>
             <h3>Bayview Crescent</h3>
@@ -535,7 +543,7 @@
         </a>
 
         <a href="harbour-key-drive-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🛥️</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Harbour Key Drive</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Channel-Front Street</span>
             <h3>Harbour Key Drive</h3>
@@ -545,7 +553,7 @@
         </a>
 
         <a href="mojave-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏙️</div>
+          <div class="community-card-visual"><img src="images/thumbs/mojave-osoyoos.jpg" alt="Mojave — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">New Construction — Rooftop Patios</span>
             <h3>Mojave</h3>
@@ -555,7 +563,7 @@
         </a>
 
         <a href="selah-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">⚓</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Selah</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Presale Watch — Waterfront &amp; Marina</span>
             <h3>Selah</h3>
@@ -565,7 +573,7 @@
         </a>
 
         <a href="horizon-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌅</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Horizon</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">New Construction — Boutique, 5 Units</span>
             <h3>Horizon</h3>
@@ -575,7 +583,7 @@
         </a>
 
         <a href="the-villas-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏛️</div>
+          <div class="community-card-visual"><img src="images/thumbs/the-villas-osoyoos.jpg" alt="The Villas — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Townhomes — Legal Suites, Peanut Lake</span>
             <h3>The Villas</h3>
@@ -585,7 +593,7 @@
         </a>
 
         <a href="peanut-lake-townhouses-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏘️</div>
+          <div class="community-card-visual"><img src="images/thumbs/peanut-lake-townhouses-osoyoos.jpg" alt="Peanut Lake Townhouses — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Older Strata Townhouses — Peanut Lake</span>
             <h3>Peanut Lake Townhouses</h3>
@@ -595,7 +603,7 @@
         </a>
 
         <a href="adobe-sands-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌵</div>
+          <div class="community-card-visual"><img src="images/thumbs/adobe-sands-osoyoos.jpg" alt="Adobe Sands — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Strata — Above Peanut Lake</span>
             <h3>Adobe Sands</h3>
@@ -605,7 +613,7 @@
         </a>
 
         <a href="sole-vita-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌳</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sole Vita</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated Low-Density Townhomes</span>
             <h3>Sole Vita</h3>
@@ -615,7 +623,7 @@
         </a>
 
         <a href="sonora-gardens-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌳</div>
+          <div class="community-card-visual"><img src="images/thumbs/sonora-gardens-osoyoos.jpg" alt="Sonora Gardens — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Detached Homes — Shared Common Grounds</span>
             <h3>Sonora Gardens</h3>
@@ -625,7 +633,7 @@
         </a>
 
         <a href="sunshine-cove-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏖️</div>
+          <div class="community-card-visual"><img src="images/thumbs/sunshine-cove-osoyoos.jpg" alt="Sunshine Cove — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Lakefront Townhomes — Private Beach</span>
             <h3>Sunshine Cove</h3>
@@ -635,7 +643,7 @@
         </a>
 
         <a href="la-mirada-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌊</div>
+          <div class="community-card-visual"><img src="images/thumbs/la-mirada-osoyoos.jpg" alt="La Mirada — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Lakefront Condos — Private Beach</span>
             <h3>La Mirada</h3>
@@ -645,7 +653,7 @@
         </a>
 
         <a href="casa-azzuro-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">⛵</div>
+          <div class="community-card-visual"><img src="images/thumbs/casa-azzuro-osoyoos.jpg" alt="Casa Azzuro — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Waterfront Townhomes — 4 Units</span>
             <h3>Casa Azzuro</h3>
@@ -655,7 +663,7 @@
         </a>
 
         <a href="porta-loma-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🛥️</div>
+          <div class="community-card-visual"><img src="images/thumbs/porta-loma-osoyoos.jpg" alt="Porta Loma — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Waterfront Townhomes — 4 Units</span>
             <h3>Porta Loma</h3>
@@ -665,7 +673,7 @@
         </a>
 
         <a href="benchview-place-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏔️</div>
+          <div class="community-card-visual"><img src="images/thumbs/benchview-place-osoyoos.jpg" alt="Benchview Place — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Condos — 89th Street</span>
             <h3>Benchview Place</h3>
@@ -675,7 +683,7 @@
         </a>
 
         <a href="casa-del-sol-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">☀️</div>
+          <div class="community-card-visual"><img src="images/thumbs/casa-del-sol-osoyoos.jpg" alt="Casa del Sol — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Townhomes &amp; Condos — 89th Street</span>
             <h3>Casa del Sol</h3>
@@ -685,7 +693,7 @@
         </a>
 
         <a href="casa-madera-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏘️</div>
+          <div class="community-card-visual"><img src="images/thumbs/casa-madera-osoyoos.jpg" alt="Casa Madera — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Central Strata — Condos & Townhomes</span>
             <h3>Casa Madera</h3>
@@ -695,7 +703,7 @@
         </a>
 
         <a href="desert-court-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌄</div>
+          <div class="community-card-visual"><img src="images/thumbs/desert-court-osoyoos.jpg" alt="Desert Court — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Lowrise Condos — Near the Beach</span>
             <h3>Desert Court</h3>
@@ -705,7 +713,7 @@
         </a>
 
         <a href="dividend-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">⛳</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Dividend Ridge</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold — Executive Home Subdivision</span>
             <h3>Dividend Ridge</h3>
@@ -715,7 +723,7 @@
         </a>
 
         <a href="vintners-on-the-creek-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🍇</div>
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Vintners on the Creek</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Leasehold RV Sites — OIB Partnership</span>
             <h3>Vintners on the Creek</h3>
@@ -725,7 +733,7 @@
         </a>
 
         <a href="watermark-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🌊</div>
+          <div class="community-card-visual"><img src="images/thumbs/watermark-beach-resort-osoyoos.jpg" alt="Watermark Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Whole & Fractional Ownership</span>
             <h3>Watermark Beach Resort</h3>
@@ -735,7 +743,7 @@
         </a>
 
         <a href="white-sands-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual">🏨</div>
+          <div class="community-card-visual"><img src="images/thumbs/white-sands-osoyoos.jpg" alt="White Sands — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Established Lakefront Condos</span>
             <h3>White Sands</h3>
