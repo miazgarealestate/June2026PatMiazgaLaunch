@@ -74,6 +74,23 @@
     .community-card-visual--tile{background:linear-gradient(135deg,#1a1a18 0%,#3d3d38 100%);position:relative}
     .community-card-visual--tile::before{content:"";position:absolute;left:50%;top:50%;width:64px;height:1px;background:var(--sand);transform:translate(-50%,-22px)}
     .community-card-visual--tile span{font-family:var(--fd);font-style:italic;font-size:1.35rem;line-height:1.2;font-weight:500;color:var(--sand);letter-spacing:.02em;text-align:center;padding:0 16px;margin-top:6px}
+    .community-card[hidden]{display:none}
+    .dev-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 24px}
+    .dev-filters-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm-mid);margin-right:4px}
+    .dev-chip{font:500 13px/1 Inter,system-ui,sans-serif;background:transparent;color:var(--stone);border:1px solid var(--sand);border-radius:999px;padding:9px 16px;cursor:pointer;transition:all .15s}
+    .dev-chip:hover{border-color:var(--accent);color:var(--accent-dk)}
+    .dev-chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--white)}
+    .dev-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .dev-chip .dev-n{opacity:.7;margin-left:5px}
+    .dev-showing{font-size:13px;color:var(--warm-mid);margin:-8px 0 20px}
+    .start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .start-card{display:block;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px 24px;text-decoration:none;transition:all .2s}
+    .start-card:hover{border-color:var(--accent);box-shadow:0 8px 28px rgba(0,0,0,.08);transform:translateY(-2px)}
+    .start-card strong{display:block;font-family:var(--fd);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+    .start-card span{display:block;font-size:14px;line-height:1.55;color:var(--warm-mid)}
+    .start-card em{display:block;font-style:normal;font-size:13px;font-weight:600;color:var(--accent);margin-top:12px}
+    @media(max-width:900px){.start-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.start-grid{grid-template-columns:1fr}}
     .dev-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}
     .dev-tab{font:600 14px/1 Inter,system-ui,sans-serif;background:var(--white);color:var(--stone);border:1px solid var(--border);border-radius:999px;padding:11px 20px;cursor:pointer;transition:all .15s}
     .dev-tab:hover{border-color:var(--accent);color:var(--accent-dk)}
@@ -177,6 +194,22 @@
       <span class="eyebrow" style="color:var(--sand)">South Okanagan — Community by Community</span>
       <h1>Find your place in the<br><em>South Okanagan</em></h1>
       <p class="hero-sub">In-depth community spotlights — from someone who lives here. Not a marketing brochure. Real information about what each community is actually like to live in, buy in, and invest in.</p>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="start-here">
+    <div class="container">
+      <span class="eyebrow">Start here</span>
+      <h2>Which of these sounds like you?</h2>
+      <p style="color:var(--stone);max-width:640px">Most people arrive with a situation, not a town name. Pick the closest one and I will point you to the part of the site that answers your questions.</p>
+      <div class="start-grid">
+        <a href="moving-from-vancouver-guide.html" class="start-card"><strong>Moving from Vancouver</strong><span>Selling in the Lower Mainland and buying here? What your equity actually buys, and why one agent for both sides of the move matters.</span><em>Read the guide →</em></a>
+        <a href="moving-from-alberta-guide.html" class="start-card"><strong>Moving from Alberta</strong><span>Calgary and Edmonton buyers: climate, real estate, and the tax trap most Alberta buyers miss.</span><em>Read the guide →</em></a>
+        <a href="retirement-guide-osoyoos.html" class="start-card"><strong>Retiring in Osoyoos</strong><span>Healthcare access, single-level living, climate and community. The questions to ask before you commit.</span><em>Read the guide →</em></a>
+        <a href="communities.html?type=lakefront#developments-osoyoos" class="start-card"><strong>I want the lake</strong><span>Lakefront and beach-access developments in Osoyoos, filtered for you.</span><em>See lakefront developments →</em></a>
+        <a href="acreage-buyers-guide.html" class="start-card"><strong>Acreage and privacy</strong><span>ALR zoning, well water and septic, fire insurance, private roads and rural financing rules.</span><em>Read the guide →</em></a>
+        <a href="snowbird-guide.html" class="start-card"><strong>Part-time or snowbird</strong><span>Winterizing, seasonal insurance, managing the place while you are away, and the tax residency line.</span><em>Read the guide →</em></a>
+      </div>
     </div>
   </section>
 
@@ -361,7 +394,7 @@
         <h3 class="dev-panel-title">Osoyoos developments <span class="dev-count"></span></h3>
         <div class="community-grid">
 
-        <a href="the-cottages-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="the-cottages-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/the-cottages-osoyoos.jpg" alt="The Cottages on Osoyoos Lake — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated Resort — Osoyoos Lake</span>
@@ -371,7 +404,7 @@
           </div>
         </a>
 
-        <a href="casitas-del-sol-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="casitas-del-sol-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/casitas-del-sol-osoyoos.jpg" alt="Casitas Del Sol — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated 55+ — Osoyoos</span>
@@ -391,7 +424,7 @@
           </div>
         </a>
 
-        <a href="spirit-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="spirit-ridge-osoyoos.html" class="community-card" data-types="lakefront fractional" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Spirit Ridge at Nk'Mip Resort</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Fractional & Whole Resort — Nk'Mip</span>
@@ -401,7 +434,7 @@
           </div>
         </a>
 
-        <a href="walnut-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="walnut-beach-resort-osoyoos.html" class="community-card" data-types="lakefront fractional" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/walnut-beach-resort-osoyoos.jpg" alt="Walnut Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Condo-Hotel — Private Beach</span>
@@ -411,7 +444,7 @@
           </div>
         </a>
 
-        <a href="safari-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="safari-beach-resort-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/safari-beach-resort-osoyoos.jpg" alt="Safari Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Strata — Sheltered Bay</span>
@@ -421,7 +454,7 @@
           </div>
         </a>
 
-        <a href="rendezvous-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="rendezvous-beach-resort-osoyoos.html" class="community-card" data-types="rv" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Rendezvous Beach Resort</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Leasehold Sites — Reserve Land</span>
@@ -431,7 +464,7 @@
           </div>
         </a>
 
-        <a href="sonora-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="sonora-ridge-osoyoos.html" class="community-card" data-types="homes" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sonora Ridge</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated Custom Homes — East Bench</span>
@@ -441,7 +474,7 @@
           </div>
         </a>
 
-        <a href="desert-rose-estates-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="desert-rose-estates-osoyoos.html" class="community-card" data-types="55plus homes" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/desert-rose-estates-osoyoos.jpg" alt="Desert Rose Estates — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated 55+ Bare Land Strata</span>
@@ -451,7 +484,7 @@
           </div>
         </a>
 
-        <a href="cedar-villa-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="cedar-villa-osoyoos.html" class="community-card" data-types="homes" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/cedar-villa-osoyoos.jpg" alt="Cedar Villa — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">No Age Restriction — Bare Land Strata</span>
@@ -461,7 +494,7 @@
           </div>
         </a>
 
-        <a href="waltons-lakefront-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="waltons-lakefront-resort-osoyoos.html" class="community-card" data-types="lakefront rv" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/waltons-lakefront-resort-osoyoos.jpg" alt="Walton's Waterfront RV Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Strata RV Lots — Osoyoos Lake</span>
@@ -471,7 +504,7 @@
           </div>
         </a>
 
-        <a href="lakeshore-villas-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="lakeshore-villas-resort-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/lakeshore-villas-resort-osoyoos.jpg" alt="Lakeshore Villas Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Owner-Operated — Private Dock</span>
@@ -481,7 +514,7 @@
           </div>
         </a>
 
-        <a href="island-view-rv-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="island-view-rv-resort-osoyoos.html" class="community-card" data-types="rv" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/island-view-rv-resort-osoyoos.jpg" alt="Island View RV Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Bare Land Strata RV Lots</span>
@@ -491,7 +524,7 @@
           </div>
         </a>
 
-        <a href="the-oasis-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="the-oasis-resort-osoyoos.html" class="community-card" data-types="lakefront rv" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/the-oasis-resort-osoyoos.jpg" alt="The Oasis Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Deeded RV Sites — 8 Acres</span>
@@ -501,7 +534,7 @@
           </div>
         </a>
 
-        <a href="casa-del-mila-oro-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="casa-del-mila-oro-resort-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/casa-del-mila-oro-resort-osoyoos.jpg" alt="Casa Del Mila Oro Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Owner-Operated Beachfront</span>
@@ -511,7 +544,7 @@
           </div>
         </a>
 
-        <a href="las-ventanas-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="las-ventanas-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/las-ventanas-osoyoos.jpg" alt="Las Ventanas Al Paraiso — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Exclusive 11-Unit Beachfront</span>
@@ -521,7 +554,7 @@
           </div>
         </a>
 
-        <a href="brightwater-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="brightwater-osoyoos.html" class="community-card" data-types="new" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/brightwater-osoyoos.jpg" alt="Brightwater — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">New Construction — Lakeshore Dr</span>
@@ -531,7 +564,7 @@
           </div>
         </a>
 
-        <a href="cactus-flats-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="cactus-flats-osoyoos.html" class="community-card" data-types="rv" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/cactus-flats-osoyoos.jpg" alt="Cactus Flats — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">RV-Garage Townhomes</span>
@@ -551,7 +584,7 @@
           </div>
         </a>
 
-        <a href="bayview-crescent-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="bayview-crescent-osoyoos.html" class="community-card" data-types="lakefront homes" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Bayview Crescent</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Waterfront Street</span>
@@ -561,7 +594,7 @@
           </div>
         </a>
 
-        <a href="harbour-key-drive-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="harbour-key-drive-osoyoos.html" class="community-card" data-types="lakefront homes" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Harbour Key Drive</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Channel-Front Street</span>
@@ -571,7 +604,7 @@
           </div>
         </a>
 
-        <a href="mojave-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="mojave-osoyoos.html" class="community-card" data-types="new" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/mojave-osoyoos.jpg" alt="Mojave — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">New Construction — Rooftop Patios</span>
@@ -581,7 +614,7 @@
           </div>
         </a>
 
-        <a href="selah-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="selah-osoyoos.html" class="community-card" data-types="lakefront new" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Selah</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Presale Watch — Waterfront &amp; Marina</span>
@@ -591,7 +624,7 @@
           </div>
         </a>
 
-        <a href="horizon-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="horizon-osoyoos.html" class="community-card" data-types="new" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Horizon</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">New Construction — Boutique, 5 Units</span>
@@ -621,7 +654,7 @@
           </div>
         </a>
 
-        <a href="adobe-sands-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="adobe-sands-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/adobe-sands-osoyoos.jpg" alt="Adobe Sands — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Strata — Above Peanut Lake</span>
@@ -631,7 +664,7 @@
           </div>
         </a>
 
-        <a href="sole-vita-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="sole-vita-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/sole-vita-osoyoos.jpg" alt="Solé Vita — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated Waterfront Townhomes</span>
@@ -641,7 +674,7 @@
           </div>
         </a>
 
-        <a href="sonora-gardens-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="sonora-gardens-osoyoos.html" class="community-card" data-types="homes" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/sonora-gardens-osoyoos.jpg" alt="Sonora Gardens — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Detached Homes — Shared Common Grounds</span>
@@ -651,7 +684,7 @@
           </div>
         </a>
 
-        <a href="sunshine-cove-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="sunshine-cove-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/sunshine-cove-osoyoos.jpg" alt="Sunshine Cove — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Lakefront Townhomes — Private Beach</span>
@@ -661,7 +694,7 @@
           </div>
         </a>
 
-        <a href="la-mirada-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="la-mirada-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/la-mirada-osoyoos.jpg" alt="La Mirada — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Lakefront Condos — Private Beach</span>
@@ -671,7 +704,7 @@
           </div>
         </a>
 
-        <a href="casa-azzuro-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="casa-azzuro-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/casa-azzuro-osoyoos.jpg" alt="Casa Azzuro — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Waterfront Townhomes — 4 Units</span>
@@ -681,7 +714,7 @@
           </div>
         </a>
 
-        <a href="porta-loma-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="porta-loma-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/porta-loma-osoyoos.jpg" alt="Porta Loma — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Waterfront Townhomes — 4 Units</span>
@@ -691,7 +724,7 @@
           </div>
         </a>
 
-        <a href="benchview-place-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="benchview-place-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/benchview-place-osoyoos.jpg" alt="Benchview Place — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Condos — 89th Street</span>
@@ -731,7 +764,7 @@
           </div>
         </a>
 
-        <a href="dividend-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="dividend-ridge-osoyoos.html" class="community-card" data-types="homes" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Dividend Ridge</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold — Executive Home Subdivision</span>
@@ -741,7 +774,7 @@
           </div>
         </a>
 
-        <a href="vintners-on-the-creek-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="vintners-on-the-creek-osoyoos.html" class="community-card" data-types="lakefront rv" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Vintners on the Creek</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Leasehold RV Sites — OIB Partnership</span>
@@ -751,7 +784,7 @@
           </div>
         </a>
 
-        <a href="watermark-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="watermark-beach-resort-osoyoos.html" class="community-card" data-types="lakefront fractional" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/watermark-beach-resort-osoyoos.jpg" alt="Watermark Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Whole & Fractional Ownership</span>
@@ -761,7 +794,7 @@
           </div>
         </a>
 
-        <a href="white-sands-osoyoos.html" class="community-card" style="text-decoration:none">
+        <a href="white-sands-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/white-sands-osoyoos.jpg" alt="White Sands — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Established Lakefront Condos</span>
@@ -873,6 +906,45 @@
   panels.forEach(function(p,i){if(location.hash==='#'+p.id){start=i;}});
   show(start,false);
   if(start>0){bar.scrollIntoView();}
+})();
+</script>
+<script>
+(function(){
+  var TYPES=[['lakefront','Lakefront'],['55plus','55+'],['rv','RV'],['new','New build & presale'],['fractional','Fractional & resort'],['homes','Detached homes & land']];
+  var wanted=(new URLSearchParams(location.search).get('type')||'').toLowerCase();
+  [].forEach.call(document.querySelectorAll('.dev-panel'),function(p){
+    var cards=[].slice.call(p.querySelectorAll('.community-card[data-types]'));
+    if(!cards.length){return;}
+    var total=p.querySelectorAll('.community-card').length;
+    var bar=document.createElement('div');bar.className='dev-filters';bar.setAttribute('role','group');bar.setAttribute('aria-label','Filter developments');
+    var lab=document.createElement('span');lab.className='dev-filters-label';lab.textContent='Show';bar.appendChild(lab);
+    var note=document.createElement('p');note.className='dev-showing';note.setAttribute('aria-live','polite');
+    var chips=[];
+    function count(t){return cards.filter(function(c){return (' '+c.getAttribute('data-types')+' ').indexOf(' '+t+' ')>-1;}).length;}
+    function apply(t){
+      var shown=0;
+      p.querySelectorAll('.community-card').forEach(function(c){
+        var ok=!t||(c.getAttribute('data-types')||'').split(' ').indexOf(t)>-1;
+        c.hidden=!ok;if(ok){shown++;}
+      });
+      chips.forEach(function(x){x.b.setAttribute('aria-pressed',x.t===t?'true':'false');});
+      note.textContent=t?('Showing '+shown+' of '+total+' developments'):'';
+      note.style.display=t?'':'none';
+      if(history.replaceState){var u=new URL(location.href);if(t){u.searchParams.set('type',t);}else{u.searchParams.delete('type');}history.replaceState(null,'',u.pathname+u.search+u.hash);}
+    }
+    [['', 'All']].concat(TYPES).forEach(function(x){
+      var n=x[0]?count(x[0]):0;if(x[0]&&!n){return;}
+      var b=document.createElement('button');b.type='button';b.className='dev-chip';
+      b.innerHTML=x[1]+(x[0]?'<span class="dev-n">'+n+'</span>':'');
+      b.addEventListener('click',function(){apply(x[0]&&b.getAttribute('aria-pressed')==='true'?'':x[0]);});
+      chips.push({t:x[0],b:b});bar.appendChild(b);
+    });
+    var title=p.querySelector('.dev-panel-title');
+    title.parentNode.insertBefore(bar,title.nextSibling);bar.parentNode.insertBefore(note,bar.nextSibling);
+    var valid=TYPES.some(function(x){return x[0]===wanted&&count(x[0])>0;});
+    apply(valid&&p.id==='developments-osoyoos'?wanted:'');
+  });
+  if(wanted&&location.hash){var el=document.querySelector(location.hash);if(el){setTimeout(function(){el.scrollIntoView();},50);}}
 })();
 </script>
 </body>
