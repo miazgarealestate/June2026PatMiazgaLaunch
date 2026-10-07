@@ -74,6 +74,18 @@
     .community-card-visual--tile{background:linear-gradient(135deg,#1a1a18 0%,#3d3d38 100%);position:relative}
     .community-card-visual--tile::before{content:"";position:absolute;left:50%;top:50%;width:64px;height:1px;background:var(--sand);transform:translate(-50%,-22px)}
     .community-card-visual--tile span{font-family:var(--fd);font-style:italic;font-size:1.35rem;line-height:1.2;font-weight:500;color:var(--sand);letter-spacing:.02em;text-align:center;padding:0 16px;margin-top:6px}
+    .dev-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}
+    .dev-tab{font:600 14px/1 Inter,system-ui,sans-serif;background:var(--white);color:var(--stone);border:1px solid var(--border);border-radius:999px;padding:11px 20px;cursor:pointer;transition:all .15s}
+    .dev-tab:hover{border-color:var(--accent);color:var(--accent-dk)}
+    .dev-tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--white)}
+    .dev-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+    .dev-tab .dev-n{font-weight:500;opacity:.65;margin-left:6px}
+    .dev-panel{margin-bottom:40px}
+    .dev-panel-title{font-family:var(--fd);font-size:1.5rem;font-weight:600;color:var(--ink);margin:0 0 20px}
+    .dev-panel-title .dev-count{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--warm-mid);margin-left:8px}
+    .dev-empty{background:var(--white);border:1px dashed var(--sand);border-radius:14px;padding:44px 28px;text-align:center;color:var(--warm-mid);line-height:1.65}
+    .dev-empty p{margin:0 0 6px}
+    .dev-empty strong{color:var(--ink)}
     .community-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
     .community-card-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
     .community-card h3{font-family:var(--fd);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.25}
@@ -338,9 +350,16 @@
   <section class="section section--peer">
     <div class="container">
       <span class="eyebrow">Development & Resort Spotlights</span>
-      <h2>41 named developments across Osoyoos & Oliver</h2>
+      <h2>Developments by town</h2>
       <p style="color:var(--stone);max-width:680px;margin-bottom:32px">From fractional resort ownership to freehold waterfront streets, RV lots to new construction — the ownership structure behind the name matters as much as the lifestyle. Each page below covers what's actually being sold, what to verify, and recent pricing.</p>
-      <div class="community-grid">
+      <!--
+        TOWN TABS: each town is one <div class="dev-panel" id="developments-TOWN" data-town="Town Name"> below.
+        To add a town (Keremeos, Cawston, ...): copy the Oliver panel, change id + data-town, drop cards into its community-grid.
+        Tabs, counts and #developments-TOWN deep links are built automatically by the script at the bottom of this page.
+      -->
+      <div class="dev-panel" id="developments-osoyoos" data-town="Osoyoos">
+        <h3 class="dev-panel-title">Osoyoos developments <span class="dev-count"></span></h3>
+        <div class="community-grid">
 
         <a href="the-cottages-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/the-cottages-osoyoos.jpg" alt="The Cottages on Osoyoos Lake — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
@@ -753,6 +772,15 @@
         </a>
 
       </div>
+      </div>
+
+      <div class="dev-panel" id="developments-oliver" data-town="Oliver">
+        <h3 class="dev-panel-title">Oliver developments <span class="dev-count"></span></h3>
+        <div class="dev-empty">
+          <p><strong>Oliver developments are being added.</strong></p>
+          <p>Each one is photographed and checked in person before it goes up. In the meantime, start with the <a href="oliver-real-estate.html">Oliver community spotlight</a>.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -811,6 +839,40 @@
   t.addEventListener('click',function(){set(!l.classList.contains('open'));});
   l.addEventListener('click',function(e){if(e.target.tagName==='A'){set(false);}});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('open')){set(false);t.focus();}});
+})();
+</script>
+<script>
+(function(){
+  var panels=[].slice.call(document.querySelectorAll('.dev-panel'));
+  if(!panels.length){return;}
+  var bar=document.createElement('div');bar.className='dev-tabs';bar.setAttribute('role','tablist');bar.setAttribute('aria-label','Developments by town');
+  var tabs=[];
+  panels.forEach(function(p){
+    var n=p.querySelectorAll('.community-card').length,town=p.getAttribute('data-town');
+    var c=p.querySelector('.dev-count');if(c){c.textContent=n?'· '+n+' named':'';}
+    var b=document.createElement('button');b.type='button';b.className='dev-tab';b.setAttribute('role','tab');
+    b.id='tab-'+p.id;b.setAttribute('aria-controls',p.id);
+    b.innerHTML=town+'<span class="dev-n">'+(n?n:'Soon')+'</span>';
+    p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby',b.id);
+    bar.appendChild(b);tabs.push(b);
+  });
+  panels[0].parentNode.insertBefore(bar,panels[0]);
+  function show(i,fromUser){
+    panels.forEach(function(p,j){p.hidden=(j!==i);tabs[j].setAttribute('aria-selected',j===i?'true':'false');tabs[j].tabIndex=(j===i)?0:-1;});
+    if(fromUser&&history.replaceState){history.replaceState(null,'','#'+panels[i].id);}
+  }
+  tabs.forEach(function(b,i){
+    b.addEventListener('click',function(){show(i,true);});
+    b.addEventListener('keydown',function(e){
+      var k=e.key,j=i;
+      if(k==='ArrowRight'){j=(i+1)%tabs.length;}else if(k==='ArrowLeft'){j=(i-1+tabs.length)%tabs.length;}else{return;}
+      e.preventDefault();show(j,true);tabs[j].focus();
+    });
+  });
+  var start=0;
+  panels.forEach(function(p,i){if(location.hash==='#'+p.id){start=i;}});
+  show(start,false);
+  if(start>0){bar.scrollIntoView();}
 })();
 </script>
 </body>
