@@ -1,0 +1,707 @@
+<title>Tradewinds Estates Oliver</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+/* === DESIGN TOKENS === */
+:root {
+  --ink: #1a1a18;
+  --stone: #3d3d38;
+  --warm-mid: #7a7468;
+  --sand: #c8b89a;
+  --cream: #f7f4ef;
+  --white: #ffffff;
+  --accent: #8b6f47;
+  --accent-dk: #6b5235;
+  --border: #e2ddd6;
+  --peer-bg: #f0ede8;
+  --fd: 'Cormorant Garamond', Georgia, serif;
+  --fb: 'Inter', system-ui, sans-serif;
+
+  --hero-bg: #1a1a14;
+  --hero-fg: #f7f4ef;
+  --nav-bg: #1a1a14;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #1e1c18;
+    --peer-bg: #252320;
+    --border: #35332e;
+    --ink: #f0ede6;
+    --stone: #c8c2b8;
+    --warm-mid: #9a9286;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --cream: #1e1c18;
+  --peer-bg: #252320;
+  --border: #35332e;
+  --ink: #f0ede6;
+  --stone: #c8c2b8;
+  --warm-mid: #9a9286;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--fb);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAV */
+.nav {
+  background: var(--nav-bg);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(200,184,154,.12);
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.nav-logo {
+  font-family: var(--fd);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--sand);
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-family: var(--fb);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(247,244,239,.65);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: color .15s;
+}
+.nav-links a:hover { color: var(--sand); }
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+  padding: 6px 14px !important;
+  border-radius: 4px;
+  font-weight: 600 !important;
+}
+.nav-cta:hover { background: var(--accent-dk) !important; }
+
+/* NAV TOGGLE (mobile) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--sand);
+  border-radius: 1px;
+  transition: transform .2s, opacity .2s;
+}
+@media (max-width: 700px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0; right: 0;
+    background: var(--nav-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 24px 20px;
+    border-bottom: 1px solid rgba(200,184,154,.15);
+    gap: 2px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 10px 0; width: 100%; }
+}
+
+/* HERO */
+.hero {
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+  padding: 72px 24px 56px;
+}
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+}
+.hero-eyebrow {
+  font-family: var(--fb);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--sand);
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: var(--fd);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  text-wrap: balance;
+  color: var(--hero-fg);
+  margin-bottom: 20px;
+}
+.hero-sub {
+  font-size: 16px;
+  color: rgba(247,244,239,.7);
+  max-width: 480px;
+  line-height: 1.7;
+}
+.hero-visual {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(200,184,154,.18);
+  border-radius: 8px;
+  padding: 32px 28px;
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-stat .stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--sand);
+  opacity: .7;
+}
+.hero-stat .stat-value {
+  font-family: var(--fd);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--hero-fg);
+  line-height: 1.2;
+}
+
+/* CONTAINER / SECTION */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section {
+  padding: 64px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section + .section {
+  border-top: 1px solid var(--border);
+}
+.section-eyebrow {
+  font-family: var(--fb);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-family: var(--fd);
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--stone);
+  max-width: 680px;
+  margin-bottom: 16px;
+}
+.section p:last-of-type { margin-bottom: 0; }
+
+/* TWO-COL LAYOUT */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 800px) {
+  .two-col { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* CARD */
+.card {
+  background: var(--peer-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px 24px;
+}
+.card h3 {
+  font-family: var(--fd);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--stone);
+  margin-bottom: 10px;
+}
+.card p:last-child { margin-bottom: 0; }
+
+/* ACCENT CARD */
+.card-accent {
+  background: var(--accent);
+  border-color: var(--accent-dk);
+  color: var(--white);
+}
+.card-accent h3, .card-accent p { color: var(--white); }
+
+/* QUICK FACTS */
+.quick-facts {
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+  padding: 56px 24px;
+}
+.quick-facts-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.quick-facts h2 {
+  font-family: var(--fd);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--hero-fg);
+  margin-bottom: 32px;
+}
+.fact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  list-style: none;
+}
+.fact-list li {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(200,184,154,.14);
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.fact-list li .fact-icon {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.fact-list li .fact-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(247,244,239,.8);
+}
+.fact-list li .fact-text strong {
+  display: block;
+  color: var(--sand);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* GUIDE LINKS */
+.guide-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.guide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--fb);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 16px;
+  background: var(--peer-bg);
+  transition: border-color .15s, background .15s;
+}
+.guide-link:hover {
+  border-color: var(--accent);
+  background: var(--cream);
+}
+
+/* CTA BOX */
+.cta-box {
+  background: var(--peer-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 32px 28px;
+  max-width: 680px;
+}
+.cta-box h3 {
+  font-family: var(--fd);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.cta-box p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+.cta-phone {
+  font-family: var(--fd);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+.cta-email {
+  font-size: 14px;
+  color: var(--warm-mid);
+  text-decoration: none;
+}
+.cta-email:hover { color: var(--accent); }
+
+/* FOOTER */
+.footer {
+  background: var(--hero-bg);
+  color: rgba(247,244,239,.65);
+  padding: 40px 24px;
+  font-size: 14px;
+  line-height: 2;
+  margin-top: 0;
+}
+.footer .container { max-width: 1100px; margin: 0 auto; }
+.footer strong { color: var(--sand); }
+.footer a { color: rgba(247,244,239,.65); text-decoration: none; }
+.footer a:hover { color: var(--sand); }
+
+/* DIVIDER SECTION wrapper */
+.section-wrap {
+  background: var(--cream);
+}
+.section-wrap.alt {
+  background: var(--peer-bg);
+}
+
+/* COST TABLE */
+.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-top: 16px;
+}
+.cost-table th {
+  text-align: left;
+  font-family: var(--fb);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--warm-mid);
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--border);
+}
+.cost-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--stone);
+  vertical-align: top;
+}
+.cost-table tr:last-child td { border-bottom: none; }
+.cost-table td:first-child { font-weight: 500; color: var(--ink); }
+.cost-table-wrap { overflow-x: auto; }
+</style>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">Pat Miazga</span>
+    <button class="nav-toggle" aria-label="Open menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/osoyoos-real-estate.html">Osoyoos</a>
+      <a href="/oliver-real-estate.html">Oliver</a>
+      <a href="/communities.html">Communities</a>
+      <a href="/manufactured-home-guide.html">MH Guide</a>
+      <a href="tel:16045625982" class="nav-cta">604-562-5982</a>
+    </div>
+  </div>
+</nav>
+
+<link rel="canonical" href="https://patmiazga.com/tradewinds-estates-oliver.html">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Oliver · 55+ Manufactured Home Park</p>
+      <h1>Tradewinds Estates, Oliver — Leasehold Park Living Explained</h1>
+      <p class="hero-sub">A well-established 55+ manufactured home community near Tucelnuit Lake. Lower purchase prices, monthly pad rent, and a lifestyle built around quiet Okanagan living — with the important lease details buyers must understand before making an offer.</p>
+    </div>
+    <div class="hero-visual">
+      <div class="stat-grid">
+        <div class="hero-stat">
+          <span class="stat-label">Age Restriction</span>
+          <span class="stat-value">55+</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Ownership Type</span>
+          <span class="stat-value">Leasehold</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Location</span>
+          <span class="stat-value">Oliver, BC</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Setting</span>
+          <span class="stat-value">Near Tucelnuit Lake</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEASEHOLD VS FREEHOLD -->
+<div class="section-wrap">
+  <div class="section">
+    <p class="section-eyebrow">Ownership Structure</p>
+    <h2>Leasehold vs. Freehold: What the Difference Means Here</h2>
+    <div class="two-col">
+      <div>
+        <p>In most real estate transactions, buying a property means buying both the building and the land beneath it — that is freehold ownership. At Tradewinds Estates, and at manufactured home parks like it across BC, the arrangement works differently. You purchase the manufactured home itself and own it outright, but the land the home sits on — the pad — remains owned by the park operator. Your right to occupy that pad comes from a lease agreement, not from title.</p>
+        <p>This structure is why purchase prices at leasehold parks are substantially lower than comparable freehold properties. The absence of land value from the purchase price makes entry accessible, and for buyers on a fixed income or looking to right-size their housing costs, that reduced upfront number can be genuinely attractive.</p>
+        <p>However, owning a home on leased land creates an ongoing financial commitment and a set of risks that do not exist in a freehold purchase. Your monthly costs will include pad rent paid to the park owner — typically in the $500–$700 range in Oliver-area parks, though this varies and changes over time. You are a tenant of the land even as you are the owner of the home sitting on it.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card">
+          <h3>You Own</h3>
+          <p>The manufactured home structure itself. You hold title to the home and can sell it, renovate it, or will it as part of your estate — subject to park rules and the lease terms.</p>
+        </div>
+        <div class="card">
+          <h3>You Lease</h3>
+          <p>The pad — the specific lot within the park. You pay monthly rent to the park owner for this right. The park owner controls the land, the common areas, and the overall operation of the community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRACTICAL MEANING -->
+<div class="section-wrap alt">
+  <div class="section">
+    <p class="section-eyebrow">Day-to-Day Reality</p>
+    <h2>What "Owning the Home, Leasing the Land" Means in Practice</h2>
+    <p>For many buyers, leasehold manufactured home parks work well as a long-term housing solution. The community at Tradewinds Estates is established and quiet, and the 55+ restriction creates a consistent demographic of neighbours. The proximity to Tucelnuit Lake means easy access to the water, and Oliver's small-town character means services, dining, and healthcare are close at hand.</p>
+    <p>That said, buyers need to understand a few practical realities that distinguish this ownership model from a standard home purchase. When you eventually sell, your buyer will also need to qualify under the park's approval process, and the marketability of your home is tied directly to the desirability of the park and the terms of the lease at that time. If pad rents have risen significantly, that will affect what a future buyer is willing to pay for the home.</p>
+    <p>Financing is a material difference as well. Most traditional mortgage lenders do not lend against leasehold manufactured homes in the same way they lend against freehold property. Some credit unions and specialty lenders will consider these purchases, but expect fewer options and potentially different terms than a conventional mortgage. Cash purchases are common in this market segment.</p>
+    <p>The lease term itself is critical. A long remaining lease term — for example, 20 or more years — gives future buyers confidence and supports the resale value of your home. A lease with only a few years remaining creates uncertainty and can significantly reduce the pool of interested buyers when you go to sell. BC's Manufactured Home Park Tenancy Act provides some protections for residents, but it does not guarantee lease renewal on the same terms.</p>
+  </div>
+</div>
+
+<!-- MONTHLY COSTS -->
+<div class="section-wrap">
+  <div class="section">
+    <p class="section-eyebrow">Monthly Costs</p>
+    <h2>What You'll Pay Each Month at a Leasehold Park</h2>
+    <p>Unlike a freehold home where your monthly housing cost is primarily your mortgage payment plus utilities, a leasehold manufactured home has a different cost structure. Understanding the full monthly picture before you commit is essential.</p>
+    <div class="cost-table-wrap">
+      <table class="cost-table">
+        <thead>
+          <tr>
+            <th>Cost Item</th>
+            <th>Typical Range</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pad Rent</td>
+            <td>$500 – $700 / month</td>
+            <td>Paid to the park owner. Subject to annual increases. Verify the current rate and increase history before purchasing.</td>
+          </tr>
+          <tr>
+            <td>Home Insurance</td>
+            <td>$80 – $150 / month</td>
+            <td>Insures the manufactured home structure. Rates vary by age, condition, and insurer. Some insurers are cautious about older manufactured homes.</td>
+          </tr>
+          <tr>
+            <td>Utilities</td>
+            <td>$100 – $300 / month</td>
+            <td>Electricity, gas, and water are often metered individually. Utility hookup arrangements vary by park — confirm what is included in pad rent.</td>
+          </tr>
+          <tr>
+            <td>Home Maintenance</td>
+            <td>Varies</td>
+            <td>You are responsible for maintaining the home structure, roof, skirting, and mechanical systems. Budget accordingly, especially for older homes.</td>
+          </tr>
+          <tr>
+            <td>Park Fees / Amenity Fees</td>
+            <td>May be included in pad rent</td>
+            <td>Some parks charge separately for amenities or maintenance of common areas. Review the fee schedule in the lease agreement.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:20px;">Pad rent increases in BC are governed by the Manufactured Home Park Tenancy Act. Park owners are permitted to increase rents annually, and the allowable increase is tied to a formula set by the provincial government. Review the rental increase history for the park — not just the current rate — to understand the trend over recent years.</p>
+  </div>
+</div>
+
+<!-- WHAT TO REVIEW -->
+<div class="section-wrap alt">
+  <div class="section">
+    <p class="section-eyebrow">Due Diligence</p>
+    <h2>What Every Buyer Should Review Before Removing Subjects</h2>
+    <p>A leasehold manufactured home purchase requires careful review of documents that have no equivalent in a standard freehold transaction. Your offer should be subject to your review and satisfaction with all of the following.</p>
+    <div class="two-col">
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card">
+          <h3>The Lease Agreement</h3>
+          <p>This is the most important document in the transaction. Read it in full. Key items to confirm: the remaining term of the lease, the conditions under which the park owner can terminate or decline to renew, and any obligations placed on the tenant beyond paying rent. Pay particular attention to notice provisions — how much notice the park owner must give before terminating the lease, and what compensation, if any, is required.</p>
+        </div>
+        <div class="card">
+          <h3>Pad Rent History</h3>
+          <p>Ask for a history of pad rent increases going back at least five years. This will tell you whether the park owner increases rents at the maximum allowable rate each year, or less frequently. Consistent maximum-rate increases should factor into your long-term cost projections.</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card">
+          <h3>Park Rules and Regulations</h3>
+          <p>Parks typically have rules governing the condition and appearance of homes, what modifications are permitted, whether pets are allowed and of what size, parking, subletting, and many other matters. Review these thoroughly — if you plan to bring a large dog, run an air conditioner, or park a recreational vehicle on your pad, confirm it is permitted.</p>
+        </div>
+        <div class="card">
+          <h3>Home Inspection</h3>
+          <p>A manufactured home inspection is not identical to a site-built home inspection. Ensure your inspector has experience with manufactured homes and that the inspection covers the structure, the roof, the underbelly and insulation, all mechanical systems, and the condition of the skirting and pad. The age of the home matters; pre-1976 homes built before the National Building Code were constructed to different standards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK FACTS -->
+<section class="quick-facts">
+  <div class="quick-facts-inner">
+    <h2>Tradewinds Estates — Quick Facts</h2>
+    <ul class="fact-list">
+      <li>
+        <span class="fact-icon">📍</span>
+        <span class="fact-text"><strong>Address</strong>34-6778 Tucelnuit Drive, Oliver, BC</span>
+      </li>
+      <li>
+        <span class="fact-icon">🏡</span>
+        <span class="fact-text"><strong>Ownership Type</strong>Leasehold — you own the home, lease the pad from the park owner</span>
+      </li>
+      <li>
+        <span class="fact-icon">👤</span>
+        <span class="fact-text"><strong>Age Restriction</strong>55+ community. At least one resident per home must be 55 or older.</span>
+      </li>
+      <li>
+        <span class="fact-icon">💰</span>
+        <span class="fact-text"><strong>Pad Rent</strong>Typically $500–$700/month in Oliver-area parks. Confirm current rate with the park operator.</span>
+      </li>
+      <li>
+        <span class="fact-icon">🏞️</span>
+        <span class="fact-text"><strong>Setting</strong>Quiet established community near Tucelnuit Lake in Oliver, BC</span>
+      </li>
+      <li>
+        <span class="fact-icon">🏦</span>
+        <span class="fact-text"><strong>Financing</strong>Fewer lender options than freehold; credit unions and specialty lenders are typical. Cash purchases are common.</span>
+      </li>
+      <li>
+        <span class="fact-icon">📋</span>
+        <span class="fact-text"><strong>Key Document</strong>Lease agreement — review notice-to-vacate clauses, renewal provisions, and rent increase history</span>
+      </li>
+      <li>
+        <span class="fact-icon">⚖️</span>
+        <span class="fact-text"><strong>BC Legislation</strong>Manufactured Home Park Tenancy Act governs the landlord-tenant relationship for pad rentals</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA + GUIDES -->
+<div class="section-wrap">
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <p class="section-eyebrow">Talk to Pat</p>
+        <h2>Questions About Tradewinds Estates or Leasehold Parks?</h2>
+        <div class="cta-box">
+          <h3>Pat Miazga — RE/MAX All Points Realty</h3>
+          <p>Leasehold manufactured home purchases have moving parts that a standard offer doesn't. I can walk you through the lease, help you understand what to look for in the park rules, and connect you with the right professionals for inspection and financing. Call or email any time.</p>
+          <a class="cta-phone" href="tel:16045625982">604-562-5982</a>
+          <a class="cta-email" href="mailto:MiazgaRealEstate@gmail.com">MiazgaRealEstate@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <p class="section-eyebrow">Further Reading</p>
+        <h2>Related Guides</h2>
+        <p>These pages cover the broader context around manufactured home and community purchases in the South Okanagan.</p>
+        <div class="guide-row">
+          <a href="/manufactured-home-guide.html" class="guide-link">→ Manufactured Home Buyer's Guide</a>
+          <a href="/oliver-real-estate.html" class="guide-link">→ Oliver Real Estate Overview</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <strong>Pat Miazga</strong> · RE/MAX All Points Realty<br>
+    <a href="tel:16045625982">604-562-5982</a> · <a href="mailto:MiazgaRealEstate@gmail.com">MiazgaRealEstate@gmail.com</a><br>
+    <span style="font-size:13px;color:rgba(255,255,255,.35);margin-top:8px;display:block">The information on this page is for general guidance. Verify all details with strata documents, municipal records, and your own due diligence.</span>
+  </div>
+</footer>

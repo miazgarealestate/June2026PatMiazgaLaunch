@@ -1,0 +1,283 @@
+<title>Cedar Lane Osoyoos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="canonical" href="https://patmiazga.com/cedar-lane-osoyoos.html">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1a18;--stone:#3d3d38;--warm-mid:#7a7468;--sand:#c8b89a;--cream:#f7f4ef;--white:#ffffff;--accent:#8b6f47;--accent-dk:#6b5235;--border:#e2ddd6;--peer-bg:#f0ede8;--fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',system-ui,sans-serif;}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--white);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{color:var(--accent-dk)}img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--white);letter-spacing:.08em}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.75)}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent);color:var(--white)!important;padding:8px 16px;border-radius:4px;font-weight:600!important}
+.hero{background:var(--ink);padding:88px 24px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(139,111,71,.18) 0%,transparent 65%)}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:60px;align-items:center;position:relative}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:18px}
+.breadcrumb a{color:var(--sand)}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);display:block;margin-bottom:18px}
+.hero h1{font-family:var(--fd);font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:600;line-height:1.1;color:var(--white);margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--sand)}
+.hero-hook{font-size:17px;font-weight:500;color:var(--white);border-left:3px solid var(--sand);padding-left:16px;margin-bottom:20px;line-height:1.55}
+.hero-sub{font-size:16px;color:rgba(255,255,255,.68);line-height:1.75;margin-bottom:32px}
+.btn{display:inline-block;padding:12px 26px;border-radius:5px;font-size:14px;font-weight:600;letter-spacing:.03em;transition:all .2s}
+.btn-primary{background:var(--accent);color:var(--white)}
+.btn-primary:hover{background:var(--accent-dk);color:var(--white)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--fd);font-size:1.8rem;font-weight:600;color:var(--sand);display:block}
+.hero-stat-label{font-size:12px;color:rgba(255,255,255,.6);line-height:1.4}
+.hero-visual-note{font-size:13px;color:rgba(255,255,255,.5);text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;font-style:italic}
+.section{padding:72px 24px}
+.section--cream{background:var(--cream)}
+.section--peer{background:var(--peer-bg)}
+.section h2{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;line-height:1.15;margin-bottom:20px;text-wrap:balance}
+.section h3{font-family:var(--fd);font-size:1.35rem;font-weight:600;margin-bottom:10px}
+.section p{color:var(--stone);line-height:1.78;margin-bottom:16px;max-width:700px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px 24px}
+.card--accent{border-left:4px solid var(--accent)}
+.card h3{font-family:var(--fd);font-size:1.2rem;margin-bottom:10px;color:var(--ink)}
+.card p{font-size:15px;color:var(--warm-mid);margin-bottom:0;line-height:1.65}
+.comparison-block{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:28px 0}
+.compare-card{border-radius:12px;padding:28px 24px}
+.compare-card--good{background:rgba(139,111,71,.08);border:2px solid var(--accent)}
+.compare-card--warn{background:var(--peer-bg);border:1px solid var(--border)}
+.compare-card h3{font-family:var(--fd);font-size:1.15rem;margin-bottom:12px}
+.compare-card ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.compare-card ul li{font-size:14px;color:var(--stone);line-height:1.5;padding-left:20px;position:relative}
+.compare-card ul li::before{content:'•';position:absolute;left:0;color:var(--warm-mid)}
+.quick-facts{background:var(--peer-bg);border:1px solid var(--border);border-radius:14px;padding:32px;margin:28px 0}
+.quick-facts h3{font-family:var(--fd);font-size:1.2rem;margin-bottom:16px}
+.fact-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fact-list li{display:flex;gap:12px;font-size:15px;color:var(--stone);line-height:1.5}
+.fact-list li span:first-child{flex-shrink:0;width:20px}
+.guide-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.guide-link{background:var(--peer-bg);border:1px solid var(--border);border-radius:10px;padding:20px;color:var(--ink);display:block;transition:all .2s}
+.guide-link:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.guide-link .icon{font-size:20px;margin-bottom:8px}
+.guide-link .gtitle{font-family:var(--fd);font-size:1.05rem;font-weight:600;margin-bottom:4px}
+.guide-link .gdesc{font-size:13px;color:var(--warm-mid);line-height:1.55}
+.guide-link .gcta{font-size:12px;font-weight:600;color:var(--accent);margin-top:8px;display:block}
+.cta-box{background:var(--ink);color:var(--white);border-radius:14px;padding:52px 40px;text-align:center}
+.cta-box h2{font-family:var(--fd);font-size:2.2rem;color:var(--white);margin-bottom:14px}
+.cta-box p{color:rgba(255,255,255,.7);max-width:480px;margin:0 auto 28px}
+.footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px;text-align:center;font-size:14px;line-height:1.8}
+.footer a{color:var(--sand)}
+.footer strong{color:var(--white)}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}}
+@media(max-width:680px){.grid-2{grid-template-columns:1fr}.comparison-block{grid-template-columns:1fr}.guide-row{grid-template-columns:1fr 1fr}.nav-links{display:none}.cta-box{padding:36px 24px}}
+@media(max-width:420px){.guide-row{grid-template-columns:1fr}}
+</style>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">Pat Miazga</span>
+    <div class="nav-links">
+      <a href="/osoyoos-real-estate.html">Osoyoos</a>
+      <a href="/oliver-real-estate.html">Oliver</a>
+      <a href="/communities.html">Communities</a>
+      <a href="/manufactured-home-guide.html">MH Guide</a>
+      <a href="tel:16045625982" class="nav-cta">604-562-5982</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="breadcrumb"><a href="/communities.html">Communities</a> › Osoyoos › Cedar Lane</div>
+      <span class="hero-eyebrow">Osoyoos · Manufactured Home on Land</span>
+      <h1>Cedar Lane Osoyoos — <em>Manufactured Home, Freehold Land Ownership</em></h1>
+      <p class="hero-hook">You own the home and the land — not a pad rental. Cedar Lane is a manufactured home community where buyers hold freehold title to their lot.</p>
+      <p class="hero-sub">21-4911 Cedar Lane offers the affordability of manufactured home living combined with the security of real land ownership. In Osoyoos's mild, sun-drenched climate, this combination makes for an accessible and genuinely comfortable lifestyle. Understanding the ownership structure is the key to evaluating this opportunity correctly.</p>
+      <div class="hero-btns">
+        <a href="tel:16045625982" class="btn btn-primary">Call Pat · 604-562-5982</a>
+        <a href="/manufactured-home-guide.html" class="btn" style="background:rgba(255,255,255,.1);color:var(--white);border:1px solid rgba(255,255,255,.2)">MH Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="stat-grid">
+        <div class="hero-stat">
+          <span class="hero-stat-num">Freehold</span>
+          <span class="hero-stat-label">Title Type</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Own</span>
+          <span class="hero-stat-label">the Land</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Osoyoos</span>
+          <span class="hero-stat-label">BC</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">MFH</span>
+          <span class="hero-stat-label">Manufactured Home</span>
+        </div>
+      </div>
+      <div class="hero-visual-note">21-4911 Cedar Lane — confirm title type with Pat</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>The Distinction That Changes Everything: Freehold vs. Leasehold</h2>
+    <p>In BC, manufactured home properties come in two fundamentally different ownership structures, and the difference has major consequences for financing, long-term value, and security of tenure. Understanding which type you are buying is not a technicality — it is the most important question to answer before you proceed.</p>
+    <p>Cedar Lane appears to be a freehold (or bare land strata) community, meaning buyers hold registered title to their individual lot. The home sits on land you own. When you sell, you sell both the home and the land together. A conventional mortgage lender will generally treat this the same way as any other residential real estate transaction, and the property builds equity like any other titled property.</p>
+
+    <div class="comparison-block">
+      <div class="compare-card compare-card--good">
+        <h3 style="color:var(--accent-dk)">✓ Freehold / Bare Land Strata (Cedar Lane)</h3>
+        <ul>
+          <li>You hold registered title to your lot at the Land Title Office</li>
+          <li>The home and land are sold together as real property</li>
+          <li>Conventional mortgage financing is typically available</li>
+          <li>Property appreciates in line with the broader real estate market</li>
+          <li>No landlord can change pad rent or terminate your occupancy</li>
+          <li>Estate planning is straightforward — property passes like any other real asset</li>
+        </ul>
+      </div>
+      <div class="compare-card compare-card--warn">
+        <h3>✗ Leasehold Pad Rental (common alternative)</h3>
+        <ul>
+          <li>You own the home but rent the land from a park owner</li>
+          <li>No title to the land — only a tenancy agreement</li>
+          <li>Conventional mortgage financing is difficult or unavailable</li>
+          <li>Pad rents can increase, subject to MHP Act limits</li>
+          <li>Park operator retains control over rules and eventual land use</li>
+          <li>Resale market is narrower due to financing constraints</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The practical effect of freehold land ownership extends to every stage of the transaction. You can finance the purchase through a conventional mortgage with standard lender terms, the same as any other residential property. The home registers as real property — not chattel — which means better rates, longer amortizations, and access to the full range of lenders rather than a specialized subset. When it comes time to sell, you are selling to any qualified buyer, not navigating the additional complexity that leasehold properties introduce.</p>
+    <p>Before proceeding with any manufactured home purchase, always confirm the title type in writing. Your REALTOR and your notary or lawyer can pull the title certificate directly from the Land Title Office. "It's in a park" does not mean it's a pad rental, and "it's freehold" is only confirmed by the title itself. At Cedar Lane, the unit number format (21-4911) is consistent with a bare land strata designation, but verification is mandatory — not assumed.</p>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <h2>Manufactured Home Ownership in BC: What It Means</h2>
+    <div class="grid-2">
+      <div>
+        <p>Manufactured homes in BC are built to the Canadian Standards Association (CSA) A277 standard, which governs structural, electrical, plumbing, and thermal requirements. Homes built to CSA A277 are treated comparably to site-built homes for most regulatory and financing purposes. Older homes built before the current standard was in place may have been constructed under different codes, and lenders sometimes distinguish between pre- and post-standard construction when evaluating financing eligibility.</p>
+        <p>The age and condition of the home itself carries significant weight in manufactured home transactions. A well-maintained home from the 1990s or 2000s may present no special financing challenges, while a home that is heavily dated or showing deferred maintenance could affect both the appraised value and lender appetite. Always commission a professional home inspection by an inspector experienced with manufactured construction — the inspection criteria differ from those applied to a site-built home.</p>
+        <p>BC's Home Owner Grant applies to manufactured homes on freehold or bare land strata lots in the same way as conventional housing, provided the property is your principal residence. Property Transfer Tax also applies on the same basis as other residential transactions. One tax distinction worth noting: if the home is registered as a manufactured home under the Manufactured Home Act (and not yet converted to real property), the property transfer may be structured differently. Your notary will address this at conveyance.</p>
+        <p>Osoyoos's climate is a genuine asset for manufactured home owners. The South Okanagan receives more sun hours annually than almost any other city in Canada, and its mild winters significantly reduce heating costs relative to most of BC. A manufactured home in Osoyoos is a year-round residence in a way that wouldn't apply in many other parts of the province — seasonal use concerns that sometimes arise in northern or higher-elevation communities simply do not apply here.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="card card--accent">
+          <h3>CSA A277 Standard</h3>
+          <p>Homes built to this standard meet federal construction requirements for structure, electrical, plumbing, and energy efficiency. Confirm the build year and whether the home carries the CSA label.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>Home Age &amp; Condition</h3>
+          <p>Lenders sometimes limit financing on manufactured homes older than a certain threshold. Verify the home's year of manufacture early and discuss with your mortgage broker before falling in love with a unit.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>Osoyoos Climate Advantage</h3>
+          <p>Canada's warmest city designation is not marketing — it reflects real conditions. Mild winters mean lower heating costs, no seasonal shutdown concerns, and comfortable year-round living.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>Property Transfer Tax</h3>
+          <p>PTT applies on the same basis as other residential transactions. First-time buyers may qualify for an exemption — confirm eligibility with your notary or lawyer at the time of purchase.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>What to Review Before Making an Offer</h2>
+    <p>A manufactured home on freehold or bare land strata land requires its own specific due diligence checklist. The items below are the ones that matter most — some are common to all residential purchases, others are specific to manufactured construction.</p>
+    <div class="grid-2" style="margin-top:28px">
+      <div class="card">
+        <h3>Title Confirmation</h3>
+        <p>Pull the title search from the Land Title Office and confirm it is fee simple or bare land strata — not leasehold, not a Manufactured Home Registry registration only. If the title shows a Manufactured Home Registry number without a corresponding land title, the land situation requires further investigation. Your notary handles this as part of standard conveyancing, but ask for the title search before removing subjects, not after.</p>
+      </div>
+      <div class="card">
+        <h3>Home Age and Condition</h3>
+        <p>Know the year the home was manufactured and whether it was built to CSA A277. Hire a home inspector who has specific experience with manufactured construction — inspecting a manufactured home is not identical to inspecting a site-built home, and a general inspector unfamiliar with the differences may miss issues specific to this building type. Pay particular attention to the roof, skirting, underbelly, and any site-set modifications made after the original installation.</p>
+      </div>
+      <div class="card">
+        <h3>Bare Land Strata Rules and Fees</h3>
+        <p>If Cedar Lane is organized as a bare land strata, a strata corporation governs shared roads, utilities, or common areas within the development. There will be bylaws and strata fees. Review the bylaws for any restrictions on exterior modifications, parking, or suites. Confirm the monthly strata fee and review the most recent financial statements and meeting minutes, just as you would for any strata purchase.</p>
+      </div>
+      <div class="card">
+        <h3>Financing Pre-Approval</h3>
+        <p>Talk to a mortgage broker before you make an offer, not after. Explain that the property is a manufactured home and provide the home's year of manufacture. Your broker will identify which lenders will consider the application and under what terms. Having this confirmed in advance means your financing subject is real protection, not a placeholder — and it tells you your actual purchase ceiling before you negotiate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--peer">
+  <div class="container">
+    <div class="quick-facts">
+      <h3>Cedar Lane Osoyoos — Quick Facts</h3>
+      <ul class="fact-list">
+        <li><span>📍</span><span>21-4911 Cedar Lane, Osoyoos, BC</span></li>
+        <li><span>🏠</span><span>Type: Manufactured home — freehold / bare land strata (confirm title)</span></li>
+        <li><span>🔑</span><span>Ownership: You own both the home and the land — not a pad rental</span></li>
+        <li><span>🏦</span><span>Financing: Conventional mortgage typically available for freehold manufactured homes</span></li>
+        <li><span>📋</span><span>Bare land strata fees may apply — confirm with listing agent</span></li>
+        <li><span>🌤</span><span>Osoyoos: one of Canada's warmest cities, mild year-round climate</span></li>
+        <li><span>🔍</span><span>Confirm home's year of manufacture and CSA A277 compliance</span></li>
+        <li><span>📄</span><span>Request strata documents (if applicable): bylaws, minutes, financials</span></li>
+        <li><span>⚖️</span><span>PTT applies; Home Owner Grant available for principal residence</span></li>
+      </ul>
+    </div>
+
+    <h2 style="margin-top:40px">Explore Related Guides</h2>
+    <p>The manufactured home guide covers BC-specific rules in detail. The Osoyoos page has current active listings across all property types.</p>
+    <div class="guide-row">
+      <a href="/manufactured-home-guide.html" class="guide-link">
+        <div class="icon">📖</div>
+        <div class="gtitle">Manufactured Home Guide</div>
+        <div class="gdesc">A complete buyer's guide to manufactured homes in BC — ownership types, financing, CSA standards, and the key questions to ask before making an offer.</div>
+        <span class="gcta">Read the full guide →</span>
+      </a>
+      <a href="/osoyoos-real-estate.html" class="guide-link">
+        <div class="icon">🏡</div>
+        <div class="gtitle">Osoyoos Real Estate</div>
+        <div class="gdesc">Current listings across all property types in Osoyoos — detached homes, strata, manufactured, and vacant land. See what the market looks like right now.</div>
+        <span class="gcta">View Osoyoos listings →</span>
+      </a>
+      <a href="/communities.html" class="guide-link">
+        <div class="icon">🗺</div>
+        <div class="gtitle">Communities</div>
+        <div class="gdesc">Profiles of South Okanagan communities — Osoyoos, Oliver, and surrounding areas. Compare neighbourhoods, price ranges, and lifestyle before narrowing your search.</div>
+        <span class="gcta">Browse communities →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Questions About Cedar Lane?</h2>
+      <p>Pat can walk you through the title, the home's history, and what the due diligence process looks like for this specific property. Call to discuss or book a showing.</p>
+      <a href="tel:16045625982" class="btn btn-primary" style="font-size:16px;padding:14px 32px">604-562-5982</a>
+      <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.45)">Pat Miazga · RE/MAX All Points Realty · MiazgaRealEstate@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <strong>Pat Miazga</strong> · RE/MAX All Points Realty<br>
+    <a href="tel:16045625982">604-562-5982</a> · <a href="mailto:MiazgaRealEstate@gmail.com">MiazgaRealEstate@gmail.com</a><br>
+    <span style="font-size:13px;color:rgba(255,255,255,.35);margin-top:8px;display:block">The information on this page is for general guidance. Verify all details with strata documents, municipal records, and your own due diligence.</span>
+  </div>
+</footer>

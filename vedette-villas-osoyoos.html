@@ -1,0 +1,249 @@
+<title>Vedette Villas Osoyoos</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="canonical" href="https://patmiazga.com/vedette-villas-osoyoos.html">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1a18;--stone:#3d3d38;--warm-mid:#7a7468;--sand:#c8b89a;--cream:#f7f4ef;--white:#ffffff;--accent:#8b6f47;--accent-dk:#6b5235;--border:#e2ddd6;--peer-bg:#f0ede8;--fd:'Cormorant Garamond',Georgia,serif;--fb:'Inter',system-ui,sans-serif;}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--white);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{color:var(--accent-dk)}img{max-width:100%;display:block}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:100;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--white);letter-spacing:.08em}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.75)}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent);color:var(--white)!important;padding:8px 16px;border-radius:4px;font-weight:600!important}
+.hero{background:var(--ink);padding:88px 24px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 65% 40%,rgba(139,111,71,.18) 0%,transparent 65%)}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:60px;align-items:center;position:relative}
+.breadcrumb{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:18px}
+.breadcrumb a{color:var(--sand)}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);display:block;margin-bottom:18px}
+.hero h1{font-family:var(--fd);font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:600;line-height:1.1;color:var(--white);margin-bottom:20px}
+.hero h1 em{font-style:italic;color:var(--sand)}
+.hero-hook{font-size:17px;font-weight:500;color:var(--white);border-left:3px solid var(--sand);padding-left:16px;margin-bottom:20px;line-height:1.55}
+.hero-sub{font-size:16px;color:rgba(255,255,255,.68);line-height:1.75;margin-bottom:32px}
+.btn{display:inline-block;padding:12px 26px;border-radius:5px;font-size:14px;font-weight:600;letter-spacing:.03em;transition:all .2s}
+.btn-primary{background:var(--accent);color:var(--white)}
+.btn-primary:hover{background:var(--accent-dk);color:var(--white)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:var(--fd);font-size:1.8rem;font-weight:600;color:var(--sand);display:block}
+.hero-stat-label{font-size:12px;color:rgba(255,255,255,.6);line-height:1.4}
+.hero-visual-note{font-size:13px;color:rgba(255,255,255,.5);text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:14px;font-style:italic}
+.section{padding:72px 24px}
+.section--cream{background:var(--cream)}
+.section--peer{background:var(--peer-bg)}
+.section h2{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;line-height:1.15;margin-bottom:20px;text-wrap:balance}
+.section h3{font-family:var(--fd);font-size:1.35rem;font-weight:600;margin-bottom:10px}
+.section p{color:var(--stone);line-height:1.78;margin-bottom:16px;max-width:700px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px 24px}
+.card--accent{border-left:4px solid var(--accent)}
+.card h3{font-family:var(--fd);font-size:1.2rem;margin-bottom:10px;color:var(--ink)}
+.card p{font-size:15px;color:var(--warm-mid);margin-bottom:0;line-height:1.65}
+.quick-facts{background:var(--peer-bg);border:1px solid var(--border);border-radius:14px;padding:32px;margin:28px 0}
+.quick-facts h3{font-family:var(--fd);font-size:1.2rem;margin-bottom:16px}
+.fact-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.fact-list li{display:flex;gap:12px;font-size:15px;color:var(--stone);line-height:1.5}
+.fact-list li span:first-child{flex-shrink:0;width:20px}
+.guide-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.guide-link{background:var(--peer-bg);border:1px solid var(--border);border-radius:10px;padding:20px;color:var(--ink);display:block;transition:all .2s}
+.guide-link:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.guide-link .icon{font-size:20px;margin-bottom:8px}
+.guide-link .gtitle{font-family:var(--fd);font-size:1.05rem;font-weight:600;margin-bottom:4px}
+.guide-link .gdesc{font-size:13px;color:var(--warm-mid);line-height:1.55}
+.guide-link .gcta{font-size:12px;font-weight:600;color:var(--accent);margin-top:8px;display:block}
+.cta-box{background:var(--ink);color:var(--white);border-radius:14px;padding:52px 40px;text-align:center}
+.cta-box h2{font-family:var(--fd);font-size:2.2rem;color:var(--white);margin-bottom:14px}
+.cta-box p{color:rgba(255,255,255,.7);max-width:480px;margin:0 auto 28px}
+.footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px;text-align:center;font-size:14px;line-height:1.8}
+.footer a{color:var(--sand)}
+.footer strong{color:var(--white)}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}}
+@media(max-width:680px){.grid-2{grid-template-columns:1fr}.guide-row{grid-template-columns:1fr 1fr}.nav-links{display:none}.cta-box{padding:36px 24px}}
+@media(max-width:420px){.guide-row{grid-template-columns:1fr}}
+</style>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">Pat Miazga</span>
+    <div class="nav-links">
+      <a href="/osoyoos-real-estate.html">Osoyoos</a>
+      <a href="/oliver-real-estate.html">Oliver</a>
+      <a href="/communities.html">Communities</a>
+      <a href="/manufactured-home-guide.html">MH Guide</a>
+      <a href="tel:16045625982" class="nav-cta">604-562-5982</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="breadcrumb"><a href="/communities.html">Communities</a> › Osoyoos › Vedette Villas</div>
+      <span class="hero-eyebrow">Osoyoos · 55+ Strata Villas</span>
+      <h1>Vedette Villas Osoyoos — <em>Affordable 55+ Strata Living</em></h1>
+      <p class="hero-hook">One of Osoyoos's most accessible entry points into strata ownership — compact villas priced near $199K in a 55+ community close to the lake.</p>
+      <p class="hero-sub">8010 Vedette Drive offers a quiet, low-maintenance lifestyle for retirees who want real property ownership without the cost or upkeep of a detached home. Two units are currently listed at comparable prices, making this a rare opportunity to compare and choose.</p>
+      <div class="hero-btns">
+        <a href="tel:16045625982" class="btn btn-primary">Call Pat · 604-562-5982</a>
+        <a href="/osoyoos-real-estate.html" class="btn" style="background:rgba(255,255,255,.1);color:var(--white);border:1px solid rgba(255,255,255,.2)">All Osoyoos Listings</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="stat-grid">
+        <div class="hero-stat">
+          <span class="hero-stat-num">55+</span>
+          <span class="hero-stat-label">Age-Restricted Community</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Strata</span>
+          <span class="hero-stat-label">Ownership Type</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Osoyoos</span>
+          <span class="hero-stat-label">BC</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">Near</span>
+          <span class="hero-stat-label">Osoyoos Lake &amp; Shopping</span>
+        </div>
+      </div>
+      <div class="hero-visual-note">Two units listed near $199K — call to discuss both</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>What Strata Villa Ownership Means</h2>
+    <div class="grid-2">
+      <div>
+        <p>When you purchase a unit at Vedette Villas, you hold title to your individual strata lot — typically the interior of your unit, including fixtures, flooring, and appliances. The title is registered in the Land Title Office in your name, the same as any other BC real property transaction. This is genuine ownership, not a rental or a leasehold arrangement.</p>
+        <p>The land under the complex and all shared areas — exterior walls, roofing, landscaping, parking, common hallways, and any shared amenities — are owned collectively by the strata corporation. Every owner holds a share of that corporation proportional to their unit entitlement. This is what allows the maintenance costs of shared infrastructure to be divided fairly across all owners.</p>
+        <p>Monthly strata fees cover the strata corporation's operating costs: building insurance, landscaping, snow removal, routine maintenance of common areas, and contributions to the contingency reserve fund. The reserve fund is the strata's savings account for large future expenditures — roof replacement, parking lot resurfacing, major mechanical work. A well-funded reserve is one of the most important things to verify before purchasing in any strata complex.</p>
+        <p>The strata also governs certain aspects of how you use your unit. Bylaws may address restrictions on pets, rentals, parking, alterations, and noise. As a 55+ community, Vedette Villas has age-restriction bylaws requiring that at least one resident per unit meet the minimum age requirement. Reviewing the bylaws before making an offer is essential, not optional.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="card card--accent">
+          <h3>What You Own</h3>
+          <p>Your strata lot — the interior of the unit, your fixtures, and your improvements. Title is registered in your name at the Land Title Office.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>Shared Areas</h3>
+          <p>Exterior structure, roofing, grounds, and any common amenities are owned collectively by the strata corporation. All owners share maintenance costs via monthly fees.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>Monthly Fees</h3>
+          <p>Strata fees cover insurance, maintenance, landscaping, and reserve fund contributions. Confirm the current fee amount and what it includes before making an offer.</p>
+        </div>
+        <div class="card card--accent">
+          <h3>55+ Age Restriction</h3>
+          <p>At least one occupant per unit must meet the age requirement. This is a bylaw restriction, not a suggestion — it runs with the property and applies to all future owners.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--cream">
+  <div class="container">
+    <h2>The Value Proposition: Affordable Strata Ownership in Osoyoos</h2>
+    <p>Osoyoos real estate has seen significant appreciation over the past decade, driven by its warm climate, lakeside lifestyle, and growing profile among retirees and lifestyle buyers from across BC and Alberta. Detached homes in Osoyoos have climbed well past the $500,000 mark, and lakefront properties command significantly more. Against that backdrop, Vedette Villas stands out as one of the few strata communities where ownership is achievable for buyers working with a more modest budget.</p>
+    <p>With both currently listed units priced near $199,000, Vedette Villas represents an entry point that is genuinely rare in this market. For a buyer coming out of a larger urban centre — Vancouver, Kelowna, or Calgary — the price point may feel surprisingly attainable. For a buyer downsizing from a detached home in the South Okanagan, it offers a way to free up equity while retaining the benefits of real property ownership: building equity, stability of tenure, and the ability to make improvements and sell on your own terms.</p>
+    <p>The 55+ restriction is often viewed as a limitation, but in practice it tends to work in buyers' favour. These communities attract owners who care about maintaining their property and their neighbourhood. The age restriction also limits the pool of eligible buyers, which can moderate competitive bidding pressure relative to unrestricted comparable product. If you qualify, it is not a drawback — it is a feature.</p>
+    <p>Location matters here too. Vedette Drive sits within easy reach of Osoyoos's core commercial strip, the lake, and basic services. For a retiree who wants to age in place without dependence on a car for every errand, the proximity is a practical advantage that deserves weight alongside the purchase price.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>What Buyers Should Review Before Making an Offer</h2>
+    <p>Strata purchases carry a distinct due diligence checklist compared to freehold purchases. The documents listed below are your window into the financial health and governance of the corporation you are buying into. Request them early and read them carefully.</p>
+    <div class="grid-2" style="margin-top:28px">
+      <div class="card">
+        <h3>Strata Meeting Minutes</h3>
+        <p>The minutes of annual general meetings and council meetings for the past two years tell you what issues have come up, how the strata has responded, and what problems may be on the horizon. Look for recurring maintenance concerns, owner disputes, or deferred work that has been acknowledged but not resolved. Minutes are the single most revealing document in any strata package.</p>
+      </div>
+      <div class="card">
+        <h3>Contingency Reserve Fund</h3>
+        <p>The CRF balance tells you whether the strata has been setting money aside for major capital expenses. A low or depleted reserve relative to the age and condition of the complex is a warning sign: it means a special levy — a one-time charge to all owners — may be coming to fund repairs the reserve cannot cover. Ask for the most recent financial statements and compare the CRF balance to the depreciation report's projections.</p>
+      </div>
+      <div class="card">
+        <h3>Strata Bylaws</h3>
+        <p>The bylaws govern what you can and cannot do in your unit and on strata property. For a 55+ community, the age restriction is the most important bylaw to understand fully, including any provisions for surviving spouses or co-owners who do not meet the age requirement. Bylaws also address pets, rentals, parking, and alterations — any of which may affect your plans for the property.</p>
+      </div>
+      <div class="card">
+        <h3>Depreciation Report</h3>
+        <p>BC strata corporations with more than four lots are required to obtain a depreciation report every three years unless owners vote to waive it. The report is an independent assessment of the complex's major components — roofing, envelope, mechanical systems, paving — and projects replacement costs over 30 years. It is the tool that tells you whether the strata's current reserve fund contributions are adequate. If the report is old or has been waived repeatedly, factor that uncertainty into your offer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--peer">
+  <div class="container">
+    <div class="quick-facts">
+      <h3>Vedette Villas — Quick Facts</h3>
+      <ul class="fact-list">
+        <li><span>📍</span><span>8010 Vedette Drive, Osoyoos, BC</span></li>
+        <li><span>🏠</span><span>Type: 55+ strata townhome / villa complex</span></li>
+        <li><span>💰</span><span>Current listings: Unit 1 at $199,000 · Unit 5 at $199,900</span></li>
+        <li><span>👤</span><span>Age restriction: 55+ (at least one occupant per unit must qualify)</span></li>
+        <li><span>🔑</span><span>Ownership: Strata title — you own your unit, share in the corporation</span></li>
+        <li><span>📋</span><span>Monthly strata fees apply — confirm current amount with the listing agent</span></li>
+        <li><span>🌊</span><span>Location: Close to Osoyoos Lake, shopping, and core services</span></li>
+        <li><span>📄</span><span>Strata documents (minutes, CRF, bylaws, depreciation report) available on request</span></li>
+        <li><span>🏦</span><span>Financing: Strata units are eligible for conventional mortgage financing — confirm lender requirements</span></li>
+      </ul>
+    </div>
+
+    <h2 style="margin-top:40px">Explore Related Guides</h2>
+    <p>Looking at other properties in the area or want to understand the broader Osoyoos market? These guides cover the context.</p>
+    <div class="guide-row">
+      <a href="/osoyoos-real-estate.html" class="guide-link">
+        <div class="icon">🏡</div>
+        <div class="gtitle">Osoyoos Real Estate</div>
+        <div class="gdesc">Browse active listings and get an overview of the Osoyoos market — pricing, neighbourhoods, and what to expect as a buyer.</div>
+        <span class="gcta">View Osoyoos listings →</span>
+      </a>
+      <a href="/manufactured-home-guide.html" class="guide-link">
+        <div class="icon">📖</div>
+        <div class="gtitle">Manufactured Home Guide</div>
+        <div class="gdesc">Considering a manufactured home as an alternative? This guide explains ownership types, financing rules, and key distinctions for BC buyers.</div>
+        <span class="gcta">Read the guide →</span>
+      </a>
+      <a href="/communities.html" class="guide-link">
+        <div class="icon">🗺</div>
+        <div class="gtitle">Communities</div>
+        <div class="gdesc">Explore other South Okanagan communities — Oliver, Osoyoos, and surrounding areas — with profiles of each neighbourhood's character and price range.</div>
+        <span class="gcta">Browse communities →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Ready to View Vedette Villas?</h2>
+      <p>Both units are available now. Call Pat directly to arrange a showing, ask questions about the strata documents, or discuss how this fits your plans.</p>
+      <a href="tel:16045625982" class="btn btn-primary" style="font-size:16px;padding:14px 32px">604-562-5982</a>
+      <p style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.45)">Pat Miazga · RE/MAX All Points Realty · MiazgaRealEstate@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <strong>Pat Miazga</strong> · RE/MAX All Points Realty<br>
+    <a href="tel:16045625982">604-562-5982</a> · <a href="mailto:MiazgaRealEstate@gmail.com">MiazgaRealEstate@gmail.com</a><br>
+    <span style="font-size:13px;color:rgba(255,255,255,.35);margin-top:8px;display:block">The information on this page is for general guidance. Verify all details with strata documents, municipal records, and your own due diligence.</span>
+  </div>
+</footer>

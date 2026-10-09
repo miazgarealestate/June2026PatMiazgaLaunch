@@ -1,0 +1,748 @@
+<title>Deer Park Estates Oliver</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+/* === DESIGN TOKENS === */
+:root {
+  --ink: #1a1a18;
+  --stone: #3d3d38;
+  --warm-mid: #7a7468;
+  --sand: #c8b89a;
+  --cream: #f7f4ef;
+  --white: #ffffff;
+  --accent: #8b6f47;
+  --accent-dk: #6b5235;
+  --border: #e2ddd6;
+  --peer-bg: #f0ede8;
+  --fd: 'Cormorant Garamond', Georgia, serif;
+  --fb: 'Inter', system-ui, sans-serif;
+
+  --hero-bg: #1a1a14;
+  --hero-fg: #f7f4ef;
+  --nav-bg: #1a1a14;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #1e1c18;
+    --peer-bg: #252320;
+    --border: #35332e;
+    --ink: #f0ede6;
+    --stone: #c8c2b8;
+    --warm-mid: #9a9286;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --cream: #1e1c18;
+  --peer-bg: #252320;
+  --border: #35332e;
+  --ink: #f0ede6;
+  --stone: #c8c2b8;
+  --warm-mid: #9a9286;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--fb);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAV */
+.nav {
+  background: var(--nav-bg);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(200,184,154,.12);
+}
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+.nav-logo {
+  font-family: var(--fd);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--sand);
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  font-family: var(--fb);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(247,244,239,.65);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: color .15s;
+}
+.nav-links a:hover { color: var(--sand); }
+.nav-cta {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+  padding: 6px 14px !important;
+  border-radius: 4px;
+  font-weight: 600 !important;
+}
+.nav-cta:hover { background: var(--accent-dk) !important; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--sand);
+  border-radius: 1px;
+}
+@media (max-width: 700px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0; right: 0;
+    background: var(--nav-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 24px 20px;
+    border-bottom: 1px solid rgba(200,184,154,.15);
+    gap: 2px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 10px 0; width: 100%; }
+}
+
+/* HERO */
+.hero {
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+  padding: 72px 24px 56px;
+}
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+}
+.hero-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--sand);
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: var(--fd);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 1.15;
+  text-wrap: balance;
+  color: var(--hero-fg);
+  margin-bottom: 20px;
+}
+.hero-sub {
+  font-size: 16px;
+  color: rgba(247,244,239,.7);
+  max-width: 480px;
+  line-height: 1.7;
+}
+.hero-visual {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(200,184,154,.18);
+  border-radius: 8px;
+  padding: 32px 28px;
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.hero-stat { display: flex; flex-direction: column; gap: 4px; }
+.hero-stat .stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--sand);
+  opacity: .7;
+}
+.hero-stat .stat-value {
+  font-family: var(--fd);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--hero-fg);
+  line-height: 1.2;
+}
+
+/* LISTINGS BANNER */
+.listings-banner {
+  background: var(--accent);
+  color: var(--white);
+  padding: 16px 24px;
+}
+.listings-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.listings-banner .lb-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: .8;
+  white-space: nowrap;
+}
+.listing-pill {
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.listing-pill strong { font-weight: 700; }
+
+/* CONTAINER / SECTION */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section {
+  padding: 64px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.section + .section { border-top: 1px solid var(--border); }
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-family: var(--fd);
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--stone);
+  max-width: 680px;
+  margin-bottom: 16px;
+}
+.section p:last-of-type { margin-bottom: 0; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 800px) {
+  .two-col { grid-template-columns: 1fr; gap: 32px; }
+}
+
+.card {
+  background: var(--peer-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px 24px;
+}
+.card h3 {
+  font-family: var(--fd);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.card p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--stone);
+  margin-bottom: 10px;
+}
+.card p:last-child { margin-bottom: 0; }
+
+/* COMPARISON TABLE */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 24px;
+}
+.compare-table th {
+  text-align: left;
+  font-family: var(--fb);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  color: var(--warm-mid);
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--border);
+  background: var(--peer-bg);
+}
+.compare-table th:first-child { border-radius: 6px 0 0 0; }
+.compare-table th:last-child { border-radius: 0 6px 0 0; }
+.compare-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--stone);
+  vertical-align: top;
+}
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table td:first-child { font-weight: 600; color: var(--ink); width: 160px; }
+.compare-table .tick { color: #4a8c5c; font-weight: 700; }
+.compare-table .cross { color: #9c4a3a; font-weight: 700; }
+.compare-table .neutral { color: var(--warm-mid); }
+.compare-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 6px; }
+
+/* QUICK FACTS */
+.quick-facts {
+  background: var(--hero-bg);
+  color: var(--hero-fg);
+  padding: 56px 24px;
+}
+.quick-facts-inner { max-width: 1100px; margin: 0 auto; }
+.quick-facts h2 {
+  font-family: var(--fd);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--hero-fg);
+  margin-bottom: 32px;
+}
+.fact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  list-style: none;
+}
+.fact-list li {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(200,184,154,.14);
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.fact-icon { font-size: 18px; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+.fact-text { font-size: 14px; line-height: 1.6; color: rgba(247,244,239,.8); }
+.fact-text strong {
+  display: block;
+  color: var(--sand);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* STRATA CHECKLIST */
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+.checklist li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--stone);
+}
+.checklist li::before {
+  content: '→';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* GUIDE LINKS */
+.guide-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+.guide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 16px;
+  background: var(--peer-bg);
+  transition: border-color .15s, background .15s;
+}
+.guide-link:hover { border-color: var(--accent); background: var(--cream); }
+
+/* CTA BOX */
+.cta-box {
+  background: var(--peer-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  padding: 32px 28px;
+  max-width: 680px;
+}
+.cta-box h3 {
+  font-family: var(--fd);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.cta-box p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--stone);
+  margin-bottom: 20px;
+}
+.cta-phone {
+  font-family: var(--fd);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+.cta-email { font-size: 14px; color: var(--warm-mid); text-decoration: none; }
+.cta-email:hover { color: var(--accent); }
+
+.section-wrap { background: var(--cream); }
+.section-wrap.alt { background: var(--peer-bg); }
+
+/* FOOTER */
+.footer {
+  background: var(--hero-bg);
+  color: rgba(247,244,239,.65);
+  padding: 40px 24px;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer .container { max-width: 1100px; margin: 0 auto; }
+.footer strong { color: var(--sand); }
+.footer a { color: rgba(247,244,239,.65); text-decoration: none; }
+.footer a:hover { color: var(--sand); }
+</style>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">Pat Miazga</span>
+    <button class="nav-toggle" aria-label="Open menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="/osoyoos-real-estate.html">Osoyoos</a>
+      <a href="/oliver-real-estate.html">Oliver</a>
+      <a href="/communities.html">Communities</a>
+      <a href="/manufactured-home-guide.html">MH Guide</a>
+      <a href="tel:16045625982" class="nav-cta">604-562-5982</a>
+    </div>
+  </div>
+</nav>
+
+<link rel="canonical" href="https://patmiazga.com/deer-park-estates-oliver.html">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Oliver · 55+ Bare Land Strata</p>
+      <h1>Deer Park Estates Oliver — Freehold Bare Land Strata</h1>
+      <p class="hero-sub">A well-established 55+ community on Highway 97 in Oliver. Freehold bare land strata means you hold title to your individual lot — a meaningfully different ownership structure from leasehold parks, with important advantages and its own set of documents to review.</p>
+    </div>
+    <div class="hero-visual">
+      <div class="stat-grid">
+        <div class="hero-stat">
+          <span class="stat-label">Age Restriction</span>
+          <span class="stat-value">55+</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Title Type</span>
+          <span class="stat-value">Freehold</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Strata Type</span>
+          <span class="stat-value">Bare Land Strata</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-label">Location</span>
+          <span class="stat-value">Oliver, BC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS BANNER -->
+<div class="listings-banner">
+  <div class="listings-banner-inner">
+    <span class="lb-label">Current Listings</span>
+    <span class="listing-pill">Unit 40 — <strong>$289,000</strong></span>
+    <span class="listing-pill">Unit 15 — <strong>$279,000</strong></span>
+    <span style="font-size:13px;opacity:.75;">8598 Highway 97, Oliver, BC · Contact Pat for current availability</span>
+  </div>
+</div>
+
+<!-- OWNERSHIP COMPARISON -->
+<div class="section-wrap">
+  <div class="section">
+    <p class="section-eyebrow">Understanding Ownership</p>
+    <h2>Bare Land Strata vs. Regular Strata vs. Leasehold — The Differences That Matter</h2>
+    <p>When shopping for manufactured homes and 55+ communities in the South Okanagan, you'll encounter three distinct ownership structures. Understanding what you are actually buying — and what rights come with it — is fundamental to making a sound decision.</p>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Bare Land Strata (Deer Park)</th>
+            <th>Regular Strata</th>
+            <th>Leasehold Park</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Own the Land</td>
+            <td class="tick">Yes — strata lot title</td>
+            <td class="neutral">Shared interest in all land</td>
+            <td class="cross">No — pad is leased</td>
+          </tr>
+          <tr>
+            <td>Freehold Title</td>
+            <td class="tick">Yes</td>
+            <td class="tick">Yes (unit + fractional common)</td>
+            <td class="cross">No</td>
+          </tr>
+          <tr>
+            <td>Monthly Pad Rent</td>
+            <td class="tick">None</td>
+            <td class="tick">None</td>
+            <td class="cross">$500–$700+/month</td>
+          </tr>
+          <tr>
+            <td>Monthly Strata Fees</td>
+            <td class="neutral">Yes — typically lower than highrise</td>
+            <td class="neutral">Yes — varies widely</td>
+            <td class="neutral">May be charged separately</td>
+          </tr>
+          <tr>
+            <td>Mortgage Financing</td>
+            <td class="tick">Standard mortgage available</td>
+            <td class="tick">Standard mortgage available</td>
+            <td class="cross">Limited lenders; specialty only</td>
+          </tr>
+          <tr>
+            <td>Lease Expiry Risk</td>
+            <td class="tick">None</td>
+            <td class="tick">None</td>
+            <td class="cross">Yes — lease may not renew</td>
+          </tr>
+          <tr>
+            <td>Strata Council</td>
+            <td class="neutral">Yes — owners elect council</td>
+            <td class="neutral">Yes — owners elect council</td>
+            <td class="cross">Park owner makes decisions</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:24px;">The comparison above shows why freehold bare land strata is generally considered the stronger ownership position for buyers in this market. You own title to your individual lot, you are not exposed to lease expiry risk, standard mortgage financing is available, and you participate in governing the community through the strata council. The trade-off is monthly strata fees, but these cover the maintenance of common areas and the reserve fund — they are not rent paid to a third-party landlord.</p>
+  </div>
+</div>
+
+<!-- WHY FREEHOLD IS PREFERRED -->
+<div class="section-wrap alt">
+  <div class="section">
+    <p class="section-eyebrow">Why It Matters</p>
+    <h2>Why Freehold Bare Land Strata Is Generally Preferred Over Leasehold</h2>
+    <div class="two-col">
+      <div>
+        <p>The single most important advantage of freehold bare land strata over a leasehold park is the security of ownership. When you purchase at Deer Park Estates, the title to your individual strata lot is registered in your name at the Land Title Office. There is no lease to expire, no landlord who can decline to renew, and no notice-to-vacate provisions to worry about. Your ownership is as secure as any other freehold property in BC.</p>
+        <p>That security has a direct impact on financing. Because you hold freehold title, standard mortgage financing is available through most major lenders and credit unions. This expands the pool of potential buyers when you eventually sell, which supports your property's value over time. Leasehold properties are significantly harder to finance, which limits the resale market.</p>
+        <p>Resale value is the other major consideration. Freehold bare land strata properties in established communities have historically held their value better than comparable leasehold homes, in part because buyers at all price points have access to financing, and in part because there is no underlying lease risk being priced into the market. At $279,000–$289,000, the current listings at Deer Park Estates represent genuine freehold real estate at a price point well below standard single-family homes in the area.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="card">
+          <h3>Freehold Title Security</h3>
+          <p>Your strata lot — the land your home sits on — is registered in your name at the BC Land Title Office. This is the same title security that applies to any freehold property in the province. No lease, no landlord, no expiry date.</p>
+        </div>
+        <div class="card">
+          <h3>Community Governance</h3>
+          <p>As a strata lot owner, you are a member of the strata corporation and participate in electing the strata council. Decisions about common property, fee levels, and bylaw changes require owner votes — you have a voice in how Deer Park Estates is managed.</p>
+        </div>
+        <div class="card">
+          <h3>Standard Financing</h3>
+          <p>Major lenders treat bare land strata properties similarly to other freehold real estate. This opens the full range of mortgage products and terms, with competitive rates and a straightforward qualification process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MONTHLY COSTS -->
+<div class="section-wrap">
+  <div class="section">
+    <p class="section-eyebrow">Monthly Costs</p>
+    <h2>Strata Fees and What They Cover</h2>
+    <p>Every bare land strata community charges monthly strata fees. These fees fund the ongoing maintenance of common areas — roads, landscaping, lighting, amenities such as a clubhouse — and contribute to the contingency reserve fund, which is the strata corporation's savings account for major future expenditures.</p>
+    <p>In a smaller bare land strata like Deer Park Estates, monthly fees are typically lower than you would encounter in a highrise or larger urban strata development. The common areas in a manufactured home community are generally less complex than a tower with elevators, gym equipment, and a full concierge — which means lower ongoing operating costs. That said, exact current fees must be confirmed directly from the strata documents; fees change over time as the strata council adjusts the budget.</p>
+    <p>What matters as a buyer is not just the current fee but the trajectory. Review at least three years of strata financial statements and meeting minutes to understand whether fees have been increasing, whether there have been special levies, and whether the contingency reserve fund is being adequately funded. A strata with a healthy reserve fund and modest, predictable fee increases is in a better financial position than one with a low current fee but a depleted reserve — the latter often leads to a special levy.</p>
+    <p>A special levy is a one-time charge to all strata lot owners to cover a major expense that the reserve fund cannot absorb. Examples include roof replacements, road repaving, or significant repairs to common buildings. Reviewing the depreciation report — if one exists — tells you what major expenditures are projected and when. Not all strata corporations are required to have a depreciation report, but when one exists, reading it is one of the most valuable things you can do as a buyer.</p>
+  </div>
+</div>
+
+<!-- WHAT TO REVIEW -->
+<div class="section-wrap alt">
+  <div class="section">
+    <p class="section-eyebrow">Due Diligence</p>
+    <h2>Strata Documents Every Buyer Should Review</h2>
+    <p>BC's strata legislation requires the seller to provide standard disclosure, and your offer should be subject to your review and approval of the complete strata document package. These documents tell the full story of the corporation's financial health, governance quality, and any outstanding issues.</p>
+    <div class="two-col">
+      <div>
+        <ul class="checklist">
+          <li><span><strong>Strata Minutes (2–3 years):</strong> Meeting minutes are the most revealing document in the package. They record what the council has been discussing, what repairs have been done or deferred, any ongoing disputes between owners, and the issues the community is currently working through. Look for recurring complaints, unresolved maintenance items, and any mentions of upcoming special levies or capital projects.</span></li>
+          <li><span><strong>Financial Statements:</strong> Review the annual financial statements to understand the strata's income and expense picture. Are fees covering operating costs with room to fund the reserve? Is the reserve fund growing, stable, or declining? A strata spending from its reserve without replenishing it is a warning sign.</span></li>
+          <li><span><strong>Contingency Reserve Fund Balance:</strong> The reserve fund balance tells you how prepared the strata is for major future expenses. A healthy balance relative to the age and condition of the common property means less likelihood of a special levy in the near term. The Form B Information Certificate, which the seller is required to provide, will state the current balance.</span></li>
+          <li><span><strong>Strata Bylaws and Rules:</strong> Review the full bylaw document. Age restrictions, pet policies, rental restrictions, home-based business rules, and requirements for the appearance and maintenance of individual lots are all governed by bylaws. The 55+ restriction itself is a bylaw — confirm the exact wording, including what happens in the event of the death of one resident.</span></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="checklist">
+          <li><span><strong>Depreciation Report:</strong> If the strata corporation has commissioned a depreciation report, read it. This professional engineering report projects the lifespan and replacement cost of major common property components over a 30-year period. It is the most accurate picture available of what the community will need to spend — and when — and it tells you whether the current reserve fund contributions are adequate.</span></li>
+          <li><span><strong>Form B Information Certificate:</strong> This document, provided by the strata corporation, confirms the current monthly fees, the reserve fund balance, any outstanding legal proceedings against the strata, and whether the unit has any outstanding bylaw fines or charges. Review it carefully for any items that are not disclosed elsewhere.</span></li>
+          <li><span><strong>Insurance Certificate:</strong> The strata corporation carries property insurance on the common areas. Confirm the coverage is current and adequate, and understand what the strata policy covers versus what your own home insurance needs to cover. This distinction matters if there is ever a claim.</span></li>
+          <li><span><strong>Home Inspection:</strong> Your inspection of the individual unit should cover the structure, roof, mechanical systems, and the condition of the home relative to its age. The strata corporation maintains common property; you are responsible for your own unit.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK FACTS -->
+<section class="quick-facts">
+  <div class="quick-facts-inner">
+    <h2>Deer Park Estates — Quick Facts</h2>
+    <ul class="fact-list">
+      <li>
+        <span class="fact-icon">📍</span>
+        <span class="fact-text"><strong>Address</strong>8598 Highway 97, Oliver, BC</span>
+      </li>
+      <li>
+        <span class="fact-icon">🏡</span>
+        <span class="fact-text"><strong>Ownership Type</strong>Freehold bare land strata — you hold title to your individual strata lot</span>
+      </li>
+      <li>
+        <span class="fact-icon">👤</span>
+        <span class="fact-text"><strong>Age Restriction</strong>55+ community. Confirm exact bylaw language with strata documents.</span>
+      </li>
+      <li>
+        <span class="fact-icon">💰</span>
+        <span class="fact-text"><strong>Current Listings</strong>Unit 40 at $289,000 · Unit 15 at $279,000. Contact Pat for current status.</span>
+      </li>
+      <li>
+        <span class="fact-icon">📋</span>
+        <span class="fact-text"><strong>Monthly Fees</strong>Strata fees apply — confirm current amount and history from strata documents</span>
+      </li>
+      <li>
+        <span class="fact-icon">🏦</span>
+        <span class="fact-text"><strong>Financing</strong>Standard mortgage financing available through major lenders and credit unions</span>
+      </li>
+      <li>
+        <span class="fact-icon">🏘️</span>
+        <span class="fact-text"><strong>Amenities</strong>Common areas typically include clubhouse and landscaped grounds — confirm with strata</span>
+      </li>
+      <li>
+        <span class="fact-icon">📖</span>
+        <span class="fact-text"><strong>Key Documents</strong>Strata minutes, financials, Form B, depreciation report, bylaws and rules</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA + GUIDES -->
+<div class="section-wrap">
+  <div class="section">
+    <div class="two-col">
+      <div>
+        <p class="section-eyebrow">Talk to Pat</p>
+        <h2>Interested in Deer Park Estates?</h2>
+        <div class="cta-box">
+          <h3>Pat Miazga — RE/MAX All Points Realty</h3>
+          <p>I can arrange a showing of either available unit and walk you through the full strata document package once you've identified a property of interest. Understanding the financials and the bylaws before removing subjects is the most important work in a strata purchase — I can help you read those documents with the right questions in mind.</p>
+          <a class="cta-phone" href="tel:16045625982">604-562-5982</a>
+          <a class="cta-email" href="mailto:MiazgaRealEstate@gmail.com">MiazgaRealEstate@gmail.com</a>
+        </div>
+      </div>
+      <div>
+        <p class="section-eyebrow">Further Reading</p>
+        <h2>Related Guides</h2>
+        <p>Learn more about manufactured home communities, strata ownership, and the Oliver real estate market.</p>
+        <div class="guide-row">
+          <a href="/manufactured-home-guide.html" class="guide-link">→ Manufactured Home Buyer's Guide</a>
+          <a href="/oliver-real-estate.html" class="guide-link">→ Oliver Real Estate Overview</a>
+          <a href="/communities.html" class="guide-link">→ South Okanagan Communities</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <strong>Pat Miazga</strong> · RE/MAX All Points Realty<br>
+    <a href="tel:16045625982">604-562-5982</a> · <a href="mailto:MiazgaRealEstate@gmail.com">MiazgaRealEstate@gmail.com</a><br>
+    <span style="font-size:13px;color:rgba(255,255,255,.35);margin-top:8px;display:block">The information on this page is for general guidance. Verify all details with strata documents, municipal records, and your own due diligence.</span>
+  </div>
+</footer>
