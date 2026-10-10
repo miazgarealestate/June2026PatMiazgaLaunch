@@ -1374,9 +1374,183 @@
   "desc": "St. Andrews by the Lake, 100 St. Andrews Drive, Par Boulevard, Range Road and Eagle Drive, Kaleden \u2014 a golf-course community with a clubhouse, pool and courts south of Penticton. What the MLS\u00ae listings show and what buyers should verify."
  },
  {
+  "title": "Norvision Osoyoos \u2014 Bare-Land Strata Acreage Estate Lots | Pat Miazga",
+  "url": "norvision-osoyoos.html",
+  "category": "Community Spotlight",
+  "desc": "Norvision, Highway 3 East, Osoyoos area \u2014 five bare-land strata acreage lots of about 2.5 acres with lake views. What the listings say and what buyers should verify."
+ },
+ {
+  "title": "Olympic View & Quail Ridge Osoyoos \u2014 Golf-Course Neighbourhood Homes | Pat Miazga",
+  "url": "olympic-view-quail-ridge-osoyoos.html",
+  "category": "Community Spotlight",
+  "desc": "Olympic View and Quail Ridge, Osoyoos \u2014 a golf-course neighbourhood with lake and vineyard views. What is listed, what the listings say and what buyers should verify."
+ },
+ {
+  "title": "Osoyoos Lake Waterfront Homes & Estates | Pat Miazga",
+  "url": "osoyoos-lake-waterfront-estates-osoyoos.html",
+  "category": "Community Spotlight",
+  "desc": "Osoyoos Lake waterfront homes and estates \u2014 private beaches, docks and large lots on Canada's warmest lake per listings. What is listed, and what to verify on foreshore, docks and insurance."
+ },
+ {
+  "title": "Penticton Uplands & Vancouver Place \u2014 Hillside Luxury Homes | Pat Miazga",
+  "url": "penticton-uplands-vancouver-place-penticton.html",
+  "category": "Community Spotlight",
+  "desc": "Penticton Uplands, Vancouver Place and Grandview \u2014 hillside luxury homes with Okanagan Lake views near downtown. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Grandview Terraces Penticton \u2014 New Luxury Homes by Agave Homes | Pat Miazga",
+  "url": "grandview-terraces-agave-penticton.html",
+  "category": "Community Spotlight",
+  "desc": "Grandview Terraces, Westminster Avenue East, Penticton \u2014 new luxury homes by Agave Homes steps from the KVR Trail. What the MLS\u00ae listings show and what buyers should verify."
+ },
+ {
+  "title": "Marina Heights Penticton \u2014 Boutique Luxury Homes by the Marina | Pat Miazga",
+  "url": "marina-heights-penticton.html",
+  "category": "Community Spotlight",
+  "desc": "Marina Heights, Vancouver Avenue, Penticton \u2014 boutique luxury homes with lake views and private trail access to the marina. What the MLS\u00ae listings show and what buyers should verify."
+ },
+ {
+  "title": "Wiltse & Valleyview Penticton \u2014 Skaha Lake View Homes & Acreage | Pat Miazga",
+  "url": "wiltse-valleyview-penticton.html",
+  "category": "Community Spotlight",
+  "desc": "Wiltse and Valleyview, Penticton \u2014 view homes, lots and small acreages above Skaha Lake. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Lakeside Road Skaha Lakefront Penticton \u2014 Waterfront Homes | Pat Miazga",
+  "url": "lakeside-road-skaha-lakefront-penticton.html",
+  "category": "Community Spotlight",
+  "desc": "Lakeside Road, Penticton \u2014 Skaha Lake waterfront homes with beaches and docks per listings. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Penticton Bench & Naramata Road Vineyard Estates | Pat Miazga",
+  "url": "penticton-bench-vineyard-estates-penticton.html",
+  "category": "Community Spotlight",
+  "desc": "Penticton's Bench and Naramata Road \u2014 vineyard estates, acreage and lakeview legacy properties inside city limits. What is listed and what buyers should verify."
+ },
+ {
+  "title": "West Bench Penticton \u2014 Acreage, View Homes & Horse Properties | Pat Miazga",
+  "url": "west-bench-penticton.html",
+  "category": "Community Spotlight",
+  "desc": "West Bench and Husula, Penticton \u2014 view homes, acreage and horse-friendly properties above Okanagan Lake. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Eastside Road & Heritage Hills Okanagan Falls \u2014 Skaha Lake Homes | Pat Miazga",
+  "url": "eastside-road-heritage-hills-okanagan-falls.html",
+  "category": "Community Spotlight",
+  "desc": "Eastside Road, Heritage Hills and Skaha Estates, Okanagan Falls \u2014 lakefront and lake-view homes above Skaha Lake. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Okanagan Falls & Kaleden Vineyards, Wineries & Acreage Estates | Pat Miazga",
+  "url": "okanagan-falls-kaleden-vineyards-acreage.html",
+  "category": "Community Spotlight",
+  "desc": "Okanagan Falls and Kaleden \u2014 vineyards, a boutique winery, large acreages and country estates. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Hunters Hill Summerland \u2014 New Luxury Lake-View Homes & Lots | Pat Miazga",
+  "url": "hunters-hill-summerland.html",
+  "category": "Community Spotlight",
+  "desc": "Hunters Hill, Summerland \u2014 new luxury homes and building lots with Okanagan Lake views on McKenzie Court, Sanborn and nearby streets. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Trout Creek & Lakehouse Summerland \u2014 Lakeside Homes | Pat Miazga",
+  "url": "trout-creek-lakehouse-summerland.html",
+  "category": "Community Spotlight",
+  "desc": "Trout Creek and Lakehouse Summerland \u2014 lakefront estates, new lakeside townhomes and beach-area homes on Okanagan Lake. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Summerland Rural Acreage, Orchards & Estates | Pat Miazga",
+  "url": "summerland-prairie-valley-acreage-summerland.html",
+  "category": "Community Spotlight",
+  "desc": "Summerland Rural \u2014 orchards, vineyards, acreage and country estates around Prairie Valley and Bottleneck Drive. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Oliver Wine-Country Estates, Vineyard Homes & Acreage | Pat Miazga",
+  "url": "oliver-wine-country-estates-oliver.html",
+  "category": "Community Spotlight",
+  "desc": "Oliver wine-country estates \u2014 vineyard homes, boutique wineries, horse properties and Tuc-el-Nuit Lake homes. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Naramata Bench Estates, Vineyards & Lakeview Lots | Pat Miazga",
+  "url": "naramata-bench-estates-naramata.html",
+  "category": "Community Spotlight",
+  "desc": "Naramata Bench \u2014 lakeview estates, vineyards, lots and homes above Okanagan Lake. What is listed and what buyers should verify."
+ },
+ {
+  "title": "Similkameen Valley Estates, Orchards & Vineyards (Keremeos & Cawston) | Pat Miazga",
+  "url": "similkameen-valley-estates-keremeos-cawston.html",
+  "category": "Community Spotlight",
+  "desc": "Keremeos and Cawston \u2014 orchards, vineyards, riverfront estates, organic farms and acreage in the Similkameen Valley. What is listed and what buyers should verify."
+ },
+ {
   "title": "Summerland BC Real Estate \u2014 Homes, Condos, Lakefront & Orchard Properties",
   "url": "summerland-real-estate.html",
   "category": "Town / Area",
   "desc": "Summerland, BC real estate \u2014 detached homes, condos, townhomes, 55+ communities, lots and acreage on Okanagan Lake."
+ },
+ {
+  "title": "Browse South Okanagan Real Estate by Lifestyle \u2014 Luxury, Waterfront, Acreage, Vineyard & More",
+  "url": "lifestyle.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Browse South Okanagan homes by what matters to you: luxury and ultra-luxury, waterfront, acreage, vineyards, golf, views, building lots, townhomes and condos, with counts and ranges by town."
+ },
+ {
+  "title": "Luxury Homes for Sale in the South Okanagan ($1.5M+)",
+  "url": "luxury-homes-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Luxury homes, estates, waterfront and vineyard properties listed at $1.5 million or more across Osoyoos, Oliver, Penticton, Summerland, Naramata, Okanagan Falls and the Similkameen. Counts and price ranges by town."
+ },
+ {
+  "title": "Ultra-Luxury Estates in the South Okanagan ($3M+)",
+  "url": "ultra-luxury-estates-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Ultra-luxury estates, lakefront, vineyard and legacy properties listed at $3 million or more across the South Okanagan. Counts and price ranges by town."
+ },
+ {
+  "title": "Waterfront & Lakefront Homes in the South Okanagan",
+  "url": "waterfront-homes-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Waterfront and lakefront homes, lots, estates and resort condos on Osoyoos, Skaha, Okanagan and Tuc-el-Nuit lakes and the Similkameen River. Counts and price ranges by town."
+ },
+ {
+  "title": "Acreage & Country Estates in the South Okanagan",
+  "url": "acreage-estates-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Acreage, country estates, hobby farms and horse properties across the South Okanagan with counts and price ranges by town."
+ },
+ {
+  "title": "Vineyards, Orchards & Winery Properties in the South Okanagan",
+  "url": "vineyard-winery-properties-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Vineyards, orchards, wineries and wine-country estates across the South Okanagan, with counts and price ranges by town."
+ },
+ {
+  "title": "Golf-Course Homes & Communities in the South Okanagan",
+  "url": "golf-community-homes-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Homes, townhomes and condos on or near golf courses in Osoyoos, Oliver, Penticton and Okanagan Falls, with counts and price ranges."
+ },
+ {
+  "title": "Lake & Mountain View Homes in the South Okanagan",
+  "url": "view-homes-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Homes and lots with lake, mountain, vineyard and valley views across the South Okanagan, with counts and price ranges by town."
+ },
+ {
+  "title": "Building Lots & Land in the South Okanagan",
+  "url": "building-lots-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Residential building lots and acreage for sale across the South Okanagan with counts and price ranges by town."
+ },
+ {
+  "title": "Townhomes & Half Duplexes in the South Okanagan",
+  "url": "townhomes-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Townhomes and half duplexes for sale across the South Okanagan with counts and price ranges by town."
+ },
+ {
+  "title": "Condos for Sale in the South Okanagan",
+  "url": "condos-south-okanagan.html",
+  "category": "Browse by Lifestyle",
+  "desc": "Condos and apartments for sale across the South Okanagan, including resort and lakefront condos, with counts and price ranges by town."
  }
 ]
