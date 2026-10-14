@@ -110,7 +110,7 @@
 .sold-price {
   font-size: 13px;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--white);
 }
 .sold-story {
   font-size: 12px;
