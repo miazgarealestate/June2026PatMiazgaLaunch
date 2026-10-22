@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anarchist Mountain Zoning: What to Check Before You Buy | Pat Miazga</title>
+  <meta name="description" content="A plain-language reference on Anarchist Mountain zoning questions, including the RDOS LH1s zone review, with links to the RDOS sources." />
+  <link rel="canonical" href="https://patmiazga.com/anarchist-mountain-zoning.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --ink:#1a1a18;--stone:#3d3d38;--warm-mid:#7a7468;--sand:#c8b89a;
+      --cream:#f7f4ef;--white:#ffffff;--accent:#8b6f47;--accent-dk:#6b5235;
+      --border:#e2ddd6;--peer-bg:#f0ede8;
+      --fd:'Cormorant Garamond',Georgia,serif;
+      --fb:'Inter',system-ui,sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);background:var(--white);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{color:var(--accent-dk)}
+    img{max-width:100%;display:block}
+    .container{max-width:1100px;margin:0 auto;padding:0 24px}
+    .narrow{max-width:720px;margin:0 auto;padding:0 24px}
+    .nav{position:sticky;top:0;z-index:100;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--white);letter-spacing:.08em}
+    .nav-links{display:flex;gap:24px;align-items:center}
+    .nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.75);letter-spacing:.04em}
+    .nav-links a:hover{color:var(--white)}
+    .nav-cta{background:var(--accent);color:var(--white)!important;padding:8px 16px;border-radius:4px;font-weight:600!important}
+    .eyebrow{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:12px}
+    /* HERO */
+    .hero{background:var(--ink);padding:88px 24px 80px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(139,111,71,.18) 0%,transparent 70%)}
+    .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;position:relative}
+    .hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sand);display:block;margin-bottom:18px}
+    .hero h1{font-family:var(--fd);font-size:clamp(2.6rem,5vw,4.2rem);font-weight:600;line-height:1.08;color:var(--white);margin-bottom:20px}
+    .hero h1 em{font-style:italic;color:var(--sand)}
+    .hero-hook{font-size:18px;font-weight:500;color:var(--white);border-left:3px solid var(--sand);padding-left:16px;margin-bottom:20px;line-height:1.55}
+    .hero-sub{font-size:16px;color:rgba(255,255,255,.68);line-height:1.75;margin-bottom:32px}
+    .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:12px 26px;border-radius:5px;font-size:14px;font-weight:600;letter-spacing:.03em;transition:all .2s}
+    .btn-primary{background:var(--accent);color:var(--white)}
+    .btn-primary:hover{background:var(--accent-dk);color:var(--white)}
+    .btn-ghost{border:1px solid rgba(255,255,255,.4);color:var(--white)}
+    .btn-ghost:hover{border-color:var(--white)}
+    /* VISUAL CARD in hero */
+    .hero-visual{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px;color:var(--white)}
+    .hero-visual .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+    .hero-stat{text-align:center}
+    .hero-stat-num{font-family:var(--fd);font-size:2.2rem;font-weight:600;color:var(--sand);display:block}
+    .hero-stat-label{font-size:12px;color:rgba(255,255,255,.6);line-height:1.4}
+    .hero-visual-note{font-size:13px;color:rgba(255,255,255,.55);text-align:center;border-top:1px solid rgba(255,255,255,.1);padding-top:16px;font-style:italic}
+    /* SECTIONS */
+    .section{padding:72px 24px}
+    .section--cream{background:var(--cream)}
+    .section--peer{background:var(--peer-bg)}
+    .section--dark{background:var(--ink);color:var(--white)}
+    .section h2{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:600;line-height:1.15;margin-bottom:20px}
+    .section h3{font-family:var(--fd);font-size:1.35rem;font-weight:600;margin-bottom:10px}
+    .section p{color:var(--stone);line-height:1.78;margin-bottom:16px}
+    .section--dark p{color:rgba(255,255,255,.72)}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    /* CARDS */
+    .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:28px 24px}
+    .card--accent{border-left:4px solid var(--accent)}
+    .card h3{font-family:var(--fd);font-size:1.2rem;margin-bottom:10px;color:var(--ink)}
+    .card p{font-size:15px;color:var(--warm-mid);margin-bottom:0;line-height:1.65}
+    /* FACT BAR */
+    .fact-bar{display:flex;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:40px 0}
+    .fact{flex:1;padding:24px 16px;text-align:center;border-right:1px solid var(--border)}
+    .fact:last-child{border-right:none}
+    .fact-num{font-family:var(--fd);font-size:2rem;font-weight:600;color:var(--accent);display:block}
+    .fact-label{font-size:12px;color:var(--warm-mid);line-height:1.4}
+    /* COMMUNITY HIGHLIGHT */
+    .community-org{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px;display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start}
+    .org-icon{width:64px;height:64px;background:var(--peer-bg);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+    .org-body h3{font-family:var(--fd);font-size:1.3rem;margin-bottom:8px;color:var(--ink)}
+    .org-body p{font-size:15px;color:var(--stone);line-height:1.7;margin-bottom:10px}
+    .org-link{font-size:13px;font-weight:600;color:var(--accent)}
+    /* STR CALLOUT */
+    .str-callout{background:linear-gradient(135deg,var(--ink) 0%,#2a2820 100%);border-radius:14px;padding:36px 32px;color:var(--white);border-left:4px solid var(--sand);margin:32px 0}
+    .str-callout h3{font-family:var(--fd);font-size:1.4rem;color:var(--sand);margin-bottom:12px}
+    .str-callout p{color:rgba(255,255,255,.75);font-size:15px;line-height:1.7;margin-bottom:0}
+    /* GUIDE LINKS */
+    .guide-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .guide-link{background:var(--peer-bg);border:1px solid var(--border);border-radius:10px;padding:20px;color:var(--ink);display:block;transition:all .2s}
+    .guide-link:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+    .guide-link .icon{font-size:20px;margin-bottom:8px}
+    .guide-link .gtitle{font-family:var(--fd);font-size:1.05rem;font-weight:600;margin-bottom:4px}
+    .guide-link .gcta{font-size:12px;font-weight:600;color:var(--accent);margin-top:8px;display:block}
+    /* PAT NOTE */
+    .pat-note{background:var(--peer-bg);border:1px solid var(--border);border-radius:14px;padding:32px;display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:start;margin:40px 0}
+    .pat-avatar{width:80px;height:80px;border-radius:50%;background:var(--border);overflow:hidden;flex-shrink:0}
+    .pat-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+    .pat-note-body h3{font-family:var(--fd);font-size:1.2rem;margin-bottom:8px}
+    .pat-note-body p{font-size:15px;color:var(--stone);line-height:1.72;margin-bottom:0;font-style:italic}
+    /* CTA BOX */
+    .cta-box{background:var(--ink);color:var(--white);border-radius:14px;padding:52px 40px;text-align:center}
+    .cta-box h2{font-family:var(--fd);font-size:2.2rem;color:var(--white);margin-bottom:14px}
+    .cta-box p{color:rgba(255,255,255,.7);max-width:480px;margin:0 auto 28px}
+    /* BREADCRUMB */
+    .breadcrumb{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:20px}
+    .breadcrumb a{color:var(--sand)}
+    /* FOOTER */
+    .footer{background:var(--ink);color:rgba(255,255,255,.55);padding:48px 24px;text-align:center;font-size:14px;line-height:1.8}
+    .footer a{color:var(--sand)}
+    .footer strong{color:var(--white)}
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr}
+      .hero-visual{display:none}
+    }
+    @media(max-width:680px){
+      .grid-2,.grid-3{grid-template-columns:1fr}
+      .guide-row{grid-template-columns:1fr 1fr}
+      .community-org{grid-template-columns:1fr}
+      .fact-bar{flex-wrap:wrap}
+      .fact{flex:1 1 45%;border-right:none;border-bottom:1px solid var(--border)}
+      .pat-note{grid-template-columns:1fr}
+      .cta-box{padding:36px 24px}
+      .nav-links{display:none}
+    }
+    @media(max-width:420px){.guide-row{grid-template-columns:1fr}}
+      /* Mobile menu */
+    .nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.35);border-radius:4px;color:var(--white);font-size:20px;line-height:1;padding:6px 10px;cursor:pointer}
+    .nav-toggle:focus-visible{outline:2px solid var(--sand);outline-offset:2px}
+    @media(max-width:680px){
+      .nav-toggle{display:block}
+      .nav-inner .pm-search-trigger{margin-left:auto;margin-right:8px}
+      .nav-links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.12)}
+      .nav-links.open{display:flex}
+      .nav-links a{padding:14px 24px;font-size:15px;border-top:1px solid rgba(255,255,255,.08)}
+      .nav-links a.nav-cta{margin:12px 24px;padding:12px 16px;text-align:center;border-top:none;border-radius:4px}
+    }
+    .photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:20px;align-items:start}
+    .photo-grid figure{margin:0;border-radius:10px;overflow:hidden;background:var(--peer-bg);border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .photo-grid img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+    .photo-grid figcaption{font-size:13px;color:var(--warm-mid);padding:10px 14px;background:var(--white)}
+    @media(max-width:420px){.photo-grid{grid-template-columns:1fr}}
+  </style>
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-53T370HE4C"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-53T370HE4C',{allow_google_signals:false,allow_ad_personalization_signals:false});</script>
+<script defer src="analytics.js"></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" style="display:inline-flex;align-items:center;gap:10px"><img src="images/pat-miazga-logo-badge-96.png" alt="" width="40" height="40" style="display:block;flex:none">PAT MIAZGA</a><button class="pm-search-trigger" aria-label="Search site" title="Search (Ctrl+K)">🔍</button>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="communities.html">Communities</a>
+        <a href="index.html#guides">Free Guides</a>
+        <a href="index.html#contact" class="nav-cta">Talk to Pat</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:48px">
+    <div class="narrow">
+      <div class="breadcrumb" style="font-size:13px;margin-bottom:18px"><a href="index.html">Home</a> → <a href="communities.html">Communities</a> → <a href="anarchist-mountain.html">Anarchist Mountain</a> → Zoning reference</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;margin:0 0 14px">Anarchist Mountain zoning: what to check before you buy</h1>
+      <p>Zoning is set parcel by parcel, and on Anarchist Mountain it is administered by the Regional District of Okanagan-Similkameen (RDOS), Electoral Area A. This page is a reference, not advice. It collects what RDOS has published about one recent zoning review and the questions worth asking about any property.</p>
+
+      <h2>The LH1s zone review</h2>
+      <p>RDOS ran a review of the site-specific Large Holdings One (LH1s) zone, which applies to about 25 properties at Raven Hill Road and Nine Mile Place. The proposal was to replace LH1s with the standard Large Holdings One (LH1) zone. The review started after a January 2026 rezoning application asked to remove the accessory dwelling restriction on one Nine Mile Place property. On February 5, 2026, the RDOS Board chose to consider the question for all affected parcels instead of case by case.</p>
+      <p>The LH1s zone traces back to a 2003 amendment (Bylaw No. 2221) and is now Section 14.1.8(a)(i) of Okanagan Valley Zoning Bylaw No. 2800, 2022.</p>
+
+      <h3>What RDOS said would change</h3>
+      <p>According to RDOS's March 17, 2026 public information meeting presentation:</p>
+      <ul>
+        <li><strong>Dwellings:</strong> LH1s allows one principal dwelling plus one secondary suite. The proposed LH1 allows one principal dwelling plus either a secondary suite or an accessory dwelling on parcels under 8.0 hectares.</li>
+        <li><strong>Livestock:</strong> LH1s caps livestock at 5. The proposed LH1 sets no limit on parcels over 2.0 hectares.</li>
+        <li><strong>Highway 3:</strong> RDOS's report notes the Ministry of Transportation must approve the bylaw before adoption because the parcels are within 800 metres of Highway 3.</li>
+      </ul>
+
+      <h3>Where it stands</h3>
+      <p><strong>Status: partially verified.</strong> The RDOS review page lists a public hearing on May 21, 2026 and final-reading documents dated June 18, 2026. RDOS's Area A applications page lists the Nine Mile Place application as "returned due to completion of Anarchist Mountain LH1s Zone Review." Neither page states in plain text that Amendment Bylaw No. 2800.63 was adopted. Before relying on the new rules for a specific parcel, confirm with RDOS Planning which zone and which regulations apply to it today.</p>
+
+      <h2>Three questions for any Anarchist Mountain property</h2>
+      <ol>
+        <li><strong>What zone applies to this exact parcel today?</strong> Use the legal description, and confirm the zone and any amendments with RDOS. A neighbour's zoning is not a substitute.</li>
+        <li><strong>Does the zone allow what you plan?</strong> A separate dwelling, a suite, a rental or livestock each have their own rules. Ask which approvals and conditions apply before counting any of it toward value.</li>
+        <li><strong>What documents back the listing's claims?</strong> Separate an existing approval from a proposal or an idea.</li>
+      </ol>
+
+      <h2>RDOS contact and sources</h2>
+      <p>RDOS Planning: 250-492-0237, <a href="mailto:info@rdos.bc.ca">info@rdos.bc.ca</a>.</p>
+      <ul>
+        <li><a href="https://www.rdos.bc.ca/development-services/planning/strategic-projects/anarchist-mountain-site-specific-large-holdings-one-lh1s-zone-review/" rel="noopener">RDOS: Anarchist Mountain LH1s Zone Review</a></li>
+        <li><a href="https://www.rdos.bc.ca/assets/PLANNING/AreaA/2026/001-ZONE/PIMPresentation.pdf" rel="noopener">RDOS public information meeting presentation (March 17, 2026)</a></li>
+        <li><a href="https://www.rdos.bc.ca/assets/PLANNING/AreaA/2026/001-ZONE/Report20260416.pdf" rel="noopener">RDOS administrative report (April 16, 2026)</a></li>
+        <li><a href="https://www.rdos.bc.ca/development-services/planning/current-applications-decisions/electoral-area-a/" rel="noopener">RDOS: Electoral Area A applications and decisions</a></li>
+      </ul>
+      <p style="font-size:13px;color:var(--warm,#7a7468)">Information checked October 22, 2026. Zoning bylaws change; this page is general information and not a substitute for RDOS confirmation or professional advice.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Pat Miazga, REALTOR®</strong> — RE/MAX All Points Realty | BCFSA Licence #138735<br>
+      South Okanagan Real Estate & Relocation Specialist<br>
+      📞 <a href="tel:6045625982">604-562-5982</a> &nbsp;|&nbsp; ✉️ <a href="mailto:miazgarealestate@gmail.com">miazgarealestate@gmail.com</a> &nbsp;|&nbsp; <a href="https://patmiazga.com">patmiazga.com</a></p>
+      <p style="margin-top:16px;font-size:12px">General information only. Confirm current zoning and approvals for any specific property with RDOS and qualified advisers.</p>
+    </div>
+  </footer>
+
+  <script src="search.js" defer></script>
+<script>
+(function(){
+  var t=document.querySelector('.nav-toggle'),l=document.getElementById('nav-links');
+  if(!t||!l){return;}
+  function set(o){l.classList.toggle('open',o);t.setAttribute('aria-expanded',o?'true':'false');t.setAttribute('aria-label',o?'Close menu':'Open menu');}
+  t.addEventListener('click',function(){set(!l.classList.contains('open'));});
+  l.addEventListener('click',function(e){if(e.target.tagName==='A'){set(false);}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('open')){set(false);t.focus();}});
+})();
+</script>
+</body>
+</html>
