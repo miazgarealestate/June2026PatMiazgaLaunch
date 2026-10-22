@@ -71,6 +71,11 @@
       .nav-links a{padding:14px 24px;font-size:15px;border-top:1px solid rgba(255,255,255,.08)}
       .nav-links a.nav-cta{margin:12px 24px;padding:12px 16px;text-align:center;border-top:none;border-radius:4px}
     }
+    .photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:20px;align-items:start}
+    .photo-grid figure{margin:0;border-radius:10px;overflow:hidden;background:var(--peer-bg);border:1px solid var(--border);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .photo-grid img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+    .photo-grid figcaption{font-size:13px;color:var(--warm-mid);padding:10px 14px;background:var(--white)}
+    @media(max-width:420px){.photo-grid{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
   {
@@ -98,7 +103,8 @@
     "containedInPlace": {"@type": "Place", "name": "Anarchist Mountain, British Columbia, Canada"}
   }
   </script>
-  <meta property="og:image" content="https://patmiazga.com/images/anarchist-mountain-switchback.jpg" />
+  <meta property="og:image" content="https://patmiazga.com/images/sidley-mountain-og.jpg" />
+  <meta name="twitter:image" content="https://patmiazga.com/images/sidley-mountain-og.jpg" />
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192.png">
@@ -125,6 +131,53 @@
         <div class="hero-stat"><span class="hero-stat-num">1885</span><span class="hero-stat-label">Richard Sidley<br>settled the area</span></div><div class="hero-stat"><span class="hero-stat-num">1922</span><span class="hero-stat-label">"Anarchist Mountain"<br>officially adopted</span></div><div class="hero-stat"><span class="hero-stat-num">RDOS<br>Area A/C</span><span class="hero-stat-label">Same electoral<br>area as Anarchist Mtn</span></div><div class="hero-stat"><span class="hero-stat-num">Near US<br>Border</span><span class="hero-stat-label">Historic customs<br>&amp; postal locality</span></div>
       </div>
       <p class="hero-visual-note">Because Sidley is part of the historic naming of the whole Anarchist Mountain plateau, local usage of "Sidley Mountain" can vary — Pat can clarify exactly which area a specific listing refers to.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">On-Site Photos</span>
+    <h2>Sidley Mountain, in person</h2>
+    <p style="max-width:720px">Open ranch and pasture country on the eastern Anarchist Mountain plateau, photographed in October.</p>
+    <div class="photo-grid">
+        <figure>
+          <img src="images/sidley-mountain-ranch-pasture-cattle-rock-pile-osoyoos.jpg" width="1000" height="753" loading="lazy" decoding="async" alt="Ranch pasture with cattle, a stone pile and forested hills, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Pasture with cattle and forested hills</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sidley-mountain-road-utility-pole-fall-larch-osoyoos.jpg" width="1000" height="754" loading="lazy" decoding="async" alt="Paved road beside a utility pole with larch in fall colour and a bare hilltop, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Road and rolling hills in fall</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sidley-mountain-gravel-road-fence-grassland-osoyoos.jpg" width="1000" height="754" loading="lazy" decoding="async" alt="Gravel road and wire fence along open golden grassland with forested ridges, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Gravel road along open grassland</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sidley-mountain-open-grassland-fence-blue-sky-osoyoos.jpg" width="1000" height="754" loading="lazy" decoding="async" alt="Open grassland behind a wire fence under a blue sky with scattered clouds, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Open grassland and big sky</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sidley-mountain-rolling-hills-fall-larch-osoyoos.jpg" width="1000" height="753" loading="lazy" decoding="async" alt="Rolling hills with fall-coloured larch and pasture behind a fence, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Rolling hills with fall larch</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sidley-mountain-fence-line-valley-view-osoyoos.jpg" width="1000" height="753" loading="lazy" decoding="async" alt="Fence line across golden grass with forested hills and distant mountains, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Fence line and distant mountains</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sidley-mountain-fence-gate-hillside-pasture-osoyoos.jpg" width="1000" height="753" loading="lazy" decoding="async" alt="Wooden fence gate on a grassy hillside pasture with forested hills, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Hillside pasture with a fence gate</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sidley-mountain-fence-posts-plateau-hills-osoyoos.jpg" width="1000" height="753" loading="lazy" decoding="async" alt="Fence posts across open plateau grassland with forested hills behind, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Open plateau grassland</figcaption>
+        </figure>
+        <figure>
+          <img src="images/sidley-mountain-fence-gravel-shoulder-ridge-osoyoos.jpg" width="1000" height="753" loading="lazy" decoding="async" alt="Grassland and fence beside a gravel road shoulder with a forested ridge, Sidley Mountain area near Osoyoos BC">
+          <figcaption>Plateau grassland from the road</figcaption>
+        </figure>
+      <!-- ADD MORE PHOTOS HERE: copy a <figure> block above -->
     </div>
   </div>
 </section>
