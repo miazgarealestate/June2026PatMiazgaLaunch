@@ -9,6 +9,7 @@
 
   <!-- Community spotlights -->
   <url><loc>https://patmiazga.com/anarchist-mountain.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/anarchist-mountain-zoning.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://patmiazga.com/osoyoos-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://patmiazga.com/oliver-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://patmiazga.com/the-cottages-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -47,7 +48,6 @@
   <url><loc>https://patmiazga.com/owner-builder-guide.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://patmiazga.com/commercial-opportunity-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/contractors-guide.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://patmiazga.com/dripa-property-rights-guide.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 
   <!-- Seller guides -->
   <url><loc>https://patmiazga.com/sellers-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -101,16 +101,6 @@
   <url><loc>https://patmiazga.com/vintners-on-the-creek-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/watermark-beach-resort-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/white-sands-osoyoos.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/casa-del-lago-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/the-palms-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/desert-surfside-resort-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/villa-del-paraiso-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/sierra-heights-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/cedar-crest-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/fairview-estates-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/pender-place-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/sandberg-place-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/casa-blanca-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- New guide: BC strata depreciation report rules (added Aug 2026) -->
   <url><loc>https://patmiazga.com/strata-depreciation-report-guide.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -120,6 +110,7 @@
   <url><loc>https://patmiazga.com/naramata-real-estate.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Active listings -->
+  <url><loc>https://patmiazga.com/surrey-listing.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Comparison and relocation question pages (added Aug 2026) -->
   <url><loc>https://patmiazga.com/osoyoos-vs-kelowna.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -130,169 +121,61 @@
   <url><loc>https://patmiazga.com/wildfire-risk-south-okanagan.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://patmiazga.com/internet-cell-water-south-okanagan.html</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <url><loc>https://patmiazga.com/deer-park-estates-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/tradewinds-estates-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/macpherson-meadows-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/casa-rio-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/gallagher-lake-village-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/country-pines-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/arbor-crest-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/maple-place-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/elm-tree-apartments-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/sunningdale-estates-oliver.html</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/desert-canyon-golf-villas-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/park-avenue-estates-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/woodside-villa-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/parklane-villa-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/gobeil-village-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/green-acres-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/redwing-place-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/st-martin-place-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/chardonnay-avenue-half-duplexes-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/acacia-court-keremeos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/ridgeview-estates-keremeos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/olalla-mobile-home-park-keremeos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/riverside-estates-keremeos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/k-mountain-park-keremeos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/the-bench-keremeos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/copper-ridge-keremeos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/ninth-street-townhomes-keremeos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/fort-greenwood-greenwood.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/creekside-mobile-home-park-greenwood.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/grandview-bench-midway.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/triple-acres-mobile-home-park-rock-creek.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/outlook-naramata-benchlands-naramata.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/kettle-ridge-naramata.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/stonebrook-benchlands-naramata.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/vista-naramata-benchlands-naramata.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/grace-estates-naramata.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/peach-cliff-estates-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/skaha-lakeside-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/railway-lane-850-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/lemonade-lane-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/cedar-court-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/willow-creek-estates-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/skaha-beachfront-condos-640-main-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/greenwood-real-estate.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/midway-real-estate.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/penticton-real-estate.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/cascade-gardens-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/sokana-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/creekside-lane-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/skaha-lake-towers-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/wade-residences-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/lakeshore-towers-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/canyon-court-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/burnaby-gardens-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/verana-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/athens-creek-towers-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/mount-baldy-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/church-avenue-redevelopment-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/tucelnuit-wine-streets-lots-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/the-ellis-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/skaha-village-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/skaha-breeze-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/argyle-by-basran-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/peach-city-manor-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/westbrook-court-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/fleetwood-court-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/windsor-avenue-townhomes-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/evergreen-drive-half-duplexes-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/apex-mountain-resort-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/skaha-place-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/dynes-avenue-922-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/rigsby-court-329-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/south-main-townhomes-3004-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/the-artisan-lee-avenue-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/433-churchill-avenue-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/the-ridge-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/riva-ridge-manufactured-home-park-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/sun-leisure-mobile-home-park-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/green-avenue-143-townhomes-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/fairview-road-803-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/the-stratford-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/wade-avenue-240-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/green-avenue-272-55plus-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/tiffany-gardens-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/the-vistas-skaha-hills-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/lakeview-terrace-marina-way-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/creekside-forestbrook-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/cherry-lane-towers-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/paris-street-mobile-home-park-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/atkinson-street-1750-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/wilson-street-3363-townhomes-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/sendero-gate-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/finnerty-road-3948-skaha-benches-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/halifax-street-1445-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/hastings-avenue-246-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/dauphin-park-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/the-bow-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/74th-avenue-55plus-park-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/main-street-9106-mobile-home-park-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/cedar-street-1302-presale-homes-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/summerland-waterfront-resort-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/oasis-luxury-residences-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/tuscan-terrace-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/linden-estates-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/summokan-park-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/elliott-street-10615-townhomes-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/grant-avenue-11815-half-duplexes-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/victoria-road-14203-half-duplexes-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/victoria-place-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/north-beach-estates-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/victoria-gardens-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/washington-gardens-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/maple-grove-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/cherry-grove-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/la-caseta-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/quinpool-green-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/quinpool-patio-homes-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/silver-birch-place-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/fairway-five-sumac-ridge-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/prairie-valley-road-8710-townhomes-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/walters-road-11619-55plus-park-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/snow-avenue-17017-55plus-park-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/summerland-real-estate.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/alder-crescent-kaleden.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/st-andrews-by-the-lake-kaleden.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/norvision-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/olympic-view-quail-ridge-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/osoyoos-lake-waterfront-estates-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/penticton-uplands-vancouver-place-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/grandview-terraces-agave-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/marina-heights-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/wiltse-valleyview-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/lakeside-road-skaha-lakefront-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/penticton-bench-vineyard-estates-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/west-bench-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/8909-92nd-avenue-osoyoos.html</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/8911-92nd-avenue-osoyoos.html</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/acreage-estates-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/anarchist-mountain-estates-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/building-lots-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/carmi-penticton-acreage-retreats-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/condos-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://patmiazga.com/eastside-road-heritage-hills-okanagan-falls.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/okanagan-falls-kaleden-vineyards-acreage.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/hunters-hill-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/trout-creek-lakehouse-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/summerland-prairie-valley-acreage-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/oliver-wine-country-estates-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/naramata-bench-estates-naramata.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/similkameen-valley-estates-keremeos-cawston.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/golf-community-homes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/lakeside-road-skaha-lakefront-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/lifestyle.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://patmiazga.com/luxury-homes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/ultra-luxury-estates-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/waterfront-homes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/acreage-estates-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/vineyard-winery-properties-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/golf-community-homes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/view-homes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/building-lots-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/townhomes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/condos-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://patmiazga.com/rock-creek-bridesville-ranches-rock-creek.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/carmi-penticton-acreage-retreats-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/summerland-lakefront-north-beach-crescent-beach-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/anarchist-mountain-estates-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/naramata-bench-estates-naramata.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/norvision-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/okanagan-falls-kaleden-vineyards-acreage.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/oliver-wine-country-estates-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/olympic-view-quail-ridge-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/osoyoos-lake-waterfront-estates-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/osoyoos-vineyard-valley-estates-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/princeton-ranches-country-estates-princeton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/penticton-bench-vineyard-estates-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/penticton-uplands-vancouver-place-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/princeton-lakes-rivers-waterfront-princeton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/princeton-ranches-country-estates-princeton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/rock-creek-bridesville-ranches-rock-creek.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/similkameen-valley-estates-keremeos-cawston.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/summerland-lakefront-north-beach-crescent-beach-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/summerland-prairie-valley-acreage-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/townhomes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/trout-creek-lakehouse-summerland.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/ultra-luxury-estates-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/view-homes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/vineyard-winery-properties-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/waterfront-homes-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/west-bench-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/wiltse-valleyview-penticton.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/estates-and-estate-lots-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://patmiazga.com/farms-ranches-land-holdings-south-okanagan.html</loc><lastmod>2026-10-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/8911-92nd-avenue-osoyoos.html</loc><lastmod>2026-10-19</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://patmiazga.com/8909-92nd-avenue-osoyoos.html</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/penticton-real-estate.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/summerland-real-estate.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/74th-avenue-55plus-park-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/casa-del-lago-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/cedar-crest-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/desert-surfside-resort-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/fairview-estates-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/main-street-9106-mobile-home-park-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/pender-place-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/sandberg-place-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/sierra-heights-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/the-palms-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/villa-del-paraiso-osoyoos.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/greenwood-real-estate.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/midway-real-estate.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://patmiazga.com/deer-park-estates-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/tradewinds-estates-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/mount-baldy-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://patmiazga.com/tucelnuit-wine-streets-lots-oliver.html</loc><lastmod>2026-10-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

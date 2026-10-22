@@ -74,35 +74,6 @@
     .community-card-visual--tile{background:linear-gradient(135deg,#1a1a18 0%,#3d3d38 100%);position:relative}
     .community-card-visual--tile::before{content:"";position:absolute;left:50%;top:50%;width:64px;height:1px;background:var(--sand);transform:translate(-50%,-22px)}
     .community-card-visual--tile span{font-family:var(--fd);font-style:italic;font-size:1.35rem;line-height:1.2;font-weight:500;color:var(--sand);letter-spacing:.02em;text-align:center;padding:0 16px;margin-top:6px}
-    .community-card[hidden]{display:none}
-    .dev-filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 24px}
-    .dev-filters-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm-mid);margin-right:4px}
-    .dev-chip{font:500 13px/1 Inter,system-ui,sans-serif;background:transparent;color:var(--stone);border:1px solid var(--sand);border-radius:999px;padding:9px 16px;cursor:pointer;transition:all .15s}
-    .dev-chip:hover{border-color:var(--accent);color:var(--accent-dk)}
-    .dev-chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--white)}
-    .dev-chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-    .dev-chip .dev-n{opacity:.7;margin-left:5px}
-    .dev-showing{font-size:13px;color:var(--warm-mid);margin:-8px 0 20px}
-    .start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-    .start-card{display:block;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px 24px;text-decoration:none;transition:all .2s}
-    .start-card:hover{border-color:var(--accent);box-shadow:0 8px 28px rgba(0,0,0,.08);transform:translateY(-2px)}
-    .start-card strong{display:block;font-family:var(--fd);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:6px}
-    .start-card span{display:block;font-size:14px;line-height:1.55;color:var(--warm-mid)}
-    .start-card em{display:block;font-style:normal;font-size:13px;font-weight:600;color:var(--accent);margin-top:12px}
-    @media(max-width:900px){.start-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:560px){.start-grid{grid-template-columns:1fr}}
-    .dev-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}
-    .dev-tab{font:600 14px/1 Inter,system-ui,sans-serif;background:var(--white);color:var(--stone);border:1px solid var(--border);border-radius:999px;padding:11px 20px;cursor:pointer;transition:all .15s}
-    .dev-tab:hover{border-color:var(--accent);color:var(--accent-dk)}
-    .dev-tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--white)}
-    .dev-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-    .dev-tab .dev-n{font-weight:500;opacity:.65;margin-left:6px}
-    .dev-panel{margin-bottom:40px}
-    .dev-panel-title{font-family:var(--fd);font-size:1.5rem;font-weight:600;color:var(--ink);margin:0 0 20px}
-    .dev-panel-title .dev-count{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--warm-mid);margin-left:8px}
-    .dev-empty{background:var(--white);border:1px dashed var(--sand);border-radius:14px;padding:44px 28px;text-align:center;color:var(--warm-mid);line-height:1.65}
-    .dev-empty p{margin:0 0 6px}
-    .dev-empty strong{color:var(--ink)}
     .community-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
     .community-card-tag{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
     .community-card h3{font-family:var(--fd);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:10px;line-height:1.25}
@@ -149,6 +120,31 @@
       .nav-links a{padding:14px 24px;font-size:15px;border-top:1px solid rgba(255,255,255,.08)}
       .nav-links a.nav-cta{margin:12px 24px;padding:12px 16px;text-align:center;border-top:none;border-radius:4px}
     }
+    .start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .start-card{display:block;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px 24px;text-decoration:none;transition:all .2s}
+    .start-card:hover{border-color:var(--accent);box-shadow:0 8px 28px rgba(0,0,0,.08);transform:translateY(-2px)}
+    .start-card strong{display:block;font-family:var(--fd);font-size:1.25rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+    .start-card span{display:block;font-size:14px;line-height:1.55;color:var(--warm-mid)}
+    .start-card em{display:block;font-style:normal;font-size:13px;font-weight:600;color:var(--accent);margin-top:12px}
+    @media(max-width:900px){.start-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.start-grid{grid-template-columns:1fr}}
+      <div class="start-grid">
+        <a href="moving-from-vancouver-guide.html" class="start-card"><strong>Moving from Vancouver</strong><span>Selling in the Lower Mainland and buying here? What your equity actually buys, and why one agent for both sides of the move matters.</span><em>Read the guide →</em></a>
+        <a href="moving-from-alberta-guide.html" class="start-card"><strong>Moving from Alberta</strong><span>Calgary and Edmonton buyers: climate, real estate, and the tax trap most Alberta buyers miss.</span><em>Read the guide →</em></a>
+        <a href="retirement-guide-osoyoos.html" class="start-card"><strong>Retiring in Osoyoos</strong><span>Healthcare access, single-level living, climate and community. The questions to ask before you commit.</span><em>Read the guide →</em></a>
+        <a href="communities.html?type=lakefront#developments-osoyoos" class="start-card"><strong>I want the lake</strong><span>Lakefront and beach-access developments in Osoyoos, filtered for you.</span><em>See lakefront developments →</em></a>
+        <a href="acreage-buyers-guide.html" class="start-card"><strong>Acreage and privacy</strong><span>ALR zoning, well water and septic, fire insurance, private roads and rural financing rules.</span><em>Read the guide →</em></a>
+        <a href="snowbird-guide.html" class="start-card"><strong>Part-time or snowbird</strong><span>Winterizing, seasonal insurance, managing the place while you are away, and the tax residency line.</span><em>Read the guide →</em></a>
+      <div class="start-grid">
+        <a href="luxury-homes-south-okanagan.html" class="start-card"><strong>Luxury homes $1.5M+</strong><span>Estates, lakefront, vineyard and new custom homes across the South Okanagan.</span><em>Browse luxury →</em></a>
+        <a href="ultra-luxury-estates-south-okanagan.html" class="start-card"><strong>Ultra-luxury $3M+</strong><span>Legacy estates, lakefront, wineries and trophy properties.</span><em>Browse ultra-luxury →</em></a>
+        <a href="waterfront-homes-south-okanagan.html" class="start-card"><strong>Waterfront &amp; lakefront</strong><span>Osoyoos, Skaha, Okanagan and Tuc-el-Nuit lakes and the Similkameen River.</span><em>Browse waterfront →</em></a>
+        <a href="acreage-estates-south-okanagan.html" class="start-card"><strong>Acreage &amp; estates</strong><span>Privacy, horses, hobby farms and country estates.</span><em>Browse acreage →</em></a>
+        <a href="vineyard-winery-properties-south-okanagan.html" class="start-card"><strong>Vineyards &amp; wineries</strong><span>Planted acres, orchards and boutique wineries.</span><em>Browse vineyards →</em></a>
+        <a href="golf-community-homes-south-okanagan.html" class="start-card"><strong>Golf-course homes</strong><span>Fairway homes, golf villas and golf communities.</span><em>Browse golf →</em></a>
+        <a href="view-homes-south-okanagan.html" class="start-card"><strong>Lake &amp; mountain views</strong><span>Hillside homes and lots with views.</span><em>Browse views →</em></a>
+        <a href="building-lots-south-okanagan.html" class="start-card"><strong>Building lots &amp; land</strong><span>Lots and acreage for custom builds.</span><em>Browse lots →</em></a>
+        <a href="lifestyle.html" class="start-card"><strong>All lifestyles by town</strong><span>Counts for every category in every town, plus townhomes and condos.</span><em>Open the lifestyle hub →</em></a>
   </style>
   <script type="application/ld+json">
   {
@@ -162,7 +158,7 @@
     "email": "miazgarealestate@gmail.com",
     "areaServed": ["Osoyoos, BC","Oliver, BC","South Okanagan, BC","Similkameen, BC","Anarchist Mountain, BC"],
     "knowsLanguage": ["English","Polish"],
-    "description": "South Okanagan Real Estate and Relocation Specialist with 22+ years BC experience. Selling in the Lower Mainland? Buying in the South Okanagan? One REALTOR® who understands both markets — licensed BC-wide since 2004.",
+    "description": "South Okanagan Real Estate and Relocation Specialist with 22+ years BC experience. The only REALTOR® who can handle your Lower Mainland sale and South Okanagan purchase — licensed BC-wide since 2004.",
     "award": ["RE/MAX Hall of Fame","MLS Medallion Club"]
   }
   </script>
@@ -194,26 +190,41 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="breadcrumb"><a href="index.html">Home</a> → Communities</div>
+      <div class="breadcrumb"><a href="index.html">Home</a>
+
+        <a href="sunningdale-estates-oliver.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual"><img src="images/thumbs/sunningdale-estates-oliver.jpg" alt="Sunningdale Estates, 6526 Tucelnuit Drive, Oliver — brick entrance walls and nameplates with hills behind" width="720" height="340" loading="lazy" decoding="async"></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">55+ Ranchers — Oliver</span>
+            <h3>Sunningdale Estates</h3>
+            <p>One-level 55+ ranchers on Tucelnuit Drive, described in MLS&reg; listings as a bare land strata.</p>
+            <span class="community-card-cta">Community Spotlight →</span>
+          </div>
+        </a>
+
+        <a href="8909-92nd-avenue-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual"><img src="images/thumbs/8909-92nd-avenue-osoyoos.jpg" alt="8909 92nd Avenue, Osoyoos — three-storey condo building with brick address pillar" width="720" height="340" loading="lazy" decoding="async"></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">Condo Building — Osoyoos</span>
+            <h3>8909 92nd Avenue</h3>
+            <p>Three-storey stucco strata building near downtown and the vineyards, per an MLS&reg; listing.</p>
+            <span class="community-card-cta">Building Information →</span>
+          </div>
+        </a>
+
+        <a href="8911-92nd-avenue-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual"><img src="images/thumbs/8911-92nd-avenue-osoyoos.jpg" alt="8911 92nd Avenue, Osoyoos — two-storey condo building with brick address sign" width="720" height="340" loading="lazy" decoding="async"></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">Condo Building — Osoyoos</span>
+            <h3>8911 92nd Avenue</h3>
+            <p>Two-storey stucco strata building with ground-floor two-bedroom condos near the vineyards, per MLS&reg; listings.</p>
+            <span class="community-card-cta">Building Information →</span>
+          </div>
+        </a>
+ → Communities</div>
       <span class="eyebrow" style="color:var(--sand)">South Okanagan — Community by Community</span>
       <h1>Find your place in the<br><em>South Okanagan</em></h1>
       <p class="hero-sub">In-depth community spotlights — from someone who lives here. Not a marketing brochure. Real information about what each community is actually like to live in, buy in, and invest in.</p>
-    </div>
-  </section>
-
-  <section class="section section--cream" id="start-here">
-    <div class="container">
-      <span class="eyebrow">Start here</span>
-      <h2>Which of these sounds like you?</h2>
-      <p style="color:var(--stone);max-width:640px">Most people arrive with a situation, not a town name. Pick the closest one and I will point you to the part of the site that answers your questions.</p>
-      <div class="start-grid">
-        <a href="moving-from-vancouver-guide.html" class="start-card"><strong>Moving from Vancouver</strong><span>Selling in the Lower Mainland and buying here? What your equity actually buys, and why one agent for both sides of the move matters.</span><em>Read the guide →</em></a>
-        <a href="moving-from-alberta-guide.html" class="start-card"><strong>Moving from Alberta</strong><span>Calgary and Edmonton buyers: climate, real estate, and the tax trap most Alberta buyers miss.</span><em>Read the guide →</em></a>
-        <a href="retirement-guide-osoyoos.html" class="start-card"><strong>Retiring in Osoyoos</strong><span>Healthcare access, single-level living, climate and community. The questions to ask before you commit.</span><em>Read the guide →</em></a>
-        <a href="communities.html?type=lakefront#developments-osoyoos" class="start-card"><strong>I want the lake</strong><span>Lakefront and beach-access developments in Osoyoos, filtered for you.</span><em>See lakefront developments →</em></a>
-        <a href="acreage-buyers-guide.html" class="start-card"><strong>Acreage and privacy</strong><span>ALR zoning, well water and septic, fire insurance, private roads and rural financing rules.</span><em>Read the guide →</em></a>
-        <a href="snowbird-guide.html" class="start-card"><strong>Part-time or snowbird</strong><span>Winterizing, seasonal insurance, managing the place while you are away, and the tax residency line.</span><em>Read the guide →</em></a>
-      </div>
     </div>
   </section>
 
@@ -232,9 +243,6 @@
           <div class="fstat"><span class="fstat-num">1,491m</span><span class="fstat-label">Elevation at summit<br>4,892 ft above sea level</span></div>
           <div class="fstat"><span class="fstat-num">15km</span><span class="fstat-label">East of Osoyoos<br>Easy town access</span></div>
           <div class="fstat"><span class="fstat-num">130+</span><span class="fstat-label">Community BBQ<br>attendance 2024</span></div>
-
-
-
         </div>
       </div>
 
@@ -272,8 +280,8 @@
           </div>
         </a>
 
-        <a href="regal-ridge-osoyoos.html" class="community-card" data-types="estates" style="text-decoration:none">
-          <div class="community-card-visual"><img src="images/thumbs/regal-ridge-osoyoos.jpg" alt="Regal Ridge entrance sign with eagle statue on Peregrine Drive, Anarchist Mountain" width="720" height="340" loading="lazy" decoding="async"></div>
+        <a href="regal-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual"><img src="images/thumbs/regal-ridge-osoyoos.jpg" alt="Regal Ridge — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Rural — Anarchist Mountain</span>
             <h3>Regal Ridge <span style="font-weight:400;font-size:.7em;opacity:.7">(a.k.a. Osoyoos Mountain Estates)</span></h3>
@@ -288,6 +296,36 @@
             <span class="community-card-tag">Rural — Anarchist Mountain (Sidley Area)</span>
             <h3>Sidley Mountain</h3>
             <p>The quieter, more historic eastern reaches of the Anarchist Mountain plateau, near the US border. Ranching character, real history, genuine distance from town.</p>
+            <span class="community-card-cta">Community Spotlight →</span>
+          </div>
+        </a>
+
+        <a href="the-cottages-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual"><img src="images/thumbs/the-cottages-osoyoos.jpg" alt="The Cottages on Osoyoos Lake — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">Gated Resort — Osoyoos Lake</span>
+            <h3>The Cottages on Osoyoos Lake</h3>
+            <p>285 homes. 1,800ft of waterfront. Private beach, marina, 2 pools, community centre. One of the South Okanagan's most sought-after communities.</p>
+            <span class="community-card-cta">Community Spotlight →</span>
+          </div>
+        </a>
+
+        <a href="casitas-del-sol-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual"><img src="images/thumbs/casitas-del-sol-osoyoos.jpg" alt="Casitas Del Sol — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">Gated 55+ — Osoyoos</span>
+            <h3>Casitas Del Sol</h3>
+            <p>Gated 55+ rancher community on the hillside above Osoyoos. Lake views, backs onto Osoyoos Golf, $100–$150/mo fees. The sensible retirement buy that doesn't compromise on quality of life.</p>
+            <span class="community-card-cta">Community Spotlight →</span>
+          </div>
+        </a>
+
+        <a href="desert-mirage-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual"><img src="images/thumbs/desert-mirage-osoyoos.jpg" alt="Desert Mirage — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">Resort Condos — Osoyoos</span>
+            <h3>Desert Mirage</h3>
+            <p>Gated Santa Fe-style condos at 15 Solana Key Court, built in the early 2000s. 2 pools, hot tub, large 2–3 bedroom units, short walk to the lake.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
@@ -352,6 +390,16 @@
           </div>
         </a>
 
+        <a href="rock-creek-real-estate.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Rock Creek &amp; Bridesville</span></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">Rural — Boundary Country</span>
+            <h3>Rock Creek &amp; Bridesville</h3>
+            <p>Kettle River acreage and ranch country at the junction of Highway 3 &amp; 33, about 45-60 minutes east of Osoyoos. Gold rush history, genuine rural land.</p>
+            <span class="community-card-cta">Community Spotlight →</span>
+          </div>
+        </a>
+
         <a href="greenwood-real-estate.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Greenwood</span></div>
           <div class="community-card-body">
@@ -368,36 +416,6 @@
             <span class="community-card-tag">Village — Midway, Boundary Country</span>
             <h3>Midway</h3>
             <p>Midway is a small village in BC's Boundary Country, close to the Kettle River.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="penticton-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Penticton</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">City — Penticton</span>
-            <h3>Penticton</h3>
-            <p>Penticton sits between Okanagan Lake and Skaha Lake and is the largest real estate market in the South Okanagan.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="summerland-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Summerland</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Town — Summerland</span>
-            <h3>Summerland</h3>
-            <p>Summerland is a district municipality on the west shore of Okanagan Lake.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="rock-creek-real-estate.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Rock Creek &amp; Bridesville</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Rural — Boundary Country</span>
-            <h3>Rock Creek &amp; Bridesville</h3>
-            <p>Kettle River acreage and ranch country at the junction of Highway 3 &amp; 33, about 45-60 minutes east of Osoyoos. Gold rush history, genuine rural land.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
@@ -449,98 +467,41 @@
   <section class="section section--peer">
     <div class="container">
       <span class="eyebrow">Development & Resort Spotlights</span>
-      <h2>Developments by town</h2>
+      <h2>53 named developments across Osoyoos & Oliver</h2>
       <p style="color:var(--stone);max-width:680px;margin-bottom:32px">From fractional resort ownership to freehold waterfront streets, RV lots to new construction — the ownership structure behind the name matters as much as the lifestyle. Each page below covers what's actually being sold, what to verify, and recent pricing.</p>
-      <!--
-        TOWN TABS: each town is one <div class="dev-panel" id="developments-TOWN" data-town="Town Name"> below.
-        To add a town (Keremeos, Cawston, ...): copy the Oliver panel, change id + data-town, drop cards into its community-grid.
-        Tabs, counts and #developments-TOWN deep links are built automatically by the script at the bottom of this page.
-      -->
-      <div class="dev-panel" id="developments-osoyoos" data-town="Osoyoos">
-        <h3 class="dev-panel-title">Osoyoos developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
+      <div class="community-grid">
 
-        <a href="8909-92nd-avenue-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual"><img src="images/thumbs/8909-92nd-avenue-osoyoos.jpg" alt="8909 92nd Avenue, Osoyoos — three-storey condo building with brick address pillar" width="720" height="340" loading="lazy" decoding="async"></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Building — Osoyoos</span>
-            <h3>8909 92nd Avenue</h3>
-            <p>Three-storey stucco strata building near downtown and the vineyards, per an MLS&reg; listing.</p>
-            <span class="community-card-cta">Building Information →</span>
-          </div>
-        </a>
-
-        <a href="8911-92nd-avenue-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual"><img src="images/thumbs/8911-92nd-avenue-osoyoos.jpg" alt="8911 92nd Avenue, Osoyoos — two-storey condo building with brick address sign" width="720" height="340" loading="lazy" decoding="async"></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Building — Osoyoos</span>
-            <h3>8911 92nd Avenue</h3>
-            <p>Two-storey stucco strata building with ground-floor two-bedroom condos near the vineyards, per MLS&reg; listings.</p>
-            <span class="community-card-cta">Building Information →</span>
-          </div>
-        </a>
-
-        <a href="the-cottages-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual"><img src="images/thumbs/the-cottages-osoyoos.jpg" alt="The Cottages on Osoyoos Lake — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Gated Resort — Osoyoos Lake</span>
-            <h3>The Cottages on Osoyoos Lake</h3>
-            <p>285 homes on 70.1 acres. Private beach, 168-slip marina, 2 pools, clubhouse. Sold-out development — resale only. One of the South Okanagan's most sought-after communities.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="casitas-del-sol-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual"><img src="images/thumbs/casitas-del-sol-osoyoos.jpg" alt="Casitas Del Sol — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Gated 55+ — Osoyoos</span>
-            <h3>Casitas Del Sol</h3>
-            <p>Gated 55+ rancher community on the hillside above Osoyoos. The sensible retirement buy that doesn't compromise on quality of life.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="desert-mirage-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual"><img src="images/thumbs/desert-mirage-osoyoos.jpg" alt="Desert Mirage — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Resort Condos — Osoyoos</span>
-            <h3>Desert Mirage</h3>
-            <p>Gated Santa Fe-style condos at 15 Solana Key Court.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="spirit-ridge-osoyoos.html" class="community-card" data-types="lakefront fractional" style="text-decoration:none">
+        <a href="spirit-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/spirit-ridge-osoyoos.jpg" alt="Spirit Ridge sign with directions to Nk&#39;Mip Cellars, Solterra Spa, Sonora Dunes Golf Course and The Residences, Osoyoos BC" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Fractional & Whole Resort — Nk'Mip</span>
             <h3>Spirit Ridge at Nk'Mip Resort</h3>
-            <p>Vineyard resort on Osoyoos Indian Band land, Hyatt-managed. On-site winery, golf and private beach.</p>
+            <p>Vineyard resort on Osoyoos Indian Band land, Hyatt-managed. On-site winery, golf and private beach. Recent sales in the $700K–$750K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="walnut-beach-resort-osoyoos.html" class="community-card" data-types="lakefront fractional" style="text-decoration:none">
+        <a href="walnut-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/walnut-beach-resort-osoyoos.jpg" alt="Walnut Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Condo-Hotel — Private Beach</span>
             <h3>Walnut Beach Resort</h3>
-            <p>Osoyoos' only private beach resort. Strata-titled suites with an optional rental pool.</p>
+            <p>Osoyoos' only private beach resort. Strata-titled suites with an optional rental pool. Recent sales in the $100K–$1.7M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="safari-beach-resort-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="safari-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/safari-beach-resort-osoyoos.jpg" alt="Safari Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Strata — Sheltered Bay</span>
             <h3>Safari Beach Resort</h3>
-            <p>400ft of sheltered waterfront, genuine freehold strata with no underlying lease, owner-run management.</p>
+            <p>400ft of sheltered waterfront, genuine freehold strata with no underlying lease, owner-run management. Recent sales in the $200K–$300K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="rendezvous-beach-resort-osoyoos.html" class="community-card" data-types="rv" style="text-decoration:none">
+        <a href="rendezvous-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/rendezvous-beach-resort.jpg" alt="Rendezvous Beach Resort entrance sign" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Leasehold Sites — Reserve Land</span>
@@ -550,112 +511,112 @@
           </div>
         </a>
 
-        <a href="sonora-ridge-osoyoos.html" class="community-card" data-types="homes estates" style="text-decoration:none">
+        <a href="sonora-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sonora Ridge</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated Custom Homes — East Bench</span>
             <h3>Sonora Ridge</h3>
-            <p>Custom-built gated community one block from the beach.</p>
+            <p>Custom-built gated community one block from the beach. Recent sales in the $900K–$1.1M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="desert-rose-estates-osoyoos.html" class="community-card" data-types="55plus homes" style="text-decoration:none">
+        <a href="desert-rose-estates-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/desert-rose-estates-osoyoos.jpg" alt="Desert Rose Estates — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated 55+ Bare Land Strata</span>
             <h3>Desert Rose Estates <span style="font-weight:400;font-size:.7em;opacity:.7">(a.k.a. Sunset Ridge Estates)</span></h3>
-            <p>Own the land under your manufactured home.</p>
+            <p>Own the land under your manufactured home. Low ~$100–$150/mo fees. Recent sales in the $300K–$500K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="cedar-villa-osoyoos.html" class="community-card" data-types="homes" style="text-decoration:none">
+        <a href="cedar-villa-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/cedar-villa-osoyoos.jpg" alt="Cedar Villa — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">No Age Restriction — Bare Land Strata</span>
             <h3>Cedar Villa</h3>
-            
+            <p>Own the land, no age restriction, fees around $50–$100/mo. Recent sales in the $250K–$500K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="waltons-lakefront-resort-osoyoos.html" class="community-card" data-types="lakefront rv" style="text-decoration:none">
+        <a href="waltons-lakefront-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/waltons-lakefront-resort-osoyoos.jpg" alt="Walton's Waterfront RV Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Strata RV Lots — Osoyoos Lake</span>
             <h3>Walton's Waterfront RV Resort</h3>
-            <p>72 individually titled RV lots with a shared clubhouse.</p>
+            <p>70–80 individually titled RV lots with a shared clubhouse. Recent sales in the $100K–$250K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="lakeshore-villas-resort-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="lakeshore-villas-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/lakeshore-villas-resort-osoyoos.jpg" alt="Lakeshore Villas Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Owner-Operated — Private Dock</span>
             <h3>Lakeshore Villas Resort</h3>
-            <p>Individually owned condos, townhouses & villas on Osoyoos Lake with a resident-only dock.</p>
+            <p>Individually owned condos, townhouses & villas on Osoyoos Lake with a resident-only dock. Recent sales in the $450K–$700K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="island-view-rv-resort-osoyoos.html" class="community-card" data-types="rv" style="text-decoration:none">
+        <a href="island-view-rv-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/island-view-rv-resort-osoyoos.jpg" alt="Island View RV Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Bare Land Strata RV Lots</span>
             <h3>Island View RV Resort</h3>
-            <p>RV lots across from a private beach, rental-friendly.</p>
+            <p>RV lots across from a private beach, rental-friendly. Recent sales in the $100K–$250K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="the-oasis-resort-osoyoos.html" class="community-card" data-types="lakefront rv" style="text-decoration:none">
+        <a href="the-oasis-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/the-oasis-resort-osoyoos.jpg" alt="The Oasis Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
-            <span class="community-card-tag">Deeded RV Sites</span>
+            <span class="community-card-tag">Deeded RV Sites — 8 Acres</span>
             <h3>The Oasis Resort</h3>
-            <p>105 deeded, fully serviced RV sites on Osoyoos Lake.</p>
+            <p>100–110 deeded, fully serviced RV sites on Osoyoos Lake. Recent sales in the $400K–$500K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="casa-del-mila-oro-resort-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="casa-del-mila-oro-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/casa-del-mila-oro-resort-osoyoos.jpg" alt="Casa Del Mila Oro Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Owner-Operated Beachfront</span>
             <h3>Casa Del Mila Oro Resort</h3>
-            <p>Santa Fe-styled beachfront resort since 2006, 300ft private beach.</p>
+            <p>Santa Fe-styled beachfront resort since the mid-2000s, 300ft private beach. Recent sales in the $300K–$750K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="las-ventanas-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="las-ventanas-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/las-ventanas-osoyoos.jpg" alt="Las Ventanas Al Paraiso — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
-            <span class="community-card-tag">Exclusive Beachfront</span>
+            <span class="community-card-tag">Exclusive 11-Unit Beachfront</span>
             <h3>Las Ventanas Al Paraiso</h3>
-            <p>Geothermal-heated condo building, private dock &amp; beach.</p>
+            <p>Geothermal-heated condo building, private dock &amp; beach. Recent sales in the $900K–$1M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="brightwater-osoyoos.html" class="community-card" data-types="new" style="text-decoration:none">
+        <a href="brightwater-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/brightwater-osoyoos.jpg" alt="Brightwater — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">New Construction — Lakeshore Dr</span>
             <h3>Brightwater</h3>
-            <p>Osoyoos' newest concrete-construction condos, steps to the lake.</p>
+            <p>Osoyoos' newest concrete-construction condos, steps to the lake. Recent sales in the $300K–$650K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="cactus-flats-osoyoos.html" class="community-card" data-types="rv" style="text-decoration:none">
+        <a href="cactus-flats-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/cactus-flats-osoyoos.jpg" alt="Cactus Flats — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">RV-Garage Townhomes</span>
             <h3>Cactus Flats</h3>
-            <p>Townhomes with an enclosed, heated garage fitting RVs up to 47.5ft.</p>
+            <p>Townhomes with an enclosed, heated garage fitting RVs up to 47.5ft. Recent sales in the $600K–$650K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
@@ -663,59 +624,59 @@
         <a href="paradise-rv-park-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/paradise-rv-park-resort-osoyoos.jpg" alt="Welcome to Paradise entry arch at Paradise Park, Osoyoos BC" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
-            <span class="community-card-tag">Park Model Homes — Solana Bay</span>
+            <span class="community-card-tag">RV Resort Lots — Solana Bay</span>
             <h3>Paradise Park</h3>
-            <p>All-in annual fee covers taxes, sewer, water & maintenance.</p>
+            <p>Owner-run RV resort of 69 individually owned lots. Confirm tenure, dues and rules. Recent sales in the $100K–$250K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="bayview-crescent-osoyoos.html" class="community-card" data-types="lakefront homes" style="text-decoration:none">
+        <a href="bayview-crescent-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/bayview-crescent-osoyoos.jpg" alt="Bayview Crescent street sign beside Osoyoos Lake" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Waterfront Street</span>
             <h3>Bayview Crescent</h3>
-            <p>Freehold homes with private docks on sheltered Solana Bay.</p>
+            <p>Freehold homes with private docks on sheltered Solana Bay. Recent sales in the $650K–$1.55M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="harbour-key-drive-osoyoos.html" class="community-card" data-types="lakefront homes" style="text-decoration:none">
+        <a href="harbour-key-drive-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/harbour-key-drive-osoyoos.jpg" alt="Autumn reflections on the water near Harbour Key Drive, Osoyoos, with homes and hills across the channel" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold Channel-Front Street</span>
             <h3>Harbour Key Drive</h3>
-            <p>Quiet channel-front street, vacant lots to finished estates.</p>
+            <p>Quiet channel-front street, vacant lots to finished estates. Recent sales in the $2M–$2.3M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="mojave-osoyoos.html" class="community-card" data-types="new" style="text-decoration:none">
+        <a href="mojave-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/mojave-osoyoos.jpg" alt="Mojave — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">New Construction — Rooftop Patios</span>
             <h3>Mojave</h3>
-            <p>New townhomes with rooftop patios. Phase 1 resales and a Phase II in two layouts.</p>
+            <p>New townhomes with 2,900+ sq ft total living space including rooftop patio. Recent sales in the $700K–$800K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="selah-osoyoos.html" class="community-card" data-types="lakefront new" style="text-decoration:none">
+        <a href="selah-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/selah-osoyoos.jpg" alt="Selah Osoyoos development sign" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Presale Watch — Waterfront &amp; Marina</span>
             <h3>Selah</h3>
-            <p>Approval status and details subject to verification; pricing not yet released.</p>
+            <p>50–60 homes on the lake with a private 40–50-slip marina. In approvals/site work — pricing not yet released.</p>
             <span class="community-card-cta">Presale Watch →</span>
           </div>
         </a>
 
-        <a href="horizon-osoyoos.html" class="community-card" data-types="new" style="text-decoration:none">
+        <a href="horizon-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/horizon-osoyoos.jpg" alt="Horizon townhomes and on-site sign, Osoyoos BC" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
-            <span class="community-card-tag">New Construction — Boutique</span>
+            <span class="community-card-tag">New Construction — Boutique, 5 Units</span>
             <h3>Horizon</h3>
-            <p>A small lakeview townhome development, central and walking distance to downtown Osoyoos.</p>
+            <p>A small 5-unit lakeview townhome development, central and walking distance to downtown Osoyoos.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
@@ -725,7 +686,7 @@
           <div class="community-card-body">
             <span class="community-card-tag">Townhomes — Legal Suites, Peanut Lake</span>
             <h3>The Villas</h3>
-            <p>Desert-modern townhomes at 8000 Vedette Drive, many with a legal suite.</p>
+            <p>Desert-modern townhomes at 8000 Vedette Drive, many with a legal suite. Recent sales in the $550K–$750K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
@@ -735,87 +696,87 @@
           <div class="community-card-body">
             <span class="community-card-tag">Older Strata Townhouses — Peanut Lake</span>
             <h3>Peanut Lake Townhouses</h3>
-            <p>No official name, so find them by address: 8005–8043 Vedette Drive, overlooking Peanut Lake.</p>
+            <p>No official name, so find them by address: 8005–8043 Vedette Drive, built in the early 1980s, overlooking Peanut Lake.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="adobe-sands-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
+        <a href="adobe-sands-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/adobe-sands-osoyoos.jpg" alt="Adobe Sands — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Strata — Above Peanut Lake</span>
             <h3>Adobe Sands</h3>
-            <p>55+ apartment complex at 8006 Vedette Drive, with ground-floor units and covered parking.</p>
+            <p>55+ apartment complex at 8006 Vedette Drive, built in the early 1990s, with ground-floor units and covered parking. Recent sales in the $250K–$350K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="sole-vita-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual"><img src="images/thumbs/sole-vita-osoyoos.jpg" alt="Solé Vita — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
+        <a href="sole-vita-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sole Vita</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Gated Waterfront Townhomes</span>
             <h3>Sole Vita</h3>
-            
+            <p>80–90 gated waterfront townhomes, built in the mid-2000s: two pools, two hot tubs, clubhouse, marina. Recent sales in the $700K–$1M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="sonora-gardens-osoyoos.html" class="community-card" data-types="homes estates" style="text-decoration:none">
+        <a href="sonora-gardens-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/sonora-gardens-osoyoos.jpg" alt="Sonora Gardens — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Detached Homes — Shared Common Grounds</span>
             <h3>Sonora Gardens</h3>
-            <p>Detached homes on Wildflower Court and Lobelia Drive, not a strata per MLS®.</p>
+            <p>Detached homes on Wildflower Court and Lobelia Drive, not a strata per MLS®. Recent sales in the $700K–$850K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="sunshine-cove-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="sunshine-cove-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/sunshine-cove-osoyoos.jpg" alt="Sunshine Cove — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Lakefront Townhomes — Private Beach</span>
             <h3>Sunshine Cove</h3>
-            
+            <p>Lakefront townhomes at 4231 Oleander Drive with a private beach, moorage and indoor pool, per MLS® listings. Recent sales in the $500K–$600K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="la-mirada-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="la-mirada-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/la-mirada-osoyoos.jpg" alt="La Mirada — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Lakefront Condos — Private Beach</span>
             <h3>La Mirada</h3>
-            <p>Lakefront condos at 5003 Oleander Drive.</p>
+            <p>20–30 lakefront condos at 5003 Oleander Drive, built in the late 2000s, with a private beach and outdoor saltwater pool, per MLS® and BC Assessment. Recent sales in the $500K–$600K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="casa-azzuro-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="casa-azzuro-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/casa-azzuro-osoyoos.jpg" alt="Casa Azzuro — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
-            <span class="community-card-tag">Waterfront Townhomes</span>
+            <span class="community-card-tag">Waterfront Townhomes — 4 Units</span>
             <h3>Casa Azzuro</h3>
-            
+            <p>Four three-storey strata townhomes at 5405 Oleander Drive, built in the mid-2000s, with garages and lake views, per MLS® and BC Assessment. Recent sales in the $600K–$700K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="porta-loma-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="porta-loma-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/porta-loma-osoyoos.jpg" alt="Porta Loma — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
-            <span class="community-card-tag">Waterfront Townhomes</span>
+            <span class="community-card-tag">Waterfront Townhomes — 4 Units</span>
             <h3>Porta Loma</h3>
-            
+            <p>Four strata townhomes at 5221–5227 Oleander Drive, built in the mid-1980s, on Osoyoos Lake with a boat slip and beach access per MLS®. Recent sales in the $1.4M–$1.5M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="benchview-place-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
+        <a href="benchview-place-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/benchview-place-osoyoos.jpg" alt="Benchview Place — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Condos — 89th Street</span>
             <h3>Benchview Place</h3>
-            <p>55+ building at 4801 89th Street, with lake and mountain views.</p>
+            <p>Nine-unit 55+ building at 4801 89th Street, built in the mid-1990s, with lake and mountain views. Recent sales in the $200K–$400K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
@@ -825,7 +786,7 @@
           <div class="community-card-body">
             <span class="community-card-tag">Townhomes &amp; Condos — 89th Street</span>
             <h3>Casa del Sol</h3>
-            <p>Strata complex at 4809 89th Street.</p>
+            <p>Strata complex at 4809 89th Street, built in the late 2000s per MLS®. No age restriction; pets and rentals allowed per listing. Recent sales in the $300K–$400K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
@@ -835,7 +796,7 @@
           <div class="community-card-body">
             <span class="community-card-tag">Central Strata — Condos & Townhomes</span>
             <h3>Casa Madera</h3>
-            <p>Complex steps to downtown, beach and golf.</p>
+            <p>50–60-unit complex steps to downtown, beach and golf. Recent sales in the $250K–$350K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
@@ -845,22 +806,22 @@
           <div class="community-card-body">
             <span class="community-card-tag">Lowrise Condos — Near the Beach</span>
             <h3>Desert Court</h3>
-            <p>One block from Legion Beach, strong resale history.</p>
+            <p>One block from Legion Beach, strong resale history. Recent sales in the $250K–$350K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="dividend-ridge-osoyoos.html" class="community-card" data-types="homes" style="text-decoration:none">
+        <a href="dividend-ridge-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Dividend Ridge</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Freehold — Executive Home Subdivision</span>
             <h3>Dividend Ridge</h3>
-            <p>Golf cart distance to Osoyoos Golf Club, building scheme (no strata).</p>
+            <p>Golf cart distance to Osoyoos Golf Club, building scheme (no strata). Recent sales in the $150K–$1.4M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="vintners-on-the-creek-osoyoos.html" class="community-card" data-types="lakefront rv" style="text-decoration:none">
+        <a href="vintners-on-the-creek-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/vintners-on-the-creek-osoyoos.jpg" alt="Vintners on the Creek entrance sign with Osoyoos Lake behind" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Leasehold RV Sites — OIB Partnership</span>
@@ -870,27 +831,39 @@
           </div>
         </a>
 
-        <a href="watermark-beach-resort-osoyoos.html" class="community-card" data-types="lakefront fractional" style="text-decoration:none">
+        <a href="watermark-beach-resort-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/watermark-beach-resort-osoyoos.jpg" alt="Watermark Beach Resort — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Whole & Fractional Ownership</span>
             <h3>Watermark Beach Resort</h3>
-            <p>Osoyoos' flagship fractional resort. Deeded shares and whole units.</p>
+            <p>Osoyoos' flagship fractional resort. Recent sales in the $25K–$650K range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="white-sands-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+        <a href="white-sands-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual"><img src="images/thumbs/white-sands-osoyoos.jpg" alt="White Sands — community photo" width="720" height="340" loading="lazy" decoding="async"></div>
           <div class="community-card-body">
             <span class="community-card-tag">Established Lakefront Condos</span>
             <h3>White Sands</h3>
-            
+            <p>Built in the mid-1990s, underground parking, one of Osoyoos' fastest-selling addresses. Recent sales in the $450K–$3.25M range.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="casa-del-lago-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
+
+        <a href="74th-avenue-55plus-park-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>9904 74th Avenue 55+ Park</span></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">55+ Manufactured Home Park — Osoyoos</span>
+            <h3>9904 74th Avenue 55+ Park</h3>
+            <p>A 55+ manufactured home community at 9904 74th Avenue across from vineyards.</p>
+            <span class="community-card-cta">Community Spotlight →</span>
+          </div>
+        </a>
+
+
+        <a href="casa-del-lago-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Casa del Lago</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Waterfront Condos &amp; Townhomes — Osoyoos</span>
@@ -900,47 +873,8 @@
           </div>
         </a>
 
-        <a href="the-palms-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Palms</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Resort-Style Condos — Osoyoos</span>
-            <h3>The Palms</h3>
-            <p>A condo building at 6805 Cottonwood Drive, directly across from Cottonwood Beach and Park, with an in-ground pool, exercise and party rooms and rooftop decks.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
 
-        <a href="desert-surfside-resort-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Desert Surfside Resort</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Resort Suites — Osoyoos Lake</span>
-            <h3>Desert Surfside Resort</h3>
-            <p>A lakeside resort-style property at 7310 Main Street offering compact suites with beach access on Osoyoos Lake, marketed with rental and vacation-income potential.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="villa-del-paraiso-osoyoos.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Villa del Paraiso</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Mixed-Use Condo Building — Osoyoos</span>
-            <h3>Villa del Paraiso</h3>
-            <p>A mixed-use building at 5820 89th Street with residential condos above and commercial units at street level, directly across from the beach.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="sierra-heights-osoyoos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sierra Heights</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lowrise Condos — Osoyoos</span>
-            <h3>Sierra Heights</h3>
-            <p>A lowrise condo building at 6840 89th Street with elevator and secured entry, a short walk from Main Street, shops and restaurants.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="cedar-crest-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
+        <a href="cedar-crest-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Cedar Crest</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Level-Entry Homes — Osoyoos</span>
@@ -950,7 +884,19 @@
           </div>
         </a>
 
-        <a href="fairview-estates-osoyoos.html" class="community-card" data-types="homes" style="text-decoration:none">
+
+        <a href="desert-surfside-resort-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Desert Surfside Resort</span></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">Resort Suites — Osoyoos Lake</span>
+            <h3>Desert Surfside Resort</h3>
+            <p>A lakeside resort-style property at 7310 Main Street offering compact suites with beach access on Osoyoos Lake, marketed with rental and vacation-income potential.</p>
+            <span class="community-card-cta">Community Spotlight →</span>
+          </div>
+        </a>
+
+
+        <a href="fairview-estates-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Fairview Estates</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Golf-Course Townhomes — Osoyoos</span>
@@ -959,6 +905,18 @@
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
+
+
+        <a href="main-street-9106-mobile-home-park-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>9106 Main Street Mobile Home Park</span></div>
+          <div class="community-card-body">
+            <span class="community-card-tag">Manufactured Home Park — Osoyoos</span>
+            <h3>9106 Main Street Mobile Home Park</h3>
+            <p>A mobile home park at 9106 Main Street near the lake and beach.</p>
+            <span class="community-card-cta">Community Spotlight →</span>
+          </div>
+        </a>
+
 
         <a href="pender-place-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Pender Place</span></div>
@@ -970,6 +928,7 @@
           </div>
         </a>
 
+
         <a href="sandberg-place-osoyoos.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sandberg Place</span></div>
           <div class="community-card-body">
@@ -980,94 +939,41 @@
           </div>
         </a>
 
-        <a href="casa-blanca-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Casa Blanca</span></div>
+
+        <a href="sierra-heights-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sierra Heights</span></div>
           <div class="community-card-body">
-            <span class="community-card-tag">55+ Rancher Townhomes — Osoyoos</span>
-            <h3>Casa Blanca</h3>
-            <p>A 1983 55+ community of one-level attached rancher townhomes at 8010 Vedette Drive, with carports and a low monthly strata fee.</p>
+            <span class="community-card-tag">Lowrise Condos — Osoyoos</span>
+            <h3>Sierra Heights</h3>
+            <p>A lowrise condo building at 6840 89th Street with elevator and secured entry, a short walk from Main Street, shops and restaurants.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="74th-avenue-55plus-park-osoyoos.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>9904 74th Avenue 55+ Park</span></div>
+
+        <a href="the-palms-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Palms</span></div>
           <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Osoyoos</span>
-            <h3>9904 74th Avenue 55+ Park</h3>
-            <p>A 55+ manufactured home community at 9904 74th Avenue across from vineyards.</p>
+            <span class="community-card-tag">Resort-Style Condos — Osoyoos</span>
+            <h3>The Palms</h3>
+            <p>A condo building at 6805 Cottonwood Drive, directly across from Cottonwood Beach and Park, with an in-ground pool, exercise and party rooms and rooftop decks.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="main-street-9106-mobile-home-park-osoyoos.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>9106 Main Street Mobile Home Park</span></div>
+
+        <a href="villa-del-paraiso-osoyoos.html" class="community-card" style="text-decoration:none">
+          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Villa del Paraiso</span></div>
           <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Osoyoos</span>
-            <h3>9106 Main Street Mobile Home Park</h3>
-            <p>A mobile home park at 9106 Main Street near the lake and beach.</p>
+            <span class="community-card-tag">Mixed-Use Condo Building — Osoyoos</span>
+            <h3>Villa del Paraiso</h3>
+            <p>A mixed-use building at 5820 89th Street with residential condos above and commercial units at street level, directly across from the beach.</p>
             <span class="community-card-cta">Community Spotlight →</span>
           </div>
         </a>
 
-        <a href="norvision-osoyoos.html" class="community-card" data-types="estates acreage luxury view lots" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Norvision</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Acreage Estate Lots — Osoyoos</span>
-            <h3>Norvision</h3>
-            <p>An exclusive group of five bare-land strata acreage lots east of Osoyoos on Highway 3.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
 
-        <a href="olympic-view-quail-ridge-osoyoos.html" class="community-card" data-types="golf homes view" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Olympic View &amp; Quail Ridge</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Golf Neighbourhood — Osoyoos</span>
-            <h3>Olympic View &amp; Quail Ridge</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="osoyoos-lake-waterfront-estates-osoyoos.html" class="community-card" data-types="lakefront luxury estates ultra" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Osoyoos Lake Waterfront Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Waterfront Estates — Osoyoos</span>
-            <h3>Osoyoos Lake Waterfront Estates</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="anarchist-mountain-estates-osoyoos.html" class="community-card" data-types="estates acreage view luxury lots homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Anarchist Mountain Estates &amp; Acreage</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Mountain Acreage &amp; Estates — Osoyoos</span>
-            <h3>Anarchist Mountain Estates &amp; Acreage</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="osoyoos-vineyard-valley-estates-osoyoos.html" class="community-card" data-types="vineyard acreage estates luxury view homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Osoyoos Vineyard &amp; Valley Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Vineyard &amp; Country Estates — Osoyoos</span>
-            <h3>Osoyoos Vineyard &amp; Valley Estates</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-      </div>
-      </div>
-
-      <div class="dev-panel" id="developments-oliver" data-town="Oliver">
-        <h3 class="dev-panel-title">Oliver developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="deer-park-estates-oliver.html" class="community-card" data-types="55plus" style="text-decoration:none">
+        <a href="deer-park-estates-oliver.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Deer Park Estates</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Bare Land Strata — Oliver</span>
@@ -1077,7 +983,8 @@
           </div>
         </a>
 
-        <a href="tradewinds-estates-oliver.html" class="community-card" data-types="55plus" style="text-decoration:none">
+
+        <a href="tradewinds-estates-oliver.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Tradewinds Estates</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">55+ Manufactured Home Park — Oliver</span>
@@ -1087,177 +994,8 @@
           </div>
         </a>
 
-        <a href="macpherson-meadows-oliver.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>MacPherson Meadows</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Townhomes — Oliver</span>
-            <h3>MacPherson Meadows</h3>
-            <p>A townhome complex on Meadows Drive.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
 
-        <a href="casa-rio-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Casa Rio</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Oliver</span>
-            <h3>Casa Rio</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="gallagher-lake-village-oliver.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Gallagher Lake Village</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Oliver</span>
-            <h3>Gallagher Lake Village</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="country-pines-oliver.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Country Pines</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Oliver</span>
-            <h3>Country Pines</h3>
-            <p>A 55+ manufactured home community at 8487 Highway 97, just north of Oliver, with single- and double-wide homes.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="arbor-crest-oliver.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Arbor Crest</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Gated 55+ Ranchers — Oliver</span>
-            <h3>Arbor Crest</h3>
-            <p>A gated 55+ community of ranchers on Meadows Drive.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="maple-place-oliver.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Maple Place</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Townhomes — Oliver</span>
-            <h3>Maple Place</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="elm-tree-apartments-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Elm Tree Apartments</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Oliver</span>
-            <h3>Elm Tree Apartments</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="sunningdale-estates-oliver.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual"><img src="images/thumbs/sunningdale-estates-oliver.jpg" alt="Sunningdale Estates, 6526 Tucelnuit Drive, Oliver — brick entrance walls and nameplates with hills behind" width="720" height="340" loading="lazy" decoding="async"></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Ranchers — Oliver</span>
-            <h3>Sunningdale Estates</h3>
-            <p>One-level 55+ ranchers on Tucelnuit Drive, described in MLS&reg; listings as a bare land strata.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="desert-canyon-golf-villas-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Desert Canyon Golf Villas</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Golf Course Villas — Oliver</span>
-            <h3>Desert Canyon Golf Villas</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="park-avenue-estates-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Park Avenue Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Oliver</span>
-            <h3>Park Avenue Estates</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="woodside-villa-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Woodside Villa</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Oliver</span>
-            <h3>Woodside Villa</h3>
-            <p>A condo building at 529 Co-Op Avenue.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="parklane-villa-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Parklane Villa</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Oliver</span>
-            <h3>Parklane Villa</h3>
-            <p>A townhome complex at 6370 Park Drive, a short walk from the community centre, elementary school, hospital and the International Hike and Bike Trail.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="gobeil-village-oliver.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Gobeil Village</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Townhomes — Oliver</span>
-            <h3>Gobeil Village</h3>
-            <p>A pet-friendly 55+ community at 5869 Main Street.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="green-acres-oliver.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Green Acres</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Oliver</span>
-            <h3>Green Acres</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="redwing-place-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Redwing Place</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Oliver</span>
-            <h3>Redwing Place</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="st-martin-place-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>St. Martin Place</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Oliver</span>
-            <h3>St. Martin Place</h3>
-            <p>A townhome building at 6163 Saint Martin Place within walking distance of downtown Oliver.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="chardonnay-avenue-half-duplexes-oliver.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Chardonnay Avenue Half-Duplexes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Half-Duplexes — Oliver</span>
-            <h3>Chardonnay Avenue Half-Duplexes</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="mount-baldy-oliver.html" class="community-card" data-types="homes" style="text-decoration:none">
+        <a href="mount-baldy-oliver.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Mount Baldy</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Ski Resort Community — Oliver area</span>
@@ -1268,17 +1006,7 @@
         </a>
 
 
-        <a href="church-avenue-redevelopment-oliver.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Church Avenue Redevelopment Sites</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Development Sites — Oliver</span>
-            <h3>Church Avenue Redevelopment Sites</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="tucelnuit-wine-streets-lots-oliver.html" class="community-card" data-types="homes" style="text-decoration:none">
+        <a href="tucelnuit-wine-streets-lots-oliver.html" class="community-card" style="text-decoration:none">
           <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Tuc-el-Nuit Wine Streets Lots</span></div>
           <div class="community-card-body">
             <span class="community-card-tag">Building Lots — Oliver</span>
@@ -1288,1250 +1016,6 @@
           </div>
         </a>
 
-
-
-
-        <a href="oliver-wine-country-estates-oliver.html" class="community-card" data-types="vineyard acreage estates luxury lakefront homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Oliver Wine-Country Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Wine-Country &amp; Lake Estates — Oliver</span>
-            <h3>Oliver Wine-Country Estates</h3>
-            <p>Estates, vineyards and acreage around Oliver.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-keremeos" data-town="Keremeos">
-        <h3 class="dev-panel-title">Keremeos developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="acacia-court-keremeos.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Acacia Court</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Keremeos</span>
-            <h3>Acacia Court</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="ridgeview-estates-keremeos.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Ridgeview Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Keremeos</span>
-            <h3>Ridgeview Estates</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="olalla-mobile-home-park-keremeos.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Olalla Mobile Home Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Keremeos</span>
-            <h3>Olalla Mobile Home Park</h3>
-            <p>A 55+ mobile home park on Highway 3A in the Olalla area.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="riverside-estates-keremeos.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Riverside Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Keremeos</span>
-            <h3>Riverside Estates</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="k-mountain-park-keremeos.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>K Mountain Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Keremeos</span>
-            <h3>K Mountain Park</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="the-bench-keremeos.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Bench</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Keremeos</span>
-            <h3>The Bench</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="copper-ridge-keremeos.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Copper Ridge</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Keremeos</span>
-            <h3>Copper Ridge</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="ninth-street-townhomes-keremeos.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>601 9th Street Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Keremeos</span>
-            <h3>601 9th Street Townhomes</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="similkameen-valley-estates-keremeos-cawston.html" class="community-card" data-types="acreage vineyard estates luxury ultra homes lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Similkameen Valley Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Orchard, Vineyard &amp; Estate Properties — Similkameen</span>
-            <h3>Similkameen Valley Estates</h3>
-            <p>Orchards, vineyards, estates and homes in Keremeos and Cawston.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-greenwood" data-town="Greenwood">
-        <h3 class="dev-panel-title">Greenwood developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="fort-greenwood-greenwood.html" class="community-card" data-types="rv" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Fort Greenwood</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">RV &amp; Park Model Community — Greenwood</span>
-            <h3>Fort Greenwood</h3>
-            <p>A private creekfront community of RV and park model lots at 321 Copper Avenue N.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="creekside-mobile-home-park-greenwood.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Creekside Mobile Home Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Greenwood</span>
-            <h3>Creekside Mobile Home Park</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-midway" data-town="Midway">
-        <h3 class="dev-panel-title">Midway developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="grandview-bench-midway.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Grandview Bench</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Residential Lots — Midway</span>
-            <h3>Grandview Bench</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-rock-creek" data-town="Rock Creek">
-        <h3 class="dev-panel-title">Rock Creek developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="triple-acres-mobile-home-park-rock-creek.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Triple Acres Mobile Home Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Rock Creek</span>
-            <h3>Triple Acres Mobile Home Park</h3>
-            <p>A 55+ mobile home park on Highway 33 in Rock Creek.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="rock-creek-bridesville-ranches-rock-creek.html" class="community-card" data-types="acreage estates view lots homes lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Rock Creek &amp; Bridesville Ranches and Acreage</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Ranch &amp; Large Acreage — Rock Creek</span>
-            <h3>Rock Creek &amp; Bridesville Ranches and Acreage</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-naramata" data-town="Naramata">
-        <h3 class="dev-panel-title">Naramata developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="outlook-naramata-benchlands-naramata.html" class="community-card" data-types="homes estates" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Outlook Naramata Benchlands</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">View Building Lots — Naramata</span>
-            <h3>Outlook Naramata Benchlands</h3>
-            <p>A newer Naramata neighbourhood of 42 lakeview lots on Outlook Way.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="kettle-ridge-naramata.html" class="community-card" data-types="homes estates" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Kettle Ridge</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">View Building Lots — Naramata</span>
-            <h3>Kettle Ridge</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="stonebrook-benchlands-naramata.html" class="community-card" data-types="homes estates" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Stonebrook Benchlands</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Estate Building Lots — Naramata</span>
-            <h3>Stonebrook Benchlands</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="vista-naramata-benchlands-naramata.html" class="community-card" data-types="homes estates" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>VISTA Naramata Benchlands</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Estate Building Lots — Naramata</span>
-            <h3>VISTA Naramata Benchlands</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="grace-estates-naramata.html" class="community-card" data-types="homes estates" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Grace Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Estate Building Lots — Naramata</span>
-            <h3>Grace Estates</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="naramata-bench-estates-naramata.html" class="community-card" data-types="estates vineyard acreage luxury view lots homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Naramata Bench Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Wine-Country Estates — Naramata</span>
-            <h3>Naramata Bench Estates</h3>
-            <p>Estates, vineyards, lots and homes on the Naramata Bench.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-okanagan-falls" data-town="Okanagan Falls">
-        <h3 class="dev-panel-title">Okanagan Falls developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="peach-cliff-estates-okanagan-falls.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Peach Cliff Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Okanagan Falls</span>
-            <h3>Peach Cliff Estates</h3>
-            <p>A 55+ mobile home park in Okanagan Falls, about 15 minutes south of Penticton.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="skaha-lakeside-okanagan-falls.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Skaha Lakeside</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Okanagan Falls</span>
-            <h3>Skaha Lakeside</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="railway-lane-850-okanagan-falls.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>850 Railway Lane Condos</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Okanagan Falls</span>
-            <h3>850 Railway Lane Condos</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="lemonade-lane-okanagan-falls.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Lemonade Lane</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Riverfront Townhomes — Okanagan Falls</span>
-            <h3>Lemonade Lane</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="cedar-court-okanagan-falls.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Cedar Court</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Okanagan Falls</span>
-            <h3>Cedar Court</h3>
-            <p>A townhome complex at 1020 Cedar Street.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="willow-creek-estates-okanagan-falls.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Willow Creek Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Okanagan Falls</span>
-            <h3>Willow Creek Estates</h3>
-            <p>A townhome complex at 5050 13th Avenue.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="skaha-beachfront-condos-640-main-okanagan-falls.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>640 Main Street Beachfront Condos</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Beachfront Condos — Okanagan Falls</span>
-            <h3>640 Main Street Beachfront Condos</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="cedar-street-1302-presale-homes-okanagan-falls.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>1302 Cedar Street Presale Homes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Okanagan Falls</span>
-            <h3>1302 Cedar Street Presale Homes</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="eastside-road-heritage-hills-okanagan-falls.html" class="community-card" data-types="lakefront luxury ultra view estates homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Eastside Road &amp; Heritage Hills</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lake-View &amp; Lakefront Neighbourhood — Okanagan Falls</span>
-            <h3>Eastside Road &amp; Heritage Hills</h3>
-            <p>Skaha Lake lakefront and lake-view homes on the east side.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="okanagan-falls-kaleden-vineyards-acreage.html" class="community-card" data-types="vineyard acreage estates luxury view" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Okanagan Falls &amp; Kaleden Vineyards and Acreage</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Vineyard &amp; Acreage Estates — Okanagan Falls</span>
-            <h3>Okanagan Falls &amp; Kaleden Vineyards and Acreage</h3>
-            <p>Vineyards, acreage and country estates around Okanagan Falls and Kaleden.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-penticton" data-town="Penticton">
-        <h3 class="dev-panel-title">Penticton developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="cascade-gardens-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Cascade Gardens</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Penticton</span>
-            <h3>Cascade Gardens</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="sokana-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sokana</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Resort-Style Condos — Penticton</span>
-            <h3>Sokana</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="creekside-lane-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Creekside Lane</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Townhomes — Penticton</span>
-            <h3>Creekside Lane</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="skaha-lake-towers-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Skaha Lake Towers</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Condo Towers — Penticton</span>
-            <h3>Skaha Lake Towers</h3>
-            <p>A condo tower complex on Skaha Lake Road (3346, 3362 and 3388).</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="wade-residences-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Wade Residences</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Boutique Townhomes — Penticton</span>
-            <h3>The Wade Residences</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="lakeshore-towers-penticton.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Lakeshore Towers</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lakefront High-Rise Condos — Penticton</span>
-            <h3>Lakeshore Towers</h3>
-            <p>High-rise condo towers across from Okanagan Lake at 75 Martin Street and 160 Lakeshore Drive.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="canyon-court-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Canyon Court</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>Canyon Court</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="burnaby-gardens-penticton.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Burnaby Gardens</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Penticton</span>
-            <h3>Burnaby Gardens</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="verana-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Verana</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>The Verana</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="athens-creek-towers-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Athens Creek Towers</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>Athens Creek Towers</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="the-ellis-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Ellis</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>The Ellis</h3>
-            <p>An apartment community at 256 Hastings Avenue between Okanagan and Skaha Lakes.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="skaha-village-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Skaha Village</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condos &amp; Townhomes — Penticton</span>
-            <h3>Skaha Village</h3>
-            <p>A resort-style complex at 310 Yorkton Avenue a short walk from Skaha Lake beach.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="skaha-breeze-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Skaha Breeze</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>Skaha Breeze</h3>
-            <p>A condo building at 3589 Skaha Lake Road steps from Skaha Lake and beach.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="argyle-by-basran-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Argyle by Basran</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Townhomes — Penticton</span>
-            <h3>Argyle by Basran</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="peach-city-manor-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Peach City Manor</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>Peach City Manor</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="westbrook-court-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Westbrook Court</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>Westbrook Court</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="fleetwood-court-penticton.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Fleetwood Court</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Condo Apartments — Penticton</span>
-            <h3>Fleetwood Court</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="windsor-avenue-townhomes-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>378 Windsor Avenue Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Townhomes — Penticton</span>
-            <h3>378 Windsor Avenue Townhomes</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="evergreen-drive-half-duplexes-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>2830 Evergreen Drive Half-Duplexes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Half-Duplexes — Penticton</span>
-            <h3>2830 Evergreen Drive Half-Duplexes</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="apex-mountain-resort-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Apex Mountain Resort</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Ski Resort Community — Penticton area</span>
-            <h3>Apex Mountain Resort</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="skaha-place-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Skaha Place</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>Skaha Place</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="dynes-avenue-922-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>922 Dynes Avenue</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>922 Dynes Avenue</h3>
-            <p>A condo building at 922 Dynes Avenue across from Okanagan Beach.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="rigsby-court-329-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>329 Rigsby Street</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>329 Rigsby Street</h3>
-            <p>A condo building at 329 Rigsby Street near Okanagan Lake and the events centre.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="south-main-townhomes-3004-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>3004 South Main Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Penticton</span>
-            <h3>3004 South Main Townhomes</h3>
-            <p>Townhomes at 3004 South Main Street near schools, shopping and Skaha Lake Park.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="the-artisan-lee-avenue-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Artisan on Lee</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Luxury Townhomes — Penticton</span>
-            <h3>The Artisan on Lee</h3>
-            <p>A townhome project at 222 Lee Avenue steps from Skaha Lake, beach and marina.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="433-churchill-avenue-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>433 Churchill Avenue Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Luxury Townhomes — Penticton</span>
-            <h3>433 Churchill Avenue Townhomes</h3>
-            <p>Townhomes at 433 Churchill Avenue steps from Okanagan Beach and the Lakeshore Promenade.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="the-ridge-penticton.html" class="community-card" data-types="homes estates" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Ridge Penticton</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Half-Duplexes — Penticton</span>
-            <h3>The Ridge Penticton</h3>
-            <p>A newer hillside development at 1100 Antler Drive with Skaha Lake views.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="riva-ridge-manufactured-home-park-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Riva Ridge Manufactured Home Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Penticton</span>
-            <h3>Riva Ridge Manufactured Home Park</h3>
-            <p>A manufactured home park off Highway 97 with Skaha Lake views.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="sun-leisure-mobile-home-park-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sun Leisure Mobile Home Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Penticton</span>
-            <h3>Sun Leisure Mobile Home Park</h3>
-            <p>A mobile home park across from Skaha Lake and beside the channel.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="green-avenue-143-townhomes-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>143 Green Avenue Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Townhomes — Penticton</span>
-            <h3>143 Green Avenue Townhomes</h3>
-            <p>New townhomes at 143 Green Avenue across from schools and a few blocks from Skaha Lake.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="fairview-road-803-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>803 Fairview Road</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>803 Fairview Road</h3>
-            <p>A condo building at 803 Fairview Road a short walk from downtown Penticton.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="the-stratford-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Stratford</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>The Stratford</h3>
-            <p>A condo building at 196 Wade Avenue West in downtown Penticton.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="wade-avenue-240-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>240 Wade Avenue West</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>240 Wade Avenue West</h3>
-            <p>A condo building at 240 Wade Avenue West a short walk from downtown and Okanagan Lake.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="green-avenue-272-55plus-penticton.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>272 Green Avenue West 55+</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Condo Apartments — Penticton</span>
-            <h3>272 Green Avenue West 55+</h3>
-            <p>A 1990 55+ condo complex at 272 Green Avenue West near Walmart, transit and Skaha Lake.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="tiffany-gardens-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Tiffany Gardens</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condos &amp; Townhomes — Penticton</span>
-            <h3>Tiffany Gardens</h3>
-            <p>A complex at 3140 Wilson Street near Skaha Beach.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="the-vistas-skaha-hills-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Vistas at Skaha Hills</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Luxury Condos — Penticton</span>
-            <h3>The Vistas at Skaha Hills</h3>
-            <p>Newer condos at Vista Park in Skaha Hills with Skaha Lake views.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="lakeview-terrace-marina-way-penticton.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Lakeview Terrace</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lakefront Condos — Penticton</span>
-            <h3>Lakeview Terrace</h3>
-            <p>A condo building at 250 Marina Way with lake views, near the beach and the marina.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="creekside-forestbrook-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Creekside on Forestbrook</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>Creekside on Forestbrook</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="cherry-lane-towers-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Cherry Lane Towers</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>Cherry Lane Towers</h3>
-            <p>A multi-building condo community on Atkinson Street next to Cherry Lane Shopping Centre.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="paris-street-mobile-home-park-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>3245 Paris Street Mobile Home Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Penticton</span>
-            <h3>3245 Paris Street Mobile Home Park</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="atkinson-street-1750-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>1750 Atkinson Street</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>1750 Atkinson Street</h3>
-            <p>A condo building at 1750 Atkinson Street in central Penticton.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="wilson-street-3363-townhomes-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>3363 Wilson Street Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Penticton</span>
-            <h3>3363 Wilson Street Townhomes</h3>
-            <p>Townhomes at 3363 Wilson Street steps from Skaha Park and Beach.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="sendero-gate-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Sendero Gate</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Penticton</span>
-            <h3>Sendero Gate</h3>
-            <p>A townhome community at 1115 Holden Road in the Sendero Canyon neighbourhood near hiking and biking trails.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="finnerty-road-3948-skaha-benches-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>3948 Finnerty Road Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Penticton</span>
-            <h3>3948 Finnerty Road Townhomes</h3>
-            <p>A townhome community at 3948 Finnerty Road on the Skaha East Bench with a clubhouse.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="halifax-street-1445-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>1445 Halifax Street</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>1445 Halifax Street</h3>
-            <p>A condo building at 1445 Halifax Street one block from Penticton Regional Hospital.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="hastings-avenue-246-penticton.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>246 Hastings Avenue</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condo Apartments — Penticton</span>
-            <h3>246 Hastings Avenue</h3>
-            <p>A condo building at 246 Hastings Avenue near shopping, transit and the college.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="dauphin-park-penticton.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Dauphin Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Penticton</span>
-            <h3>Dauphin Park</h3>
-            <p>A gated 55+ manufactured home park at 197 Dauphin Avenue near shopping and the Lake-to-Lake bike lane.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="the-bow-penticton.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Bow</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Penticton</span>
-            <h3>The Bow</h3>
-            <p>A newer manufactured home community at 351 Warren Avenue West with a clubhouse, social committee and walking path.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="penticton-uplands-vancouver-place-penticton.html" class="community-card" data-types="luxury ultra view estates" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Uplands &amp; Vancouver Place</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Hillside Luxury — Penticton</span>
-            <h3>Uplands &amp; Vancouver Place</h3>
-            <p>Hillside homes above downtown Penticton with lake views.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="grandview-terraces-agave-penticton.html" class="community-card" data-types="new luxury ultra view" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Grandview Terraces</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Luxury Homes — Penticton</span>
-            <h3>Grandview Terraces</h3>
-            <p>A luxury development by Agave Homes on Westminster Avenue East in Penticton.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="marina-heights-penticton.html" class="community-card" data-types="new luxury ultra lakefront view" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Marina Heights</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Luxury Homes — Penticton</span>
-            <h3>Marina Heights</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="wiltse-valleyview-penticton.html" class="community-card" data-types="homes view estates luxury" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Wiltse &amp; Valleyview</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Family &amp; Estate Neighbourhood — Penticton</span>
-            <h3>Wiltse &amp; Valleyview</h3>
-            <p>View homes, lots and small acreages above Skaha Lake.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="lakeside-road-skaha-lakefront-penticton.html" class="community-card" data-types="lakefront luxury ultra" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Lakeside Road Skaha Lakefront</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Waterfront Homes — Penticton</span>
-            <h3>Lakeside Road Skaha Lakefront</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="penticton-bench-vineyard-estates-penticton.html" class="community-card" data-types="vineyard acreage luxury ultra estates view" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Penticton Bench &amp; Naramata Road Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Vineyard &amp; Acreage Estates — Penticton</span>
-            <h3>Penticton Bench &amp; Naramata Road Estates</h3>
-            <p>Vineyard estates and acreage on the Naramata Bench inside Penticton.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="west-bench-penticton.html" class="community-card" data-types="acreage view estates homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>West Bench</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Acreage &amp; View Homes — Penticton</span>
-            <h3>West Bench</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="carmi-penticton-acreage-retreats-penticton.html" class="community-card" data-types="acreage view estates luxury homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Carmi &amp; Penticton Acreage Retreats</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">View Acreage — Penticton</span>
-            <h3>Carmi &amp; Penticton Acreage Retreats</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-summerland" data-town="Summerland">
-        <h3 class="dev-panel-title">Summerland developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="summerland-waterfront-resort-summerland.html" class="community-card" data-types="lakefront" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Summerland Waterfront Resort</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Resort Condos — Summerland</span>
-            <h3>Summerland Waterfront Resort</h3>
-            <p>A resort condo complex at 13011 Lakeshore Drive South on Okanagan Lake.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="oasis-luxury-residences-summerland.html" class="community-card" data-types="lakefront new luxury" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Oasis Luxury Residences</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lakefront Condos — Summerland</span>
-            <h3>Oasis Luxury Residences</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="tuscan-terrace-summerland.html" class="community-card" data-types="homes luxury" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Tuscan Terrace</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Summerland</span>
-            <h3>Tuscan Terrace</h3>
-            <p>A townhome development at 14419 Downton Avenue with lake views.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="linden-estates-summerland.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Linden Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Condos — Summerland</span>
-            <h3>Linden Estates</h3>
-            <p>A 1993 55+ condo community at 8907 Pineo Court with covered parking.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="summokan-park-summerland.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Summokan Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Manufactured Home Park — Summerland</span>
-            <h3>Summokan Park</h3>
-            <p>A manufactured home park at 8712 Steuart Street near golf, downtown and trails.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="elliott-street-10615-townhomes-summerland.html" class="community-card" data-types="new homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>10615 Elliott Street Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Townhomes — Summerland</span>
-            <h3>10615 Elliott Street Townhomes</h3>
-            <p>New townhomes at 10615 Elliott Street walkable to downtown Summerland.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="grant-avenue-11815-half-duplexes-summerland.html" class="community-card" data-types="new homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>11815 Grant Avenue Half Duplexes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Half Duplexes — Summerland</span>
-            <h3>11815 Grant Avenue Half Duplexes</h3>
-            <p>New strata half duplexes at 11815 Grant Avenue with ductless heat pumps.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="victoria-road-14203-half-duplexes-summerland.html" class="community-card" data-types="new homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>14203 Victoria Road North Half Duplexes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Presale Half Duplexes — Summerland</span>
-            <h3>14203 Victoria Road North Half Duplexes</h3>
-            <p>Half duplexes under construction at 14203 Victoria Road North.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="victoria-place-summerland.html" class="community-card" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Victoria Place</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Condos &amp; Commercial — Summerland</span>
-            <h3>Victoria Place</h3>
-            <p>A mixed-use building at 13615 Victoria Road North in downtown Summerland.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="north-beach-estates-summerland.html" class="community-card" data-types="lakefront luxury estates" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>North Beach Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lakefront Share Community — Summerland</span>
-            <h3>North Beach Estates</h3>
-            <p>A private gated lakefront community at 506 North Beach Road on Okanagan Lake.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="victoria-gardens-summerland.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Victoria Gardens</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Condos — Summerland</span>
-            <h3>Victoria Gardens</h3>
-            <p>A 1986 55+ condo community at 13620 Victoria Road steps from downtown shopping and banking.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="washington-gardens-summerland.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Washington Gardens</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Townhomes — Summerland</span>
-            <h3>Washington Gardens</h3>
-            <p>A 1988 55+ townhome community at 11222 Quinpool Road.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="maple-grove-summerland.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Maple Grove</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Townhomes — Summerland</span>
-            <h3>Maple Grove</h3>
-            <p>A 1991 55+ townhome community at 14615 Victoria Road.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="cherry-grove-summerland.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Cherry Grove</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Summerland</span>
-            <h3>Cherry Grove</h3>
-            <p>A townhome community at 8704 Purves Road a few blocks from downtown.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="la-caseta-summerland.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>La Caseta</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Half Duplexes — Summerland</span>
-            <h3>La Caseta</h3>
-            <p>A 1993 55+ half-duplex community at 9600 Turner Street.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="quinpool-green-summerland.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Quinpool Green</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Summerland</span>
-            <h3>Quinpool Green</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="quinpool-patio-homes-summerland.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Quinpool Patio Homes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Patio Homes — Summerland</span>
-            <h3>Quinpool Patio Homes</h3>
-            <p>A patio-home community at 11110 Quinpool Road.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="silver-birch-place-summerland.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Silver Birch Place</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Condos — Summerland</span>
-            <h3>Silver Birch Place</h3>
-            <p>A 2000 secure 55+ condo community at 8416 Jubilee Road East with an outdoor pool, clubhouse and underground parking.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="fairway-five-sumac-ridge-summerland.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>The Fairway Five at Sumac Ridge</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Summerland</span>
-            <h3>The Fairway Five at Sumac Ridge</h3>
-            <p>A small townhome group at 144 Sumac Ridge Drive.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="prairie-valley-road-8710-townhomes-summerland.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>8710 Prairie Valley Road Townhomes</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Townhomes — Summerland</span>
-            <h3>8710 Prairie Valley Road Townhomes</h3>
-            <p>A townhome complex at 8710 Prairie Valley Road with no age restriction.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="walters-road-11619-55plus-park-summerland.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>11619 Walters Road 55+ Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Summerland</span>
-            <h3>11619 Walters Road 55+ Park</h3>
-            <p>A 55+ manufactured home community at 11619 Walters Road with lake views.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="snow-avenue-17017-55plus-park-summerland.html" class="community-card" data-types="55plus" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>17017 Snow Avenue 55+ Park</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">55+ Manufactured Home Park — Summerland</span>
-            <h3>17017 Snow Avenue 55+ Park</h3>
-            <p>A 55+ manufactured home community at 17017 Snow Avenue in Summerland Rural.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="hunters-hill-summerland.html" class="community-card" data-types="new luxury view estates homes lots" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Hunters Hill</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Luxury Neighbourhood — Summerland</span>
-            <h3>Hunters Hill</h3>
-            <p>A newer hillside neighbourhood above Okanagan Lake with homes and lots.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="trout-creek-lakehouse-summerland.html" class="community-card" data-types="lakefront luxury ultra homes view" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Trout Creek &amp; Lakehouse</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lakeside Neighbourhood — Summerland</span>
-            <h3>Trout Creek &amp; Lakehouse</h3>
-            <p>Lakefront and lakeside homes in Trout Creek.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="summerland-prairie-valley-acreage-summerland.html" class="community-card" data-types="acreage vineyard estates luxury view" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Summerland Rural Acreage &amp; Orchards</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Acreage &amp; Orchard Estates — Summerland</span>
-            <h3>Summerland Rural Acreage &amp; Orchards</h3>
-            <p>Orchards, vineyards, acreage and country estates around Summerland.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="summerland-lakefront-north-beach-crescent-beach-summerland.html" class="community-card" data-types="lakefront luxury ultra view homes lots" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Summerland Lakefront: North Beach, Crescent Beach &amp; Lakeshore</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lakefront — Summerland</span>
-            <h3>Summerland Lakefront: North Beach, Crescent Beach &amp; Lakeshore</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-kaleden" data-town="Kaleden">
-        <h3 class="dev-panel-title">Kaleden developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="alder-crescent-kaleden.html" class="community-card" data-types="new" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Alder Crescent</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">New Lots — Kaleden</span>
-            <h3>Alder Crescent</h3>
-            <p>A brand-new bare-land strata lot subdivision off Alder Avenue in Kaleden near Skaha Lake and the KVR rail trail.</p>
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="st-andrews-by-the-lake-kaleden.html" class="community-card" data-types="homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>St. Andrews by the Lake</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Golf Community — Kaleden</span>
-            <h3>St. Andrews by the Lake</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
-      </div>
-
-      <div class="dev-panel" id="developments-princeton" data-town="Princeton & area">
-        <h3 class="dev-panel-title">Princeton & area developments <span class="dev-count"></span></h3>
-        <div class="community-grid">
-
-        <a href="princeton-ranches-country-estates-princeton.html" class="community-card" data-types="acreage estates luxury view homes" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Princeton Ranches &amp; Country Estates</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Ranch &amp; Acreage Estates — Princeton</span>
-            <h3>Princeton Ranches &amp; Country Estates</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        <a href="princeton-lakes-rivers-waterfront-princeton.html" class="community-card" data-types="lakefront acreage homes lots view" style="text-decoration:none">
-          <div class="community-card-visual community-card-visual--tile" aria-hidden="true"><span>Princeton Lakes &amp; Rivers</span></div>
-          <div class="community-card-body">
-            <span class="community-card-tag">Lake &amp; River Frontage — Princeton</span>
-            <h3>Princeton Lakes &amp; Rivers</h3>
-            
-            <span class="community-card-cta">Community Spotlight →</span>
-          </div>
-        </a>
-
-        </div>
       </div>
     </div>
   </section>
@@ -2591,79 +1075,6 @@
   t.addEventListener('click',function(){set(!l.classList.contains('open'));});
   l.addEventListener('click',function(e){if(e.target.tagName==='A'){set(false);}});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&l.classList.contains('open')){set(false);t.focus();}});
-})();
-</script>
-<script>
-(function(){
-  var panels=[].slice.call(document.querySelectorAll('.dev-panel'));
-  if(!panels.length){return;}
-  var bar=document.createElement('div');bar.className='dev-tabs';bar.setAttribute('role','tablist');bar.setAttribute('aria-label','Developments by town');
-  var tabs=[];
-  panels.forEach(function(p){
-    var n=p.querySelectorAll('.community-card').length,town=p.getAttribute('data-town');
-    var c=p.querySelector('.dev-count');if(c){c.textContent=n?'· '+n+' named':'';}
-    var b=document.createElement('button');b.type='button';b.className='dev-tab';b.setAttribute('role','tab');
-    b.id='tab-'+p.id;b.setAttribute('aria-controls',p.id);
-    b.innerHTML=town+'<span class="dev-n">'+(n?n:'Soon')+'</span>';
-    p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby',b.id);
-    bar.appendChild(b);tabs.push(b);
-  });
-  panels[0].parentNode.insertBefore(bar,panels[0]);
-  function show(i,fromUser){
-    panels.forEach(function(p,j){p.hidden=(j!==i);tabs[j].setAttribute('aria-selected',j===i?'true':'false');tabs[j].tabIndex=(j===i)?0:-1;});
-    if(fromUser&&history.replaceState){history.replaceState(null,'','#'+panels[i].id);}
-  }
-  tabs.forEach(function(b,i){
-    b.addEventListener('click',function(){show(i,true);});
-    b.addEventListener('keydown',function(e){
-      var k=e.key,j=i;
-      if(k==='ArrowRight'){j=(i+1)%tabs.length;}else if(k==='ArrowLeft'){j=(i-1+tabs.length)%tabs.length;}else{return;}
-      e.preventDefault();show(j,true);tabs[j].focus();
-    });
-  });
-  var start=0;
-  panels.forEach(function(p,i){if(location.hash==='#'+p.id){start=i;}});
-  show(start,false);
-  if(start>0){bar.scrollIntoView();}
-})();
-</script>
-<script>
-(function(){
-  var TYPES=[['luxury','Luxury $1.5M+'],['ultra','Ultra-luxury $3M+'],['lakefront','Lakefront & waterfront'],['estates','Estates & neighbourhoods'],['view','View properties'],['acreage','Acreage'],['vineyard','Vineyard & wine country'],['golf','Golf'],['lots','Building lots'],['55plus','55+'],['rv','RV'],['new','New build & presale'],['fractional','Fractional & resort'],['homes','Detached homes & land']];
-  var wanted=(new URLSearchParams(location.search).get('type')||'').toLowerCase();
-  [].forEach.call(document.querySelectorAll('.dev-panel'),function(p){
-    var cards=[].slice.call(p.querySelectorAll('.community-card[data-types]'));
-    if(!cards.length){return;}
-    var total=p.querySelectorAll('.community-card').length;
-    var bar=document.createElement('div');bar.className='dev-filters';bar.setAttribute('role','group');bar.setAttribute('aria-label','Filter developments');
-    var lab=document.createElement('span');lab.className='dev-filters-label';lab.textContent='Show';bar.appendChild(lab);
-    var note=document.createElement('p');note.className='dev-showing';note.setAttribute('aria-live','polite');
-    var chips=[];
-    function count(t){return cards.filter(function(c){return (' '+c.getAttribute('data-types')+' ').indexOf(' '+t+' ')>-1;}).length;}
-    function apply(t){
-      var shown=0;
-      p.querySelectorAll('.community-card').forEach(function(c){
-        var ok=!t||(c.getAttribute('data-types')||'').split(' ').indexOf(t)>-1;
-        c.hidden=!ok;if(ok){shown++;}
-      });
-      chips.forEach(function(x){x.b.setAttribute('aria-pressed',x.t===t?'true':'false');});
-      note.textContent=t?('Showing '+shown+' of '+total+' developments'):'';
-      note.style.display=t?'':'none';
-      if(history.replaceState){var u=new URL(location.href);if(t){u.searchParams.set('type',t);}else{u.searchParams.delete('type');}history.replaceState(null,'',u.pathname+u.search+u.hash);}
-    }
-    [['', 'All']].concat(TYPES).forEach(function(x){
-      var n=x[0]?count(x[0]):0;if(x[0]&&!n){return;}
-      var b=document.createElement('button');b.type='button';b.className='dev-chip';
-      b.innerHTML=x[1]+(x[0]?'<span class="dev-n">'+n+'</span>':'');
-      b.addEventListener('click',function(){apply(x[0]&&b.getAttribute('aria-pressed')==='true'?'':x[0]);});
-      chips.push({t:x[0],b:b});bar.appendChild(b);
-    });
-    var title=p.querySelector('.dev-panel-title');
-    title.parentNode.insertBefore(bar,title.nextSibling);bar.parentNode.insertBefore(note,bar.nextSibling);
-    var valid=TYPES.some(function(x){return x[0]===wanted&&count(x[0])>0;});
-    apply(valid&&((location.hash&&('#'+p.id)===location.hash)||(!location.hash&&p.id==='developments-osoyoos'))?wanted:'');
-  });
-  if(wanted&&location.hash){var el=document.querySelector(location.hash);if(el){setTimeout(function(){el.scrollIntoView();},50);}}
 })();
 </script>
 </body>
